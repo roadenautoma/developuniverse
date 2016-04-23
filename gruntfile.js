@@ -65,24 +65,10 @@ module.exports = function(grunt) {
 					sourceMap: true
 				},
                 files: {
-                    'styles/main.css': [
-                      '<%= project.assets %>/styles/*.scss',
-                      '<%= project.assets %>/styles/partials/*.scss'
-                    ]
+                    'styles/app.css': '<%= project.assets %>/styles/app.scss'
                 }
             }
         }, // sass
-
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true, // Enable dynamic expansion
-                    cwd: 'images-src/', // Src matches are relative to this path
-                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
-                    dest: 'images/' // Destination path prefix
-                }]
-            }
-        }, // imagemin
 
         postcss: {
             options: {
@@ -113,6 +99,17 @@ module.exports = function(grunt) {
             }
         }, // uglify
 
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true, // Enable dynamic expansion
+                    cwd: 'images-src/', // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
+                    dest: 'images/' // Destination path prefix
+                }]
+            }
+        }, // imagemin
+        
         htmlmin: {
             dist: {
                 options: {
