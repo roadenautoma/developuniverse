@@ -40,10 +40,9 @@ module.exports = function(grunt) {
 
             scripts: {
                 files: [
-                  '<%= project.assets %>/scripts/libs/*.js',
-                  '<%= project.assets %>/scripts/custom/*.js'
+                  '<%= project.assets %>/scripts/**/*.js'
                 ],
-                tasks: ['concat', 'uglify'],
+                tasks: ['manifest', 'uglify'],
                 options: {
                     livereload: true,
                     spawn: true,
@@ -100,20 +99,17 @@ module.exports = function(grunt) {
             }
         },
 
-        concat: {
+        manifest: {
             dist: {
-                src: [
-                  '<%= project.assets %>/scripts/libs/*.js',
-                  '<%= project.assets %>/scripts/custom/*.js'
-                ],
-                dest: 'scripts/production.js'
+                src: '<%= project.assets %>/scripts',
+                dest: 'scripts'
             }
         }, // concat
 
         uglify: {
             dist: {
-                src: 'scripts/production.js',
-                dest: 'scripts/production.min.js'
+                src: 'scripts/app.js',
+                dest: 'scripts/app.min.js'
             }
         }, // uglify
 
@@ -151,6 +147,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -158,7 +155,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
       'sass',
       'postcss',
-      'concat',
+      'manifest',
       'uglify'
     ]);
     grunt.registerTask('default', ['build', 'browserSync', 'watch']);
