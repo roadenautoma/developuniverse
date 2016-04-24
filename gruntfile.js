@@ -154,11 +154,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-contrib-copy');
   	grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-manifest-concat');
 
     grunt.registerTask('build', [
       'manifest',

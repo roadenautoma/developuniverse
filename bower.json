@@ -26,8 +26,8 @@
     "susy": "~2.2.5",
     "matchHeight": "matchheight#~0.6.0",
     "jcf": "~1.2.0",
-    "fastclick": "^1.0.6"
-
+    "fastclick": "^1.0.6",
+    "prism": "^1.4.1"
   },
   "resolutions": {
     "jquery": "2.1.4"

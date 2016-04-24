@@ -34,6 +34,11 @@ bodyClass:
             <p>
                 The most important thing a developer should know is how to search on Google I'd say (no offence intended) that a developer job is ~50% of the time searching on Google for solutions. If you write content that's specific to your product (use cases, why you should use it, etc.) nobody will ever find it, nor read it nor share it.
             </p>
+
+            <blockquote>
+                <p>Side note: I'll be talking about the <a href="#">seed project</a> in an upcoming post.</p>
+            </blockquote>
+
             <p>
                 However, if you write insightful tips, tricks, solutions, benchmarks, etc. and you have a good SEO (we'll cover this in another post), there're big chances people will land in your blog after doing a google search. Even greater, if the content is good, they'll probably share it on Twitter amplifying your reach for free.
             </p>
@@ -99,6 +104,42 @@ bodyClass:
             <p>
                 For example, if you’re writting about Javascript and your post gets sent in JSWeekly, you’ll have lots of traffic.
             </p>
+
+            <p>
+                Let's analyze what we're doing there! The equivalent of the previous <code>watch</code> function is this line which basically just calls simultaneously (notice it's doing <code>&</code> and not <code>&&</code>) 2 other tasks from the <code>package.json</code> and the <code>serve</code> function which is installed as a dev dependency.
+            </p>
+
+            <p>
+                Now, let's checkout the <a href=""><code>watch-js</code> and <code>watch-css</code> tasks</a>. They both just call the cli for <code>watchify</code>, <code>nodemon</code> and <code>rework</code> which were installed as dev dependencies as well.
+            </p>
+
+            <pre>
+                <code class="language-javascript">
+/*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+
+(function( w ){
+  var loadJS = function( src, cb ){
+    "use strict";
+    var ref = w.document.getElementsByTagName( "script" )[ 0 ];
+    var script = w.document.createElement( "script" );
+    script.src = src;
+    script.async = true;
+    ref.parentNode.insertBefore( script, ref );
+    if (cb && typeof(cb) === "function") {
+      script.onload = cb;
+    }
+    return script;
+  };
+  // commonjs
+  if( typeof module !== "undefined" ){
+    module.exports = loadJS;
+  }
+  else {
+    w.loadJS = loadJS;
+  }
+}( typeof global !== "undefined" ? global : this )); }
+</code>
+            </pre>
 
             <p>
                 A few places I always recommend sharing articles are:

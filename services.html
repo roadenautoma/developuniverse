@@ -2,28 +2,109 @@
 layout: default
 ---
 
-<h1>Services</h1>
+<header>
+    <div class="container">
+        <div>Services</div>
+        <h1>Marketing for developers <small>(and non-developers too...)</small></h1>
+    </div><!-- .container -->
+</header>
 
 
-<ul>
-    <li>
-        <button>All</button>
-    </li>
-    {% for area in site.data.areas %}
-    <li>
-        <button>{{ area.name }}</button>
-    </li>
-    {% endfor %}
-</ul>
+
+<section id="" class="">
+    <div class="container">
+
+        <header class="sr-only">
+            <h2>What do I do?</h2>
+        </header>
+
+        <div class="content">
+            <div class="">
+                <h3>Developer Platform</h3>
+                <p>
+                    <strong>What is it:</strong> B2D are a new ecosystem of companies that bypasses traditional enterprise IT and sells directly to developers via the cloud. B2Ds are a subclass of a B2B, since the developers you’re selling to are part of a company which eventually buys the SaaS subscription.
+                </p>
+
+                <p>
+                    <strong>Why me:</strong> Being a developer and system engineer gives me the right background and perspective to be able to successfully market to developers.
+                </p>
+            </div>
+
+            <div class="">
+                <h3>Business to Business</h3>
+                <p>
+                    <strong>What is it:</strong> A B2B is a typical case where a company is selling a software or a service subscription to another company.
+                </p>
+
+                <p>
+                    <strong>Why me:</strong> My engineering background and my marketing experience gives me the right mindset to create and optimize data driven marketing experiments to target companies.
+                </p>
+            </div>
+        </div><!-- .content -->
 
 
-<ul>
-    {% for area in site.data.areas %}
-        {% for service in area.services %}
-        <li data-category="{{ area.slug }}">
-            <h4>{{ service.name }}</h4>
-            <p>{{ service.description }}</p>
-        </li>
-        {% endfor %}
-    {% endfor %}
-</ul>
+
+    </div><!-- .container -->
+</section>
+
+
+
+<section id="" class="">
+    <div class="container">
+
+        <header class="">
+            <h2>Areas of Expertise</h2>
+        </header>
+
+        <div class="content">
+            <ul>
+                <li>
+                    <button>All</button>
+                </li>
+                {% for area in site.data.areas %}
+                <li>
+                    <button>{{ area.name }}</button>
+                </li>
+                {% endfor %}
+            </ul>
+
+
+            <ul>
+                {% for area in site.data.areas %}
+                    {% for service in area.services %}
+                    <li data-category="{{ area.slug }}">
+                        <h3>{{ service.name }}</h3>
+                        <p>{{ service.description }}</p>
+                    </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div><!-- .content -->
+
+
+    </div><!-- .container -->
+</section>
+
+
+<section id="" class="">
+    <div class="container">
+        <header class="sr-only">
+            <h2>How do I do it?</h2>
+        </header>
+
+        <div class="">
+            <h3>Training</h3>
+            <p>
+                I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
+            </p>
+        </div>
+
+        <div class="">
+            <h3>Consulting</h3>
+            <p>
+                I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
+            </p>
+        </div>
+
+    </div><!-- .container -->
+</section>

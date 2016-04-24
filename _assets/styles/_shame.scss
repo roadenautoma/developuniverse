@@ -1,0 +1,137 @@
+html,
+button,
+input,
+select,
+textarea {
+   	color: #494745;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  	text-rendering: optimizeLegibility;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: "Circular"; // GOOD
+    //font-family: "Source Sans Pro";
+    //font-family: "Circular";
+    //font-family: "Graphik";
+    //font-family: "Proxima Nova";
+    //font-family: "Roboto";
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #494745;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Circular"; // GOOD
+    font-weight: 900;
+}
+
+.post .body-content {
+    font-family: "Merriweather";
+    font-family: "Rooney";
+    font-family: "Source Serif Pro"; // GOOD
+    //font-size: 20px;
+}
+
+.container {
+    max-width: 805px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: #494745;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 500;
+    transition: transform 0.2s;
+    &:before{
+        transition: transform 0.2s;
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        content: "";
+        z-index: -1;
+        transform: translateY(90%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        bottom: 0;
+        background: rgba(red, 0.15);
+    }
+    &:hover{
+        color: red;
+        &:before {
+            transform: translateY(5%);
+        }
+
+    }
+}
+
+.post .body-content > p:first-child {
+    font-size: 1.35rem;
+    line-height: 1.9;
+    &:first-letter {
+        color: red;
+        font-size: 2em;
+    }
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+figure {
+    margin: 0;
+}
+
+p>code, li>code, dd>code, td>code {
+    font-family: "Source Code Pro";
+    border: solid 1px #e4e4e4;
+    padding: 4px 4px 1px;
+    background: #f5f7f8;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.post .highlighted {
+    //display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(blue, 0.05);
+    // &:before{
+    //     content: "";
+    //     z-index: -1;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    //     left: 0;
+    //     bottom: 0;
+    //     outline: 1px solid red;
+    // }
+    &:hover {
+        background-color: rgba(blue, 0.25);
+    }
+}
+
+.post h2 {
+    margin: 1.3em 0;
+    font-weight: 500;
+    font-size: 1.9rem;
+}
