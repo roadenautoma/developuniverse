@@ -1,78 +1,44 @@
 // Gruntfile.js
 module.exports = function(grunt) {
 
-  require('time-grunt')(grunt);
+    require('time-grunt')(grunt);
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    project: {
-			dist: '_site',
-      assets: '_assets'
-		},
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        project: {
+		    dist: '_site',
+            assets: '_assets'
+	    },
 
-    /*
-     =====================================================================================================================================
-     start of watch
-     =====================================================================================================================================
-     *
-     */
 
-        watch: {
-            content: {
-                files: ['<%= project.dist %>/**/*.*'],
-                tasks: [],
-                options: {
-                    livereload: false,
-                    spawn: false
-                }
+        // shell commands for use in Grunt tasks
+        shell: {
+            jekyllBuild: {
+                command: 'jekyll build'
             },
-            images: {
-                files: ['images/**/*.*'],
-                tasks: []
-            }, // watch images added to src
-            css: {
-                files: ['<%= project.assets %>/styles/**/*.scss'],
-                tasks: ['sass', 'postcss'],
-                options: {
-                    spawn: false,
-                }
-            },
-
-            scripts: {
-                files: [
-                  '<%= project.assets %>/scripts/**/*.js'
-                ],
-                tasks: ['manifest', 'uglify'],
-                options: {
-                    livereload: true,
-                    spawn: true,
-                }
-            },
+            jekyllServe: {
+                command: 'jekyll serve'
+            }
         },
-
-        /*
-         =====================================================================================================================================
-         end of watch
-         =====================================================================================================================================
-         *
-         */
 
         sass: {
             dist: {
                 options: {
                     includePaths: ['bower_components'],
-					outputStyle: 'expanded',
-					sourceMap: true
-				},
-                files: {
-                    'styles/app.css': '<%= project.assets %>/styles/app.scss'
-                }
+    				outputStyle: 'expanded',
+    				sourceMap: true
+    			},
+                files: [{
+                    'styles/app.css': '<%= project.assets %>/styles/app.scss',
+                    '<%= project.dist %>/styles/app.css': '<%= project.assets %>/styles/app.scss'
+                }]
             }
         }, // sass
 
         postcss: {
             options: {
                 map: true,
+    			inline: false,
                 processors: [
                     require('autoprefixer')({
                         browsers: 'last 2 version, IE 9'
@@ -81,9 +47,12 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'styles/main.css'
+                src: [
+                    '<%= project.dist %>/styles/app.css',
+                    'styles/app.css'
+                ]
             }
-        },
+        }, // postcss
 
         manifest: {
             dist: {
@@ -99,61 +68,110 @@ module.exports = function(grunt) {
             }
         }, // uglify
 
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true, // Enable dynamic expansion
-                    cwd: 'images-src/', // Src matches are relative to this path
-                    src: ['**/*.{png,jpg,gif,svg}'], // Actual patterns to match
-                    dest: 'images/' // Destination path prefix
-                }]
-            }
-        }, // imagemin
-        
-        htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true,
-                    collapseWhitespace: true
-                },
-                expand: true,
-                cwd: '_site/',
-                src: ['**/*.html'],
-                dest: '_site/'
-            }
-        }, // htmlmin
+        connect: {
+    		options: {
+    			port: 9000,
+    			livereload: 35729,
+    			// change this to '0.0.0.0' to access the server from outside
+    			hostname: '0.0.0.0',
+    			base: './_site'
+    		},
+    		livereload: {
+    			options: {
+    				open: true
+    			}
+    		},
+    		server: {
+    			options: {
+    				port: 9001,
+    				keepalive: true,
+    				open: false
+    			}
+    		}
+    	}, // connect
 
         browserSync: {
-            dev: {
-                bsFiles: {
-                    src: ['<%= project.dist %>/**/*.*']
+            bsFiles: {
+                src: ['<%= project.dist %>/**/*.*']
+            },
+            options: {
+                watchTask: true,
+                server: {
+                    baseDir: './_site'
                 },
-                options: {
-                    proxy: "localhost:4000",
-                    watchTask: true
+                ghostMode: {
+                   clicks: true,
+                   scroll: true,
+                   links: true,
+                   forms: true
                 }
             }
-        } //browserSync
+        }, //browserSync
+
+
+        watch: {
+            options: {
+    	  		livereload: true,
+     	 	},
+            jekyll: {
+                files: [
+                    '_layouts/*.html',
+                    '_includes/*.html',
+                    '_data/*.*',
+                    'blog/**/*.*',
+                    '*.html',
+                ],
+                tasks: ['shell:jekyllBuild']
+            },
+            sass: {
+                options: {
+    	  			livereload: false
+    			},
+                files: ['<%= project.assets %>/styles/**/*.scss'],
+                tasks: ['sass', 'postcss']
+            },
+            css: {
+    			files: ['<%= project.dist %>/styles/*.css'],
+    			tasks: []
+      		},
+            scripts: {
+                files: [
+                  '<%= project.assets %>/scripts/**/*.js'
+                ],
+                tasks: ['manifest', 'uglify', 'shell:jekyllBuild']
+            },
+            images: {
+                files: ['images/**/*.*'],
+                tasks: ['shell:jekyllBuild']
+            }
+        } // watch
+
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-newer');
+  	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-shell');
 
     grunt.registerTask('build', [
-      'sass',
-      'postcss',
       'manifest',
-      'uglify'
+      'uglify',
+      'shell:jekyllBuild',
+      'sass',
+      'postcss'
     ]);
-    grunt.registerTask('default', ['build', 'browserSync', 'watch']);
+
+    grunt.registerTask('dev', [
+      'connect:livereload',
+      'watch'
+    ]);
+
+    grunt.registerTask('default', ['build', 'dev']);
 };

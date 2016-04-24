@@ -3,6 +3,84 @@
 @import "breakpoint-sass/stylesheets/breakpoint";
 @import "susy/sass/susy";
 
+// Base
+@import "base/fonts";
+
+
 body {
-    background-color: yellow;
+    font-family: "Graphik";
+    font-size: 19px;
+    line-height: 1.7;
+    color: #494745;
+}
+
+.container {
+    max-width: 805px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: #494745;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 500;
+    transition: transform 0.2s;
+    &:before{
+        transition: transform 0.2s;
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        content: "";
+        z-index: -1;
+        transform: translateY(90%);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        bottom: 0;
+        background: rgba(red, 0.15);
+    }
+    &:hover{
+        color: red;
+        &:before {
+            transform: translateY(5%);
+        }
+
+    }
+}
+
+
+.post .body-content > p:first-child {
+    font-size: 1.35rem;
+    line-height: 1.9;
+    &:first-letter {
+        color: red;
+        font-size: 2em;
+    }
+}
+
+.post .highlighted {
+    //display: inline-block;
+    position: relative;
+    background-color: rgba(blue, 0.15);
+    // &:before{
+    //     content: "";
+    //     z-index: -1;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    //     left: 0;
+    //     bottom: 0;
+    //     outline: 1px solid red;
+    // }
+}
+
+.post h2 {
+    margin: 1.3em 0;
+    font-weight: 500;
+    font-size: 1.9rem;
 }

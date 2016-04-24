@@ -15,7 +15,7 @@ defaults:
     scope:
       path: "blog"
     values:
-      layout: "post"
+      layout: "posts"
 
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
