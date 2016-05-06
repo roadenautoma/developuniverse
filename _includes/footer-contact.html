@@ -1,18 +1,17 @@
 <div class="footer-contact">
     <div class="container">
 
-        <header class="">
-            <h2>Get in touch!</h2>
-            <p>
+        <header class="page-section__header">
+            <h2 class="page-section__title">Get in touch!</h2>
+            <p class="page_section__subtitle">
                 If you’re planning a project you’d like to discuss or interested in working with me please get it touch − I’d love to hear from you.
             </p>
-        </header>
+        </header><!-- .page-section__header -->
 
-        <div class="">
+        <div class="page-section__body">
 
             <form action="./" method="post">
                 <fieldset>
-
                     <div class="form-group">
                         <label for="name">Your Name <span class="req">*</span></label>
                         <input name="name" class="form-control" type="text" placeholder="Your Name*" />
@@ -29,16 +28,19 @@
                     </div><!-- .form-group -->
 
                     <div class="form-group">
-                        <label for="service">What can I do for you? <span class="req">*</span></label>
+                        <label for="service_1">What can I do for you? <span class="req">*</span></label>
                         <div class="checkbox">
-                            <label name="service_1">
-                                <input type="checkbox" /> Consulting
+                            <label>
+                                <input type="checkbox" value="consulting" />
+                                Consulting
                             </label>
-                            <label name="service_1">
-                                <input type="checkbox" /> Training
+                            <label>
+                                <input type="checkbox" value="training" />
+                                Training
                             </label>
-                            <label name="service_1">
-                                <input type="checkbox" /> Other
+                            <label>
+                                <input type="checkbox" value="other" />
+                                Other
                             </label>
                         </div>
                     </div><!-- .form-group -->
@@ -50,11 +52,11 @@
 
                 </fieldset>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn--primary">Send</button>
                 </div><!-- .form-actions -->
             </form>
 
-        </div><!-- . -->
+        </div><!-- .page-section__body -->
 
     </div><!-- .container -->
 </div><!-- .footer-contact -->

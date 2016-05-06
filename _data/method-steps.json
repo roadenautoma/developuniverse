@@ -1,0 +1,45 @@
+[
+    {
+        "number": "1",
+        "short_title": "Decompose",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    },
+    {
+        "number": "2",
+        "short_title": "Formulate",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    },
+    {
+        "number": "3",
+        "short_title": "Define",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    },
+    {
+        "number": "4",
+        "short_title": "Run",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    },
+    {
+        "number": "5",
+        "short_title": "Verify",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    },
+    {
+        "number": "6",
+        "short_title": "Iterate",
+        "title": "Decompose your problem into small pieces.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "image": "http://placehold.it/500x500"
+    }
+
+]

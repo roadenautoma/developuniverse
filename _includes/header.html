@@ -5,34 +5,48 @@
 <!--[if lt IE 9]>
 <html lang="en" class="ie ie-legacy">
 <![endif]-->
-<html lang="en">
+<html class="no-js" lang="en">
 
-{% include head.html %}
+    {% include head.html %}
 
-<body class="{{page.bodyClass}}">
+    <body class="{{page.bodyClass}}">
 
-    <div class="site-header">
-        <div class="container container--fluid">
+        <div id="page" class="site">
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="{{ site.url }}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.url }}/services/">Services</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.url }}/blog/">Thoughts</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.url }}/about/">About</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.url }}/contact/">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            <header class="site-header" role="banner">
+                <nav class="navbar">
+                    <div class="container">
 
-        </div><!-- .container -->
-    </div><!-- .site-header -->
+                        <div class="navbar__header">
+                            <div class="navbar__brand">
+                                <h1 class="brand-logo">
+                                    <a href="{{ site.url }}">Gonto</a>
+                                </h1>
+                            </div><!-- .navbar-brand -->
+                            <div class="navbar__toggle">
+                                <button type="button" class="navbar-toggle-btn js-nav-toggle">
+                                    <span class="navbar-toggle-btn__text">Menu</span>
+                                    <i class="navbar-toggle-btn__icon icon-bars"></i>
+                                </button>
+                            </div><!-- .navbar-toggle-btn -->
+                        </div><!-- .navbar__header -->
+
+                        <div class="navbar__collapse js-nav-overlay">
+                            <div class="navbar__collapse__wrapper">
+
+                                <ul class="navbar__nav navbar__nav--primary">
+                                    <li><a href="{{ site.url }}">Home</a></li>
+                                    <li class="active"><a href="{{ site.url }}/services/">Services</a></li>
+                                    <li><a href="{{ site.url }}/blog/">Thoughts</a></li>
+                                    <li><a href="{{ site.url }}/about/">About</a></li>
+                                    <li><a href="{{ site.url }}/contact/">Contact</a></li>
+                                </ul><!-- .navbar__nav -->
+
+                            </div><!-- .navbar__collapse__wrapper -->
+                        </div><!-- .navbar__collapse -->
+
+                    </div><!-- .container -->
+                </nav><!-- .navbar -->
+            </header><!-- .site-header -->
+
+            <div id="content" class="site-content">

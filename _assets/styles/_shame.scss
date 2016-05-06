@@ -19,21 +19,25 @@ textarea {
 
 html {
     box-sizing: border-box;
-    font-family: "Circular"; // GOOD
+    //font-family: "Circular"; // GOOD
+    //font-family: "GT Walsheim";
     //font-family: "Source Sans Pro";
-    //font-family: "Circular";
     //font-family: "Graphik";
-    //font-family: "Proxima Nova";
+    font-family: "Proxima Nova";
     //font-family: "Roboto";
-    font-weight: 400;
+    //font-family: "Karla";
+    font-weight: normal;
     font-size: 19px;
     line-height: 1.7;
     color: #494745;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Circular"; // GOOD
-    font-weight: 900;
+    //font-family: "Circular"; // GOOD
+    font-family: "GT Walsheim";
+    //font-family: "Graphik";
+    //font-family: "Source Sans Pro";
+    font-weight: 700;
 }
 
 .post .body-content {

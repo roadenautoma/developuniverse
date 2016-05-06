@@ -3,4 +3,165 @@ layout: default
 bodyClass: tpl-home
 ---
 
-<h1>Homepage</h1>
+<main id="main" class="page-main" role="main">
+
+    <section id="home-hero" class="page-section ps-home-hero">
+
+        <div class="hero">
+            <div class="container">
+                <header class="hero__header">
+                    <h1 class="hero__title">An engineering approach to marketing</h1>
+                    <p class="hero__subtitle">Do or do not. There is no try.</p>
+                </header>
+
+                <a class="hero__read-more" href="#">Read more</a>
+            </div><!-- .container -->
+        </div><!-- .hero -->
+
+    </section><!-- .ps-home-hero -->
+
+
+    <section id="home-about" class="page-section ps-home-about">
+        <div class="container">
+
+            <header class="page-section__header">
+                <p class="page-section__name">About me</p>
+                <h2 class="page-section__title">Hi! I’m Martin Gontovnikas, but everybody calls me &ldquo;Gonto&rdquo;</h2>
+            </header><!-- .page-section__header -->
+
+            <div class="page-section__content">
+                <p>
+                    I’m a software engineer theat now works on Marketing. Wait, what? Yes, I found a way to combine my 2 passions and apply my engineering thinking model to Marketing.
+                </p>
+                <div class="actions">
+                    <ul>
+                        <li>
+                            <a href="#" class="btn btn--more">Learn more</a>
+                        </li>
+                    </ul>
+                </div><!-- .actions -->
+            </div><!-- .page-section__content -->
+
+        </div><!-- .container -->
+    </section><!-- .ps-home-about -->
+
+
+    <section id="home-method" class="page-section ps-home-method">
+        <div class="container">
+
+            <header class="page-section__header">
+                <p class="page-section__name">Methodology</p>
+                <h2 class="page-section__title">The engineering approach</h2>
+                <p class="page-section__subtitle">
+                    Marketing is all about sending the right message to the right audience to get an expected response. Even though this sounds easy, it’s certainly not. An engineering approach lets you decompose this big problem into smaller pieces that you can tackle by running continuous experiments that are validated by data.
+                </p>
+            </header><!-- .page-section__header -->
+
+            <div class="page-section__content">
+
+                <div class="method">
+
+                    <nav class="method__nav">
+                        <ol>
+                            {% for step in site.data.method-steps %}
+                            <li {% if forloop.index == 1 %} class="active" {% endif %}><a href="#">{{step.short_title}}</a></li>
+                            {% endfor %}
+                        </ol>
+                    </nav><!-- .method-steps__nav -->
+
+                    <div class="method__content">
+
+                        <ol class="method-steps">
+
+                            {% for step in site.data.method-steps %}
+                            <li class="method-step {% if forloop.index == 1 %}active{% endif %}">
+                                <aside class="method-step__aside">
+                                    <figure class="">
+                                        <img src="{{step.image}}" alt="{{step.title}}">
+                                    </figure>
+                                </aside>
+                                <div class="method-step__content">
+                                    <span class="">{{step.number}}</span>
+                                    <h3 class="">{{step.title}}</h3>
+                                    <div class="">
+                                        <p>{{step.body}}</p>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="btn">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- .method-step__content -->
+                            </li><!-- .method-step -->
+                            {% endfor %}
+
+                        </ol><!-- .method-steps -->
+
+                    </div><!-- .method__content -->
+
+                </div><!-- .method -->
+
+            </div><!-- .page-section__content -->
+
+        </div><!-- .container -->
+    </section><!-- .ps-home-method -->
+
+
+    <section id="home-blog" class="page-section ps-home-blog">
+        <div class="container">
+
+            <header class="page-section__header">
+                <p class="page-section__name">Thoughts</p>
+                <h2 class="page-section__title">Latest ramblings...</h2>
+            </header><!-- .page-section__header -->
+
+            <div class="page-section__content">
+
+                <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
+
+                    <ul class="">
+                        {% for article in site.data.articles limit: 3 %}
+                        <li class="">
+
+                            <article class="blog-entry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+                                <div class="blog-entry__image">
+                                    <a href="{{article.url}}">
+                                        <img itemprop="thumbnailUrl" src="http://placehold.it/500x400" alt="{{article.title}}" />
+                                    </a>
+                                </div><!-- .blog-entry__image -->
+                                <div class="blog-entry__content" itemprop="text">
+                                    <h3 class="blog-entry__title"><a href="{{article.url}}" itemprop="name">{{article.title}}</a></h3>
+                                    <div class="blog-entry__meta">
+                                        <div itemprop="author">Martin Gontovnikas</div>
+                                    </div><!-- .blog-entry__meta -->
+                                    <div class="actions">
+                                        <ul>
+                                            <li><a href="{{article.url}}" class="btn btn--more">{{article.read_time}} min read</a></li>
+                                        </ul>
+                                    </div><!-- .actions -->
+                                </div><!-- .blog-entry__content -->
+                            </article><!-- .blog-entry -->
+
+                        </li><!-- . -->
+                        {% endfor %}
+                    </ul><!-- . -->
+
+                    <div class="actions">
+                        <ul>
+                            <li>
+                                <a href="#" class="btn btn--more">More thoughts</a>
+                            </li>
+                        </ul>
+                    </div><!-- .actions -->
+
+                </div><!-- . -->
+
+            </div><!-- .page-section__content -->
+
+        </div><!-- .container -->
+    </section><!-- .ps-home-about -->
+
+
+</main><!-- .page-main -->

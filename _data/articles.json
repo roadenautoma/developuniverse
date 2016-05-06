@@ -1,0 +1,23 @@
+[
+    {
+        "title": "5 tips on how to target developers with your content marketing",
+        "featured_image": "http://placehold.it/500x400",
+        "url": "#",
+        "read_time": "3",
+        "case_study": true
+    },
+    {
+        "title": "Gulp is awesome, but do we need it?",
+        "featured_image": "http://placehold.it/500x400",
+        "url": "#",
+        "read_time": "2",
+        "case_study": false
+    },
+    {
+        "title": "New Play Framework 2 Video Course: How to create Webapps",
+        "featured_image": "http://placehold.it/500x400",
+        "url": "#",
+        "read_time": "4",
+        "case_study": false
+    }
+]
