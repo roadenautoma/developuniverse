@@ -1,6 +1,8 @@
 {
     "contents": [
-        "vendor/jquery-1.11.2.min.js",
+        "vendor/jquery.js",
+        "vendor/enquire.js",
+        "vendor/fastclick.js",
         "vendor/prism.js",
         "main.js"
     ]

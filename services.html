@@ -3,18 +3,14 @@ layout: default
 bodyClass: tpl-services
 ---
 
-
 <main id="main" class="page-main" role="main">
 
-    <div class="hero">
-        <header class="page__header">
-            <div class="container">
-                <p class="page__name">Services</p>
-                <h1 class="page__title">Marketing for developers <small>(and non-developers too...)</small></h1>
-            </div><!-- .container -->
-        </header>
-    </div><!-- .hero -->
-
+    <header class="hero">
+        <div class="container">
+            <p class="page__name">Services</p>
+            <h1 class="page__title">Marketing for developers <small>(and non-developers too...)</small></h1>
+        </div><!-- .container -->
+    </header><!-- .hero -->
 
     <section id="services-what" class="page-section ps-services-what">
         <div class="container">
@@ -71,17 +67,14 @@ bodyClass: tpl-services
     </section><!-- .page-section -->
 
 
-
-
-
-    <section id="" class="">
+    <section id="services-areas" class="ps-services-areas">
         <div class="container">
 
-            <header class="">
+            <header class="page-section__header sr-only">
                 <h2>Areas of Expertise</h2>
             </header>
 
-            <div class="content">
+            <div class="page-section__body">
                 <ul>
                     <li>
                         <button>All</button>
@@ -104,34 +97,36 @@ bodyClass: tpl-services
                         {% endfor %}
                     {% endfor %}
                 </ul>
-            </div><!-- .content -->
+            </div><!-- .page-section__body -->
 
 
         </div><!-- .container -->
-    </section>
+    </section><!-- .page-section -->
 
 
-    <section id="" class="">
+    <section id="services-how" class="page-section ps-services-how">
         <div class="container">
-            <header class="sr-only">
+            <header class="page-section__header sr-only">
                 <h2>How do I do it?</h2>
             </header>
 
-            <div class="">
-                <h3>Training</h3>
-                <p>
-                    I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
-                </p>
-            </div>
+            <div class="page-section__body">
+                <div class="">
+                    <h3>Training</h3>
+                    <p>
+                        I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
+                    </p>
+                </div>
 
-            <div class="">
-                <h3>Consulting</h3>
-                <p>
-                    I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
-                </p>
-            </div>
+                <div class="">
+                    <h3>Consulting</h3>
+                    <p>
+                        I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
+                    </p>
+                </div>
+            </div><!-- .page-section__body -->
 
         </div><!-- .container -->
-    </section>
+    </section><!-- .page-section -->
 
 </main><!-- .page-main -->

@@ -54,6 +54,38 @@ module.exports = function(grunt) {
             }
         }, // postcss
 
+        bowercopy: {
+			options: {
+				clean: true
+			},
+			scripts: {
+				options: {
+					destPrefix: '<%= project.assets %>/scripts/vendor'
+				},
+				files: {
+                    'jquery.js': 'jquery/dist/jquery.js',
+					'modernizr.js': 'modernizr/modernizr.js',
+                    'enquire.js': 'enquire/dist/enquire.js',
+                    'prism.js': 'prism/prism.js',
+                    'jquery.matchHeight.js': 'matchHeight/jquery.matchHeight.js',
+                    'jcf.js': 'jcf/js/jcf.js',
+                    'jcf.select.js': 'jcf/js/jcf.select.js',
+                    'jcf.radio.js': 'jcf/js/jcf.radio.js',
+                    'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
+                    'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+                    'fastclick.js': 'fastclick/lib/fastclick.js'
+				}
+			},
+            production_scripts: {
+				options: {
+					destPrefix: 'scripts'
+				},
+				files: {
+					'modernizr.js': 'modernizr/modernizr.js'
+				}
+			},
+		}, // bowercopy
+
         manifest: {
             dist: {
                 src: '<%= project.assets %>/scripts',
@@ -155,13 +187,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
   	grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-manifest-concat');
+    grunt.loadNpmTasks('grunt-bowercopy');
 
     grunt.registerTask('build', [
+      'bowercopy',
       'manifest',
       'uglify',
       'shell:jekyllBuild',
