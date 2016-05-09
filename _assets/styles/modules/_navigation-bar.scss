@@ -1,0 +1,49 @@
+.nav {
+    @include no-list;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav > li > a {
+    display: block;
+}
+
+.navbar {
+    background-color: $white;
+    padding: 1em 0;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.navbar .brand-logo{
+    margin: 0 auto;
+    display: block;
+    width: 6em;
+    svg {
+        fill: $brand-primary-color;
+    }
+}
+
+.navbar-toggle-btn {
+
+}
+
+.navbar__collapse {
+    display: none;
+}
+
+
+@include respond-to("navbar-collapse") {
+
+    .navbar-toggle-btn {
+        display: none;
+    }
+
+    .navbar__collapse {
+        display: block;
+    }
+
+
+}

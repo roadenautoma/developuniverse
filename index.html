@@ -15,7 +15,7 @@ bodyClass: tpl-home
             </div><!-- .hero-intro__wrapper -->
 
             <a class="hero__read-more" href="#">Read more</a>
-        </div><!-- .container -->        
+        </div><!-- .container -->
     </header><!-- .ps-home-hero -->
 
     <section id="home-about" class="page-section page-section--inset ps-home-about">
@@ -121,6 +121,8 @@ bodyClass: tpl-home
 
                 <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
 
+                    <!-- TODO: Replace with real articles -->
+                    <!-- TODO: Add param to hide excerpts -->
                     <ul class="blog-list">
                         {% for article in site.data.articles limit: 3 %}
                         <li class="blog-list__item">

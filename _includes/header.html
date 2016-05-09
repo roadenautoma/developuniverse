@@ -19,9 +19,9 @@
 
                         <div class="navbar__header">
                             <div class="navbar__brand">
-                                <h1 class="brand-logo">
-                                    <a href="{{ site.url }}">Gonto</a>
-                                </h1>
+                                <a class="brand-logo" href="{{ site.url }}">
+                                    {% include images/logo.svg  %}
+                                </a>
                             </div><!-- .navbar-brand -->
                             <div class="navbar__toggle">
                                 <button type="button" class="navbar-toggle-btn js-nav-toggle">
@@ -35,7 +35,7 @@
                             <div class="navbar__collapse__wrapper">
 
                                 <ul class="nav navbar__nav navbar__nav--primary">
-                                    <li><a href="{{ site.url }}">Home</a></li>
+                                    <!-- <li><a href="{{ site.url }}">Home</a></li> -->
                                     <li class="active"><a href="{{ site.url }}/services/">Services</a></li>
                                     <li><a href="{{ site.url }}/blog/">Thoughts</a></li>
                                     <li><a href="{{ site.url }}/about/">About</a></li>

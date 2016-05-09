@@ -1,6 +1,24 @@
 .site-footer {
     background-color: #e2e2e2;
     padding: 2em 0;
+    font-size: 0.89rem;
+}
+
+.site-footer-logo {
+    .text {
+        @extend .sr-only;
+    }
+    .icon {
+        height: 2.25em;
+        width: 2.25em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    svg{
+        .shape {
+            fill: $brand-primary-color;
+        }
+    }
 }
 
 .site-footer__social {
@@ -11,6 +29,8 @@
         @extend .sr-only;
     }
 }
+
+
 
 @include respond-to("medium") {
     .site-footer > .container {
@@ -26,6 +46,7 @@
         left: 0;
         right: 0;
         top: 0;
+        bottom: 0;
     }
     .site-footer__copy {
         width: 40%;

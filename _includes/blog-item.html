@@ -2,21 +2,22 @@
     <div class="blog-item__image">
         <a href="{{ site.url }}/post">
             {% if article.case_study %}
-                <span class="badge">Case study</span>
+            <span class="badge">Case study</span>
             {% endif %}
 
             <img itemprop="thumbnailUrl" src="http://placehold.it/500x400" alt="{{ article.title }}" />
         </a>
     </div><!-- .blog-item__image -->
     <div class="blog-item__content" itemprop="text">
-        <h3 class="blog-item__title"><a href="{{ site.url }}/post" itemprop="name">{{ article.title }}</a></h3>
+        <h3 class="blog-item__title" data-mh="blog-item-title"><a href="{{ site.url }}/post" itemprop="name">{{ article.title }}</a></h3>
         <div class="blog-item__meta">
             <span class="date">{{ article.date | date: "%m-%d-%Y"}}</span>
             <span itemprop="author">{{ article.author }}</span>
         </div><!-- .blog-item__meta -->
 
+        <!-- TODO: Optional excerpt via param -->
         {% if article.excerpt %}
-        <p class="blog-item__excerpt">{{ article.excerpt }}</p>
+        <p class="blog-item__excerpt" data-mh="blog-item-excerpt">{{ article.excerpt }}</p>
         {% endif %}
 
         <div class="actions">

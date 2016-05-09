@@ -1,8 +1,6 @@
 // Colors
 
 
-
-
 $brand-primary-color: 			#0a2e3d;
 $brand-primary-color-light:     #6c8085;
 $brand-primary-color-lightest:  #809aa5;
@@ -10,9 +8,9 @@ $brand-primary-color-lightest:  #809aa5;
 $brand-secondary-color: 		#f2461c;
 
 $black:                         #2c2c2c;
-$gray:                          #beb8ac;
-$gray-light:                    lighten($black, 35%);
-$gray-lighter:                  lighten($black, 50%);
+$gray:                          lighten($black, 50%);
+$gray-light:                    lighten($black, 40%);
+$gray-lighter:                  lighten($black, 30%);
 $gray-lightest:                 #f1f1f1;
 $white:                         #ffffff;
 
@@ -53,7 +51,7 @@ $small-line-height-percent:     1.5;
 
 // Links
 $link-text-color: 				$brand-primary-color;
-$link-text-color-hover:			darken($brand-primary-color, 10%);
+$link-text-color-hover:			darken($brand-primary-color, 5%);
 
 // Spacing Unit
 $base-spacing-unit:           	1em;

@@ -2,7 +2,9 @@
 
 }
 
-
+.blog-item__meta {
+    @extend .sr-only;
+}
 
 .blog-item__image {
     position: relative;
