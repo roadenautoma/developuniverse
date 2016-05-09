@@ -2,9 +2,15 @@
 @import "normalize-scss/_normalize.scss";
 @import "breakpoint-sass/stylesheets/breakpoint";
 @import "susy/sass/susy";
+@import "magnific-popup/src/css/main.scss";
 @import "vendor/prism-base16-solarized.dark";
 
 // Base
 @import "base/fonts";
+
+
+
+// Modules
+@import "modules/modal";
 
 @import "shame";

@@ -10,51 +10,7 @@
 
         <div class="page-section__body">
 
-            <form action="./" method="post">
-                <fieldset>
-                    <div class="form-group">
-                        <label for="name">Your Name <span class="req">*</span></label>
-                        <input name="name" class="form-control" type="text" placeholder="Your Name*" />
-                    </div><!-- .form-group -->
-
-                    <div class="form-group">
-                        <label for="company">Your Company <span class="req">*</span></label>
-                        <input name="company" class="form-control" type="text" placeholder="Your Company*" />
-                    </div><!-- .form-group -->
-
-                    <div class="form-group">
-                        <label for="email">Your Email <span class="req">*</span></label>
-                        <input name="email" class="form-control" type="email" placeholder="Your Email*" />
-                    </div><!-- .form-group -->
-
-                    <div class="form-group">
-                        <label for="service_1">What can I do for you? <span class="req">*</span></label>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="consulting" />
-                                Consulting
-                            </label>
-                            <label>
-                                <input type="checkbox" value="training" />
-                                Training
-                            </label>
-                            <label>
-                                <input type="checkbox" value="other" />
-                                Other
-                            </label>
-                        </div>
-                    </div><!-- .form-group -->
-
-                    <div class="form-group">
-                        <label for="email">Tell me more</label>
-                        <textarea placeholder="Tell me more"></textarea>
-                    </div><!-- .form-group -->
-
-                </fieldset>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn--primary">Send</button>
-                </div><!-- .form-actions -->
-            </form>
+            {% include contact-form.html %}
 
         </div><!-- .page-section__body -->
 

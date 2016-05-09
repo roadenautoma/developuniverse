@@ -73,7 +73,8 @@ module.exports = function(grunt) {
                     'jcf.radio.js': 'jcf/js/jcf.radio.js',
                     'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
-                    'fastclick.js': 'fastclick/lib/fastclick.js'
+                    'fastclick.js': 'fastclick/lib/fastclick.js',
+                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js'
 				}
 			},
             production_scripts: {
@@ -83,7 +84,7 @@ module.exports = function(grunt) {
 				files: {
 					'modernizr.js': 'modernizr/modernizr.js'
 				}
-			},
+			}
 		}, // bowercopy
 
         manifest: {

@@ -4,6 +4,7 @@
         "vendor/enquire.js",
         "vendor/fastclick.js",
         "vendor/prism.js",
+        "vendor/jquery.magnific-popup.js",
         "main.js"
     ]
 }
