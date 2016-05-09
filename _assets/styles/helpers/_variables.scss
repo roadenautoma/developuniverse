@@ -1,0 +1,111 @@
+// Colors
+
+
+
+
+$brand-primary-color: 			#0a2e3d;
+$brand-primary-color-light:     #6c8085;
+$brand-primary-color-lightest:  #809aa5;
+
+$brand-secondary-color: 		#f2461c;
+
+$black:                         #2c2c2c;
+$gray:                          #beb8ac;
+$gray-light:                    lighten($black, 35%);
+$gray-lighter:                  lighten($black, 50%);
+$gray-lightest:                 #f1f1f1;
+$white:                         #ffffff;
+
+$success-color:					green;
+$danger-color:					red;
+
+$font-weight-light:				300;
+$font-weight-normal:			400;
+$font-weight-medium:			500;
+$font-weight-bold:				700;
+
+// Base
+$font-family-primary:           'Circular', 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-secondary:         'GT Walsheim', 'Roboto', Helvetica, Arial, sans-serif;
+
+$font-family-code:              'Source Code Pro', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+$tfont-family-text:            'Source Serif Pro', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+$base-font-family: 				$font-family-primary;
+$base-font-size:				18px;
+$base-font-size-percent: 		112.5%;
+$base-line-height-percent: 		1.8;
+$base-line-height:				1.8em;
+$base-letter-spacing: 			0.05em;
+
+$base-font-weight: 				$font-weight-normal;
+$base-text-color:				#3a3d4a;
+$base-background-color:			$white;
+
+$medium-font-size: 				16px;
+$medium-font-size-percent: 		100%; // 18px
+
+$small-font-size: 				14px;
+$small-font-size-percent: 		87.5%; // 14px
+$small-line-height:				1.5em;
+$small-line-height-percent:     1.5;
+
+// Links
+$link-text-color: 				$brand-primary-color;
+$link-text-color-hover:			darken($brand-primary-color, 10%);
+
+// Spacing Unit
+$base-spacing-unit:           	1em;
+$base-spacing-unit--tiny:    	round($base-spacing-unit / 4);
+$base-spacing-unit--small:    	round($base-spacing-unit / 2);
+$base-spacing-unit--medium:    	round($base-spacing-unit * 1.5);
+$base-spacing-unit--large:    	round($base-spacing-unit * 2);
+$base-spacing-unit--huge:		round($base-spacing-unit * 4);
+
+$base-padding:					$base-spacing-unit--small;
+
+$base-border-width:            2px;
+
+
+// Transitions
+$base-transition-time:			0.3s;
+$base-transition-time--faster:	0.2s;
+$base-transition-time--slower:	0.5s;
+
+
+// Headings
+$header-font-family: 			$font-family-secondary;
+$header-font-weight:			$font-weight-bold;
+$header-line-height: 			1.1;
+$header-text-color: 			$brand-primary-color;
+$header-margin:					1em;
+$header-letter-spacing: 		-0.02em;
+
+// Navbar
+$navbar-small-height:		    56px;
+$navbar-medium-height:		    129px;
+$navbar-large-height:		    132px;
+
+// Max Widths
+$max-width:						1210px;
+$max-width-narrow:				1000px;
+$max-width-thin:				800px;
+
+// Media queries breakpoints
+$screen-xsmall:					480px;
+$screen-small:					640px;
+$screen-medium: 				960px;
+$screen-large:					1365px;
+$screen-huge:					1600px;
+$screen-xhuge:					2200px;
+
+$screen-xsmall-min:				$screen-xsmall;
+$screen-small-min:				$screen-small;
+$screen-medium-min:				$screen-medium;
+$screen-large-min:				$screen-large;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xsmall-max:             ($screen-small-min - 1);
+$screen-small-max:              ($screen-medium-min - 1);
+$screen-medium-max:             ($screen-large-min - 1);

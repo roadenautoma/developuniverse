@@ -5,12 +5,51 @@
 @import "magnific-popup/src/css/main.scss";
 @import "vendor/prism-base16-solarized.dark";
 
+// Helpers
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/breakpoints";
+@import "helpers/mixins";
+@import "helpers/animations";
+
 // Base
 @import "base/fonts";
+@import "base/general";
+@import "base/typography";
+@import "base/media";
+@import "base/forms";
+// @import "base/forms-custom";
+// @import "base/icons";
+// @import "base/buttons";
 
+
+// Layout
+@import "layout/grids";
+@import "layout/site-layout";
+@import "layout/site-header";
+@import "layout/site-footer";
+@import "layout/page-layout";
 
 
 // Modules
+@import "modules/actions";
+@import "modules/navbar";
+@import "modules/hero";
+@import "modules/hero-intro";
 @import "modules/modal";
+@import "modules/tabs";
+@import "modules/social-links";
+@import "modules/blog-list";
+@import "modules/blog-item";
+@import "modules/footer-contact";
+@import "modules/footer-newsletter";
+@import "modules/method-steps";
 
-@import "shame";
+// Templates
+@import "templates/tpl-home";
+// @import "templates/tpl-about";
+// @import "templates/tpl-services";
+@import "templates/tpl-blog";
+// @import "templates/tpl-post";
+
+//@import "shame";

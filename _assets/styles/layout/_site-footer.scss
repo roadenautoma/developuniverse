@@ -1,0 +1,40 @@
+.site-footer {
+    background-color: #e2e2e2;
+    padding: 2em 0;
+}
+
+.site-footer__social {
+    > dl {
+        @include no-deflist;
+    }
+    > dl > dt {
+        @extend .sr-only;
+    }
+}
+
+@include respond-to("medium") {
+    .site-footer > .container {
+        @include clearfix;
+        position: relative;
+    }
+    .site-footer__nav {
+        position: absolute;
+        text-align: center;
+        z-index: 1;
+        width: 10%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .site-footer__copy {
+        width: 40%;
+        float: left;
+        text-align: left;
+    }
+    .site-footer__social {
+        width: 40%;
+        float: right;
+        text-align: right;
+    }
+}

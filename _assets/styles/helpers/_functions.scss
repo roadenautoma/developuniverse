@@ -1,0 +1,16 @@
+// Em to PX
+@function pxem($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+@function pxrem($px, $base: $base-font-size) {
+	@return ($px / $base) * 1rem;
+}
+
+// STRIP UNIT
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+

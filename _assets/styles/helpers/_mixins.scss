@@ -1,0 +1,198 @@
+// Clearfix
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Hide Text
+@mixin hide-text {
+	overflow: hidden;
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
+// Vertical align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Center
+@mixin center-el() {
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+}
+
+// Headings
+@mixin headings($from: 1, $to: 6){
+	@for $i from $from through $to{
+	  h#{$i}{
+		@content
+	  }
+	}
+}
+
+
+
+// Position
+@mixin position($position, $args) {
+	position: $position;
+	$offsets: top right bottom left;
+
+	@each $o in $offsets {
+		$i: index($args, $o);
+
+		@if $i
+		and $i + 1 <= length($args)
+		and type-of( nth($args, $i + 1) ) == number {
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+}
+
+// Icon font
+@mixin icon-font($content) {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	content: $content;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin page-container {
+	margin: 0 auto;
+    max-width: $max-width;
+	width: 90%;
+    @include respond-to("small") {
+        width: 95%;
+    }
+}
+
+@mixin page-container-narrow {
+	max-width: $max-width-narrow;
+}
+
+
+@mixin page-container-thin {
+    max-width: $max-width-thin;
+    @include respond-to("small") {
+        margin: 0 auto;
+        width: 75%;
+    }
+}
+
+
+@mixin page-container-fluid {
+	width: 90%;
+	margin: 0 auto;
+	max-width: none;
+    @include respond-to("small") {
+        width: 95%;
+    }
+}
+
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+@mixin gallery-clear {
+	@include gallery(12 of 12);
+	&:nth-child(1n + 1){
+		clear: both;
+	}
+}
+
+
+// Visually Hidden
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.sr-only {
+	@extend %visuallyhidden;
+}
+
+
+// No List
+@mixin no-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li {
+		margin-bottom: 0;
+	}
+}
+
+@mixin no-deflist {
+	margin: 0;
+	padding: 0;
+	> dd,
+	> dt {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+
+
+// Pull
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+
+
+
+
+@mixin font-size($xs: 1rem, $sm: 1rem, $md: 1rem, $lg: 1rem) {
+
+    font-size: $xs;
+    @include respond-to("small") {
+        @if $sm != 1rem {
+    		font-size: pxrem($sm, $small-font-size);
+        } @else {
+            font-size: $sm;
+        }
+    }
+    @include respond-to("medium") {
+        @if $md != 1rem {
+            font-size: pxrem($md, $medium-font-size);
+        } @else {
+            font-size: $md;
+        }
+    }
+    @include respond-to("large") {
+        @if $lg != 1rem {
+        	font-size: pxrem($lg);
+        } @else {
+            font-size: $lg;
+        }
+	}
+}

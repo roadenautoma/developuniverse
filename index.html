@@ -5,18 +5,20 @@ bodyClass: tpl-home
 
 <main id="main" class="page-main" role="main">
 
-    <header id="home-hero" class="hero hero--home ps-home-hero">
+    <header id="home-hero" class="hero-intro ps-home-hero">
         <div class="container">
-            <header class="hero__header">
-                <h1 class="hero__title">An engineering approach to marketing</h1>
-                <p class="hero__subtitle">Do or do not. There is no try.</p>
-            </header>
+            <div class="hero-intro__wrapper">
+                <header class="hero__header">
+                    <h1 class="hero__title">An engineering approach to marketing</h1>
+                    <p class="hero__subtitle">Do or do not. There is no try.</p>
+                </header>
+            </div><!-- .hero-intro__wrapper -->
 
             <a class="hero__read-more" href="#">Read more</a>
-        </div><!-- .container -->
+        </div><!-- .container -->        
     </header><!-- .ps-home-hero -->
 
-    <section id="home-about" class="page-section ps-home-about">
+    <section id="home-about" class="page-section page-section--inset ps-home-about">
         <div class="container">
 
             <header class="page-section__header">
@@ -41,7 +43,7 @@ bodyClass: tpl-home
     </section><!-- .ps-home-about -->
 
 
-    <section id="home-method" class="page-section ps-home-method">
+    <section id="home-method" class="page-section page-section--inset ps-home-method">
         <div class="container">
 
             <header class="page-section__header">
@@ -57,9 +59,9 @@ bodyClass: tpl-home
                 <div class="method">
 
                     <nav class="method__nav">
-                        <ol>
+                        <ol class="nav nav-tabs">
                             {% for step in site.data.method-steps %}
-                            <li {% if forloop.index == 1 %} class="active" {% endif %}><a href="#">{{step.short_title}}</a></li>
+                            <li role="presentation" {% if forloop.index == 1 %} class="active" {% endif %}><a href="#" >{{step.short_title}}</a></li>
                             {% endfor %}
                         </ol>
                     </nav><!-- .method-steps__nav -->
@@ -70,25 +72,28 @@ bodyClass: tpl-home
 
                             {% for step in site.data.method-steps %}
                             <li class="method-step {% if forloop.index == 1 %}active{% endif %}">
-                                <aside class="method-step__aside">
-                                    <figure class="">
-                                        <img src="{{step.image}}" alt="{{step.title}}">
-                                    </figure>
-                                </aside>
-                                <div class="method-step__content">
-                                    <span class="">{{step.number}}</span>
-                                    <h3 class="">{{step.title}}</h3>
-                                    <div class="">
-                                        <p>{{step.body}}</p>
-                                    </div>
-                                    <div class="actions">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="btn">Next</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div><!-- .method-step__content -->
+                                <div class="method-step__wrapper">
+                                    <aside class="method-step__aside">
+                                        <figure class="method-step__image">
+                                            <img src="{{step.image}}" alt="{{step.title}}">
+                                        </figure>
+                                    </aside>
+                                    <div class="method-step__body">
+                                        <span class="method-step__number">{{step.number}}</span>
+                                        <h3 class="method-step__title">{{step.title}}</h3>
+                                        <div class="method-step__content">
+                                            <p>{{step.body}}</p>
+                                        </div><!-- .method-step__content -->
+                                        <div class="actions">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="btn js-method-step-next">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div><!-- .actions -->
+                                    </div><!-- .method-step__content -->
+                                </div><!-- .method-step__wrapper -->
+
                             </li><!-- .method-step -->
                             {% endfor %}
 
@@ -104,7 +109,7 @@ bodyClass: tpl-home
     </section><!-- .ps-home-method -->
 
 
-    <section id="home-blog" class="page-section ps-home-blog">
+    <section id="home-blog" class="page-section page-section--inset ps-home-blog">
         <div class="container">
 
             <header class="page-section__header">
@@ -116,18 +121,19 @@ bodyClass: tpl-home
 
                 <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
 
-                    <ul class="">
+                    <ul class="blog-list">
                         {% for article in site.data.articles limit: 3 %}
-                        <li class="">
+                        <li class="blog-list__item">
                             {% include blog-item.html article=article %}
-                        </li><!-- . -->
+                        </li><!-- .blog-list__item -->
                         {% endfor %}
-                    </ul><!-- . -->
+                    </ul><!-- .blog-list -->
 
                     <div class="actions">
                         <ul>
                             <li>
-                                <a href="#" class="btn btn--more">More thoughts</a>
+                                <!-- TODO: Change url from /blog to /thoughts -->
+                                <a href="{{ site.url }}/blog" class="btn btn--more">More thoughts</a>
                             </li>
                         </ul>
                     </div><!-- .actions -->

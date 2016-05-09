@@ -1,0 +1,11 @@
+.nav {
+    @include no-list;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav > li > a {
+    display: block;
+}

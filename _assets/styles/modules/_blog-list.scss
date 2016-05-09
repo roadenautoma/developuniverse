@@ -1,0 +1,13 @@
+.blog-list {
+    @include no-list;
+    @include container;
+    > .blog-list__item {
+        @include respond-to("small") {
+            @include gallery(6 of 12);
+        }
+        @include respond-to("medium") {
+            @include gallery(4 of 12);
+        }
+    }
+
+}

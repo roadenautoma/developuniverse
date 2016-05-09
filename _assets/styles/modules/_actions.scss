@@ -1,0 +1,14 @@
+.actions {
+	> ul {
+		@include no-list;
+		@include clearfix;
+		> li {
+			display: inline-block;
+			margin-right: 1em;
+			&:last-child,
+			.last {
+				margin-right: 0;
+			}
+		}
+	}
+}

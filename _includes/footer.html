@@ -4,8 +4,16 @@
 		<footer class="site-footer">
 			<div class="container container--fluid">
 
+				<nav class="site-footer__nav">
+					<ul class="nav">
+						<li>
+							<a href="#page">Go up!</a>
+						</li>
+					</ul>
+				</nav><!-- .site-footer__nav -->
+
 				<div class="site-footer__copy">
-					Copyright &copy; 2016 &mdash; Martin Gontovnikas
+					{{ site.time | date: '%Y' }} &copy; Martin Gontovnikas
 				</div><!-- .site-footer__copy -->
 
 				<div class="site-footer__social">

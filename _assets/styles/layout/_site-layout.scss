@@ -1,0 +1,20 @@
+.container {
+	@include page-container;
+}
+
+.container--narrow {
+	@include page-container-narrow;
+}
+
+.container--thin {
+	@include page-container-thin;
+}
+
+.container--fluid {
+	@include page-container-fluid;
+}
+
+
+.site-content {
+
+}

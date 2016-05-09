@@ -1,0 +1,29 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $base-font-family;
+    font-size: $small-font-size-percent;
+    line-height: $small-line-height-percent;
+    font-weight: $base-font-weight;
+    background-color: $base-background-color;
+    color: $base-text-color;
+    overflow-y: scroll;
+    min-height: 100%;
+    @include respond-to('medium') {
+        font-size: $medium-font-size-percent;
+        line-height: $base-line-height-percent;
+    }
+    @include respond-to('large') {
+        font-size: $base-font-size-percent;
+        line-height: $base-line-height-percent;
+    }
+}

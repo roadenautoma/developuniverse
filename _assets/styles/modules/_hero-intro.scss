@@ -1,0 +1,28 @@
+.hero-intro {
+    height: 100vh;
+}
+
+.hero-intro > .container {
+    height: 100%;
+}
+
+.hero-intro__wrapper {
+    @include vertical-align;
+}
+
+.hero__header {
+    text-align: center;
+}
+
+.hero__title {
+    margin-top: 0;
+}
+
+.ps-home-hero {
+    background-color: #052a39;
+    color: $white;
+}
+
+.ps-home-hero .hero__title {
+    color: $white;
+}

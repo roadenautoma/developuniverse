@@ -1,0 +1,42 @@
+/* @group About */
+
+.ps-home-about {
+    background-color: $gray-lightest;
+    text-align: center;
+}
+
+.ps-home-about > .container {
+    @extend .container--thin;
+    max-width: 600px;
+}
+
+/* @end About */
+
+
+/* @group Methodology */
+
+.ps-home-method {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 12em;
+        background-color: $gray-lightest;
+        z-index: -1;
+    }
+}
+
+/* @end Methodology */
+
+
+/* @group Blog */
+
+.ps-home-blog {
+    background-color: $gray-lightest;
+}
+
+/* @end Blog */

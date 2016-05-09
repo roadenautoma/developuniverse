@@ -1,0 +1,8 @@
+.social-links {
+    > ul {
+        @include no-list;
+    }
+    > ul > li {
+        display: inline-block;
+    }
+}

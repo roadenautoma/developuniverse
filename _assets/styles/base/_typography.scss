@@ -1,0 +1,324 @@
+html,
+button,
+input,
+select,
+textarea {
+   	color: $base-text-color;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  	text-rendering: optimizeLegibility;
+}
+
+
+/* Links */
+
+a {
+	color: $link-text-color;
+	text-decoration: none;
+	transition: color $base-transition-time--faster;
+	&:visited {
+		// color: $link-text-color;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		color: $link-text-color-hover;
+	}
+}
+
+/* Typographic Scale */
+
+
+@mixin ts($n) {
+
+
+    @if $n == 6 {
+        font-size: 1.75rem;
+        line-height: 1.21;
+    	@include respond-to("medium") {
+    		font-size: pxrem(50px, $medium-font-size);
+    	}
+    }
+    @if $n == 5 {
+        font-size: 1.5rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(28px, $medium-font-size);
+    	}
+    }
+    @if $n == 4 {
+        font-size: 1.45rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(26px, $medium-font-size);
+    	}
+
+    }
+    @if $n == 3 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        @include respond-to("medium") {
+            font-size: 1.4rem;
+            line-height: 1.6;
+    	}
+    	@include respond-to("large") {
+    		font-size: pxrem(22px, $base-font-size);
+
+    	}
+    }
+    @if $n == 2 {
+        font-size: 1.3rem;
+    	@include respond-to("large") {
+    		font-size: pxrem(22px, $base-font-size);
+    	}
+    }
+    @if $n == 1 {
+        font-size: 1rem;
+        @include respond-to("medium") {
+    		font-size: 1.1rem;
+    	}
+        @include respond-to("large") {
+    		font-size: pxrem(19px, $base-font-size);
+    	}
+    }
+    @if $n == 0 {
+        font-size: 1rem;
+    	@include respond-to("medium") {
+    		font-size: 1rem;
+    	}
+    }
+    @if $n == -1 {
+        font-size: 0.9rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(16px, $medium-font-size);
+    	}
+        @include respond-to("large") {
+    		font-size: pxrem(16px, $base-font-size);
+    	}
+    }
+    @if $n == -2 {
+        font-size: 0.86rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(12px, $medium-font-size);
+    	}
+    }
+}
+
+.ts5 { @include ts(5); }
+.ts6 { @include ts(6); }
+.ts4 { @include ts(4); }
+.ts3 { @include ts(3); }
+.ts2 { @include ts(2); }
+.ts1 { @include ts(1); }
+.ts0 { @include ts(0); }
+.ts_1 { @include ts(-1); }
+.ts_2 { @include ts(-2); }
+
+/* Headings */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	line-height: $header-line-height;
+    letter-spacing: $header-letter-spacing;
+	color: $header-text-color;
+    text-transform: none;
+	margin: $header-margin 0;
+}
+
+h1, .h1 { @include ts(6); }
+h2, .h2 { @include ts(4); }
+h3, .h3 { @include ts(3); }
+h4, .h4 { @include ts(2); }
+h5, .h5 { @include ts(1); }
+h6, .h6 { @include ts(0); }
+
+
+
+/* Paragraphs */
+
+p {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+
+b, strong {
+	font-weight: $font-weight-medium;
+}
+
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0;
+	font-weight: 400;
+	margin-bottom: 1.5em;
+	font-style: italic;
+	> p {
+		margin-bottom: 0;
+	}
+}
+blockquote > small {
+	font-size: 100%;
+	font-style: normal;
+
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #c2e5ef;
+	font-family: $font-family-code;
+	font-size: pxrem(16px);
+	line-height: 1.5;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-size: pxrem(16px);
+	font-family: Monaco, monospace;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $base-text-color;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+
+
+/* Lists */
+
+ul, ol {
+
+	margin-left: 1em;
+	padding-left: 0.25em;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ul > li {
+	margin-bottom: 0em;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Tables */
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+}
+
+
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.underline{
+    position: relative;
+    display: inline-block;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: -0.1em;
+        left: 0;
+        border-bottom: 0.11em solid $white;
+    }
+}

@@ -1,0 +1,56 @@
+.method-steps {
+    @include no-list;
+}
+
+.method-steps > .method-step {
+
+}
+
+.method-step {
+    padding: 4em;
+    border: $base-border-width solid $brand-secondary-color;
+    background-color: $white;
+    max-width: 850px;
+    margin: 0 auto;
+
+    // Visibility
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.method-step__number {
+    color: $brand-secondary-color;
+    line-height: 1;
+}
+
+.method-step__title {
+    font-weight: $font-weight-medium;
+}
+
+.method-step__content {
+
+}
+
+.method-step__content p {
+    color: $brand_primary_color_light;
+    margin-bottom: 0;
+}
+
+// Layout
+
+@include respond-to("small") {
+    .method-step__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .method-step__aside {
+        order: 2;
+        flex-basis: 45%;
+    }
+    .method-step__body {
+        order: 1;
+        flex-basis: 45%;
+    }
+}

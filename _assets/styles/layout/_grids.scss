@@ -1,0 +1,23 @@
+$susy: (
+  columns: 12,
+  gutters: .85,
+  debug: (
+    image: hide
+  )
+);
+
+
+$no-gutters: (
+	columns: 12,
+	gutters: 0,
+);
+
+$tiny-gutters: (
+	columns: 12,
+	gutters: .07
+);
+
+$big-gutters: (
+	columns: 12,
+	gutters: 5
+);

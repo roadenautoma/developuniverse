@@ -1,11 +1,15 @@
 <article class="blog-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
     <div class="blog-item__image">
-        <a href="{{ article.url }}">
+        <a href="{{ site.url }}/post">
+            {% if article.case_study %}
+                <span class="badge">Case study</span>
+            {% endif %}
+
             <img itemprop="thumbnailUrl" src="http://placehold.it/500x400" alt="{{ article.title }}" />
         </a>
     </div><!-- .blog-item__image -->
     <div class="blog-item__content" itemprop="text">
-        <h3 class="blog-item__title"><a href="{{article.url}}" itemprop="name">{{ article.title }}</a></h3>
+        <h3 class="blog-item__title"><a href="{{ site.url }}/post" itemprop="name">{{ article.title }}</a></h3>
         <div class="blog-item__meta">
             <span class="date">{{ article.date | date: "%m-%d-%Y"}}</span>
             <span itemprop="author">{{ article.author }}</span>
@@ -17,7 +21,7 @@
 
         <div class="actions">
             <ul>
-                <li><a href="{{ article.url }}" class="btn btn--more">{{ article.read_time }} min read</a></li>
+                <li><a href="{{ site.url }}/post" class="btn btn--more">{{ article.read_time }} min read</a></li>
             </ul>
         </div><!-- .actions -->
     </div><!-- .blog-item__content -->

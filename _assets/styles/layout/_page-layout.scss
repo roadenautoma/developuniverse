@@ -1,0 +1,53 @@
+.page-header {
+    text-align: center;
+    max-width: $max-width-thin;
+    margin: 0 auto;
+}
+
+.page__name {
+    text-transform: uppercase;
+    color: $brand-secondary-color;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.page__title {
+    color: $brand-primary-color;
+}
+
+.page__subtitle {
+    color: $brand-primary-color-light;
+}
+
+
+
+/* @group Page Section */
+
+.page-section {
+
+}
+
+.page-section--inset {
+    padding: 2em 0;
+    @include respond-to("medium") {
+        padding: 7em 0;
+    }
+}
+
+.page-section__header {
+    @extend .page-header;
+}
+
+.page-section__name {
+    @extend .page__name;
+}
+
+.page-section__title {
+    @extend .page__title;
+}
+
+.page-section__subtitle {
+    @extend .page__subtitle;
+}
+
+/* @end Page Section */

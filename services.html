@@ -75,13 +75,13 @@ bodyClass: tpl-services
             </header>
 
             <div class="page-section__body">
-                <ul>
-                    <li>
-                        <button>All</button>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active">
+                        <a href="#">All</a>
                     </li>
                     {% for area in site.data.areas %}
-                    <li>
-                        <button>{{ area.name }}</button>
+                    <li role="presentation">
+                        <a href="#">{{ area.name }}</a>
                     </li>
                     {% endfor %}
                 </ul>
