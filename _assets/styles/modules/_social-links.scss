@@ -1,8 +1,19 @@
 .social-links {
     > ul {
         @include no-list;
+        line-height: 1;
     }
     > ul > li {
         display: inline-block;
+        vertical-align: middle;
+    }
+    > ul > li > a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    svg {
+        width: 2em;
+        height: 2em;
+        display: block;
     }
 }

@@ -1,7 +1,7 @@
 .site-footer {
     background-color: #e2e2e2;
     padding: 2em 0;
-    font-size: 0.89rem;
+    font-size: pxrem(15px);
 }
 
 .site-footer-logo {
@@ -30,7 +30,16 @@
     }
 }
 
-
+.site-footer__social .social-links {
+    ul > li  {
+        margin: 0 0.75em;
+    }
+    svg {
+        fill: $brand-primary-color;
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
 
 @include respond-to("medium") {
     .site-footer > .container {
@@ -57,5 +66,8 @@
         width: 40%;
         float: right;
         text-align: right;
+        ul > li:last-child {
+            margin-right: 0;
+        }
     }
 }

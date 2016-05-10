@@ -4,11 +4,8 @@
  * Copyright 2014-2015 PSD2HTML - http://psd2html.com/jcf
  * Released under the MIT license (LICENSE.txt)
  *
- * Version: 1.2.1
+ * Version: 1.2.0
  */
-
-(function(jcf) {
-
 jcf.addModule(function($, window) {
 	'use strict';
 
@@ -142,7 +139,7 @@ jcf.addModule(function($, window) {
 					focus: this.onFocus,
 					change: this.onChange,
 					click: this.onChange,
-					keydown: this.delayedRefresh
+					keydown: this.onChange
 				});
 			} else {
 				// custom dropdown event handlers
@@ -504,8 +501,8 @@ jcf.addModule(function($, window) {
 			// delayed refresh handler
 			var self = this;
 			this.delayedRefresh = function(e) {
-				if (e && (e.which === 16 || e.ctrlKey || e.metaKey || e.altKey)) {
-					// ignore modifier keys
+				if (e && e.which === 16) {
+					// ignore SHIFT key
 					return;
 				} else {
 					clearTimeout(self.refreshTimer);
@@ -609,11 +606,6 @@ jcf.addModule(function($, window) {
 			this.listHolder = this.container.find(this.options.containerSelector);
 			this.lastClickedIndex = this.element.prop('selectedIndex');
 			this.rebuildList();
-
-			// save current selection in multiple select
-			if (this.element.prop('multiple')) {
-				this.previousSelection = this.getSelectedOptionsIndexes();
-			}
 		},
 		attachEvents: function() {
 			this.bindHandlers();
@@ -786,33 +778,30 @@ jcf.addModule(function($, window) {
 				this.listHolder.prop('scrollTop', targetOffset);
 			}
 		},
-		getSelectedOptionsIndexes: function() {
-			var selection = [];
+		getSelectedIndexRange: function() {
+			var firstSelected = -1, lastSelected = -1;
 			this.realOptions.each(function(index, option) {
 				if (option.selected) {
-					selection.push(index);
+					if (firstSelected < 0) {
+						firstSelected = index;
+					}
+					lastSelected = index;
 				}
 			});
-			return selection;
+			return [firstSelected, lastSelected];
 		},
 		getChangedSelectedIndex: function() {
 			var selectedIndex = this.element.prop('selectedIndex'),
-				self = this,
-				found = false,
-				targetIndex = null;
+				targetIndex;
 
 			if (this.element.prop('multiple')) {
 				// multiple selects handling
-				this.currentSelection = this.getSelectedOptionsIndexes();
-				$.each(this.currentSelection, function(index, optionIndex) {
-					if (!found && self.previousSelection.indexOf(optionIndex) < 0) {
-						if (index === 0) {
-							found = true;
-						}
-						targetIndex = optionIndex;
-					}
-				});
-				this.previousSelection = this.currentSelection;
+				if (!this.previousRange) {
+					this.previousRange = [selectedIndex, selectedIndex];
+				}
+				this.currentRange = this.getSelectedIndexRange();
+				targetIndex = this.currentRange[this.currentRange[0] !== this.previousRange[0] ? 0 : 1];
+				this.previousRange = this.currentRange;
 				return targetIndex;
 			} else {
 				// single choice selects handling
@@ -821,16 +810,9 @@ jcf.addModule(function($, window) {
 		},
 		getActiveOptionOffset: function() {
 			// calc values
-			var currentIndex = this.getChangedSelectedIndex();
-
-			// selection was not changed
-			if (currentIndex === null) {
-				return;
-			}
-
-			// find option and scroll to it if needed
 			var dropHeight = this.listHolder.height(),
 				dropScrollTop = this.listHolder.prop('scrollTop'),
+				currentIndex = this.getChangedSelectedIndex(),
 				fakeOption = this.fakeOptions.eq(currentIndex),
 				fakeOptionOffset = fakeOption.offset().top - this.list.offset().top,
 				fakeOptionHeight = fakeOption.innerHeight();
@@ -957,5 +939,3 @@ jcf.addModule(function($, window) {
 
 	return module;
 });
-
-}(jcf));

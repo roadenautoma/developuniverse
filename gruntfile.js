@@ -10,17 +10,6 @@ module.exports = function(grunt) {
             assets: '_assets'
 	    },
 
-
-        // shell commands for use in Grunt tasks
-        shell: {
-            jekyllBuild: {
-                command: 'jekyll build'
-            },
-            jekyllServe: {
-                command: 'jekyll serve'
-            }
-        },
-
         sass: {
             dist: {
                 options: {
@@ -101,6 +90,24 @@ module.exports = function(grunt) {
             }
         }, // uglify
 
+
+        svgstore: {
+            options: {
+                prefix : 'icon-',
+                cleanupdefs: true,
+                cleanup: false,
+                svg: {
+                    style: 'display: none;'
+                }
+            },
+            default: {
+                files: {
+                    '_includes/images/svg-defs.svg' : ['<%= project.assets %>/icons/*.svg']
+                }
+            }
+        }, // svgstore
+
+
         connect: {
     		options: {
     			port: 9000,
@@ -122,25 +129,6 @@ module.exports = function(grunt) {
     			}
     		}
     	}, // connect
-
-        browserSync: {
-            bsFiles: {
-                src: ['<%= project.dist %>/**/*.*']
-            },
-            options: {
-                watchTask: true,
-                server: {
-                    baseDir: './_site'
-                },
-                ghostMode: {
-                   clicks: true,
-                   scroll: true,
-                   links: true,
-                   forms: true
-                }
-            }
-        }, //browserSync
-
 
         watch: {
             options: {
@@ -176,14 +164,26 @@ module.exports = function(grunt) {
             images: {
                 files: ['images/**/*.*'],
                 tasks: ['shell:jekyllBuild']
+            },
+            icons: {
+                files: ['<%= project.assets %>/icons/*.svg'],
+                tasks: ['svgstore']
             }
-        } // watch
+        }, // watch
 
+        // shell commands for use in Grunt tasks
+        shell: {
+            jekyllBuild: {
+                command: 'jekyll build'
+            },
+            jekyllServe: {
+                command: 'jekyll serve'
+            }
+        }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-newer');
@@ -195,11 +195,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-bowercopy');
+    grunt.loadNpmTasks('grunt-svgstore');
 
     grunt.registerTask('build', [
       'bowercopy',
       'manifest',
       'uglify',
+      'svgstore',
       'shell:jekyllBuild',
       'sass',
       'postcss'
