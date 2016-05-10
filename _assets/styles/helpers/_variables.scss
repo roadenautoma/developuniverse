@@ -1,11 +1,16 @@
 // Colors
 
+$dark-blue:                     #0A2E3D;
+$dark-blue-alt:                 #052C3C;
+$light-blue:                    #7AD2EA;
 
-$brand-primary-color: 			#0a2e3d;
+$brand-primary-color: 			$dark-blue;
 $brand-primary-color-light:     #6c8085;
 $brand-primary-color-lightest:  #809aa5;
 
 $brand-secondary-color: 		#f2461c;
+
+$brand-terciary-color:          $light-blue;
 
 $black:                         #2c2c2c;
 $gray:                          lighten($black, 50%);
@@ -19,8 +24,8 @@ $danger-color:					red;
 
 $font-weight-light:				300;
 $font-weight-normal:			400;
-$font-weight-medium:			500;
-$font-weight-bold:				700;
+$font-weight-medium:			700;
+$font-weight-bold:				900;
 
 // Base
 $font-family-primary:           'Circular', 'Roboto', Helvetica, Arial, sans-serif;
@@ -73,12 +78,12 @@ $base-transition-time--slower:	0.5s;
 
 
 // Headings
-$header-font-family: 			$font-family-secondary;
-$header-font-weight:			$font-weight-bold;
-$header-line-height: 			1.1;
-$header-text-color: 			$brand-primary-color;
-$header-margin:					1em;
-$header-letter-spacing: 		-0.02em;
+$heading-font-family: 			$font-family-secondary;
+$heading-font-weight:			$font-weight-bold;
+$heading-line-height: 			1.1;
+$heading-text-color: 			$brand-primary-color;
+$heading-margin:					1em;
+$heading-letter-spacing: 		-0.02em;
 
 // Navbar
 $navbar-small-height:		    56px;

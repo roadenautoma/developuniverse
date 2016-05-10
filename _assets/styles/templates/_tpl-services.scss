@@ -1,0 +1,102 @@
+/* @group Hero */
+
+.tpl-services .hero-wrapper {
+    background-image: url("../images/services-hero-bg.jpg");
+    background-color: $dark-blue-alt;
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: $white;
+}
+
+.tpl-services .hero {
+    height: auto;
+}
+
+.tpl-services .hero .page__title {
+    font-size: pxrem(84px);
+    small {
+        display: block;
+        font-weight: $font-weight-medium;
+        font-size: 0.5em;
+        letter-spacing: 0;
+        margin-top: 0.5em;
+    }
+}
+
+
+/* @end Hero */
+
+
+/* @group What */
+
+.ps-services-what {
+    padding-top: 0;
+    background: linear-gradient(to bottom, rgba(5,44,60,0) 0%, rgba(5,44,60,1) 56%, rgba(5,44,60,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#052c3c', endColorstr='#052c3c', GradientType=0 );
+}
+
+.ps-services-what .grid {
+    @include no-list;
+    @include container;
+}
+
+.ps-services-what .grid__span {
+    @include respond-to("medium") {
+        @include span(6 of 12);
+        &:last-child {
+            @include last;
+        }
+    }
+}
+
+.ps-services-what .page-subsection__body {
+    dl {
+        @include no-deflist;
+        margin-bottom: 1em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    dl > dt,
+    dl > dd {
+        display: inline;
+    }
+    dl > dt {
+        &:after {
+            content: "\2014";
+            display: inline-block;
+            font-weight: $font-weight-medium;
+            color: $brand-primary-color-lightest;
+            margin: 0 0.15em 0 0.3em;
+        }
+    }
+}
+
+.ps-services-what .icon {
+    margin-bottom: 0.75em;
+}
+
+.page-subsection__header {
+    margin-bottom: 1.5em;
+}
+
+.ps-services-what .page-subsection__title {
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-size: 0.94rem;
+    letter-spacing: 0.05em;
+}
+
+.ps-services-what .page-subsection__title .badge {
+    background-color: $brand-terciary-color;
+    color: $brand-primary-color;
+    padding: .4em .6em .3em;
+    font-size: 0.65em;
+    margin-left: 0.5em;
+    position: relative;
+    top: -0.15em;
+}
+
+/* @end What */

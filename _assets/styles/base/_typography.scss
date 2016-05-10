@@ -123,13 +123,13 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-	font-family: $header-font-family;
-	font-weight: $header-font-weight;
-	line-height: $header-line-height;
-    letter-spacing: $header-letter-spacing;
-	color: $header-text-color;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: $heading-line-height;
+    letter-spacing: $heading-letter-spacing;
+	color: $heading-text-color;
     text-transform: none;
-	margin: $header-margin 0;
+	margin: $heading-margin 0;
 }
 
 h1, .h1 { @include ts(6); }

@@ -35,6 +35,7 @@
 @import "modules/actions";
 @import "modules/navigation-bar";
 @import "modules/navigation-overlay";
+@import "modules/badge";
 @import "modules/hero";
 @import "modules/hero-intro";
 @import "modules/modal";
@@ -49,7 +50,7 @@
 // Templates
 @import "templates/tpl-home";
 // @import "templates/tpl-about";
-// @import "templates/tpl-services";
+@import "templates/tpl-services";
 @import "templates/tpl-blog";
 // @import "templates/tpl-post";
 
