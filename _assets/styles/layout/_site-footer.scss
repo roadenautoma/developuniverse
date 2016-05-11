@@ -5,16 +5,18 @@
 }
 
 .site-footer-logo {
+    display: block;
+    line-height: 1;
     .text {
         @extend .sr-only;
     }
     .icon {
-        height: 2.25em;
-        width: 2.25em;
+        height: 2.5em;
+        width: 2.5em;
         display: inline-block;
-        vertical-align: middle;
     }
     svg{
+        @include vertical-align;
         display: block;
         .shape {
             fill: $brand-primary-color;
@@ -35,23 +37,28 @@
     ul > li  {
         margin: 0 0.75em;
     }
-    svg {
-        fill: $brand-primary-color;
-        width: 1.5em;
-        height: 1.5em;
+    .icon {
+        line-height: 1;
+    }
+    .text {
+        @extend .sr-only;
     }
 }
 
 @include respond-to("medium") {
     .site-footer > .container {
-        @include clearfix;
+        //@include clearfix;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .site-footer__nav {
-        position: absolute;
+        order: 2;
+        //position: absolute;
         text-align: center;
         z-index: 1;
-        width: 10%;
+        width: 20%;
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -59,13 +66,15 @@
         bottom: 0;
     }
     .site-footer__copy {
+        order: 1;
         width: 40%;
-        float: left;
+        //float: left;
         text-align: left;
     }
     .site-footer__social {
+        order: 3;
         width: 40%;
-        float: right;
+        //float: right;
         text-align: right;
         ul > li:last-child {
             margin-right: 0;

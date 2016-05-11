@@ -61,9 +61,17 @@
     @extend .page__subtitle;
 }
 
+.page-section__body p:last-child,
+.page-subsection__body p:last-child {
+    margin-bottom: 0;
+}
+
 /* @end Page Section */
 
 
+.page-subsection__header {
+    margin-bottom: 1.5em;
+}
 .page-subsection__title {
     margin-top: 0;
     text-transform: uppercase;

@@ -5,14 +5,10 @@
 			<div class="container container--fluid">
 
 				<nav class="site-footer__nav">
-					<ul class="nav">
-						<li>
-							<a class="site-footer-logo" href="{{ page.url }}#page">
-								<i class="icon">{% include images/logo-sm.svg %}</i>
-								<span class="text">Go up!</span>
-							</a>
-						</li>
-					</ul>
+					<a class="site-footer-logo" href="{{ page.url }}#page">
+						<i class="icon">{% include images/logo-sm.svg %}</i>
+						<span class="text">Go up!</span>
+					</a>
 				</nav><!-- .site-footer__nav -->
 
 				<div class="site-footer__copy">
@@ -21,26 +17,26 @@
 
 				<div class="site-footer__social">
 					<dl>
-						<dt>
-							Follow me
-						</dt>
+						<dt>Follow me</dt>
 						<dd>
 							<div class="social-links">
 								<ul>
 									<li>
 										<!-- TODO: bug. Icons not showing -->
 										<a rel="external" href="https://twitter.com/mgonto">
-											<svg><use xlink:href="#icon-twitter" /></svg>
+											<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+											<i class="icon icon-twitter"></i>
+											<span class="text">Twitter</span>
 										</a>
 									</li>
 									<li>
 										<a rel="external" href="http://linkedin.com/in/mgonto">
-											<svg><use xlink:href="#icon-linkedin" /></svg>
+											<svg class="icon"><use xlink:href="#icon-linkedin" /></svg>
 										</a>
 									</li>
 									<li>
 										<a rel="external" href="https://github.com/mgonto">
-											<svg><use xlink:href="#icon-github" /></svg>
+											<svg class="icon"><use xlink:href="#icon-github" /></svg>
 										</a>
 									</li>
 								</ul>
