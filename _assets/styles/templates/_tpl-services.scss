@@ -41,19 +41,22 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#052c3c', endColorstr='#052c3c', GradientType=0 );
 }
 
-.ps-services-what .grid {
-    @include no-list;
-    @include container;
-}
+@include with-layout($medium-gutters) {
+    .ps-services-what .page-section__body {
+        @include no-list;
+        @include container;
+    }
 
-.ps-services-what .grid__span {
-    @include respond-to("medium") {
-        @include span(6 of 12);
-        &:last-child {
-            @include last;
+    .ps-services-what .page-subsection {
+        @include respond-to("medium") {
+            @include span(6 of 12);
+            &:last-child {
+                @include last;
+            }
         }
     }
 }
+
 
 .ps-services-what .page-subsection__body {
     dl {
@@ -79,7 +82,7 @@
 }
 
 .ps-services-what .icon {
-    margin-bottom: 0.75em;
+    margin-bottom: 1.5em;
 }
 
 .page-subsection__header {
@@ -88,10 +91,6 @@
 
 .ps-services-what .page-subsection__title {
     color: $white;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    font-size: 0.94rem;
-    letter-spacing: 0.05em;
 }
 
 .ps-services-what .page-subsection__title .badge {
@@ -168,6 +167,43 @@
 
 .ps-services-how {
     background-color: $gray-lightest;
+    padding: 0;
 }
+
+.ps-services-how > .container {
+    width: 100%;
+    max-width: none;
+}
+
+.ps-services-how .page-subsection {
+    padding: 4em 2.5em;
+    text-align: center;
+}
+
+.ps-services-how .page-subsection__inner {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.ps-services-how .page-subsection__body p:last-child {
+    margin-bottom: 0;
+}
+
+// Layout
+
+@include respond-to("medium") {
+    .ps-services-how .page-section__body {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ps-services-how .page-subsection {
+        padding: 8em 6em;
+        text-align: center;
+        flex-basis: 50%;
+        width: 50%;
+    }
+}
+
 
 /* @end How? */
