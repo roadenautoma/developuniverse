@@ -6,27 +6,48 @@
 <g>
 	<g>
 		<g>
-			
-				<rect x="13.6" y="9.6" style="fill:#DCDCDC;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" width="47.8" height="58.3"/>
-			<polyline style="fill:#FFFFFF;" points="52.1,14.3 56.2,14.3 56.2,62.3 18.8,62.3 18.8,14.3 22.9,14.3 			"/>
-			<rect x="26.1" y="5.5" style="fill:#FFF36E;" width="22.9" height="10.4"/>
-			
-				<rect x="26.1" y="5.5" style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" width="22.9" height="10.4"/>
-			
-				<line style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" x1="29.7" y1="9.6" x2="45.3" y2="9.6"/>
 			<g>
-				<path style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" d="M26.1,55.4
-					c0-13.2,10.7-23.9,23.9-23.9"/>
+				<rect x="2.8" y="10.3" style="fill:#DCDCDC;" width="46.7" height="56.9"/>
+				<path style="fill:#081F3B;" d="M49.5,67.9H2.8c-0.4,0-0.7-0.3-0.7-0.7V10.3c0-0.4,0.3-0.7,0.7-0.7h46.7c0.4,0,0.7,0.3,0.7,0.7
+					v56.9C50.2,67.6,49.9,67.9,49.5,67.9z M3.5,66.5h45.3V11H3.5V66.5z"/>
+			</g>
+			<g>
+				<rect x="7.9" y="14.9" style="fill:#FFFFFF;" width="36.4" height="46.7"/>
+			</g>
+			<g>
+				<rect x="15" y="6.3" style="fill:#FFF36E;" width="22.3" height="10.1"/>
+			</g>
+			<g>
+				<path style="fill:#081F3B;" d="M37.3,17.1H15c-0.4,0-0.7-0.3-0.7-0.7V6.3c0-0.4,0.3-0.7,0.7-0.7h22.3c0.4,0,0.7,0.3,0.7,0.7
+					v10.1C38,16.8,37.7,17.1,37.3,17.1z M15.7,15.7h20.9V7H15.7V15.7z"/>
+			</g>
+			<g>
+				<rect x="18.6" y="9.6" style="fill:#081F3B;" width="15.2" height="1.4"/>
+			</g>
+			<g>
 				<g>
-					<polyline style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" points="45.8,37.7 
-						50,31.5 43.7,27.3 					"/>
+					<path style="fill:#081F3B;" d="M15.7,54.9h-1.4c0-13.2,10.8-24,24-24v1.4C25.8,32.3,15.7,42.5,15.7,54.9z"/>
 				</g>
-				
-					<line style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" x1="38.5" y1="54.4" x2="46.9" y2="46"/>
-				
-					<line style="fill:none;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" x1="38.5" y1="46" x2="46.9" y2="54.4"/>
-				
-					<circle style="fill:#67CCE9;stroke:#081F3B;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;" cx="29.2" cy="27.3" r="4.2"/>
+				<g>
+					<g>
+						<path style="fill:#081F3B;" d="M34.9,38.1l-1.2-0.8l3.7-5.5l-5.5-3.7l0.8-1.2l6.1,4.1c0.2,0.1,0.3,0.3,0.3,0.4s0,0.4-0.1,0.5
+							L34.9,38.1z"/>
+					</g>
+				</g>
+				<g>
+					
+						<rect x="30.5" y="44.1" transform="matrix(0.7071 0.7071 -0.7071 0.7071 44.409 -7.4744)" style="fill:#081F3B;" width="1.4" height="11.5"/>
+				</g>
+				<g>
+					
+						<rect x="25.5" y="49.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 44.4056 -7.4751)" style="fill:#081F3B;" width="11.5" height="1.4"/>
+				</g>
+				<g>
+					<circle style="fill:#67CCE9;" cx="18" cy="27.6" r="4.1"/>
+					<path style="fill:#081F3B;" d="M18,32.3c-2.6,0-4.8-2.1-4.8-4.8c0-2.6,2.1-4.8,4.8-4.8s4.8,2.1,4.8,4.8
+						C22.8,30.2,20.7,32.3,18,32.3z M18,24.2c-1.9,0-3.4,1.5-3.4,3.4c0,1.9,1.5,3.4,3.4,3.4c1.9,0,3.4-1.5,3.4-3.4
+						C21.4,25.7,19.9,24.2,18,24.2z"/>
+				</g>
 			</g>
 		</g>
 	</g>
