@@ -63,7 +63,9 @@ module.exports = function(grunt) {
                     'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',
-                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js'
+                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
+                    'imagesloaded.pkgd.min.js': 'imagesloaded/imagesloaded.pkgd.min.js',
+                    'isotope.pkgd.min.js': 'isotope/dist/isotope.pkgd.min.js'
 				}
 			},
             production_scripts: {
@@ -161,8 +163,14 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['manifest', 'uglify', 'shell:jekyllBuild']
             },
+            manifest: {
+                files: [
+                  '<%= project.assets %>/scripts/**/*.json'
+                ],
+                tasks: ['manifest', 'uglify', 'shell:jekyllBuild']
+            },
             images: {
-                files: ['images/**/*.*'],
+                files: ['images/**/*'],
                 tasks: ['shell:jekyllBuild']
             },
             icons: {

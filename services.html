@@ -88,32 +88,44 @@ title: Services
         <div class="container">
 
             <header class="page-section__header">
-                <h2 class="page-section__title">Areas of Expertise</h2>
+                <h2 class="page-section__title">Areas of expertise</h2>
             </header>
 
             <div class="page-section__body">
 
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active">
-                        <a href="#">All</a>
-                    </li>
-                    {% for area in site.data.areas %}
-                    <li role="presentation">
-                        <a href="#">{{ area.name }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <div class="services-areas">
 
-                <ul>
-                    {% for area in site.data.areas %}
-                        {% for service in area.services %}
-                        <li data-category="{{ area.slug }}">
-                            <h3>{{ service.name }}</h3>
-                            <p>{{ service.description }}</p>
-                        </li>
+                    <div class="areas__filters">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active">
+                                <button data-filter="*">All</button>
+                            </li>
+                            {% for area in site.data.areas %}
+                            <li role="presentation">
+                                <button data-filter=".{{ area.slug }}">{{ area.name }}</button>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div><!-- .areas__filters -->
+
+                    <!-- TODO: Should we list them alphabetically? How could we format the areas.json to achieve this? -->
+                    <ul class="areas__list">
+                        {% for area in site.data.areas %}
+                            {% for service in area.services %}
+                            <li class="areas__item {{ area.slug }}">
+                                <div class="area">
+                                    <i class="area__icon">
+                                        <img src="{{ site.url}}/images/areas/areas-icon-{{ service.icon }}.svg" alt="{{ service.name }}">
+                                    </i>
+                                    <h3 class="area__title">{{ service.name }}</h3>
+                                    <p class="area__description">{{ service.description }}</p>
+                                </div><!-- .area -->
+                            </li><!-- .areas__item -->
+                            {% endfor %}
                         {% endfor %}
-                    {% endfor %}
-                </ul>
+                    </ul><!-- .areas__list -->
+                </div><!-- .services-areas -->
+
             </div><!-- .page-section__body -->
 
 

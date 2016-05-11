@@ -6,6 +6,9 @@
         "vendor/prism.js",
         "vendor/jquery.matchHeight.js",
         "vendor/jquery.magnific-popup.js",
+        "vendor/isotope.pkgd.min.js",
+        "vendor/imagesloaded.pkgd.min.js",
+        "services.js",
         "main.js"
     ]
 }

@@ -6,10 +6,10 @@
     text-transform: uppercase;
     color: $brand-secondary-color;
     font-weight: $font-weight-medium;
-    letter-spacing: 0.15em;
-    padding-top: 5em;
-    position: relative;
     font-size: 0.89rem;
+    letter-spacing: 0.15em;
+    position: relative;
+    padding-top: 5em;
     &:before {
         content: "";
         position: absolute;
@@ -25,6 +25,7 @@
 .page__title {
     color: $brand-primary-color;
     line-height: 1.1;
+    margin-top: 0;
 }
 
 .page__subtitle {
@@ -45,6 +46,7 @@
 
 .page-section__header {
     @extend .page-header;
+    margin-bottom: 3.5em;
 }
 
 .page-section__name {

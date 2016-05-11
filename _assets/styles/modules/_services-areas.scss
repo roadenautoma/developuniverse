@@ -1,0 +1,45 @@
+
+.areas__filters {
+
+}
+
+.areas__list {
+    @include no-list;
+}
+
+.areas__list > .areas__item {
+    padding: 2.5em 3em;
+    box-shadow:
+    $base-border-width 0 0 0 $brand-primary-color,
+    0 $base-border-width 0 0 $brand-primary-color,
+    $base-border-width $base-border-width 0 0 $brand-primary-color,   /* Just to fix the corner */
+    $base-border-width 0 0 0 $brand-primary-color inset,
+    0 $base-border-width 0 0 $brand-primary-color inset;
+}
+
+.area__icon {
+    display: block;
+    max-width: 75px;
+    margin-bottom: 1em;
+}
+
+.area__title {
+    font-weight: $font-weight-medium;
+    letter-spacing: 0;
+    margin: 0 0 0.5em 0;
+}
+
+
+.area__description {
+    @include ts(-1);
+    color: $brand-primary-color-light;
+    margin-bottom: 0;
+}
+
+// Layout
+.areas__list > .areas__item {
+    width: 100%;
+    @include respond-to("small") {
+        width: 50%;
+    }
+}
