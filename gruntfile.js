@@ -92,24 +92,6 @@ module.exports = function(grunt) {
             }
         }, // uglify
 
-
-        svgstore: {
-            options: {
-                prefix : 'icon-',
-                cleanupdefs: true,
-                cleanup: false,
-                svg: {
-                    style: 'display: none;'
-                }
-            },
-            default: {
-                files: {
-                    '_includes/images/svg-defs.svg' : ['<%= project.assets %>/icons/*.svg']
-                }
-            }
-        }, // svgstore
-
-
         connect: {
     		options: {
     			port: 9000,
@@ -175,7 +157,7 @@ module.exports = function(grunt) {
             },
             icons: {
                 files: ['<%= project.assets %>/icons/*.svg'],
-                tasks: ['svgstore']
+                tasks: ['grunticon']
             }
         }, // watch
 
@@ -203,13 +185,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-bowercopy');
-    grunt.loadNpmTasks('grunt-svgstore');
 
     grunt.registerTask('build', [
       'bowercopy',
       'manifest',
       'uglify',
-      'svgstore',
       'shell:jekyllBuild',
       'sass',
       'postcss'
