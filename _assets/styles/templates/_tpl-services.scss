@@ -12,7 +12,7 @@
 .tpl-services .hero {
     height: auto;
     @include respond-to("medium") {
-        padding: 6.5em 0;
+        padding: 8em 0;
     }
 }
 
@@ -82,11 +82,7 @@
 }
 
 .ps-services-what .icon {
-    margin-bottom: 1.5em;
-}
-
-.page-subsection__header {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.25em;
 }
 
 .ps-services-what .page-subsection__title {
@@ -126,8 +122,23 @@
         width: 100%;
         background-image: url("../images/dots-bg.svg");
         background-repeat: repeat;
+        background-position: top;
         height: 6.1em;
         background-size: 48px 48px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-image: url("../images/dots-bg.svg");
+        background-repeat: repeat;
+        background-position: bottom;
+        height: 12em;
+        background-size: 48px 48px;
+        z-index: -1;
     }
 }
 
@@ -180,16 +191,13 @@
     text-align: center;
 }
 
+
+// Layout
+
 .ps-services-how .page-subsection__inner {
     margin: 0 auto;
     max-width: 600px;
 }
-
-.ps-services-how .page-subsection__body p:last-child {
-    margin-bottom: 0;
-}
-
-// Layout
 
 @include respond-to("medium") {
     .ps-services-how .page-section__body {
