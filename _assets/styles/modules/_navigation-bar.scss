@@ -12,7 +12,7 @@
 
 .navbar {
     background-color: $white;
-    padding: 1em 0;
+    //padding: 1em 0;
     backface-visibility: hidden;
     text-align: center;
 }
@@ -43,6 +43,80 @@
 
     .navbar__collapse {
         display: block;
+    }
+
+    .navbar__nav > li > a {
+        display: block;
+        padding: 2.5em 1.5em;
+        font-size: 0.89rem;
+        outline: none;
+        color: $brand-primary-color;
+        &:hover,
+        &:focus {
+            color: $brand-secondary-color;
+        }
+    }
+    .navbar__nav > li.active span {
+        color: $brand-primary-color;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -0.3em;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            border-bottom: $base-border-width solid $brand-primary-color-light;
+        }
+
+    }
+
+    // Centered logo
+    .navbar > .container {
+        position: relative;
+    }
+    .navbar__brand {
+        position: absolute;
+        width: 120px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        .brand-logo {
+            display: block;
+            width: 100%;
+            @include vertical-align;
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+            svg{
+                padding-top: 0.01em;
+                fill: $brand-secondary-color;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+    }
+    .navbar__nav {
+        width: 50%;
+    }
+
+    .navbar__collapse__wrapper {
+        @include clearfix;
+    }
+    .navbar__nav--left {
+        float: left;
+        text-align: right;
+        padding-right: 120px;
+    }
+    .navbar__nav--right {
+        float: left;
+        text-align: left;
+        padding-left: 120px;
     }
 
 

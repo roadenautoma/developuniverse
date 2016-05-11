@@ -21,6 +21,7 @@
     font-weight: $font-weight-bold;
     margin-bottom: 0;
     small {
+        color: rgba($white, 0.85);
         display: block;
         font-weight: $font-weight-medium;
         font-size: 0.5em;
@@ -46,7 +47,6 @@
         @include no-list;
         @include container;
     }
-
     .ps-services-what .page-subsection {
         @include respond-to("medium") {
             @include span(6 of 12);
@@ -71,6 +71,7 @@
         display: inline;
     }
     dl > dt {
+        color: $brand-primary-color-lightest;
         &:after {
             content: "\2014";
             display: inline-block;
@@ -82,7 +83,7 @@
 }
 
 .ps-services-what .icon {
-    margin-bottom: 1.25em;
+    margin-bottom: 1.5em;
 }
 
 .ps-services-what .page-subsection__title {
@@ -93,7 +94,7 @@
     background-color: $brand-terciary-color;
     color: $brand-primary-color;
     padding: .4em .6em .3em;
-    font-size: 0.65em;
+    font-size: 0.5em;
     margin-left: 0.5em;
     position: relative;
     top: -0.15em;

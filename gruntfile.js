@@ -133,7 +133,7 @@ module.exports = function(grunt) {
     	  			livereload: false
     			},
                 files: ['<%= project.assets %>/styles/**/*.scss'],
-                tasks: ['sass', 'postcss']
+                tasks: ['sass']
             },
             css: {
     			files: ['<%= project.dist %>/styles/*.css'],
