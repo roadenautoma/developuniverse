@@ -1,32 +1,35 @@
-<form class="" action="./" method="post">
+<!-- TODO: How should we handle validation ? -->
+
+<form class="form form--alt contact-form" action="./" method="post">
     <fieldset>
-        <div class="form-group">
-            <label for="name">Your Name <span class="req">*</span></label>
-            <input name="name" class="form-control" type="text" placeholder="Your Name*" />
+        <div class="form-group error">
+            <!-- TODO: Error class and styles -->
+            <label class="control-label" for="name">Your Name <span class="req">*</span></label>
+            <input name="name" class="form-control error" type="text" placeholder="Your Name*" required />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label for="company">Your Company <span class="req">*</span></label>
-            <input name="company" class="form-control" type="text" placeholder="Your Company*" />
+            <label class="control-label" for="company">Your Company <span class="req">*</span></label>
+            <input name="company" class="form-control" type="text" placeholder="Your Company*" required />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label for="email">Your Email <span class="req">*</span></label>
-            <input name="email" class="form-control" type="email" placeholder="Your Email*" />
+            <label class="control-label" for="email">Your Email <span class="req">*</span></label>
+            <input name="email" class="form-control" type="email" placeholder="Your Email*" required />
         </div><!-- .form-group -->
 
-        <div class="form-group">
-            <label for="service_1">What can I do for you? <span class="req">*</span></label>
+        <div class="form-group form-group--checkbox">
+            <label class="control-label" for="service_1">What can I do for you? <span class="req">*</span></label>
             <div class="checkbox">
-                <label>
+                <label class="checkbox__inline">
                     <input type="checkbox" value="consulting" />
                     Consulting
                 </label>
-                <label>
+                <label class="checkbox__inline">
                     <input type="checkbox" value="training" />
                     Training
                 </label>
-                <label>
+                <label class="checkbox__inline">
                     <input type="checkbox" value="other" />
                     Other
                 </label>
@@ -34,7 +37,7 @@
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label for="email">Tell me more</label>
+            <label class="control-label" for="email">Tell me more</label>
             <textarea placeholder="Tell me more"></textarea>
         </div><!-- .form-group -->
 

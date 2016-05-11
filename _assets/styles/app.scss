@@ -11,6 +11,7 @@
 @import "helpers/breakpoints";
 @import "helpers/mixins";
 @import "helpers/animations";
+@import "helpers/all-text-inputs";
 
 // Base
 @import "base/fonts";
@@ -47,6 +48,7 @@
 @import "modules/footer-newsletter";
 @import "modules/method-steps";
 @import "modules/services-areas";
+@import "modules/contact-form";
 
 // Templates
 @import "templates/tpl-home";

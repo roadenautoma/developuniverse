@@ -1,0 +1,18 @@
+.contact-form fieldset {
+    @include container;
+}
+
+@include respond-to("small") {
+    @include with-layout($big-gutters) {
+        .contact-form fieldset .form-group {
+            @include span(6 of 12);
+            &:nth-child(even) {
+                @include last;
+            }
+            &:last-child {
+                @include span(12 of 12);
+            }
+        }
+    }
+
+}
