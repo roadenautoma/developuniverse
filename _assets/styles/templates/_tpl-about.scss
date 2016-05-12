@@ -1,0 +1,58 @@
+
+/* @group Hero */
+
+.tpl-about .hero {
+    background-color: $brand-secondary-color;
+    background-image: url("../images/about-hero-bg.jpg");
+    @include respond-to("medium") {
+        padding: 8em 0;
+    }
+}
+
+.tpl-about .hero--large {
+    height: 650px;
+}
+
+.tpl-about .hero .hero__heading {
+    position: relative;
+    z-index: 10;
+}
+.tpl-about .hero .page__title {
+    font-size: pxrem(72px);
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+}
+
+.tpl-about .hero .page__name {
+    color: $white;
+}
+
+/* @end Hero */
+
+
+/* @group Timeline */
+
+.ps-timeline {
+    background-color: $gray-lightest;
+}
+
+/* Top dots decoration */
+
+.ps-timeline {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -12em;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-image: url("../images/dots-bg.svg");
+        background-repeat: repeat;
+        background-position: top;
+        height: 24em;
+        background-size: 48px 48px;
+    }
+}
+
+/* @end Timeline */
