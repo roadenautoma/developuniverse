@@ -37,7 +37,7 @@
 /* @group Page Section */
 
 .page-section {
-    padding: 2em 0;
+    padding: 4em 0;
     @include respond-to("medium") {
         padding: 7em 0;
     }

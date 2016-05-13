@@ -3,6 +3,7 @@
     position: relative;
     max-width: 500px;
     margin: 0 auto;
+
 }
 
 
@@ -56,6 +57,11 @@
     background-image: url("../images/line-zizzag.svg");
 }
 
+.timeline > li:last-child .timeline-block:before{
+    background-image: url("../images/line-straight.svg");
+}
+
+
 
 .timeline-block__time {
     text-align: center;
@@ -85,6 +91,10 @@
     background-color: $white;
     border: 2px solid $brand-primary-color;
     position: relative;
+}
+
+.timeline-block .body-content {
+    @include ts(-1);
 }
 
 
@@ -122,6 +132,21 @@
 @include respond-to("medium") {
     .timeline{
         max-width: none;
+        // Vertical line
+        &:before{
+            z-index: 20;
+            content: '';
+            position: absolute;
+            display: block;
+            top: -12.5em;
+            left: 50%;
+            height: 12em;
+            margin-left: -4px;
+            width: 8px;
+            background-size: contain;
+            background-repeat: repeat-y;
+            background-image: url("../images/line-straight.svg");
+        }
     }
     .timeline-block{
         overflow: hidden;
@@ -149,7 +174,7 @@
         left: auto;
         text-align: left;
         time {
-            top: -0.35em;
+            top: -0.5em;
         }
     }
     .timeline-block__content {

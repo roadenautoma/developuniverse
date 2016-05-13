@@ -4,6 +4,7 @@
 .tpl-about .hero {
     background-color: $brand-secondary-color;
     background-image: url("../images/about-hero-bg.jpg");
+    background-position: top center;
     @include respond-to("medium") {
         padding: 8em 0;
     }
@@ -24,7 +25,10 @@
 }
 
 .tpl-about .hero .page__name {
-    color: $white;
+    color: rgba($white, 0.8);
+    &:before {
+        border-color: rgba($white, 0.8);
+    }
 }
 
 /* @end Hero */

@@ -16,7 +16,7 @@ textarea {
 
 a {
 	color: $link-text-color;
-	text-decoration: none;
+	text-decoration: underline;
 	transition: color $base-transition-time--faster;
 	&:visited {
 		// color: $link-text-color;
@@ -24,7 +24,7 @@ a {
 	&:hover,
 	&:focus,
 	&:active {
-		text-decoration: none;
+		text-decoration: underline;
 		color: $link-text-color-hover;
 	}
 }
