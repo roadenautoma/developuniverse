@@ -5,6 +5,9 @@ $( document ).ready(function() {
 
     /* Services: Areas
     ------------------------------------------- */
+    // TODO: Try to fork this https://github.com/metafizzy/isotope/pull/873
+
+    /*
     if( $('.areas__list').length > 0)  {
 
 
@@ -16,6 +19,10 @@ $( document ).ready(function() {
 
             $grid.isotope({
                 // options
+                getSortData: {
+                    name: '.area__title',
+                },
+                sortBy: 'name',
                 itemSelector: '.areas__item',
                 layoutMode: 'fitRows'
             });
@@ -33,8 +40,10 @@ $( document ).ready(function() {
 
 
 
+
     }
 
+    */
 
 
 

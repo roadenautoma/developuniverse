@@ -7,6 +7,7 @@
     @include no-list;
 }
 
+// TODO: Add separation between items
 .areas__list > .areas__item {
     padding: 2.5em 3em;
     background-color: $white;
@@ -38,9 +39,14 @@
 }
 
 // Layout
+.areas__list {
+    display: flex;
+    flex-wrap: wrap;
+}
 .areas__list > .areas__item {
     width: 100%;
     @include respond-to("small") {
         width: 50%;
+
     }
 }

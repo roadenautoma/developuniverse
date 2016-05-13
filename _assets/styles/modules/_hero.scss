@@ -5,16 +5,25 @@
 	background-position: center center;
 	padding: $base-spacing-unit 0;
     color: #fff;
+    height: auto;
     @include respond-to("medium") {
 		padding: 5em 0;
+        height: 400px;
 	}
     @include respond-to("large") {
         height: 540px;
     }
 }
 
+
+.hero--large {
+    @include respond-to("medium") {
+        height: 650px;
+    }
+}
+
 .hero .page__name {
-    
+
 }
 
 .hero .page__title {

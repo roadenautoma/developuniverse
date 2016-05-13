@@ -1,6 +1,7 @@
 ---
 layout: default
 bodyClass: tpl-home
+title: Home
 ---
 
 <main id="main" class="page-main" role="main">
@@ -30,6 +31,7 @@ bodyClass: tpl-home
                 <p>
                     I’m a software engineer theat now works on Marketing. Wait, what? Yes, I found a way to combine my 2 passions and apply my engineering thinking model to Marketing.
                 </p>
+                <!-- TODO: Add Social media icons -->
                 <div class="actions">
                     <ul>
                         <li>
@@ -69,7 +71,8 @@ bodyClass: tpl-home
                     <div class="method__content">
 
                         <ol class="method-steps">
-
+                            <!-- TODO: Gonto: Add real text in method-steps.json -->
+                            <!-- TODO: Add JS transition (slide from right) -->
                             {% for step in site.data.method-steps %}
                             <li class="method-step {% if forloop.index == 1 %}active{% endif %}">
                                 <div class="method-step__wrapper">
@@ -122,11 +125,10 @@ bodyClass: tpl-home
                 <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
 
                     <!-- TODO: Replace with real articles -->
-                    <!-- TODO: Add param to hide excerpts -->
                     <ul class="blog-list">
-                        {% for article in site.data.articles limit: 3 %}
+                        {% for article in site.data.articles limit: 4 %}
                         <li class="blog-list__item">
-                            {% include blog-item.html article=article %}
+                            {% include blog-item.html article=article excerpt=false %}
                         </li><!-- .blog-list__item -->
                         {% endfor %}
                     </ul><!-- .blog-list -->
@@ -134,8 +136,7 @@ bodyClass: tpl-home
                     <div class="actions">
                         <ul>
                             <li>
-                                <!-- TODO: Change url from /blog to /thoughts -->
-                                <a href="{{ site.url }}/blog" class="btn btn--more">More thoughts</a>
+                                <a href="{{ site.url }}/thoughts" class="btn btn--more">More thoughts</a>
                             </li>
                         </ul>
                     </div><!-- .actions -->

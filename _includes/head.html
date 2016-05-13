@@ -4,7 +4,7 @@
 
     <!-- TODO: Add proper title and conditionals for home, posts -->
     <title>
-        {{ title }} &mdash; {{ site.name }}
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} &mdash; {{site.name}}
     </title>
 
     <meta name="description" content="">

@@ -1,25 +1,31 @@
-<!-- TODO: How should we handle validation ? -->
+<!-- TODO: Add alert sucess/error message -->
+<div class="alert alert--success">
+
+</div>
+<div class="alert alert--error">
+
+</div>
 
 <form class="form form--alt contact-form" action="./" method="post">
     <fieldset>
         <div class="form-group error">
             <!-- TODO: Error class and styles -->
             <label class="control-label" for="name">Your Name <span class="req">*</span></label>
-            <input name="name" class="form-control error" type="text" placeholder="Your Name*" required />
+            <input name="name" class="form-control error" type="text" placeholder="Your Name*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
             <label class="control-label" for="company">Your Company <span class="req">*</span></label>
-            <input name="company" class="form-control" type="text" placeholder="Your Company*" required />
+            <input name="company" class="form-control" type="text" placeholder="Your Company*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
             <label class="control-label" for="email">Your Email <span class="req">*</span></label>
-            <input name="email" class="form-control" type="email" placeholder="Your Email*" required />
+            <input name="email" class="form-control" type="email" placeholder="Your Email*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group form-group--checkbox">
-            <label class="control-label" for="service_1">What can I do for you? <span class="req">*</span></label>
+            <label class="control-label" for="service_1">What can I do for you? </label>
             <div class="checkbox">
                 <label class="checkbox__inline">
                     <input type="checkbox" value="consulting" />
@@ -38,11 +44,12 @@
 
         <div class="form-group">
             <label class="control-label" for="email">Tell me more</label>
-            <textarea placeholder="Tell me more"></textarea>
+            <textarea placeholder="Tell me more" required="required"></textarea>
         </div><!-- .form-group -->
 
     </fieldset>
     <div class="form-actions">
+        <!-- TODO: Add submitting class is-submitting (spinner & disabled) -->
         <button type="submit" class="btn btn--primary">Send</button>
     </div><!-- .form-actions -->
 </form>

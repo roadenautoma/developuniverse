@@ -1,6 +1,6 @@
 ---
-title: Thoughts
 bodyClass: tpl-blog
+pageName: Thoughts
 ---
 
 <main id="main" class="page-main" role="main">
@@ -21,7 +21,7 @@ bodyClass: tpl-blog
                     <!-- This loops through the paginated posts -->
         			{% for article in site.data.articles %}
                     <li class="blog-list__item">
-                        {% include blog-item.html article = article excerpt = true %}
+                        {% include blog-item.html article = article excerpt=true %}
                     </li><!-- .blog-list__item -->
                     {% endfor %}
                 </ul><!-- .blog-list -->

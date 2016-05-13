@@ -101,20 +101,28 @@ title: Services
                         </ul>
                     </div><!-- .areas__filters -->
 
-                    <!-- TODO: Should we list them alphabetically? How could we format the areas.json to achieve this? -->
                     <ul class="areas__list">
+                        {% assign all_services = "" | split: "" %}
+                        {% assign areas = "" | split: "" %}
                         {% for area in site.data.areas %}
                             {% for service in area.services %}
-                            <li class="areas__item {{ area.slug }}">
-                                <div class="area">
-                                    <i class="area__icon">
-                                        <img src="{{ site.url}}/images/areas/areas-icon-{{ service.icon }}.svg" alt="{{ service.name }}">
-                                    </i>
-                                    <h3 class="area__title">{{ service.name }}</h3>
-                                    <p class="area__description">{{ service.description }}</p>
-                                </div><!-- .area -->
-                            </li><!-- .areas__item -->
+                                {% assign areas = areas | push:area.slug %}
+                                {% assign all_services = all_services | push: service %}
                             {% endfor %}
+                        {% endfor %}
+                        <!-- TODO: Hide until loaded. Add pre load spinner -->
+                        {% for service in all_services %}
+
+                        <!-- {{ {% include {{service.icon}}_icon_svg %} }} -->
+                        <li class="areas__item {{ areas[forloop.index0] }}">
+                            <div class="area">
+                                <i class="area__icon">
+                                    <img src="{{ site.url}}/images/areas/areas-icon-{{ service.icon }}.svg" alt="{{ service.name }}">
+                                </i>
+                                <h3 class="area__title">{{ service.name }}</h3>
+                                <p class="area__description">{{ service.description }}</p>
+                            </div><!-- .area -->
+                        </li><!-- .areas__item -->
                         {% endfor %}
                     </ul><!-- .areas__list -->
                 </div><!-- .services-areas -->
