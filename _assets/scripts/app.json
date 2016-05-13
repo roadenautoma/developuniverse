@@ -5,9 +5,7 @@
         "vendor/fastclick.js",
         "vendor/prism.js",
         "vendor/jquery.matchHeight.js",
-        "vendor/jquery.magnific-popup.js",
-        "vendor/isotope.pkgd.min.js",
-        "vendor/imagesloaded.pkgd.min.js",
+        "vendor/jquery.magnific-popup.js"
         "services.js",
         "main.js"
     ]

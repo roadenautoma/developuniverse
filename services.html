@@ -110,7 +110,7 @@ title: Services
                                 {% assign all_services = all_services | push: service %}
                             {% endfor %}
                         {% endfor %}
-                        <!-- TODO: Hide until loaded. Add pre load spinner -->
+                        <!-- TODO: We need the sorting done in the Array, because we removed the Isotope plugin -->
                         {% for service in all_services %}
 
                         <!-- {{ {% include {{service.icon}}_icon_svg %} }} -->
@@ -129,46 +129,6 @@ title: Services
 
             </div><!-- .page-section__body -->
 
-
-        </div><!-- .container -->
-    </section><!-- .page-section -->
-
-
-    <section id="services-how" class="page-section ps-services-how">
-        <div class="container">
-            <header class="page-section__header sr-only">
-                <h2>How do I do it?</h2>
-            </header>
-
-            <div class="page-section__body">
-
-                <div class="page-subsection">
-                    <div class="page-subsection__inner">
-                        <header class="page-subsection__header">
-                            <h3 class="page-subsection__title">Training</h3>
-                        </header>
-                        <div class="page-subsection__body">
-                            <p>
-                                I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
-                            </p>
-                        </div><!-- .page-subsection__body -->
-                    </div><!-- .page-subsection__inner -->
-                </div><!-- .page-subsection -->
-
-                <div class="page-subsection">
-                    <div class="page-subsection__inner">
-                        <header class="page-subsection__header">
-                            <h3 class="page-subsection__title">Consulting</h3>
-                        </header>
-                        <div class="page-subsection__body">
-                            <p>
-                                I can help your company get proficient with the engineering approach to marketing by giving trainings that will expand your employee's knowledge by learning both theory on how to apply it as well as practice with real life examples.
-                            </p>
-                        </div><!-- .page-subsection__body -->
-                    </div><!-- .page-subsection__inner -->
-                </div><!-- .page-subsection -->
-
-            </div><!-- .page-section__body -->
 
         </div><!-- .container -->
     </section><!-- .page-section -->

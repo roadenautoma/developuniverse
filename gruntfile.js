@@ -63,9 +63,7 @@ module.exports = function(grunt) {
                     'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',
-                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
-                    'imagesloaded.pkgd.min.js': 'imagesloaded/imagesloaded.pkgd.min.js',
-                    'isotope.pkgd.min.js': 'isotope/dist/isotope.pkgd.min.js'
+                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js'
 				}
 			},
             production_scripts: {
