@@ -97,6 +97,39 @@
     @include ts(-1);
 }
 
+// Images
+.timeline-block .img-rounded {
+    max-width: 96px;
+    margin-bottom: 1.5em;
+    img {
+        border-radius: 50%;
+    }
+    &.align-left,
+    &.align-right {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+    @include respond-to("small") {
+        &.align-left {
+        	display: inline;
+        	float: left;
+        	margin-right: 1.5em;
+        	margin-bottom: 1em;
+        }
+        &.align-right {
+        	display: inline;
+        	float: right;
+        	margin-left: 1.5em;
+        	margin-bottom: 1em;
+        }
+    }
+    @include respond-to("medium") {
+        max-width: 150px;
+    }
+}
+
 
 // Layout
 @include respond-to("small") {

@@ -1,7 +1,27 @@
 .body-content {
     p:last-child,
     ul:last-child,
-    .embed-container:last-child {
+    .embed-container:last-child,
+    blockquote {
         margin-bottom: 0;
+    }
+}
+
+.body-content {
+    .align-left {
+    	display: inline;
+    	float: left;
+    	margin-right: $base-spacing-unit;
+    	margin-bottom: 1em;
+    }
+    .align-right {
+    	display: inline;
+    	float: right;
+    	margin-left: $base-spacing-unit;
+    	margin-bottom: 1em;
+    }
+    .align-center {
+    	display: block;
+    	margin: 0 auto;
     }
 }
