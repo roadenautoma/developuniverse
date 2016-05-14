@@ -5,7 +5,7 @@
         "vendor/fastclick.js",
         "vendor/prism.js",
         "vendor/jquery.matchHeight.js",
-        "vendor/jquery.magnific-popup.js"
+        "vendor/jquery.magnific-popup.js",
         "services.js",
         "main.js"
     ]
