@@ -1,6 +1,7 @@
 ---
+layout: default
 bodyClass: tpl-blog
-pageName: Thoughts
+title: Thoughts
 ---
 
 <main id="main" class="page-main" role="main">
@@ -19,7 +20,7 @@ pageName: Thoughts
 
                 <ul class="blog-list">
                     <!-- This loops through the paginated posts -->
-        			{% for article in site.data.articles %}
+        			 {% for article in paginator.posts %}
                     <li class="blog-list__item">
                         {% include blog-item.html article = article excerpt=true %}
                     </li><!-- .blog-list__item -->
@@ -32,11 +33,11 @@ pageName: Thoughts
     					{% if paginator.previous_page %}
     					{% if paginator.previous_page == 1 %}
     					<li>
-    						<a href="/blog/">Prev</a>
+    						<a href="/thoughts/">Prev</a>
     					</li>
     					{% else %}
     					<li>
-    						<a href="/blog/{{ paginator.previous_page }}">Prev</a>
+    						<a href="/thoughts/{{ paginator.previous_page }}">Prev</a>
     					</li>
     					{% endif %}
     					{% else %}
@@ -50,7 +51,7 @@ pageName: Thoughts
     					</li>
     					{% else %}
     					<li>
-    						<a href="/blog/">1</a>
+    						<a href="/thoughts/">1</a>
     					</li>
     					{% endif %}
     					{% for count in (2..paginator.total_pages) %}
@@ -60,13 +61,13 @@ pageName: Thoughts
     					</li>
     					{% else %}
     					<li>
-    						<a href="/blog/{{ count }}">{{ count }}</a>
+    						<a href="/thoughts/page{{ count }}">{{ count }}</a>
     					</li>
     					{% endif %}
     					{% endfor %}
     					{% if paginator.next_page %}
     					<li>
-    						<a href="/blog/{{ paginator.next_page }}">Next</a>
+    						<a href="/thoughts/{{ paginator.next_page }}">Next</a>
     					</li>
     					{% else %}
     					<li>

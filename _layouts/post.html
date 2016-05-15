@@ -1,0 +1,9 @@
+{% include header.html %}
+
+   <h1>{{page.title}}</h1>
+   <h3>{{page.date}}</h3>
+   <!-- Here go all fields from the post YAML like image, etc. -->
+   {{ content }}
+
+{% include footer-newsletter.html %}
+{% include footer.html %}
