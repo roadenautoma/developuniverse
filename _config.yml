@@ -12,8 +12,6 @@ email: martin@gon.to
 
 paginate_path: "thoughts/page:num"
 
-permalink: thoughts/:month-:day-:year/:title
-
 excerpt_separator: <!--more-->
 gems: [jekyll-paginate]
 owner:
