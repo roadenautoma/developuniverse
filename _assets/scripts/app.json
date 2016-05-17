@@ -6,6 +6,8 @@
         "vendor/prism.js",
         "vendor/jquery.matchHeight.js",
         "vendor/jquery.magnific-popup.js",
+        "vendor/owl.carousel.js",
+        "home.js",
         "services.js",
         "main.js"
     ]

@@ -63,7 +63,8 @@ module.exports = function(grunt) {
                     'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',
-                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js'
+                    'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
+                    'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js'
 				}
 			},
             production_scripts: {
@@ -79,7 +80,8 @@ module.exports = function(grunt) {
 					destPrefix: '<%= project.assets %>/styles/vendor'
 				},
 				files: {
-                    'animate.css': 'animate.css/animate.css'
+                    'animate.css': 'animate.css/animate.css',
+                    'owl.carousel.css': 'owl.carousel/dist/assets/owl.carousel.css'
                 }
             }
 		}, // bowercopy

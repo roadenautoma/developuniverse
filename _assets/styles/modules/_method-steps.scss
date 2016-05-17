@@ -1,22 +1,18 @@
-.method-steps {
+.method__list{
     @include no-list;
-}
-
-.method-steps > .method-step {
-
-}
-
-.method-step {
-    padding: 4em;
-    border: $base-border-width solid $brand-secondary-color;
-    background-color: $white;
     max-width: 850px;
     margin: 0 auto;
+    position: relative;
+}
 
-    // Visibility
-    display: none;
-    &.active {
-        display: block;
+.method__item{
+    padding: 2.5em;
+    border: $base-border-width solid $brand-secondary-color;
+    background-color: $white;
+
+    margin: 0 auto;
+    @include respond-to("medium") {
+        padding: 4em;
     }
 }
 
@@ -29,27 +25,105 @@
     font-weight: $font-weight-medium;
 }
 
-.method-step__content {
-
-}
-
 .method-step__content p {
     color: $brand_primary_color_light;
     margin-bottom: 0;
 }
 
-// Layout
 
+// Carousel
+.method__list.owl-carousel .owl-item {
+    opacity: 0;
+    transition: opacity 0.1s;
+    &.active {
+        opacity: 1;
+    }
+    img {
+        -webkit-transform-style: flat;
+        transform-style: flat;
+    }
+}
+
+// Arrows
+.method__list.owl-carousel .owl-nav {
+    position: absolute;
+    top: -2.8em;
+    left: 0;
+    width: 100%;
+    > div {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-indent: -99999px;
+    }
+    .owl-prev {
+        left: 0em;
+        background-image: url('../images/nav-arrow-left-sm.svg');
+    }
+    .owl-next {
+        right: 0em;
+        background-image: url('../images/nav-arrow-right-sm.svg');
+        background-position: right;
+    }
+    @include respond-to("medium") {
+        top: 48%;
+        > div {
+            width: 37px;
+            height: 37px;
+        }
+        .owl-prev {
+            left: -3em;
+            background-image: url('../images/nav-arrow-left.svg');
+        }
+        .owl-next {
+            right: -3em;
+            background-image: url('../images/nav-arrow-right.svg');
+        }
+    }
+}
+
+// Pager
+.method__nav .nav-tabs {
+    margin-bottom: 1em;
+    > li {
+        display: none;
+    }
+    > li.active {
+        display: inline-block;
+    }
+    > li > button:after {
+        display: none;
+    }
+    @include respond-to("medium") {
+        display: block;
+        padding: 0;
+        margin-bottom: 2em;
+        > li {
+            display: inline-block;
+        }
+        > li > button:after {
+            display: block;
+        }
+    }
+}
+
+
+
+
+// Layout
 @include respond-to("small") {
-    .method-step__wrapper {
+    .method-step{
         display: flex;
         justify-content: space-between;
     }
-    .method-step__aside {
+    .method-step__aside{
         order: 2;
         flex-basis: 45%;
     }
-    .method-step__body {
+    .method-step__body{
         order: 1;
         flex-basis: 45%;
     }

@@ -63,19 +63,21 @@ title: Home
                     <nav class="method__nav">
                         <ol class="nav nav-tabs">
                             {% for step in site.data.method-steps %}
-                            <li role="presentation" {% if forloop.index == 1 %} class="active" {% endif %}><a href="#" >{{step.short_title}}</a></li>
+                            <li role="presentation" {% if forloop.index == 1 %} class="active" {% endif %}>
+                                <button data-index="step-{{ forloop.index }}">{{step.short_title}}</button>
+                            </li>
                             {% endfor %}
                         </ol>
                     </nav><!-- .method-steps__nav -->
 
                     <div class="method__content">
 
-                        <ol class="method-steps">
-                            <!-- TODO: Gonto: Add real text in method-steps.json -->
-                            <!-- TODO: Add JS transition (slide from right) -->
+                        <ol class="method__list owl-carousel">
+
                             {% for step in site.data.method-steps %}
-                            <li class="method-step {% if forloop.index == 1 %}active{% endif %}">
-                                <div class="method-step__wrapper">
+                            <li data-step="step-{{ forloop.index }}" class="method__item {% if forloop.index == 1 %}active{% endif %}">
+
+                                <div class="method-step">
                                     <aside class="method-step__aside">
                                         <figure class="method-step__image">
                                             <img src="{{step.image}}" alt="{{step.title}}">
@@ -95,7 +97,7 @@ title: Home
                                             </ul>
                                         </div><!-- .actions -->
                                     </div><!-- .method-step__content -->
-                                </div><!-- .method-step__wrapper -->
+                                </div><!-- .method-step -->
 
                             </li><!-- .method-step -->
                             {% endfor %}
