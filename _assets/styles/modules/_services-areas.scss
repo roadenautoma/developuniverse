@@ -1,22 +1,25 @@
 
 .areas__filters {
-
+    display: none;
+    @include respond-to("medium") {
+        display: block;
+    }
 }
 
 .areas__list {
     @include no-list;
 }
 
-// TODO: Add separation between items
-.areas__list > .areas__item {
-    padding: 2.5em 3em;
+
+.areas__list .area {
+    padding: 1.5em 1.5em 2em 1.5em;
     background-color: $white;
-    box-shadow:
-    $base-border-width 0 0 0 $brand-primary-color,
-    0 $base-border-width 0 0 $brand-primary-color,
-    $base-border-width $base-border-width 0 0 $brand-primary-color,   /* Just to fix the corner */
-    $base-border-width 0 0 0 $brand-primary-color inset,
-    0 $base-border-width 0 0 $brand-primary-color inset;
+    display: block;
+    border: $base-border-width solid $brand-primary-color;
+    @include respond-to("small") {
+        padding: 2.5em;
+    }
+
 }
 
 .area__icon {
@@ -38,15 +41,30 @@
     margin-bottom: 0;
 }
 
+
+
 // Layout
+
+$areas_gutter: 0.75em;
+
 .areas__list {
     display: flex;
+    flex-flow: row;
     flex-wrap: wrap;
+    @include respond-to("small") {
+        margin: -$areas_gutter 0 0 -$areas_gutter;
+    }
 }
 .areas__list > .areas__item {
     width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    animation-duration: 0.5s;
+    margin-bottom: $areas_gutter;
     @include respond-to("small") {
         width: 50%;
-
+        flex-basis: 50%;
+        margin-bottom: 0;
+        padding: $areas_gutter 0 0 $areas_gutter;
     }
 }

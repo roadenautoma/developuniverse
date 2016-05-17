@@ -95,7 +95,7 @@ title: Services
                             </li>
                             {% for area in site.data.areas %}
                             <li role="presentation">
-                                <button data-filter=".{{ area.slug }}">{{ area.name }}</button>
+                                <button data-filter="{{ area.slug }}">{{ area.name }}</button>
                             </li>
                             {% endfor %}
                         </ul>
@@ -114,7 +114,7 @@ title: Services
                         {% for service in all_services %}
 
                         <!-- {{ {% include {{service.icon}}_icon_svg %} }} -->
-                        <li class="areas__item {{ areas[forloop.index0] }}">
+                        <li class="areas__item" data-category="{{ areas[forloop.index0] }}">
                             <div class="area">
                                 <i class="area__icon">
                                     <img src="{{ site.url}}/images/areas/areas-icon-{{ service.icon }}.svg" alt="{{ service.name }}">

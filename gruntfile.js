@@ -73,7 +73,15 @@ module.exports = function(grunt) {
 				files: {
 					'modernizr.js': 'modernizr/modernizr.js'
 				}
-			}
+			},
+            styles: {
+				options: {
+					destPrefix: '<%= project.assets %>/styles/vendor'
+				},
+				files: {
+                    'animate.css': 'animate.css/animate.css'
+                }
+            }
 		}, // bowercopy
 
         manifest: {
