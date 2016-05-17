@@ -11,7 +11,7 @@ title: Home
             <div class="hero-intro__wrapper">
                 <header class="hero__header">
                     <h1 class="hero__title">An engineering approach to marketing</h1>
-                    <p class="hero__subtitle">Do or do not. There is no try.</p>
+                    <p class="hero__subtitle">Experiment all the things</p>
                 </header>
             </div><!-- .hero-intro__wrapper -->
 
@@ -126,7 +126,7 @@ title: Home
 
                     <!-- TODO: Replace with real articles -->
                     <ul class="blog-list">
-                        {% for article in site.data.articles limit: 4 %}
+                        {% for article in site.posts limit: 4 %}
                         <li class="blog-list__item">
                             {% include blog-item.html article=article excerpt=false %}
                         </li><!-- .blog-list__item -->

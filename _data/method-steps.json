@@ -2,43 +2,43 @@
     {
         "number": "1",
         "short_title": "Decompose",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Decompose your problem into smaller pieces.",
+        "body": "Every problem can be decomposed into smaller pieces that are easier to think about, and therefore, easier to solve.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "2",
         "short_title": "Formulate",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Formulate a hypothesis for each.",
+        "body": "Based on data, you can create a hypothesis of why this problem is happening and what you can do to solve this.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "3",
         "short_title": "Define",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Define a metric, a timeframe and a goal for each hypothesis.",
+        "body": "Every hypothesis must be measurable and quantifiable. In order to do so, you must choose a metric and a goal so that you can decide if the experiment was a success or not.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "4",
         "short_title": "Run",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Run the experiment.",
+        "body": "It's execution time! Run the experiment for as much time as you defined in the previous step.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "5",
         "short_title": "Verify",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Verify the data.",
+        "body": "Once the time has passed, you have to check if the value for the metric you chose reached the goal or not. If it did, you can call this experiment a success.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "6",
         "short_title": "Iterate",
-        "title": "Decompose your problem into small pieces.",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur, dui ac laoreet porttitor, nisl orci laoreet orci, eu tincidunt mi quam vel massa.",
+        "title": "Iterate and pick your next problem.",
+        "body": "Once you've called the experiment a success or a failure, it's time to tackle the next one!",
         "image": "http://placehold.it/500x500"
     }
 

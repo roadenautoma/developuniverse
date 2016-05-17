@@ -1,22 +1,44 @@
-name: "Gonto"
+title: 'Gonto'
 description: "first attempt"
 source:      ./
 destination: ./_site
 exclude: [".sass-cache", "node_modules", "bower_components", "bower.json", "package.json", "gruntfile.js", "readme.md", "_assets"]
 encoding: utf-8
-paginate: 2
-paginate_path: "thoughts/:num"
-permalink: thoughts/:month-:day-:year/:title.html
+paginate: 6
+disqus_shortname: gontosblog
+reading_time:     true
+words_per_minute: 200
+email: martin@gon.to
+
+paginate_path: "thoughts/page:num"
+
 excerpt_separator: <!--more-->
 gems: [jekyll-paginate]
+owner:
+  name: Martin Gontovnikas
+  email: martin@gon.to
+  twitter: mgonto
 
-defaults:
-  -
-    scope:
-      path: "thoughts"
-    values:
-      layout: "posts"
+google_analytics: UA-48082910-1
+
+timezone:    America/New_York
+future:      true
+gems:
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-redirect-from
+  - jekyll-paginate
 
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: pretty
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: post
+
+# Format titles with titlecase?
+titlecase: true
