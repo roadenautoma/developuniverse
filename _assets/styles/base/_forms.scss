@@ -6,7 +6,7 @@ textarea {
 	width: 100%;
 	color: $white;
 	background-color: transparent;
-    font-size: 1.1rem;
+    font-size: 1rem;
 	font-weight: $font-weight-normal;
 	padding: 0.5em 0 0.75em 0;
 	position: relative;
@@ -78,8 +78,8 @@ input[type="checkbox"] {
 
 /* Actions */
 
-.form-actions {
-    margin-top: 1.5em;
+.form-actions{
+    margin-top: 1em;
     text-align: center;
 }
 

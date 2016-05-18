@@ -12,7 +12,7 @@ $( document ).ready(function() {
             items: 1,
             nav: true,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 7000,
             autoplayHoverPause: true,
             autoHeight: true,
             loop: true,

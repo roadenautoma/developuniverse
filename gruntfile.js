@@ -131,7 +131,7 @@ module.exports = function(grunt) {
                     '_layouts/*.html',
                     '_includes/*.html',
                     '_data/*.*',
-                    'blog/**/*.*',
+                    'thoughts/**/*.*',
                     '*.html',
                 ],
                 tasks: ['shell:jekyllBuild']

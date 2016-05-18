@@ -29,91 +29,6 @@ a {
 	}
 }
 
-/* Typographic Scale */
-
-
-@mixin ts($n) {
-
-
-    @if $n == 6 {
-        font-size: 1.75rem;
-        line-height: 1.21;
-    	@include respond-to("medium") {
-    		font-size: pxrem(50px, $medium-font-size);
-    	}
-    }
-    @if $n == 5 {
-        font-size: 1.5rem;
-    	@include respond-to("medium") {
-    		font-size: pxrem(28px, $medium-font-size);
-    	}
-    }
-    @if $n == 4 {
-        font-size: 1.45rem;
-    	@include respond-to("medium") {
-    		font-size: pxrem(26px, $medium-font-size);
-    	}
-
-    }
-    @if $n == 3 {
-        font-size: 1.1rem;
-        line-height: 1.5;
-        @include respond-to("medium") {
-            font-size: 1.4rem;
-            line-height: 1.6;
-    	}
-    	@include respond-to("large") {
-    		font-size: pxrem(22px, $base-font-size);
-
-    	}
-    }
-    @if $n == 2 {
-        font-size: 1.3rem;
-    	@include respond-to("large") {
-    		font-size: pxrem(22px, $base-font-size);
-    	}
-    }
-    @if $n == 1 {
-        font-size: 1rem;
-        @include respond-to("medium") {
-    		font-size: 1.1rem;
-    	}
-        @include respond-to("large") {
-    		font-size: pxrem(19px, $base-font-size);
-    	}
-    }
-    @if $n == 0 {
-        font-size: 1rem;
-    	@include respond-to("medium") {
-    		font-size: 1rem;
-    	}
-    }
-    @if $n == -1 {
-        font-size: 0.9rem;
-    	@include respond-to("medium") {
-    		font-size: pxrem(16px, $medium-font-size);
-    	}
-        @include respond-to("large") {
-    		font-size: pxrem(16px, $base-font-size);
-    	}
-    }
-    @if $n == -2 {
-        font-size: 0.86rem;
-    	@include respond-to("medium") {
-    		font-size: pxrem(12px, $medium-font-size);
-    	}
-    }
-}
-
-.ts5 { @include ts(5); }
-.ts6 { @include ts(6); }
-.ts4 { @include ts(4); }
-.ts3 { @include ts(3); }
-.ts2 { @include ts(2); }
-.ts1 { @include ts(1); }
-.ts0 { @include ts(0); }
-.ts_1 { @include ts(-1); }
-.ts_2 { @include ts(-2); }
 
 /* Headings */
 
@@ -132,13 +47,12 @@ h6, .h6 {
 	margin: $heading-margin 0;
 }
 
-h1, .h1 { @include ts(6); }
-h2, .h2 { @include ts(4); }
-h3, .h3 { @include ts(3); }
-h4, .h4 { @include ts(2); }
+h1, .h1 { @include ts(13); }
+h2, .h2 { @include ts(9); }
+h3, .h3 { @include ts(5); }
+h4, .h4 { @include ts(3); }
 h5, .h5 { @include ts(1); }
 h6, .h6 { @include ts(0); }
-
 
 
 /* Paragraphs */

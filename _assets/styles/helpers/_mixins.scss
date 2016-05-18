@@ -73,7 +73,7 @@
 @mixin page-container {
 	margin: 0 auto;
     max-width: $max-width;
-	width: 90%;
+	width: 87.5%;
     @include respond-to("small") {
         width: 95%;
     }
@@ -94,7 +94,7 @@
 
 
 @mixin page-container-fluid {
-	width: 90%;
+	width: 87.5%;
 	margin: 0 auto;
 	max-width: none;
     @include respond-to("small") {

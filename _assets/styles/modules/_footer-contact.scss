@@ -1,9 +1,13 @@
 .footer-contact {
-    padding: 4em 0;
     background-color: $brand-primary-color;
     color: $white;
+    padding: 4.5em 0;
+    @include respond-to("medium") {
+        padding: 5.5em 0;
+    }
 }
 
 .footer-contact .page-section__title {
     color: $white;
+    margin-top: 0;
 }

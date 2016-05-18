@@ -1,0 +1,137 @@
+
+
+@mixin ts($n) {
+
+    // 84
+    @if $n == 15 {
+        font-size: 1.75rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(84px, $base-font-size);
+    	}
+    }
+    // 76
+    @if $n == 14 {
+
+    }
+
+    // 74
+    @if $n == 13 {
+        font-size: 2.5rem;
+        line-height: 1.21;
+    	@include respond-to("medium") {
+    		font-size: pxrem(74px, $base-font-size);
+    	}
+    }
+    // 66
+    @if $n == 12 {
+
+    }
+    // 56
+    @if $n == 11 {
+        font-size: 1.5rem;
+        line-height: 1.21;
+    	@include respond-to("large") {
+    		font-size: pxrem(56px, $base-font-size);
+    	}
+    }
+
+    // 52
+    @if $n == 10 {
+
+    }
+
+    // 48
+    @if $n == 9 {
+        font-size: 1.85rem;
+        //line-height: 1.21;
+    	@include respond-to("medium") {
+    		font-size: pxrem(48px, $base-font-size);
+    	}
+    }
+
+    // 46
+    @if $n == 8 {
+
+    }
+    // 41
+    @if $n == 7 {
+
+    }
+    // 36
+    @if $n == 6 {
+        font-size: 1.75rem;
+        line-height: 1.21;
+    	@include respond-to("medium") {
+    		font-size: pxrem(50px, $medium-font-size);
+    	}
+    }
+    // 32
+    @if $n == 5 {
+        font-size: 1.5rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(32px, $base-font-size);
+    	}
+    }
+    // 28
+    @if $n == 4 {
+        font-size: 1.45rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(26px, $medium-font-size);
+    	}
+
+    }
+    // 26
+    @if $n == 3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        @include respond-to("medium") {
+            font-size: pxrem(26px, $base-font-size);
+    	}
+    }
+    // 23
+    @if $n == 2 {
+        font-size: 1.3rem;
+    	@include respond-to("large") {
+    		font-size: pxrem(22px, $base-font-size);
+    	}
+    }
+    // 21
+    @if $n == 1 {
+        font-size: 1rem;
+        @include respond-to("medium") {
+    		font-size: pxrem(21px, $base-font-size);
+    	}
+    }
+    // 18
+    @if $n == 0 {
+        font-size: 1rem;
+    }
+    // 16
+    @if $n == -1 {
+        font-size: 0.889rem;
+        @include respond-to("large") {
+    		font-size: pxrem(16px, $base-font-size);
+    	}
+    }
+    // 15
+    @if $n == -2 {
+        font-size: 0.86rem;
+    	@include respond-to("medium") {
+    		font-size: pxrem(12px, $medium-font-size);
+    	}
+    }
+    // 13
+
+
+    // 11
+}
+
+.ts5 { @include ts(5); }
+.ts6 { @include ts(6); }
+.ts4 { @include ts(4); }
+.ts3 { @include ts(3); }
+.ts2 { @include ts(2); }
+.ts1 { @include ts(1); }
+.ts0 { @include ts(0); }
+.ts-1 { @include ts(-1); }
+.ts-2 { @include ts(-2); }

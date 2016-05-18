@@ -5,22 +5,14 @@
     background-color: $brand-secondary-color;
     background-image: url("../images/about-hero-bg.jpg");
     background-position: top center;
-    @include respond-to("medium") {
-        padding: 8em 0;
-    }
 }
-
 
 
 .tpl-about .hero .hero__heading {
     position: relative;
     z-index: 10;
 }
-.tpl-about .hero .page__title {
-    font-size: pxrem(72px);
-    font-weight: $font-weight-bold;
-    margin-bottom: 0;
-}
+
 
 .tpl-about .hero .page__name {
     color: rgba($white, 0.8);

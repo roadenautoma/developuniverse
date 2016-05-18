@@ -9,17 +9,11 @@
     color: $white;
 }
 
-.tpl-services .hero {
-    height: auto;
-    @include respond-to("medium") {
-        padding: 8em 0;
-    }
-}
+
 
 .tpl-services .hero .page__title {
-    font-size: pxrem(84px);
+    @include ts(15);
     font-weight: $font-weight-bold;
-    margin-bottom: 0;
     small {
         color: rgba($white, 0.85);
         display: block;
@@ -28,6 +22,7 @@
         letter-spacing: 0;
         margin-top: 0.5em;
     }
+
 }
 
 
@@ -105,13 +100,7 @@
 
 /* @group Areas of expertise */
 
-
-.ps-services-areas .page-section__title {
-    font-size: pxrem(48px);
-}
-
-
-// Top dots decoration
+// Dots decoration
 .ps-services-areas {
     position: relative;
     &:before {
@@ -146,11 +135,10 @@
 // Top line decoration
 .ps-services-areas {
     .page-section__header {
-        padding-top: 5em;
+        padding-top: 2em;
     }
     .page-section__title {
        position: relative;
-       margin-top: 0;
        &:before {
            content: "";
            position: absolute;
@@ -164,10 +152,6 @@
    }
 }
 
-
-.ps-services-areas .areas__filters {
-
-}
 
 
 
@@ -205,7 +189,6 @@
         display: flex;
         justify-content: space-around;
     }
-
     .ps-services-how .page-subsection {
         padding: 8em 6em;
         text-align: center;

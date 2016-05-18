@@ -6,10 +6,9 @@
 }
 
 .method__item{
-    padding: 2.5em;
+    padding: 2em;
     border: $base-border-width solid $brand-secondary-color;
     background-color: $white;
-
     margin: 0 auto;
     @include respond-to("medium") {
         padding: 4em;
@@ -19,9 +18,18 @@
 .method-step__number {
     color: $brand-secondary-color;
     line-height: 1;
+    vertical-align: middle;
+    display: table-cell;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.8em;
+    height: 1.8em;
+    border: $base-border-width solid $brand-secondary-color;
 }
 
 .method-step__title {
+    @extend .h4;
     font-weight: $font-weight-medium;
 }
 

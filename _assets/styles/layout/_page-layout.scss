@@ -6,30 +6,41 @@
     text-transform: uppercase;
     color: $brand-secondary-color;
     font-weight: $font-weight-medium;
-    font-size: 0.89rem;
+    font-size: pxrem(11px, $small-font-size);
     letter-spacing: 0.15em;
     position: relative;
     padding-top: 5em;
+    // Vertical line
     &:before {
         content: "";
         position: absolute;
         bottom: 3.5em;
+        height: 5em;
         margin: 0 auto;
         left: 1px; right: 0;
         width: 1px;
-        height: 5em;
         border-right: $base-border-width solid $brand-secondary-color;
+    }
+    @include respond-to("medium") {
+        font-size: 0.889rem;
+        &:before {
+            bottom: 4em;
+            height: 6em;
+        }
     }
 }
 
 .page__title {
+    @extend .h1;
     color: $brand-primary-color;
+    font-weight: $font-weight-bold;
     line-height: 1.1;
-    margin-top: 0;
+    margin: 0;
 }
 
 .page__subtitle {
     color: $brand-primary-color-light;
+    font-weight: $font-weight-normal;
 }
 
 
@@ -37,12 +48,11 @@
 /* @group Page Section */
 
 .page-section {
-    padding: 4em 0;
+    padding: 4.5em 0;
     @include respond-to("medium") {
         padding: 7em 0;
     }
 }
-
 
 .page-section__header {
     @extend .page-header;
@@ -51,14 +61,17 @@
 
 .page-section__name {
     @extend .page__name;
+    font-size: 0.75rem;
 }
 
 .page-section__title {
-    @extend .page__title;
+    @extend .page-section__title;
+    @include ts(9);
 }
 
 .page-section__subtitle {
     @extend .page__subtitle;
+    @include ts(1);
 }
 
 .page-section__body p:last-child,

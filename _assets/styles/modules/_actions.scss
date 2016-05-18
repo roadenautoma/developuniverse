@@ -1,5 +1,5 @@
-.actions {
-	> ul {
+.actions{
+	> ul{
 		@include no-list;
 		@include clearfix;
 		> li {

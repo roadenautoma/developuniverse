@@ -6,27 +6,32 @@
 	padding: $base-spacing-unit 0;
     color: #fff;
     height: auto;
+    padding: 4em 0;
     @include respond-to("medium") {
-		padding: 5em 0;
-        height: 400px;
-	}
-    @include respond-to("large") {
-        height: 540px;
+        padding: 8em 0 2em 0;
     }
 }
 
-
-.hero--large {
+// Large
+.hero.hero--large {
     @include respond-to("medium") {
-        height: 650px;
+        padding: 8em 0;
+        height: 36em;
     }
 }
 
-.hero .page__name {
-
-}
-
-.hero .page__title {
+.hero.hero--large .page__title {
     color: $white;
     margin-top: 0;
+}
+
+
+.hero .page__name {
+    // Vertical line
+    &:before {
+        height: 5em;
+        @include respond-to("medium") {
+            height: 6em;
+        }
+    }
 }
