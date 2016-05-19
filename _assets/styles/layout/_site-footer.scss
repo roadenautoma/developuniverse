@@ -1,7 +1,7 @@
 .site-footer {
     background-color: #e2e2e2;
     padding: 2em 0;
-    font-size: pxrem(15px);
+    text-align: center;
 }
 
 .site-footer-logo {
@@ -11,17 +11,38 @@
         @extend .sr-only;
     }
     .icon {
-        height: 2.5em;
-        width: 2.5em;
+        height: 2.25em;
+        width: 2.25em;
         display: inline-block;
+        transform: rotate(0deg) scale(1);
+        transition: all $base-transition-time--faster cubic-bezier(.87,-.41,.19,1.44);
     }
     svg{
         @include vertical-align;
         display: block;
         .shape {
             fill: $brand-primary-color;
+            transition: fill $base-transition-time--faster;
         }
     }
+    &:hover,
+    &:focus{
+        .icon {
+            transform: rotate(90deg) scale(1.1);
+            transform-origin: 50% 50%;
+        }
+        svg .shape{
+            fill: $brand-secondary-color;
+        }
+    }
+}
+
+.site-footer__nav {
+    margin-bottom: 0.5em;
+}
+.site-footer__copy {
+    margin-bottom: 1.5em;
+    @include ts(-1);
 }
 
 .site-footer__social {
@@ -39,16 +60,16 @@
     }
     .icon {
         line-height: 1;
-        font-size: 1.6em;
+        font-size: 1.25em;
     }
     .text {
         @extend .sr-only;
     }
 }
 
-@include respond-to("medium") {
+
+@include respond-to("small") {
     .site-footer > .container {
-        //@include clearfix;
         position: relative;
         display: flex;
         align-items: center;
@@ -56,7 +77,6 @@
     }
     .site-footer__nav {
         order: 2;
-        //position: absolute;
         text-align: center;
         z-index: 1;
         width: 20%;
@@ -69,13 +89,12 @@
     .site-footer__copy {
         order: 1;
         width: 40%;
-        //float: left;
         text-align: left;
+        margin-bottom: 0;
     }
     .site-footer__social {
         order: 3;
         width: 40%;
-        //float: right;
         text-align: right;
         ul > li:last-child {
             margin-right: 0;
