@@ -24,6 +24,7 @@
     @include respond-to("medium") {
         padding-bottom: 7em;
         background-image: none;
+        // Image background
         &:before {
             overflow: visible;
             content: "";
@@ -44,6 +45,20 @@
             z-index: -1;
         }
     }
+    // Dots decoration
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -6.1em;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-image: url("../images/dots-bg.svg");
+        background-repeat: repeat;
+        background-position: top;
+        height: 6.1em;
+        background-size: 48px 48px;
+    }
 }
 
 .ps-home-about > .container {
@@ -58,6 +73,11 @@
     @include ts(5);
     font-weight: $font-weight-medium;
     line-height: 1.2;
+}
+
+.ps-home-about .page-section__title,
+.ps-home-about p {
+    text-shadow: 0 0 10px rgba(white, 0.85);
 }
 
 /* @end About */
@@ -116,6 +136,11 @@
         }
     }
 
+}
+
+.ps-home-blog .page-section__content > .actions {
+    text-align: center;
+    margin-top: 3.5em;
 }
 
 

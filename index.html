@@ -64,7 +64,7 @@ title: Home
                         <ol class="nav nav-tabs">
                             {% for step in site.data.method-steps %}
                             <li role="presentation" {% if forloop.index == 1 %} class="active" {% endif %}>
-                                <button data-index="step-{{ forloop.index }}">{{step.short_title}}</button>
+                                <button data-index="step-{{ forloop.index }}"><span class="number">{{step.number}}</span> {{step.short_title}}</button>
                             </li>
                             {% endfor %}
                         </ol>
@@ -126,7 +126,6 @@ title: Home
 
                 <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
 
-                    <!-- TODO: Replace with real articles -->
                     <ul class="blog-list">
                         {% for article in site.posts limit: 4 %}
                         <li class="blog-list__item">
@@ -135,15 +134,14 @@ title: Home
                         {% endfor %}
                     </ul><!-- .blog-list -->
 
-                    <div class="actions">
-                        <ul>
-                            <li>
-                                <a href="{{ site.url }}/thoughts" class="btn btn--more">More thoughts</a>
-                            </li>
-                        </ul>
-                    </div><!-- .actions -->
-
                 </div><!-- .blog -->
+                <div class="actions">
+                    <ul>
+                        <li>
+                            <a href="{{ site.url }}/thoughts" class="btn btn--more">More thoughts</a>
+                        </li>
+                    </ul>
+                </div><!-- .actions -->
 
             </div><!-- .page-section__content -->
 

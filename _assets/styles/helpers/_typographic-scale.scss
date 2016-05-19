@@ -74,9 +74,10 @@
     }
     // 28
     @if $n == 4 {
-        font-size: 1.45rem;
+        font-size: 1.3rem;
     	@include respond-to("medium") {
-    		font-size: pxrem(26px, $medium-font-size);
+    		font-size: pxrem(28px, $base-font-size);
+            line-height: 1.2;
     	}
 
     }
@@ -86,6 +87,7 @@
         line-height: 1.4;
         @include respond-to("medium") {
             font-size: pxrem(26px, $base-font-size);
+
     	}
     }
     // 23

@@ -64,7 +64,8 @@ module.exports = function(grunt) {
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',
                     'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
-                    'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js'
+                    'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js',
+                    'imagesloaded.pkgd.js': 'imagesloaded/imagesloaded.pkgd.js',
 				}
 			},
             production_scripts: {

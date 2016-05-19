@@ -4275,12 +4275,13 @@ pre > code.highlight {
 }
 
 .ts4 {
-  font-size: 1.45rem;
+  font-size: 1.3rem;
 }
 
 @media (min-width: 960px) {
   .ts4 {
-    font-size: 1.625rem;
+    font-size: 1.5555555556rem;
+    line-height: 1.2;
   }
 }
 
@@ -4453,7 +4454,7 @@ h1, .h1, .page__title,
 h2, .h2,
 h3, .h3,
 h4, .h4, .method-step__title,
-h5, .h5,
+h5, .h5, .area__title,
 h6, .h6 {
   font-family: "GT Walsheim", "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 900;
@@ -4506,12 +4507,12 @@ h4, .h4, .method-step__title {
   }
 }
 
-h5, .h5 {
+h5, .h5, .area__title {
   font-size: 1rem;
 }
 
 @media (min-width: 960px) {
-  h5, .h5 {
+  h5, .h5, .area__title {
     font-size: 1.1666666667rem;
   }
 }
@@ -5270,7 +5271,7 @@ textarea.error:-ms-input-placeholder {
     color: #0A2E3D;
     position: relative;
   }
-  .navbar__nav > li.active span:after  {
+  .navbar__nav > li.active span:after {
     content: "";
     position: absolute;
     bottom: -0.3em;
@@ -5577,6 +5578,22 @@ textarea.error:-ms-input-placeholder {
   }
 }
 
+.blog-item__title {
+  font-family: "Circular", "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 960px) {
+  .blog-item__title {
+    font-size: 1.5555555556rem;
+    line-height: 1.2;
+  }
+}
+
+.blog-item__title a {
+  text-decoration: none;
+}
+
 .blog-item__image {
   position: relative;
 }
@@ -5585,6 +5602,24 @@ textarea.error:-ms-input-placeholder {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.blog-item .btn--more {
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+  color: #667A81;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: 960px) {
+  .blog-item .btn--more {
+    font-size: 0.75rem;
+  }
+}
+
+.blog-item .btn--more:hover, .blog-item .btn--more:focus {
+  color: #f2461c;
 }
 
 .footer-contact {
@@ -5629,6 +5664,12 @@ textarea.error:-ms-input-placeholder {
   margin: 0 auto;
 }
 
+@media (min-width: 640px) {
+  .method__item {
+    padding: 2.5em;
+  }
+}
+
 @media (min-width: 960px) {
   .method__item {
     padding: 4em;
@@ -5636,10 +5677,10 @@ textarea.error:-ms-input-placeholder {
 }
 
 .method-step__number {
+  display: none;
   color: #f2461c;
   line-height: 1;
   vertical-align: middle;
-  display: table-cell;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
@@ -5648,13 +5689,27 @@ textarea.error:-ms-input-placeholder {
   border: 2px solid #f2461c;
 }
 
+@media (min-width: 640px) {
+  .method-step__number {
+    display: table-cell;
+  }
+}
+
 .method-step__title {
+  line-height: 1.3;
   font-weight: 700;
 }
 
 .method-step__content p {
   color: #667A81;
-  margin-bottom: 0;
+  font-size: 0.889rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1365px) {
+  .method-step__content p {
+    font-size: 0.8888888889rem;
+  }
 }
 
 .method__list.owl-carousel .owl-item {
@@ -5733,6 +5788,16 @@ textarea.error:-ms-input-placeholder {
   display: none;
 }
 
+.method__nav .nav-tabs .number:after {
+  content: ". ";
+}
+
+@media (min-width: 640px) {
+  .method__nav .nav-tabs .number {
+    display: none;
+  }
+}
+
 @media (min-width: 960px) {
   .method__nav .nav-tabs {
     display: block;
@@ -5750,6 +5815,7 @@ textarea.error:-ms-input-placeholder {
 @media (min-width: 640px) {
   .method-step {
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
   .method-step__aside {
@@ -6154,6 +6220,20 @@ textarea.error:-ms-input-placeholder {
   }
 }
 
+.ps-home-about:after {
+  content: "";
+  position: absolute;
+  bottom: -6.1em;
+  left: 0;
+  display: block;
+  width: 100%;
+  background-image: url("../images/dots-bg.svg");
+  background-repeat: repeat;
+  background-position: top;
+  height: 6.1em;
+  background-size: 48px 48px;
+}
+
 .ps-home-about > .container {
   max-width: 600px;
 }
@@ -6172,6 +6252,11 @@ textarea.error:-ms-input-placeholder {
   .ps-home-about .page-section__title {
     font-size: 1.7777777778rem;
   }
+}
+
+.ps-home-about .page-section__title,
+.ps-home-about p {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
 }
 
 /* @end About */
@@ -6227,6 +6312,11 @@ textarea.error:-ms-input-placeholder {
   .ps-home-blog .blog-list > .blog-list__item:nth-child(4) {
     display: none;
   }
+}
+
+.ps-home-blog .page-section__content > .actions {
+  text-align: center;
+  margin-top: 3.5em;
 }
 
 /* @end Blog */
@@ -6384,6 +6474,7 @@ textarea.error:-ms-input-placeholder {
 
 .ps-services-what .page-subsection__title {
   color: #ffffff;
+  font-size: 1rem;
 }
 
 .ps-services-what .page-subsection__title .badge {

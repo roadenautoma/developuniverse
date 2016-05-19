@@ -51,7 +51,7 @@
         display: block;
     }
 
-    .navbar__nav > li > a {
+    .navbar__nav > li > a{
         display: block;
         padding: 2.5em 1.5em;
         font-size: 0.89rem;
@@ -62,10 +62,10 @@
             color: $brand-secondary-color;
         }
     }
-    .navbar__nav > li.active span {
+    .navbar__nav > li.active span{
         color: $brand-primary-color;
         position: relative;
-        &:after {
+        &:after{
             content: "";
             position: absolute;
             bottom: -0.3em;
