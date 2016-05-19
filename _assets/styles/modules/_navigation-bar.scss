@@ -7,6 +7,9 @@
 }
 
 .nav > li > a {
+    font-weight: $font-weight-medium;
+    letter-spacing: $base-letter-spacing;
+    text-transform: uppercase;
     display: block;
     text-decoration: none;
     &:hover,
@@ -54,7 +57,7 @@
     .navbar__nav > li > a{
         display: block;
         padding: 2.5em 1.5em;
-        font-size: 0.89rem;
+        @include ts(-2);
         outline: none;
         color: $brand-primary-color;
         &:hover,

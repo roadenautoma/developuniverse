@@ -4,7 +4,7 @@
 
     // 84
     @if $n == 15 {
-        font-size: 1.75rem;
+        font-size: 2.752rem;
     	@include respond-to("medium") {
     		font-size: pxrem(84px, $base-font-size);
     	}
@@ -28,7 +28,7 @@
     }
     // 56
     @if $n == 11 {
-        font-size: 1.5rem;
+        font-size: 2.25rem;
         line-height: 1.21;
     	@include respond-to("large") {
     		font-size: pxrem(56px, $base-font-size);
@@ -42,7 +42,7 @@
 
     // 48
     @if $n == 9 {
-        font-size: 1.85rem;
+        font-size: 2rem;
         //line-height: 1.21;
     	@include respond-to("medium") {
     		font-size: pxrem(48px, $base-font-size);
@@ -74,7 +74,8 @@
     }
     // 28
     @if $n == 4 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
     	@include respond-to("medium") {
     		font-size: pxrem(28px, $base-font-size);
             line-height: 1.2;

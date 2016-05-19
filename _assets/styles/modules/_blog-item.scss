@@ -4,7 +4,8 @@
 
 .blog-item__title {
     font-family: $base-font-family;
-    @include ts(4);
+    @include ts(3);
+    line-height: 1.2;
     a {
         text-decoration: none;
     }

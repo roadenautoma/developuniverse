@@ -4275,7 +4275,8 @@ pre > code.highlight {
 }
 
 .ts4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 @media (min-width: 960px) {
@@ -4446,7 +4447,7 @@ a {
 
 a:hover, a:focus, a:active {
   text-decoration: underline;
-  color: #061d27;
+  color: #f2461c;
 }
 
 /* Headings */
@@ -4477,7 +4478,7 @@ h1, .h1, .page__title {
 }
 
 h2, .h2 {
-  font-size: 1.85rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 960px) {
@@ -5145,7 +5146,7 @@ textarea.error:-ms-input-placeholder {
 }
 
 .page-section__title {
-  font-size: 1.85rem;
+  font-size: 2rem;
 }
 
 @media (min-width: 960px) {
@@ -5222,6 +5223,9 @@ textarea.error:-ms-input-placeholder {
 }
 
 .nav > li > a {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   display: block;
   text-decoration: none;
 }
@@ -5260,10 +5264,19 @@ textarea.error:-ms-input-placeholder {
   .navbar__nav > li > a {
     display: block;
     padding: 2.5em 1.5em;
-    font-size: 0.89rem;
+    font-size: 0.86rem;
     outline: none;
     color: #0A2E3D;
   }
+}
+
+@media (min-width: 720px) and (min-width: 960px) {
+  .navbar__nav > li > a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 720px) {
   .navbar__nav > li > a:hover, .navbar__nav > li > a:focus {
     color: #f2461c;
   }
@@ -5537,6 +5550,10 @@ textarea.error:-ms-input-placeholder {
   clear: both;
 }
 
+.blog-list > .blog-list__item {
+  margin-bottom: 1.75em;
+}
+
 @media (min-width: 640px) {
   .blog-list > .blog-list__item {
     width: 48.0093676815%;
@@ -5580,13 +5597,14 @@ textarea.error:-ms-input-placeholder {
 
 .blog-item__title {
   font-family: "Circular", "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  line-height: 1.2;
 }
 
 @media (min-width: 960px) {
   .blog-item__title {
-    font-size: 1.5555555556rem;
-    line-height: 1.2;
+    font-size: 1.4444444444rem;
   }
 }
 
@@ -6377,7 +6395,7 @@ textarea.error:-ms-input-placeholder {
 }
 
 .tpl-services .hero .page__title {
-  font-size: 1.75rem;
+  font-size: 2.752rem;
   font-weight: 900;
 }
 
@@ -6469,7 +6487,7 @@ textarea.error:-ms-input-placeholder {
 }
 
 .ps-services-what .icon {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .ps-services-what .page-subsection__title {

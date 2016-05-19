@@ -56,7 +56,7 @@ $small-line-height-percent:     1.5;
 
 // Links
 $link-text-color: 				$brand-primary-color;
-$link-text-color-hover:			darken($brand-primary-color, 5%);
+$link-text-color-hover:			$brand-secondary-color;
 
 // Spacing Unit
 $base-spacing-unit:           	1em;

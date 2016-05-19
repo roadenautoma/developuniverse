@@ -2,6 +2,7 @@
     @include no-list;
     @include container;
     > .blog-list__item {
+        margin-bottom: 1.75em;
         @include respond-to("small") {
             @include gallery(6 of 12);
         }
