@@ -54,10 +54,41 @@ fieldset legend {
     margin-bottom: 2em;
 }
 
+
+/* Animated placeholder */
+
+.form-group {
+	position: relative;
+	padding-top: 1.7em;
+}
+
 .control-label {
     display: block;
     color: $brand-primary-color-light;
+	position: absolute;
+	pointer-events: none;
+	transition: all 0.2s cubic-bezier(.64,.09,.08,1);
+	left: 0;
+	top: 2em;
 }
+
+.form-group.is-focus .control-label {
+	color: $brand-terciary-color;
+}
+
+.form-group.is-focus .control-label,
+.form-group.is-filled .control-label {
+	top: 0;
+}
+
+.form-group--checkbox {
+	padding-top: 0;
+	.control-label {
+		position: relative;
+		top: 0;
+	}
+}
+
 
 
 /* Checkboxes */

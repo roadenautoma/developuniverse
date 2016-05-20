@@ -68,6 +68,21 @@ $( document ).ready(function() {
     /* Forms
     ------------------------------------------- */
 
+    // Animated placeholder
+    $('input:not(:checkbox):not(:button):not(:radio), textarea').focus(function() {
+        $(this).parents('.form-group').addClass('is-focus');
+    });
+
+    $('input:not(:checkbox):not(:button):not(:radio), textarea').blur(function() {
+        $(this).parents('.form-group').removeClass('is-focus');
+        if( $(this).val().length === 0 ) {
+            $(this).parents('.form-group').removeClass('is-filled');
+        } else {
+            $(this).parents('.form-group').addClass('is-filled')
+        }
+    });
+
+
     // Autosize textarea
     var contact_textarea = $('.js-form-comments');
     autosize(contact_textarea);
@@ -76,7 +91,6 @@ $( document ).ready(function() {
         if( $(this).val().length === 0 ) {
             console.log('empty');
             $(this).height('auto');
-
         }
     });
 

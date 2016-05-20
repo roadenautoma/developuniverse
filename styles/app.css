@@ -4817,9 +4817,38 @@ fieldset legend {
   margin-bottom: 2em;
 }
 
+/* Animated placeholder */
+.form-group {
+  position: relative;
+  padding-top: 1.7em;
+}
+
 .control-label {
   display: block;
   color: #667A81;
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  left: 0;
+  top: 2em;
+}
+
+.form-group.is-focus .control-label {
+  color: #7AD2EA;
+}
+
+.form-group.is-focus .control-label,
+.form-group.is-filled .control-label {
+  top: 0;
+}
+
+.form-group--checkbox {
+  padding-top: 0;
+}
+
+.form-group--checkbox .control-label {
+  position: relative;
+  top: 0;
 }
 
 /* Checkboxes */
