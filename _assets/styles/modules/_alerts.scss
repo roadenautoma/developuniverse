@@ -1,0 +1,14 @@
+.alert {
+    padding: 0.75em 1em;
+    border: $base-border-width solid $brand-primary-color;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.alert--error {
+    border-color: $danger-color;
+}
+
+.alert--success {
+    border-color: $success-color;
+}

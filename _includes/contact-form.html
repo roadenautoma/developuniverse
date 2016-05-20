@@ -1,27 +1,28 @@
-<!-- TODO: Add alert sucess/error message -->
+<!--
 <div class="alert alert--success">
-
+    Thank you! I'll be in touch shortly.
 </div>
 <div class="alert alert--error">
-
+    There was an error submitting the form. Please try again later.
 </div>
+-->
 
 <form class="form form--alt contact-form" action="./" method="post" autocomplete="off">
     <fieldset>
         <div class="form-group">
             <!-- TODO: Error class and styles -->
-            <label class="control-label" for="name">Your name <span class="req">*</span></label>
             <input name="name" class="form-control" type="text" placeholder="Your Name*" required="required" />
+            <label class="control-label" for="name">Your name <span class="req">*</span></label>
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="company">Your company <span class="req">*</span></label>
             <input name="company" class="form-control" type="text" placeholder="Your Company*" required="required" />
+            <label class="control-label" for="company">Your company <span class="req">*</span></label>
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="email">Your email <span class="req">*</span></label>
             <input name="email" class="form-control" type="email" placeholder="Your Email*" required="required" />
+            <label class="control-label" for="email">Your email <span class="req">*</span></label>
         </div><!-- .form-group -->
 
         <div class="form-group form-group--checkbox">
@@ -43,8 +44,9 @@
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="comments">Tell me more <span class="req">*</span></label>
+
             <textarea class="js-form-comments" rows="1" name="comments" placeholder="Tell me more" required="required"></textarea>
+            <label class="control-label" for="comments">Tell me more <span class="req">*</span></label>
         </div><!-- .form-group -->
 
     </fieldset>

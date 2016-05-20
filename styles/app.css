@@ -4833,12 +4833,15 @@ fieldset legend {
   top: 2em;
 }
 
-.form-group.is-focus .control-label {
+input:focus ~ .control-label,
+textarea:focus ~ .control-label {
   color: #7AD2EA;
 }
 
-.form-group.is-focus .control-label,
-.form-group.is-filled .control-label {
+input:focus ~ .control-label,
+input:valid ~ .control-label,
+textarea:focus ~ .control-label,
+textarea:valid ~ .control-label {
   top: 0;
 }
 
@@ -4873,31 +4876,6 @@ input[type="checkbox"] {
 }
 
 /* @group Validation */
-input[type="email"].error, input[type="number"].error, input[type="password"].error, input[type="search"].error, input[type="tel"].error, input[type="text"].error, input[type="url"].error, input[type="color"].error, input[type="date"].error, input[type="datetime"].error, input[type="datetime-local"].error, input[type="month"].error, input[type="time"].error, input[type="week"].error,
-textarea.error {
-  border-color: red;
-}
-
-input[type="email"].error::-webkit-input-placeholder, input[type="number"].error::-webkit-input-placeholder, input[type="password"].error::-webkit-input-placeholder, input[type="search"].error::-webkit-input-placeholder, input[type="tel"].error::-webkit-input-placeholder, input[type="text"].error::-webkit-input-placeholder, input[type="url"].error::-webkit-input-placeholder, input[type="color"].error::-webkit-input-placeholder, input[type="date"].error::-webkit-input-placeholder, input[type="datetime"].error::-webkit-input-placeholder, input[type="datetime-local"].error::-webkit-input-placeholder, input[type="month"].error::-webkit-input-placeholder, input[type="time"].error::-webkit-input-placeholder, input[type="week"].error::-webkit-input-placeholder,
-textarea.error::-webkit-input-placeholder {
-  color: red;
-}
-
-input[type="email"].error::-moz-placeholder, input[type="number"].error::-moz-placeholder, input[type="password"].error::-moz-placeholder, input[type="search"].error::-moz-placeholder, input[type="tel"].error::-moz-placeholder, input[type="text"].error::-moz-placeholder, input[type="url"].error::-moz-placeholder, input[type="color"].error::-moz-placeholder, input[type="date"].error::-moz-placeholder, input[type="datetime"].error::-moz-placeholder, input[type="datetime-local"].error::-moz-placeholder, input[type="month"].error::-moz-placeholder, input[type="time"].error::-moz-placeholder, input[type="week"].error::-moz-placeholder,
-textarea.error::-moz-placeholder {
-  color: red;
-}
-
-input[type="email"].error:-moz-placeholder, input[type="number"].error:-moz-placeholder, input[type="password"].error:-moz-placeholder, input[type="search"].error:-moz-placeholder, input[type="tel"].error:-moz-placeholder, input[type="text"].error:-moz-placeholder, input[type="url"].error:-moz-placeholder, input[type="color"].error:-moz-placeholder, input[type="date"].error:-moz-placeholder, input[type="datetime"].error:-moz-placeholder, input[type="datetime-local"].error:-moz-placeholder, input[type="month"].error:-moz-placeholder, input[type="time"].error:-moz-placeholder, input[type="week"].error:-moz-placeholder,
-textarea.error:-moz-placeholder {
-  color: red;
-}
-
-input[type="email"].error:-ms-input-placeholder, input[type="number"].error:-ms-input-placeholder, input[type="password"].error:-ms-input-placeholder, input[type="search"].error:-ms-input-placeholder, input[type="tel"].error:-ms-input-placeholder, input[type="text"].error:-ms-input-placeholder, input[type="url"].error:-ms-input-placeholder, input[type="color"].error:-ms-input-placeholder, input[type="date"].error:-ms-input-placeholder, input[type="datetime"].error:-ms-input-placeholder, input[type="datetime-local"].error:-ms-input-placeholder, input[type="month"].error:-ms-input-placeholder, input[type="time"].error:-ms-input-placeholder, input[type="week"].error:-ms-input-placeholder,
-textarea.error:-ms-input-placeholder {
-  color: red;
-}
-
 /* @end Validation */
 /* @group Form - Alt */
 .form--alt input[type="email"], .form--alt input[type="number"], .form--alt input[type="password"], .form--alt input[type="search"], .form--alt input[type="tel"], .form--alt input[type="text"], .form--alt input[type="url"], .form--alt input[type="color"], .form--alt input[type="date"], .form--alt input[type="datetime"], .form--alt input[type="datetime-local"], .form--alt input[type="month"], .form--alt input[type="time"], .form--alt input[type="week"],
@@ -5263,6 +5241,21 @@ textarea.error:-ms-input-placeholder {
 .actions > ul > li:last-child,
 .actions > ul > li .last  {
   margin-right: 0;
+}
+
+.alert {
+  padding: 0.75em 1em;
+  border: 2px solid #0A2E3D;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.alert--error {
+  border-color: red;
+}
+
+.alert--success {
+  border-color: green;
 }
 
 .nav {
