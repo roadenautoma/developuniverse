@@ -70,12 +70,15 @@ $( document ).ready(function() {
 
     // Autosize textarea
     var contact_textarea = $('.js-form-comments');
-    autosize(contact_textarea);
+
+    contact_textarea.on('focus', function() {
+        autosize(contact_textarea);
+    });
 
     $(contact_textarea).blur(function() {
         if( $(this).val().length === 0 ) {
-            console.log('empty');
-            $(this).height('auto');
+            //console.log('empty');
+            autosize.destroy(contact_textarea);
         }
     });
 

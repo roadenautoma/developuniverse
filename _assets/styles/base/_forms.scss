@@ -1,6 +1,7 @@
 #{$all-text-inputs},
 textarea {
 	-webkit-appearance: none;
+	outline: none;
     border: none;
 	border-bottom: $base-border-width solid $brand-primary-color;
 	width: 100%;
@@ -30,7 +31,9 @@ textarea {
 	resize: none;
     display: block;
     min-height: 1em;
-    transition: min-height 0.3s cubic-bezier(.64,.09,.08,1);
+	height: 2.6em;
+    transition: height 0.3s cubic-bezier(.64,.09,.08,1) min-height 0.3s cubic-bezier(.64,.09,.08,1);
+	overflow: hidden;
     &:focus {
      	min-height: 6em;
     }
