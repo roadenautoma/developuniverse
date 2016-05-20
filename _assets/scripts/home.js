@@ -11,14 +11,14 @@ $( document ).ready(function() {
         // Load the slider when the images are ready
         $('.method__list').imagesLoaded( function(){
 
-            // Create the slider 
+            // Create the slider
             $('.method__list').owlCarousel({
                 items: 1,
                 nav: true,
                 autoplay: true,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
-                autoHeight: true,
+                autoHeight: false,
                 loop: true,
                 dotsContainer: '.method__nav .nav'
             });

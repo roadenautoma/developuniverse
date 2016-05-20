@@ -58,8 +58,6 @@ module.exports = function(grunt) {
                     'prism.js': 'prism/prism.js',
                     'jquery.matchHeight.js': 'matchHeight/jquery.matchHeight.js',
                     'jcf.js': 'jcf/js/jcf.js',
-                    'jcf.select.js': 'jcf/js/jcf.select.js',
-                    'jcf.radio.js': 'jcf/js/jcf.radio.js',
                     'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'tab.js' : 'bootstrap-sass/assets/javascripts/bootstrap/tab.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',

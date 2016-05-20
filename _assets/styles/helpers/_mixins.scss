@@ -57,7 +57,7 @@
 
 // Icon font
 @mixin icon-font($content) {
-	font-family: 'icons';
+	font-family: 'icons' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

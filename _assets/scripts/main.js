@@ -68,6 +68,26 @@ $( document ).ready(function() {
     /* Forms
     ------------------------------------------- */
 
+    // Custom form elements
+    jcf.replaceAll();
+
+
+    // Animated placeholder
+    $('input:not(:checkbox):not(:button):not(:radio), textarea').focus(function() {
+       $(this).parents('.form-group').addClass('is-focus');
+    });
+
+    $('input:not(:checkbox):not(:button):not(:radio), textarea').blur(function() {
+        $(this).parents('.form-group').removeClass('is-focus');
+        if( $(this).val().length === 0 ) {
+           $(this).parents('.form-group').removeClass('is-filled');
+        } else {
+           $(this).parents('.form-group').addClass('is-filled')
+        }
+    });
+
+
+
     // Autosize textarea
     var contact_textarea = $('.js-form-comments');
 

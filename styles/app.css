@@ -4821,6 +4821,7 @@ fieldset legend {
 }
 
 /* Animated placeholder */
+/* Animated placeholder */
 .form-group {
   position: relative;
   padding-top: 1.7em;
@@ -4836,15 +4837,12 @@ fieldset legend {
   top: 2em;
 }
 
-input:focus ~ .control-label,
-textarea:focus ~ .control-label {
+.form-group.is-focus .control-label {
   color: #7AD2EA;
 }
 
-input:focus ~ .control-label,
-input:valid ~ .control-label,
-textarea:focus ~ .control-label,
-textarea:valid ~ .control-label {
+.form-group.is-focus .control-label,
+.form-group.is-filled .control-label {
   top: 0;
 }
 
@@ -4892,6 +4890,89 @@ input[type="checkbox"] {
 }
 
 /* @end Form - Alt */
+/* checkbox */
+.jcf-checkbox {
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  background: transparent;
+  border: 2px solid #667A81;
+  margin: 0 0.25em 0 0;
+  height: 1.25em;
+  width: 1.25em;
+  bottom: 0.1em;
+}
+
+.jcf-checkbox span {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: all 0.2s;
+  height: 0.7em;
+  width: 0.7em;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.jcf-checkbox span:before {
+  content: "\f00c";
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0.85em;
+  font-size: 0.75em;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
+:root .jcf-checkbox span {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.jcf-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+.jcf-checkbox.jcf-checked span {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* common styles */
+.jcf-disabled {
+  background: #ddd !important;
+}
+
+.jcf-focus, .jcf-focus * {
+  border-color: #7AD2EA !important;
+}
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.eot?9b1c2r");
@@ -4912,6 +4993,22 @@ input[type="checkbox"] {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\f00c";
+}
+
+.icon-close:before {
+  content: "\f00d";
+}
+
+.icon-remove:before {
+  content: "\f00d";
+}
+
+.icon-times:before {
+  content: "\f00d";
 }
 
 .icon-twitter:before {
@@ -5054,6 +5151,7 @@ input[type="checkbox"] {
 .site-footer__copy {
   margin-bottom: 1.5em;
   font-size: 0.889rem;
+  color: #667A81;
 }
 
 @media (min-width: 1365px) {

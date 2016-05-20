@@ -9,6 +9,8 @@
         "vendor/imagesloaded.pkgd.js",
         "vendor/owl.carousel.js",
         "vendor/autosize.js",
+        "vendor/jcf.js",
+        "vendor/jcf.checkbox.js",
         "home.js",
         "services.js",
         "main.js"

@@ -60,6 +60,8 @@ fieldset legend {
 
 /* Animated placeholder */
 
+/* Animated placeholder */
+
 .form-group {
 	position: relative;
 	padding-top: 1.7em;
@@ -75,15 +77,12 @@ fieldset legend {
 	top: 2em;
 }
 
-input:focus ~ .control-label,
-textarea:focus ~ .control-label {
+.form-group.is-focus .control-label {
 	color: $brand-terciary-color;
 }
 
-input:focus ~ .control-label,
-input:valid ~ .control-label,
-textarea:focus ~ .control-label,
-textarea:valid ~ .control-label {
+.form-group.is-focus .control-label,
+.form-group.is-filled .control-label {
 	top: 0;
 }
 
@@ -112,6 +111,11 @@ input[type="checkbox"] {
 .radio__inline + .radio__inline {
     margin-left: 1.25em;
 }
+
+.checkbox__inline {
+
+}
+
 
 /* Actions */
 

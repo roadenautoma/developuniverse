@@ -24,6 +24,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check:before {
+    content: "\f00c";
+}
+.icon-close:before {
+    content: "\f00d";
+}
+.icon-remove:before {
+    content: "\f00d";
+}
+.icon-times:before {
+    content: "\f00d";
+}
 .icon-twitter:before {
     content: "\f099";
 }

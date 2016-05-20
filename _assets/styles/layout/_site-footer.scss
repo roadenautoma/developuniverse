@@ -43,6 +43,7 @@
 .site-footer__copy {
     margin-bottom: 1.5em;
     @include ts(-1);
+    color: $brand-primary-color-light;
 }
 
 .site-footer__social {
