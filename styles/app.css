@@ -4792,12 +4792,12 @@ textarea:-ms-input-placeholder {
 textarea {
   resize: none;
   display: block;
-  height: 3.25em;
-  transition: height 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  min-height: 1em;
+  transition: min-height 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
 textarea:focus {
-  height: 8em;
+  min-height: 6em;
 }
 
 select {
@@ -5282,7 +5282,7 @@ textarea.error:-ms-input-placeholder {
   display: none;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 770px) {
   .navbar-toggle-btn {
     display: none;
   }
@@ -5292,19 +5292,11 @@ textarea.error:-ms-input-placeholder {
   .navbar__nav > li > a {
     display: block;
     padding: 2.5em 1.5em;
-    font-size: 0.86rem;
+    font-size: 0.7777777778rem;
     outline: none;
+    letter-spacing: 0.15em;
     color: #0A2E3D;
   }
-}
-
-@media (min-width: 720px) and (min-width: 960px) {
-  .navbar__nav > li > a {
-    font-size: 0.75rem;
-  }
-}
-
-@media (min-width: 720px) {
   .navbar__nav > li > a:hover, .navbar__nav > li > a:focus {
     color: #f2461c;
   }
@@ -5369,6 +5361,12 @@ textarea.error:-ms-input-placeholder {
     float: left;
     text-align: left;
     padding-left: 120px;
+  }
+}
+
+@media (min-width: 1365px) {
+  .navbar__nav > li > a {
+    padding: 2.5em 2em;
   }
 }
 

@@ -10,17 +10,17 @@
     <fieldset>
         <div class="form-group error">
             <!-- TODO: Error class and styles -->
-            <label class="control-label" for="name">Your Name <span class="req">*</span></label>
+            <label class="control-label" for="name">Your name <span class="req">*</span></label>
             <input name="name" class="form-control error" type="text" placeholder="Your Name*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="company">Your Company <span class="req">*</span></label>
+            <label class="control-label" for="company">Your company <span class="req">*</span></label>
             <input name="company" class="form-control" type="text" placeholder="Your Company*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="email">Your Email <span class="req">*</span></label>
+            <label class="control-label" for="email">Your email <span class="req">*</span></label>
             <input name="email" class="form-control" type="email" placeholder="Your Email*" required="required" />
         </div><!-- .form-group -->
 
@@ -28,23 +28,23 @@
             <label class="control-label" for="service_1">What can I do for you? </label>
             <div class="checkbox">
                 <label class="checkbox__inline">
-                    <input type="checkbox" value="consulting" />
+                    <input type="checkbox" value="consulting" name="service_option1" />
                     Consulting
                 </label>
                 <label class="checkbox__inline">
-                    <input type="checkbox" value="training" />
+                    <input type="checkbox" value="training" name="service_option2" />
                     Training
                 </label>
                 <label class="checkbox__inline">
-                    <input type="checkbox" value="other" />
+                    <input type="checkbox" value="other" name="service_option3" />
                     Other
                 </label>
             </div>
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="email">Tell me more</label>
-            <textarea placeholder="Tell me more" required="required"></textarea>
+            <label class="control-label" for="comments">Tell me more <span class="req">*</span></label>
+            <textarea class="js-form-comments" rows="1" name="comments" placeholder="Tell me more" required="required"></textarea>
         </div><!-- .form-group -->
 
     </fieldset>

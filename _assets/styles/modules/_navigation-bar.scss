@@ -44,21 +44,21 @@
 }
 
 
-@include respond-to("navbar-collapse") {
 
+
+@include respond-to("navbar-collapse") {
     .navbar-toggle-btn {
         display: none;
     }
-
     .navbar__collapse {
         display: block;
     }
-
     .navbar__nav > li > a{
         display: block;
         padding: 2.5em 1.5em;
-        @include ts(-2);
+        font-size: pxrem(14px, $base-font-size);
         outline: none;
+        letter-spacing: 0.15em;
         color: $brand-primary-color;
         &:hover,
         &:focus {
@@ -128,4 +128,10 @@
     }
 
 
+}
+
+@include respond-to("large") {
+    .navbar__nav > li > a{
+        padding: 2.5em 2em;
+    }
 }

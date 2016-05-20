@@ -8,6 +8,7 @@
         "vendor/jquery.magnific-popup.js",
         "vendor/imagesloaded.pkgd.js",
         "vendor/owl.carousel.js",
+        "vendor/autosize.js",
         "home.js",
         "services.js",
         "main.js"

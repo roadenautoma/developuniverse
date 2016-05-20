@@ -66,6 +66,7 @@ module.exports = function(grunt) {
                     'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
                     'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js',
                     'imagesloaded.pkgd.js': 'imagesloaded/imagesloaded.pkgd.js',
+                    'autosize.js' : 'autosize/dist/autosize.js'
 				}
 			},
             production_scripts: {

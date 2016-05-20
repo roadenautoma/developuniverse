@@ -29,10 +29,10 @@ textarea {
 textarea {
 	resize: none;
     display: block;
-    height: 3.25em;
-    transition: height 0.3s cubic-bezier(.64,.09,.08,1);
+    min-height: 1em;
+    transition: min-height 0.3s cubic-bezier(.64,.09,.08,1);
     &:focus {
-        height: 8em;
+     	min-height: 6em;
     }
 }
 

@@ -68,7 +68,17 @@ $( document ).ready(function() {
     /* Forms
     ------------------------------------------- */
 
+    // Autosize textarea
+    var contact_textarea = $('.js-form-comments');
+    autosize(contact_textarea);
 
+    $(contact_textarea).blur(function() {
+        if( $(this).val().length === 0 ) {
+            console.log('empty');
+            $(this).height('auto');
+
+        }
+    });
 
 
     /* Contact Modal
