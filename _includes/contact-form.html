@@ -1,13 +1,11 @@
-<!--
-<div class="alert alert--success">
-    Thank you! I'll be in touch shortly.
+<div class="alert alert--success js-contact-form-ok" style="display: none;">
+    
 </div>
-<div class="alert alert--error">
-    There was an error submitting the form. Please try again later.
+<div class="alert alert--error js-contact-form-error"  style="display: none;">
+    
 </div>
--->
 
-<form class="form form--alt contact-form" action="./" method="post" autocomplete="off">
+<form class="form form--alt contact-form" autocomplete="off">
     <fieldset>
         <div class="form-group">
             <!-- TODO: @Gonto: Should we add an error class and validation styles? -->
@@ -16,9 +14,8 @@
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="lastname">First name <span class="req">*</span></label>
-            <input name="lastname" class="form-control" type="text" placeholder="Last Name*" required="required" />
-        </div><!-- .form-group -->
+            <label class="control-label" for="lastname">Last name <span class="req">*</span></label>
+            <input name="lastname" class="form-control" type="text" placeholder="Last Name*" required="required" />        </div><!-- .form-group -->
 
         <div class="form-group">
             <label class="control-label" for="email">Email address <span class="req">*</span></label>
@@ -26,19 +23,17 @@
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <label class="control-label" for="company">Company <span class="req">*</span></label>
-            <input name="company" class="form-control" type="text" placeholder=" Company*" required="required" />
+            <label class="control-label" for="company">Company</label>
+            <input name="company" class="form-control" type="text" placeholder=" Company" />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <textarea class="js-form-comments" rows="1" name="comments" placeholder="Tell me more" required="required"></textarea>
-            <label class="control-label" for="comments">Tell me more <span class="req">*</span></label>
+            <textarea class="js-form-comments" rows="1" name="message" placeholder="Tell me more" required="required"></textarea>
+            <label class="control-label" for="message">Tell me more <span class="req">*</span></label>
         </div><!-- .form-group -->
-
     </fieldset>
     <div class="form-actions">
-        <!-- TODO: @Gonto Add class .btn--is-loading to button when sending -->
-        <button type="submit" class="btn btn--terciary js-send-btn">
+        <button type="submit" class="btn btn--terciary js-send-btn js-contact-form-send-btn">
             <span class="text">Send</span>
             <span class="spinner" title="0">
                 {% include images/spinner.svg %}
