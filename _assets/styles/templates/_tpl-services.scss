@@ -3,10 +3,13 @@
 .tpl-services .hero-wrapper {
     background-image: url("../images/services-hero-bg-2.jpg");
     background-color: $dark-blue-alt;
-    background-size: cover;
+    background-size: 200%;
     background-position: top center;
     background-repeat: no-repeat;
     color: $white;
+    @include respond-to("small") {
+        background-size: cover;
+    }
 }
 
 
@@ -79,6 +82,10 @@
 
 .ps-services-what .icon{
     margin-bottom: 2em;
+    max-width: 3em;
+    @include respond-to("small") {
+        max-width: 4.5em;
+    }
 }
 
 .ps-services-what .page-subsection__title{

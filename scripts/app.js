@@ -17953,11 +17953,13 @@ $( document ).ready(function() {
         // Load the slider when the images are ready
         $steps.imagesLoaded( function(){
 
+            // Machheight between steps
+
             // Create the slider
             $steps.owlCarousel({
                 items: 1,
                 nav: true,
-                autoplay: true,
+                autoplay: false,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
                 autoHeight: false,
@@ -18149,7 +18151,6 @@ $( document ).ready(function() {
     });
 
 
-
     // Autosize textarea
     var contact_textarea = $('.js-form-comments');
 
@@ -18164,6 +18165,13 @@ $( document ).ready(function() {
         }
     });
 
+    // @Gonto: Add contact form submit logic logic here
+
+    // $('.js-send-btn').on('click', function(event){
+    //     $(this).toggleClass('btn--is-loading');
+    //     event.preventDefault();
+    // });
+
 
     /* Contact Modal
 	------------------------------------------- */
@@ -18173,6 +18181,10 @@ $( document ).ready(function() {
     });
 
 
+
+    /* Newsletter Contact
+	------------------------------------------- */
+    // @Gonto: Add newsletter form submit logic logic here
 
 
     /* Footer go up!

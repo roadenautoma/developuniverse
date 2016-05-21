@@ -53,7 +53,8 @@ $areas_gutter: 0.75em;
     flex-flow: row;
     flex-wrap: wrap;
     @include respond-to("small") {
-        margin: -$areas_gutter 0 0 -$areas_gutter;
+        margin-left: -($areas_gutter / 2);
+        margin-right: -($areas_gutter / 2);
     }
 }
 .areas__list > .areas__item {
@@ -65,7 +66,6 @@ $areas_gutter: 0.75em;
     @include respond-to("small") {
         width: 50%;
         flex-basis: 50%;
-        margin-bottom: 0;
-        padding: $areas_gutter 0 0 $areas_gutter;
+        padding: 0 ($areas_gutter / 2);
     }
 }

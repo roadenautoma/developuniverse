@@ -26,6 +26,9 @@
     right: 0;
 }
 
+.blog-item .actions {
+    margin-top: 1.5em;
+}
 
 .blog-item .btn--more {
     @include ts(-2);

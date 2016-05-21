@@ -37,7 +37,7 @@ title: Home
                 <div class="actions">
                     <ul>
                         <li>
-                            <a href="{{ site.url }}/about" class="btn btn--more">Learn more</a>
+                            <a href="{{ site.url }}/about" class="btn btn--small btn--hollow">Learn more</a>
                         </li>
                     </ul>
                 </div><!-- .actions -->
@@ -94,7 +94,13 @@ title: Home
                                         <div class="actions">
                                             <ul>
                                                 <li>
-                                                    <button class="btn js-method-step-next">Next</button>
+                                                    <button class="btn btn--primary btn--small js-method-step-next">
+                                                        {% if forloop.index == 6 %}
+                                                            Let's start over!
+                                                        {% else %}
+                                                            Next
+                                                        {% endif %}
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </div><!-- .actions -->
@@ -140,7 +146,7 @@ title: Home
                 <div class="actions">
                     <ul>
                         <li>
-                            <a href="{{ site.url }}/thoughts" class="btn btn--more">More thoughts</a>
+                            <a href="{{ site.url }}/thoughts" class="btn btn--hollow">More thoughts</a>
                         </li>
                     </ul>
                 </div><!-- .actions -->

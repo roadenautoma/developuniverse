@@ -7,52 +7,42 @@
 </div>
 -->
 
-<!-- TODO: Gonto: Remove "What can I do for you?". I decided I don't want that -->
 <form class="form form--alt contact-form" action="./" method="post" autocomplete="off">
     <fieldset>
         <div class="form-group">
-            <!-- TODO: Add error class and validation styles -->
-            <input name="name" class="form-control" type="text" placeholder="Your Name*" required="required" />
-            <label class="control-label" for="name">Your name <span class="req">*</span></label>
+            <!-- TODO: @Gonto: Should we add an error class and validation styles? -->
+            <label class="control-label" for="firstname">First name <span class="req">*</span></label>
+            <input name="firstname" class="form-control" type="text" placeholder="First Name*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <input name="company" class="form-control" type="text" placeholder="Your Company*" required="required" />
-            <label class="control-label" for="company">Your company <span class="req">*</span></label>
+            <label class="control-label" for="lastname">First name <span class="req">*</span></label>
+            <input name="lastname" class="form-control" type="text" placeholder="Last Name*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
-            <input name="email" class="form-control" type="email" placeholder="Your Email*" required="required" />
-            <label class="control-label" for="email">Your email <span class="req">*</span></label>
-        </div><!-- .form-group -->
-
-        <div class="form-group form-group--checkbox">
-            <label class="control-label" for="service_1">What can I do for you? </label>
-            <div class="checkbox">
-                <label class="checkbox__inline">
-                    <input type="checkbox" value="consulting" name="service_option1" />
-                    Consulting
-                </label>
-                <label class="checkbox__inline">
-                    <input type="checkbox" value="training" name="service_option2" />
-                    Training
-                </label>
-                <label class="checkbox__inline">
-                    <input type="checkbox" value="other" name="service_option3" />
-                    Other
-                </label>
-            </div>
+            <label class="control-label" for="email">Email address <span class="req">*</span></label>
+            <input name="email" class="form-control" type="email" placeholder="Email address*" required="required" />
         </div><!-- .form-group -->
 
         <div class="form-group">
+            <label class="control-label" for="company">Company <span class="req">*</span></label>
+            <input name="company" class="form-control" type="text" placeholder=" Company*" required="required" />
+        </div><!-- .form-group -->
 
+        <div class="form-group">
             <textarea class="js-form-comments" rows="1" name="comments" placeholder="Tell me more" required="required"></textarea>
             <label class="control-label" for="comments">Tell me more <span class="req">*</span></label>
         </div><!-- .form-group -->
 
     </fieldset>
     <div class="form-actions">
-        <!-- TODO: Add submitting class is-submitting (spinner & disabled) -->
-        <button type="submit" class="btn btn--primary">Send</button>
+        <!-- TODO: @Gonto Add class .btn--is-loading to button when sending -->
+        <button type="submit" class="btn btn--terciary js-send-btn">
+            <span class="text">Send</span>
+            <span class="spinner" title="0">
+                {% include images/spinner.svg %}
+            </span><!-- .spinner -->
+        </button>
     </div><!-- .form-actions -->
 </form>

@@ -47,19 +47,26 @@
     margin-top: 0;
 }
 
-// Vertical line (Ziz-zag)
-.timeline > li:nth-child(2n+1) .timeline-block:before{
+.timeline > li:last-child .timeline-block:before{
+    background-image: url("../images/line-straight.svg");
+}
+
+// Vertical line (Solid)
+.timeline > li:nth-child(1n) .timeline-block:before{
+    background-image: url("../images/line-straight.svg");
+}
+
+// Vertical line (Dotted)
+.timeline > li:nth-child(2n) .timeline-block:before{
     background-image: url("../images/line-dotted.svg");
 }
 
 // Vertical line (Ziz-zag)
-.timeline > li:nth-child(3n+1) .timeline-block:before{
+.timeline > li:nth-child(3n) .timeline-block:before{
     background-image: url("../images/line-zizzag.svg");
 }
 
-.timeline > li:last-child .timeline-block:before{
-    background-image: url("../images/line-straight.svg");
-}
+
 
 
 

@@ -81,11 +81,29 @@
 
 
 .page-section .actions {
-    margin-top: 3.5em;
+    margin-top: 2em;
+    @include respond-to("medium") {
+        margin-top: 3.5em;
+    }
 }
 
 /* @end Page Section */
 
+
+/* @group Page Subsection */
+
+.page-subsection {
+    margin-bottom: 3.5em;
+    &:last-child {
+        //margin-bottom: 0;
+    }
+    @include respond-to("medium") {
+        margin-bottom: 4em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
 
 .page-subsection__header {
     margin-bottom: 1.5em;
@@ -96,3 +114,4 @@
     font-size: 1.1666666667rem;
     letter-spacing: 0.05em;
 }
+/* @end Page Subsection */

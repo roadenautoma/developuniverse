@@ -74,9 +74,6 @@
 	margin: 0 auto;
     max-width: $max-width;
 	width: 87.5%;
-    @include respond-to("small") {
-        width: 95%;
-    }
 }
 
 @mixin page-container-narrow {

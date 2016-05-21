@@ -87,7 +87,6 @@ $( document ).ready(function() {
     });
 
 
-
     // Autosize textarea
     var contact_textarea = $('.js-form-comments');
 
@@ -102,6 +101,13 @@ $( document ).ready(function() {
         }
     });
 
+    // @Gonto: Add contact form submit logic logic here
+
+    // $('.js-send-btn').on('click', function(event){
+    //     $(this).toggleClass('btn--is-loading');
+    //     event.preventDefault();
+    // });
+
 
     /* Contact Modal
 	------------------------------------------- */
@@ -111,6 +117,10 @@ $( document ).ready(function() {
     });
 
 
+
+    /* Newsletter Contact
+	------------------------------------------- */
+    // @Gonto: Add newsletter form submit logic logic here
 
 
     /* Footer go up!
