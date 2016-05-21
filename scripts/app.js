@@ -18257,19 +18257,20 @@ $( document ).ready(function() {
     }).then(function(data) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-ok').text('Message sent succesfully');
-      $('.js-contact-form-ok').show();
+      $('.js-contact-form-ok').show().addClass('animated flipInX');
       hideMessages();
 
     }, function(response) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-error').text(response.responseJSON.message);
-      $('.js-contact-form-error').show();
+      $('.js-contact-form-error').show().addClass('animated flipInX');
       console.log("Error sending form", response)
       hideMessages(true);
     });
 
     function hideMessages(error) {
       if (!error) {
+        $('.contact-form').addClass('animated fadeOutDown');
         firstnameField.val('');
         lastnameField.val('');
         companyField.val('');
@@ -18277,8 +18278,11 @@ $( document ).ready(function() {
         messageField.val('');
       }
       setTimeout(function() {
-        $('.js-contact-form-ok').hide();
-        $('.js-contact-form-error').hide();
+        $('.contact-form').removeClass('fadeOutDown').addClass('fadeInUp');
+      }, 3000);
+      setTimeout(function() {
+        $('.js-contact-form-ok').removeClass('flipInX').addClass('flipOutX');
+        $('.js-contact-form-error').removeClass('flipInX').addClass('flipOutX');
       }, 5000);
     }
 

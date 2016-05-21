@@ -6682,9 +6682,8 @@ input[type="checkbox"] {
   }
 }
 
-.ps-home-about .page-section__title,
-.ps-home-about p {
-  text-shadow: 0 0 1px white, 0px 0px 10px white;
+.ps-home-about .page-section__content p {
+  text-shadow: 0 0 1px white, 0px 0px 10px white, 0px 0px 30px white;
 }
 
 .ps-home-about .social-links {
