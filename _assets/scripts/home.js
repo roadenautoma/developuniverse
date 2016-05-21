@@ -40,11 +40,13 @@ $( document ).ready(function() {
         // Load the slider when the images are ready
         $steps.imagesLoaded( function(){
 
+            // Machheight between steps
+
             // Create the slider
             $steps.owlCarousel({
                 items: 1,
                 nav: true,
-                autoplay: true,
+                autoplay: false,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
                 autoHeight: false,

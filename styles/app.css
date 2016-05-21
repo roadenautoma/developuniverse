@@ -5916,6 +5916,10 @@ input[type="checkbox"] {
   }
 }
 
+.method-step .actions {
+  margin-top: 0;
+}
+
 .method__list.owl-carousel .owl-item {
   opacity: 0;
   transition: opacity 0.1s;
@@ -6017,8 +6021,22 @@ input[type="checkbox"] {
 }
 
 @media (min-width: 640px) {
+  .owl-stage {
+    display: flex;
+  }
+  .owl-item {
+    flex: 1 0 auto;
+    display: flex;
+  }
+  .method__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .method-step {
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: space-between;
   }
