@@ -18209,11 +18209,12 @@ $( document ).ready(function() {
 }); // End ready
 
 $( document ).ready(function() {
+
   $('.js-contact-form-send-btn').click(function(e) {
     var form = $('.contact-form');
 
     // Returns
-    if $(this).hasClass('btn--is-loading') {
+    if($(this).hasClass('btn--is-loading')) {
       return;
     }
     if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
@@ -18256,7 +18257,7 @@ $( document ).ready(function() {
       $('.js-contact-form-ok').show();
       $('.js-contact-form-ok').text('Message sent succesfully');
       hideMessages();
-      
+
     }, function(response) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-error').show();
@@ -18275,14 +18276,14 @@ $( document ).ready(function() {
           lastnameField.val('');
           companyField.val('');
           emailField.val('');
-          messageField.val('');  
+          messageField.val('');
         }
       }, 5000);
     }
 
     // Always return false to avoid real submit
     return false;
-    
+
 
   });
 });
