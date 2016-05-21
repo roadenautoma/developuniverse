@@ -35,11 +35,13 @@ $( document ).ready(function() {
 
     if( $('.method__list').length > 0)  {
 
+        var $steps = $('.method__list');
+
         // Load the slider when the images are ready
-        $('.method__list').imagesLoaded( function(){
+        $steps.imagesLoaded( function(){
 
             // Create the slider
-            $('.method__list').owlCarousel({
+            $steps.owlCarousel({
                 items: 1,
                 nav: true,
                 autoplay: true,
@@ -48,16 +50,35 @@ $( document ).ready(function() {
                 autoHeight: false,
                 loop: true,
                 dotsContainer: '.method__nav .nav'
-            });
+            }); // owlcarousel
 
-            owl = $('.method__list').owlCarousel();
+            var owl = $steps.owlCarousel();
 
-            $('.method__nav button').on('click', function () {
+            // Custom pager
+            $('.method__nav button').on('click', function() {
                 console.log($(this).index());
                 owl.trigger('to.owl.carousel', [$(this).parents('li').index(), 300]);
             });
 
-        });
+            // Custom next button
+            $('.method-step .js-method-step-next').on('click', function(event) {
+                owl.trigger('next.owl.carousel');
+            });
+
+            // Keyboard
+            // TODO: Should we focus on the slider first and then activate the keyboard?
+            $(document).on('keydown', function(event){
+                if (event.keyCode == 37) {
+                    owl.trigger('prev.owl.carousel');
+                } else if (event.keyCode == 39) {
+                    owl.trigger('next.owl.carousel');
+                }
+            });
+
+
+        }); // imagesloaded
+
+
 
 
 
