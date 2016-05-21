@@ -17914,6 +17914,33 @@ jcf.addModule(function($) {
 $( document ).ready(function() {
 
 
+    /* Hero: Read more
+    ------------------------------------------- */
+    // Hero scroll down
+    if( $('.ps-home-hero').length > 0 ) {
+
+        var offset = '';
+
+        enquire.register("screen and (max-width:879px)", {
+            match : function() {
+    	        offset = $('.navbar').outerHeight();
+    	    },
+    	    unmatch : function() {
+    	        offset = 0;
+    	    }
+        });
+
+		$('.ps-home-hero .js-hero-read-more').on('click', function(event) {
+			$('html, body').animate({
+        		scrollTop: $('#home-about').offset().top - offset
+   			}, 500);
+            event.preventDefault();
+		});
+
+
+	}
+
+
 
 
     /* Step by step: Slider
@@ -18123,6 +18150,21 @@ $( document ).ready(function() {
     $('.js-contact-modal-toggle').magnificPopup({
         type:'inline'
     });
+
+
+
+
+    /* Footer go up!
+	------------------------------------------- */
+
+	$('.js-go-up').on('click', function(event) {
+        $(this).blur();
+		$('html, body').animate({
+    		scrollTop: $('#page').offset().top
+			}, 500);
+        event.preventDefault();
+	});
+
 
 
 

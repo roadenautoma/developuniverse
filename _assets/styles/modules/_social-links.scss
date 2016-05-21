@@ -6,8 +6,10 @@
     > ul > li {
         display: inline-block;
         vertical-align: middle;
+        margin: 0 0.5em;
     }
     > ul > li > a {
+        padding: 0.5em;
         display: inline-block;
         vertical-align: middle;
         text-decoration: none;
@@ -17,5 +19,8 @@
         //height: 2em;
         font-size: 1.5em;
         display: block;
+    }
+    .text {
+        display: none;
     }
 }

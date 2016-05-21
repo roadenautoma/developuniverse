@@ -5175,6 +5175,10 @@ input[type="checkbox"] {
   margin: 0 0.75em;
 }
 
+.site-footer__social .social-links > ul > li > a {
+  padding: 0;
+}
+
 .site-footer__social .social-links .icon {
   line-height: 1;
   font-size: 1.25em;
@@ -5304,6 +5308,10 @@ input[type="checkbox"] {
 .page-section__body p:last-child,
 .page-subsection__body p:last-child {
   margin-bottom: 0;
+}
+
+.page-section .actions {
+  margin-top: 3.5em;
 }
 
 /* @end Page Section */
@@ -5578,6 +5586,24 @@ input[type="checkbox"] {
   color: #ffffff;
 }
 
+.ps-home-hero .hero__subtitle {
+  margin-bottom: 0;
+}
+
+.hero__read-more {
+  position: absolute;
+  color: #ffffff;
+  bottom: 3em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero__read-more:hover, .hero__read-more:focus {
+  text-decoration: none;
+}
+
 .modal {
   position: relative;
   background: #FFF;
@@ -5667,9 +5693,11 @@ input[type="checkbox"] {
 .social-links > ul > li {
   display: inline-block;
   vertical-align: middle;
+  margin: 0 0.5em;
 }
 
 .social-links > ul > li > a {
+  padding: 0.5em;
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -5678,6 +5706,10 @@ input[type="checkbox"] {
 .social-links .icon {
   font-size: 1.5em;
   display: block;
+}
+
+.social-links .text {
+  display: none;
 }
 
 .blog-list {
@@ -6429,6 +6461,10 @@ input[type="checkbox"] {
 .ps-home-about .page-section__title,
 .ps-home-about p {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
+}
+
+.ps-home-about .social-links {
+  margin: 2em 0;
 }
 
 /* @end About */

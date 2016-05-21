@@ -5,7 +5,7 @@
 			<div class="container container--fluid">
 
 				<nav class="site-footer__nav">
-					<a class="site-footer-logo" title="Go up!" href="{{ page.url }}#page">
+					<a class="site-footer-logo js-go-up" title="Go up!" href="{{ page.url }}#page">
 						<i class="icon">{% include images/logo-sm.svg %}</i>
 						<span class="text">Go up!</span>
 					</a>
@@ -19,28 +19,7 @@
 					<dl>
 						<dt>Follow me</dt>
 						<dd>
-							<div class="social-links">
-								<ul class="nav">
-									<li>
-										<a rel="external" href="https://twitter.com/mgonto">
-											<i class="icon icon-twitter"></i>
-											<span class="text">Twitter</span>
-										</a>
-									</li>
-									<li>
-										<a rel="external" href="http://linkedin.com/in/mgonto">
-											<i class="icon icon-linkedin"></i>
-											<span class="text">Linkedin</span>
-										</a>
-									</li>
-									<li>
-										<a rel="external" href="https://github.com/mgonto">
-											<i class="icon icon-github"></i>
-											<span class="text">Github</span>
-										</a>
-									</li>
-								</ul>
-							</div><!-- .social-links -->
+							{% include social-links.html %}
 						</dd>
 					</dl>
 				</div><!-- .site-footer__social -->

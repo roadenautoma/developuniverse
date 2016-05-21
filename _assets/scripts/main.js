@@ -113,6 +113,21 @@ $( document ).ready(function() {
 
 
 
+    /* Footer go up!
+	------------------------------------------- */
+
+	$('.js-go-up').on('click', function(event) {
+        $(this).blur();
+		$('html, body').animate({
+    		scrollTop: $('#page').offset().top
+			}, 500);
+        event.preventDefault();
+	});
+
+
+
+
+
 
 
 

@@ -26,3 +26,21 @@
 .ps-home-hero .hero__title {
     color: $white;
 }
+
+.ps-home-hero .hero__subtitle {
+    margin-bottom: 0;
+}
+
+.hero__read-more {
+    position: absolute;
+    color: $white;
+    bottom: 3em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
