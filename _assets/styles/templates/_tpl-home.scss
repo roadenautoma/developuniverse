@@ -84,7 +84,8 @@
 
 .ps-home-about .page-section__title,
 .ps-home-about p {
-    text-shadow: 0 0 10px rgba(white, 1);
+    text-shadow: 0 0 1px rgba(white, 1),
+    0px 0px 10px rgba(white, 1);
 }
 
 .ps-home-about .social-links {
