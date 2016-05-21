@@ -1,9 +1,16 @@
 $( document ).ready(function() {
   $('.js-contact-form-send-btn').click(function(e) {
     var form = $('.contact-form');
+
+    // Returns
+    if $(this).hasClass('btn--is-loading') {
+      return;
+    }
     if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
       return;
     }
+
+    // Fields
     var firstnameField = form.find('[name="firstname"]');
     var firstname = firstnameField.val();
 
@@ -19,23 +26,9 @@ $( document ).ready(function() {
     var emailField = form.find('[name="email"]');
     var email = emailField.val();
 
-    function hideMessages(error) {
-      setTimeout(function() {
-        $('.js-contact-form-ok').hide();
-        $('.js-contact-form-error').hide();
-        if (!error) {
-          firstnameField.val('');
-          lastnameField.val('');
-          companyField.val('');
-          emailField.val('');
-          messageField.val('');  
-        }
-      }, 5000);
-    }
-
-
     $('.js-contact-form-send-btn').toggleClass('btn--is-loading');
 
+    // Call the Webtask
     $.ajax({
       url: 'https://webtask.it.auth0.com/api/run/wt-martin-gon_to-0/contact-form?webtask_no_cache=1',
       method: 'POST',
@@ -62,6 +55,22 @@ $( document ).ready(function() {
       hideMessages(true);
     });
 
+    // Helper function
+    function hideMessages(error) {
+      setTimeout(function() {
+        $('.js-contact-form-ok').hide();
+        $('.js-contact-form-error').hide();
+        if (!error) {
+          firstnameField.val('');
+          lastnameField.val('');
+          companyField.val('');
+          emailField.val('');
+          messageField.val('');  
+        }
+      }, 5000);
+    }
+
+    // Always return false to avoid real submit
     return false;
     
 
