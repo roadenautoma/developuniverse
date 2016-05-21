@@ -1,7 +1,5 @@
 $( document ).ready(function() {
   $('.js-contact-form-send-btn').click(function(e) {
-    e.preventDefault();
-
     var form = $('.contact-form');
     if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
       return;
@@ -20,6 +18,20 @@ $( document ).ready(function() {
 
     var emailField = form.find('[name="email"]');
     var email = emailField.val();
+
+    function hideMessages(error) {
+      setTimeout(function() {
+        $('.js-contact-form-ok').hide();
+        $('.js-contact-form-error').hide();
+        if (!error) {
+          firstnameField.val('');
+          lastnameField.val('');
+          companyField.val('');
+          emailField.val('');
+          messageField.val('');  
+        }
+      }, 5000);
+    }
 
 
     $('.js-contact-form-send-btn').toggleClass('btn--is-loading');
@@ -50,19 +62,8 @@ $( document ).ready(function() {
       hideMessages(true);
     });
 
-    function hideMessages(error) {
-      setTimeout(function() {
-        $('.js-contact-form-ok').hide();
-        $('.js-contact-form-error').hide();
-        if (!error) {
-          firstnameField.val('');
-          lastnameField.val('');
-          companyField.val('');
-          emailField.val('');
-          messageField.val('');  
-        }
-      }, 5000);
-    }
+    return false;
+    
 
   });
 });
