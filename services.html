@@ -36,18 +36,19 @@ title: Services
                             <dl>
                                 <dt>What is it?</dt>
                                 <dd>
-                                    B2D are a new ecosystem of companies that bypasses traditional enterprise IT and sells directly to developers via the cloud. B2Ds are a subclass of a B2B, since the developers you’re selling to are part of a company which eventually buys the SaaS subscription.
+                                    B2D are a new ecosystem of companies that bypasses traditional enterprise IT and sells directly to developers. B2Ds are a subclass of a B2B.
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>Why me?</dt>
                                 <dd>
-                                    Being a developer and system engineer gives me the right background and perspective to be able to successfully market to developers.
+                                    Being a developer and system engineer gives me the perfect background and perspective to be able to successfully market to developers.
                                 </dd>
                             </dl>
                         </div><!-- .page-subsection__body -->
                     </div><!-- .page-subsection -->
 
+                    <!-- TODO: Gonto changed the texts but it seems still a little disaligned -->
                     <div class="page-subsection">
                         <header class="page-subsection__header">
                             <img class="icon" src="{{ site.url }}/images/services-b2b-icon.svg" alt="B2B" />
@@ -57,7 +58,7 @@ title: Services
                             <dl>
                                 <dt>What is it?</dt>
                                 <dd>
-                                    A B2B is a typical case where a company is selling a software or a service subscription to another company.
+                                    A B2B, also known as e-biz, is a typical case where a company is selling a software or a service subscription to another company instead of selling directly to consumers.
                                 </dd>
                             </dl>
                             <dl>
@@ -103,18 +104,17 @@ title: Services
 
                     <ul class="areas__list">
                         {% assign all_services = "" | split: "" %}
-                        {% assign areas = "" | split: "" %}
                         {% for area in site.data.areas %}
                             {% for service in area.services %}
-                                {% assign areas = areas | push:area.slug %}
                                 {% assign all_services = all_services | push: service %}
                             {% endfor %}
                         {% endfor %}
-                        <!-- TODO: We need the sorting done in the Array, because we removed the Isotope plugin -->
-                        {% for service in all_services %}
+                        
+                        {% assign services = all_services | sort: 'name' %}
+                        {% for service in services %}
 
                         <!-- {{ {% include {{service.icon}}_icon_svg %} }} -->
-                        <li class="areas__item" data-category="{{ areas[forloop.index0] }}">
+                        <li class="areas__item" data-category="{{ service.area_slug] }}">
                             <div class="area">
                                 <i class="area__icon">
                                     <img src="{{ site.url}}/images/areas/areas-icon-{{ service.icon }}.svg" alt="{{ service.name }}">
