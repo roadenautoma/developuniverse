@@ -46,30 +46,29 @@ $( document ).ready(function() {
       jsonp: false
     }).then(function(data) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
-      $('.js-contact-form-ok').show();
       $('.js-contact-form-ok').text('Message sent succesfully');
+      $('.js-contact-form-ok').show();
       hideMessages();
 
     }, function(response) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
-      $('.js-contact-form-error').show();
       $('.js-contact-form-error').text(response.responseJSON.message);
+      $('.js-contact-form-error').show();
       console.log("Error sending form", response)
       hideMessages(true);
     });
 
-    // Helper function
     function hideMessages(error) {
+      if (!error) {
+        firstnameField.val('');
+        lastnameField.val('');
+        companyField.val('');
+        emailField.val('');
+        messageField.val('');
+      }
       setTimeout(function() {
         $('.js-contact-form-ok').hide();
         $('.js-contact-form-error').hide();
-        if (!error) {
-          firstnameField.val('');
-          lastnameField.val('');
-          companyField.val('');
-          emailField.val('');
-          messageField.val('');
-        }
       }, 5000);
     }
 
