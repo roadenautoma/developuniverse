@@ -1,6 +1,5 @@
 var request = require('request');
 
-
 var fields = [
   {
     label: 'First Name',
@@ -26,7 +25,7 @@ var fields = [
     label: 'Message',
     field: 'message',
     required: true
-  }
+  },
 ];
 
 return function (ctx, cb) {
@@ -47,10 +46,30 @@ return function (ctx, cb) {
       'api_key': ctx.data.SENDGRID_KEY,
       'to': "martin@gon.to",
       'subject': 'Contact request from gon.to from: ' + name,
-      'from': ctx.data.email,
+      'from': "martin@gon.to",
+      'replyto': ctx.data.email,
       'html': content
     }
-  }, cb);
+  }, function(error, response, body) {
+    var validation = {
+      valid: true,
+      message: ''
+    };
+    if (error) {
+      validation.valid = false;
+      validation.message = "Internal server error. Please try again later!"
+      return cb(validation);
+    }
+    if (response && response.statusCode !== 200 && response.statusCode !== 201) {
+      validation.valid = false;
+      console.log("Error", body);
+      validation.message = "Internal server error. Please try again later!"
+      return cb(validation)
+    }
+
+    return cb(null, body);
+    
+  });
 }
 
 
@@ -65,13 +84,11 @@ function validateRequest(ctx) {
   fields.forEach(function(field) {
     if (field.required && !hasOwnPropertyValue(ctx.data, field.field)) {
       validation.valid = false;
-      validation.message = "The required property " + field + "wasn't send";
-      break;
+      validation.message = "The required property " + field.field + " wasn't send";
     }
     if (field.field === 'email' && !validEmail(ctx.data.email)) {
       validation.valid = false;
       validation.message = "The email isn't valid";
-      break;
     }
 
   });

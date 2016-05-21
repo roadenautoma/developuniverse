@@ -13,6 +13,7 @@
         "vendor/jcf.checkbox.js",
         "home.js",
         "services.js",
-        "main.js"
+        "main.js",
+        "contact-form.js"
     ]
 }

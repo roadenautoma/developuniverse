@@ -1,24 +1,28 @@
 $( document ).ready(function() {
   $('.js-contact-form-send-btn').click(function(e) {
     e.preventDefault();
+
     var form = $('.contact-form');
-    var firstnameField = form.find('[name]=firstname');
+    if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
+      return;
+    }
+    var firstnameField = form.find('[name="firstname"]');
     var firstname = firstnameField.val();
 
-    var lastnameField = form.find('[name]=lastname');
+    var lastnameField = form.find('[name="lastname"]');
     var lastname = lastnameField.val();
 
-    var companyField = form.find('[name]=company');
+    var companyField = form.find('[name="company"]');
     var company = companyField.val();
 
-    var messageField = form.find('[name]=message');
+    var messageField = form.find('[name="message"]');
     var message = messageField.val();
 
-    var emailField = form.find('[name]=email');
+    var emailField = form.find('[name="email"]');
     var email = emailField.val();
 
 
-    $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
+    $('.js-contact-form-send-btn').toggleClass('btn--is-loading');
 
     $.ajax({
       url: 'https://webtask.it.auth0.com/api/run/wt-martin-gon_to-0/contact-form?webtask_no_cache=1',
@@ -33,21 +37,32 @@ $( document ).ready(function() {
       dataType: 'json',
       jsonp: false
     }).then(function(data) {
-      // TODO notify it was sent
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
-      alert("Email sent OK");
-      firstnameField.val('');
-      lastnameField.val('');
-      companyField.val('');
-      emailField.val('');
-      messageField.val('');
+      $('.js-contact-form-ok').show();
+      $('.js-contact-form-ok').text('Message sent succesfully');
+      hideMessages();
+      
     }, function(response) {
-      // TODO: show the error better
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
+      $('.js-contact-form-error').show();
+      $('.js-contact-form-error').text(response.responseJSON.message);
       console.log("Error sending form", response)
-      alert(response.responseText);
-    })
-    //
+      hideMessages(true);
+    });
 
-  })
+    function hideMessages(error) {
+      setTimeout(function() {
+        $('.js-contact-form-ok').hide();
+        $('.js-contact-form-error').hide();
+        if (!error) {
+          firstnameField.val('');
+          lastnameField.val('');
+          companyField.val('');
+          emailField.val('');
+          messageField.val('');  
+        }
+      }, 5000);
+    }
+
+  });
 });
