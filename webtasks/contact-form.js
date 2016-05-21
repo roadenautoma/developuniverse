@@ -44,9 +44,9 @@ return function (ctx, cb) {
     form: {
       'api_user': ctx.data.SENDGRID_USER,
       'api_key': ctx.data.SENDGRID_KEY,
-      'to': "martin@gon.to",
+      'to': ctx.data.TO_EMAIL,
       'subject': 'Contact request from gon.to from: ' + name,
-      'from': "martin@gon.to",
+      'from': ctx.data.TO_EMAIL,
       'replyto': ctx.data.email,
       'html': content
     }
