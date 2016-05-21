@@ -6603,40 +6603,48 @@ input[type="checkbox"] {
 /* @end Header */
 /* @group About */
 .ps-home-about {
-  background-image: url("../images/home-about-bg.png");
+  position: relative;
+  padding-bottom: 18em;
+  text-align: center;
+  z-index: 1;
+  background-color: #F9FAFE;
+}
+
+.ps-home-about:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 18em;
+  background-image: url("../images/home-about-bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-color: #f1f1f1;
-  text-align: center;
-  padding-bottom: 18em;
+  z-index: -1;
   background-size: auto 18em;
-  position: relative;
-  z-index: 1;
 }
 
 @media (min-width: 960px) {
   .ps-home-about {
     padding-bottom: 7em;
     background-image: none;
+    background-image: none;
   }
   .ps-home-about:before {
-    overflow: visible;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 90%;
+    content: '';
     display: block;
-    margin: 0 auto;
-    max-width: 1600px;
+    position: absolute;
+    width: 2400px;
     height: 100%;
-    background-image: url("../images/home-about-bg.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0em bottom;
+    top: 0;
+    bottom: auto;
+    left: 50%;
     z-index: -1;
+    margin-left: -1580px;
+    background-image: url("../images/home-about-bg.jpg");
+    background-position: bottom center;
+    background-size: cover;
   }
 }
 
@@ -6676,7 +6684,7 @@ input[type="checkbox"] {
 
 .ps-home-about .page-section__title,
 .ps-home-about p {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 10px white;
 }
 
 .ps-home-about .social-links {
