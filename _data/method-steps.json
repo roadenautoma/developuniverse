@@ -16,7 +16,7 @@
     {
         "number": "3",
         "short_title": "Define",
-        "title": "Define a metric, a timeframe and a goal for each hypothesis.",
+        "title": "Define a metric, a timeframe and a goal.",
         "body": "Every hypothesis must be measurable and quantifiable. In order to do so, you must choose a metric and a goal so that you can decide if the experiment was a success or not.",
         "image": "http://placehold.it/500x500"
     },
