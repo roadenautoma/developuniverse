@@ -14,7 +14,7 @@
         padding: 2.5em;
     }
     @include respond-to("medium") {
-        padding: 4em;
+        padding: 2.5em 4em;
     }
 }
 
@@ -47,8 +47,25 @@
     //margin-bottom: 0;
 }
 
+
+
+
+.method-step__image {
+    margin: 0 auto;
+    max-width: 200px;
+    @include respond-to("small") {
+        max-width: 250px;
+    }
+    @include respond-to("medium") {
+        max-width: 300px;
+    }
+    svg {
+        width: 100%;
+    }
+}
 .method-step .actions {
     margin-top: 0;
+    text-align: center;
 }
 
 
@@ -158,6 +175,7 @@
 
     .method__item {
         display: flex;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -166,7 +184,8 @@
     // Item aligment
     .method-step{
         display: flex;
-        flex: 0 0 auto;
+        flex: 1 0 auto;
+        width: 100%;
         align-items: center;
         justify-content: space-between;
     }
@@ -177,5 +196,8 @@
     .method-step__body{
         order: 1;
         flex-basis: 45%;
+    }
+    .method-step .actions {
+        text-align: left;
     }
 }
