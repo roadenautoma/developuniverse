@@ -17936,10 +17936,10 @@ $( document ).ready(function() {
    			}, 500);
             event.preventDefault();
 		});
-
-
 	}
 
+
+    
 
 
 
@@ -18214,9 +18214,18 @@ $( document ).ready(function() {
 
 
 
+    /* Animated scroll to
+	------------------------------------------- */
+    $('.scroll-to').on('click', function() {
+        var target = $(this).attr('href');
 
+        $(this).blur();
+		$('html, body').animate({
+    		scrollTop: $(target).offset().top
+			}, 500);
+        event.preventDefault();
 
-
+    });
 
 
 

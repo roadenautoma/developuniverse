@@ -23,10 +23,10 @@ $( document ).ready(function() {
    			}, 500);
             event.preventDefault();
 		});
-
-
 	}
 
+
+    
 
 
 
