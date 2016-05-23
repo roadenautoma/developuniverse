@@ -49,6 +49,8 @@
     @extend .btn;
     @extend .btn--link;
     padding: 0.5em 1.25em;
+    transition: transform .2s ease-in-out;
+    padding: 0.5em 1.25em;
     height: 100%;
     overflow: hidden;
     top: 0;

@@ -1,5 +1,20 @@
 <!-- TODO: If ok, the modal closes automatically -->
 
-<div id="contact-modal" class="modal mfp-hide">
-  {% include contact-form.html %}
-</div>
+<div id="contact-modal" class="modal modal-contact mfp-hide">
+
+    <button type="button" class="modal-toggle-btn js-modal-close">
+        <span class="text">Close</span>
+        <i class="icon icon-close"></i>
+    </button>
+
+    <div class="modal__wrapper">
+        <div class="container">
+            <header class="page-section__header">
+                <h2 class="page-section__title">Get in touch!</h2>
+            </header><!-- .page-section__header -->
+
+            {% include contact-form.html %}
+        </div><!-- .container -->
+
+    </div><!-- .modal__wrapper -->
+</div><!-- .modal -->

@@ -3,6 +3,8 @@ $( document ).ready(function() {
 
     window.is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
 
     /* Remove click delay on mobile
     ------------------------------------------- */
@@ -45,6 +47,7 @@ $( document ).ready(function() {
 	function overlay_close($overlay) {
 	    $overlay.removeClass('is-open');
 		$header.removeClass('is-open');
+        $toggle.removeClass('is-open');
 	}
 
 	enquire.register("screen and (max-width:769px)", {
@@ -101,21 +104,33 @@ $( document ).ready(function() {
         }
     });
 
-    // @Gonto: Add contact form submit logic logic here
-
-    // $('.js-send-btn').on('click', function(event){
-    //     $(this).toggleClass('btn--is-loading');
-    //     event.preventDefault();
-    // });
 
 
     /* Contact Modal
 	------------------------------------------- */
 
     $('.js-contact-modal-toggle').magnificPopup({
-        type:'inline'
-    });
+        type:'inline',
+        removalDelay: 300,
+        mainClass: 'mfp-fade mfp-full',
+        showCloseBtn: false,
+        enableEscapeKey: true,
+        callbacks: {
+            open: function() {
+                // Close menu if open
+                if($overlay.hasClass('is-open')) {
+                    setTimeout(function() {
+                        overlay_close($overlay);
+                    }, 1000);
+                }
 
+            }
+        }
+    });
+    // Close btn
+    $('.js-modal-close').on('click', function() {
+        $.magnificPopup.close();
+    });
 
 
     /* Newsletter Contact

@@ -1,8 +1,84 @@
 .modal {
     position: relative;
-    background: #FFF;
+    background-color: $white;
     padding: 20px;
     width: auto;
     max-width: 500px;
     margin: 20px auto;
+}
+
+
+.modal .modal-toggle-btn {
+    @extend .navbar-toggle-btn;
+    color: $brand-primary-color;
+    position: absolute;
+    top: 1em; bottom: auto;
+    right: 0; left: auto;
+    left: auto;
+    height: auto;
+    display: block;
+}
+
+
+// Full screen
+
+.mfp-full.mfp-bg {
+    background: none;
+}
+.mfp-full .mfp-container {
+    padding: 0;
+}
+
+.mfp-full .mfp-content,
+.mfp-full .modal {
+    height: 100%;
+    background-color: $brand-primary-color;
+}
+
+.mfp-full .modal__wrapper{
+    @include vertical-align;
+}
+
+.mfp-full .mfp-content {
+    position: relative;
+}
+
+.mfp-full .modal {
+    max-width: none;
+    margin: auto;
+    padding: 2em 0;
+}
+
+// Animation
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }

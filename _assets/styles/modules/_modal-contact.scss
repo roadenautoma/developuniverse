@@ -1,0 +1,50 @@
+.modal-contact {
+    background-color: $brand-primary-color;
+}
+
+.modal-contact .modal__wrapper {
+    max-width: $max-width-thin;
+    margin: 0 auto;
+}
+
+.modal-contact .page-section__title {
+    color: $white;
+    margin-top: 0;
+}
+
+.modal-contact .modal-toggle-btn {
+    color: $white;
+    &:hover,
+    &:focus {
+        color: $brand-secondary-color;
+    }
+    &:active {
+        transform: scale(1.2);
+    }
+    .text {
+        @extend .sr-only;
+        display: none;
+    }
+    .icon{
+        font-size: 1.25rem;
+    }
+}
+
+// Animation
+.mfp-wrap .modal-contact {
+    .page-section__header,
+    .form {
+        transform: translateY(-2em);
+        opacity: 0;
+        transition: all 0.25s ease;
+        transition-delay: 0.1s;
+    }
+}
+
+.mfp-wrap.mfp-ready .modal-contact {
+    .page-section__header,
+    .form {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

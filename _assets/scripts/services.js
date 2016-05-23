@@ -9,7 +9,6 @@ $( document ).ready(function() {
     if( $('.areas__list').length > 0)  {
 
         var $grid = $('.areas__list');
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
 
         // Filter items on button click
