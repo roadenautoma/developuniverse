@@ -4253,6 +4253,17 @@ pre > code.highlight {
   float: right;
 }
 
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.5) translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .ts5 {
   font-size: 1.5rem;
 }
@@ -5565,10 +5576,7 @@ input[type="checkbox"] {
 
 .nav > li > a {
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   display: block;
-  text-decoration: none;
 }
 
 .nav > li > a:hover, .nav > li > a:focus, .nav > li > a:active {
@@ -5600,8 +5608,9 @@ input[type="checkbox"] {
 }
 
 .navbar-toggle-btn {
-  padding: 0.5em 1em;
+  padding: 0.5em 1.25em;
   height: 100%;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -5619,8 +5628,37 @@ input[type="checkbox"] {
   transform: scale(1.2);
 }
 
+.navbar-toggle-btn .text {
+  display: none;
+}
+
 .navbar-toggle-btn .icon {
   font-size: 1.25rem;
+}
+
+.navbar__nav > li > a {
+  color: #0A2E3D;
+  text-decoration: none;
+  outline: none;
+}
+
+.navbar__nav > li > a:hover, .navbar__nav > li > a:focus {
+  color: #f2461c;
+}
+
+.navbar__nav > li.active span {
+  position: relative;
+}
+
+.navbar__nav > li.active span:after {
+  content: "";
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px solid #f2461c;
 }
 
 .navbar {
@@ -5660,30 +5698,15 @@ input[type="checkbox"] {
   .navbar__nav > li {
     margin: 0 2%;
   }
+  .navbar__nav--left > li:first-child {
+    display: none;
+  }
   .navbar__nav > li > a {
     display: block;
     padding: 2.5em 1em;
     font-size: 0.7777777778rem;
-    outline: none;
     letter-spacing: 0.15em;
-    color: #0A2E3D;
-  }
-  .navbar__nav > li > a:hover, .navbar__nav > li > a:focus {
-    color: #f2461c;
-  }
-  .navbar__nav > li.active span {
-    color: #0A2E3D;
-    position: relative;
-  }
-  .navbar__nav > li.active span:after {
-    content: "";
-    position: absolute;
-    bottom: -0.3em;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    border-bottom: 2px solid #f2461c;
+    text-transform: uppercase;
   }
   .navbar > .container {
     position: relative;
@@ -5710,7 +5733,7 @@ input[type="checkbox"] {
     transform: translateY(-50%);
     padding: 0;
     margin: 0 auto;
-    height: 3em;
+    height: 2.5em;
     background-image: url("../images/logo.svg");
   }
   .navbar__nav {
@@ -5734,6 +5757,9 @@ input[type="checkbox"] {
 }
 
 @media (min-width: 960px) {
+  .navbar__brand .brand-logo {
+    height: 3em;
+  }
   .navbar__nav > li {
     margin: 0 3%;
   }
@@ -5749,6 +5775,91 @@ input[type="checkbox"] {
   .navbar__nav > li > a {
     padding: 2.5em 2em;
   }
+}
+
+.nav-overlay {
+  padding: 4em 1em;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  z-index: 100;
+  overflow: auto;
+  backface-visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.25s, opacity 0.2s ease-in;
+}
+
+.nav-overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-overlay .navbar-toggle-btn {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  left: auto;
+  bottom: auto;
+  height: auto;
+}
+
+.nav-overlay .navbar__nav > li {
+  display: block;
+}
+
+.nav-overlay .navbar__nav > li > a {
+  font-size: 22px;
+  display: block;
+  padding: 0.75em 0.25em;
+}
+
+@media (min-width: 640px) {
+  .nav-overlay .navbar__nav > li > a {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .nav-overlay .navbar__nav > li > a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1365px) {
+  .nav-overlay .navbar__nav > li > a {
+    font-size: 1rem;
+  }
+}
+
+.nav-overlay .navbar__collapse__wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-height: 440px) {
+  .nav-overlay .navbar__collapse__wrapper {
+    top: 0%;
+    transform: translateY(0%);
+  }
+}
+
+.nav-overlay .navbar__collapse__wrapper {
+  transform: translateY(-60%);
+  opacity: 0;
+  transition: all 0.25s ease;
+  transition-delay: 0.1s;
+}
+
+.nav-overlay.is-open .navbar__collapse__wrapper {
+  transform: translateY(-50%);
+  opacity: 1;
 }
 
 .badge {

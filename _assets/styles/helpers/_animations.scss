@@ -1,0 +1,24 @@
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.5) translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@mixin animation-fadedown($delay) {
+  // Apply the fadeIn keyframes. Each animation
+  // will take 0.3s and have an ease-in-out
+  animation: fadeIn $base-transition-time ease-in-out;
+  // This animation should only play once
+  animation-iteration-count: 1;
+  // Make sure the element maintains it's
+  // final visual state (i.e. 100% opacity)
+  animation-fill-mode: forwards;
+  // Delay - don't start the animation until we say so
+  animation-delay: #{$delay}s;
+}

@@ -14,7 +14,7 @@
         <div id="page" class="site">
 
             <header class="site-header" role="banner">
-                <nav class="navbar">
+                <nav class="navbar js-navbar">
                     <div class="container">
                         <div class="navbar__header">
                             <div class="navbar__brand">
@@ -23,7 +23,7 @@
                                 </a>
                             </div><!-- .navbar-brand -->
                             <div class="navbar__toggle">
-                                <button type="button" class="navbar-toggle-btn js-nav-toggle">
+                                <button type="button" class="navbar-toggle-btn  js-navbar-toggle">
                                     <span class="text">Menu</span>
                                     <i class="icon icon-bars"></i>
                                 </button>
@@ -31,9 +31,17 @@
                         </div><!-- .navbar__header -->
 
                         <div class="navbar__collapse js-nav-overlay">
-                            <div class="navbar__collapse__wrapper">
 
+                            <button class="navbar-toggle-btn js-navbar-toggle">
+                                <span class="text">Close</span>
+                                <i class="icon icon-close"></i>
+                            </button>
+
+                            <div class="navbar__collapse__wrapper">
                                 <ul class="nav navbar__nav navbar__nav--left">
+                                    <li {% if page.url == '/' %} class="active" {% endif %}>
+                                        <a href="{{ site.url }}"><span>Home</span></a>
+                                    </li>
                                     <li {% if page.url == '/services/' %} class="active" {% endif %}>
                                         <a href="{{ site.url }}/services/"><span>Services</span></a>
                                     </li>

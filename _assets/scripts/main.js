@@ -31,8 +31,8 @@ $( document ).ready(function() {
 	var $header = jQuery('.js-navbar');
 
     // Mobile nav
-    jQuery('.js-navbar-toggle').on('click', function(){
-		jQuery(this).toggleClass('is-open');
+    $toggle.on('click', function(){
+		$toggle.toggleClass('is-open');
         $overlay.toggleClass('is-open');
 		$header.toggleClass('is-open');
     });
@@ -47,7 +47,7 @@ $( document ).ready(function() {
 		$header.removeClass('is-open');
 	}
 
-	enquire.register("screen and (max-width:639px)", {
+	enquire.register("screen and (max-width:769px)", {
 	    match : function() {
 	        $overlay.addClass('nav-overlay');
 	        if($toggle.hasClass('is-open')) {
