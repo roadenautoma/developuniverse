@@ -17,6 +17,7 @@
     text-align: center;
     z-index: 1;
     background-color: #F9FAFE;
+    overflow: hidden;
     &:before {
         content: '';
         display: block;
