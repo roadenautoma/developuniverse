@@ -128,12 +128,12 @@
 }
 
 
-.btn--link{
+.btn.btn--link{
 	background: none;
 	color: $brand-secondary-color;
 	box-shadow: none;
-	padding-right: 0 !important;
-    padding-left: 0 !important;
+	padding-right: 0;
+    padding-left: 0;
 	&:visited {
 		color: $brand-secondary-color;
 	}

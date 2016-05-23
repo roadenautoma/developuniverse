@@ -24,17 +24,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-close:before {
+    content: "\e900";
+}
+.icon-bars:before {
+    content: "\e901";
+}
 .icon-check:before {
     content: "\f00c";
-}
-.icon-close:before {
-    content: "\f00d";
-}
-.icon-remove:before {
-    content: "\f00d";
-}
-.icon-times:before {
-    content: "\f00d";
 }
 .icon-twitter:before {
     content: "\f099";

@@ -165,7 +165,7 @@ module.exports = function(grunt) {
             },
             icons: {
                 files: ['<%= project.assets %>/icons/*.svg'],
-                tasks: ['grunticon']
+                tasks: []
             }
         }, // watch
 
