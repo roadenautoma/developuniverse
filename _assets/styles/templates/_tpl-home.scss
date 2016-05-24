@@ -47,7 +47,7 @@
             bottom: auto;
             left: 50%;
             z-index: -1;
-            margin-left: -1580px;
+            margin-left: -1550px;
             background-image: url('../images/home-about-bg.jpg');
             background-position: bottom center;
             background-size: cover;
@@ -127,6 +127,12 @@
         height: 24em;
         background-size: 48px 48px;
     }
+}
+
+.ps-home-method .page-section__header{
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* @end Methodology */

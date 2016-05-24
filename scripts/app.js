@@ -18184,10 +18184,15 @@ $( document ).ready(function() {
                         overlay_close($overlay);
                     }, 1000);
                 }
-
+            },
+            afterClose: function() {
+                // Remove focus to link
+                $('.js-contact-modal-toggle').blur();
             }
         }
     });
+
+
     // Close btn
     $('.js-modal-close').on('click', function() {
         $.magnificPopup.close();
