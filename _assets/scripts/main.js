@@ -71,10 +71,6 @@ $( document ).ready(function() {
     /* Forms
     ------------------------------------------- */
 
-    // Custom form elements
-    jcf.replaceAll();
-
-
     // Animated placeholder
     $('input:not(:checkbox):not(:button):not(:radio), textarea').focus(function() {
        $(this).parents('.form-group').addClass('is-focus');

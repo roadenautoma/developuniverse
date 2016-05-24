@@ -5,6 +5,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 /* @end Header */
@@ -47,7 +48,7 @@
             bottom: auto;
             left: 50%;
             z-index: -1;
-            margin-left: -1550px;
+            margin-left: -1600px;
             background-image: url('../images/home-about-bg.jpg');
             background-position: bottom center;
             background-size: cover;

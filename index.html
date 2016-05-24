@@ -10,8 +10,22 @@ title: Home
         <div class="container">
             <div class="hero-intro__wrapper">
                 <header class="hero__header">
-                    <h1 class="hero__title">An engineering approach to marketing</h1>
-                    <p class="hero__subtitle">The rise of the <strong>CTMO</strong></p>
+                    <h1 class="hero__title">An engineering approach to <span class="hero__title__concept">marketing</span></h1>
+                    <p class="hero__subtitle">The rise of the <strong>CTMO</strong>.</p>
+
+                    <figure class="hero-intro__step hero-intro__step--1">
+                        {% include images/home-hero-step-1.svg %}
+                    </figure>
+                    <figure class="hero-intro__step hero-intro__step--2">
+                        {% include images/home-hero-step-2.svg %}
+                    </figure>
+                    <figure class="hero-intro__step hero-intro__step--3">
+                        {% include images/home-hero-step-3.svg %}
+                    </figure>
+                    <figure class="hero-intro__step hero-intro__step--4">
+                        {% include images/home-hero-step-4.svg %}
+                    </figure>
+
                 </header>
             </div><!-- .hero-intro__wrapper -->
 
@@ -48,7 +62,7 @@ title: Home
 
 
     <section id="home-method" class="page-section ps-home-method">
-        <div class="container container--narrow">
+        <div class="container">
 
             <header class="page-section__header">
                 <p class="page-section__name">Methodology</p>
@@ -75,7 +89,7 @@ title: Home
                     <div class="method__content">
 
                         <ol class="method__list owl-carousel">
-
+                            <!-- TODO: Uglyyyyyyy bug. Find a way to bind the left arrow to the steps when resizing the window -->
                             {% for step in site.data.method-steps %}
                             <li data-step="step-{{ forloop.index }}" class="method__item {% if forloop.index == 1 %}active{% endif %}">
 

@@ -20,6 +20,15 @@
     }
 }
 
+
+.hero__header {
+    text-align: center;
+}
+
+.hero__title {
+    margin-top: 0;
+}
+
 .hero.hero--large .page__title {
     color: $white;
     margin-top: 0;

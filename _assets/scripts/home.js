@@ -47,7 +47,7 @@ $( document ).ready(function() {
                 autoplay: false,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
-                autoHeight: true,
+                autoHeight: false,
                 loop: true,
                 dotsContainer: '.method__nav .nav'
             }); // owlcarousel

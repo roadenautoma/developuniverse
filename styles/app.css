@@ -4462,7 +4462,7 @@ a:hover, a:focus, a:active {
 }
 
 /* Headings */
-h1, .h1, .page__title,
+h1, .h1, .page__title, .hero-intro__step,
 h2, .h2,
 h3, .h3,
 h4, .h4, .method-step__title,
@@ -4477,13 +4477,13 @@ h6, .h6 {
   margin: 1em 0;
 }
 
-h1, .h1, .page__title {
+h1, .h1, .page__title, .hero-intro__step {
   font-size: 2.5rem;
   line-height: 1.21;
 }
 
 @media (min-width: 960px) {
-  h1, .h1, .page__title {
+  h1, .h1, .page__title, .hero-intro__step {
     font-size: 4.1111111111rem;
   }
 }
@@ -5237,7 +5237,7 @@ input[type="checkbox"] {
   width: 87.5%;
 }
 
-.container--narrow {
+.container--narrow, .hero-intro > .container {
   max-width: 1000px;
 }
 
@@ -5903,6 +5903,14 @@ input[type="checkbox"] {
   }
 }
 
+.hero__header {
+  text-align: center;
+}
+
+.hero__title {
+  margin-top: 0;
+}
+
 .hero.hero--large .page__title {
   color: #ffffff;
   margin-top: 0;
@@ -5926,34 +5934,70 @@ input[type="checkbox"] {
   height: 100%;
 }
 
-.hero-intro__wrapper {
+.hero-intro .hero-intro__wrapper {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.hero__header {
-  text-align: center;
-}
-
-.hero__title {
-  margin-top: 0;
-}
-
-.ps-home-hero {
+.hero-intro {
   background-color: #052a39;
+  background-image: url("../images/home-hero-bg.svg");
+  background-size: 70px 70px;
+  background-repeat: repeat;
+  background-position: center;
   color: #ffffff;
 }
 
-.ps-home-hero .hero__title {
-  color: #ffffff;
+.hero-intro .hero__header {
+  position: relative;
+  z-index: 1;
+  max-width: 530px;
 }
 
-.ps-home-hero .hero__subtitle {
+@media (min-width: 640px) {
+  .hero-intro .hero__header {
+    max-width: 530px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-intro .hero__header {
+    max-width: 880px;
+  }
+}
+
+@media (min-width: 1365px) {
+  .hero-intro .hero__header {
+    max-width: none;
+  }
+}
+
+.hero-intro .hero__title {
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.25em;
+}
+
+.hero-intro .hero__title__concept {
+  color: #7AD2EA;
+}
+
+.hero-intro .hero__subtitle {
+  font-size: 1.3rem;
   margin-bottom: 0;
 }
 
-.hero__read-more {
+@media (min-width: 1365px) {
+  .hero-intro .hero__subtitle {
+    font-size: 1.2222222222rem;
+  }
+}
+
+.hero-intro .hero__read-more {
   position: absolute;
   color: #ffffff;
   bottom: 3em;
@@ -5963,8 +6007,68 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 
-.hero__read-more:hover, .hero__read-more:focus {
+.hero-intro .hero__read-more:hover, .hero-intro .hero__read-more:focus {
   text-decoration: none;
+}
+
+.hero-intro__step {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  display: block;
+  z-index: -1;
+  transition: transform 0.2s ease;
+  margin: 0;
+}
+
+.hero-intro__step--1 {
+  top: 0;
+  left: 0;
+  transform: translate(-0.5em, -2em) scale(1.8);
+  transform-origin: bottom right;
+}
+
+@media (min-width: 640px) {
+  .hero-intro__step--1 {
+    transform: translate(0.5em, -1.5em) scale(1.8);
+  }
+}
+
+.hero-intro__step--2 {
+  top: 0;
+  right: 0;
+  transform: translate(0.25em, -3em) scale(1.8);
+  transform-origin: bottom left;
+}
+
+@media (min-width: 640px) {
+  .hero-intro__step--2 {
+    transform: translate(0, -2.5em) scale(1.8);
+  }
+}
+
+.hero-intro__step--3 {
+  left: 0;
+  transform: translate(0em, 0.5em) scale(1.8);
+  transform-origin: top right;
+}
+
+@media (min-width: 640px) {
+  .hero-intro__step--3 {
+    transform: translate(1.25em, 0) scale(1.8);
+  }
+}
+
+.hero-intro__step--4 {
+  right: 0;
+  transform: translate(0.5em, 0.5em) scale(1.8);
+  transform-origin: top left;
+}
+
+@media (min-width: 640px) {
+  .hero-intro__step--4 {
+    transform: translate(-0.75em, 0) scale(1.8);
+  }
 }
 
 .modal {
@@ -6934,6 +7038,7 @@ input[type="checkbox"] {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 /* @end Header */
@@ -6978,7 +7083,7 @@ input[type="checkbox"] {
     bottom: auto;
     left: 50%;
     z-index: -1;
-    margin-left: -1550px;
+    margin-left: -1600px;
     background-image: url("../images/home-about-bg.jpg");
     background-position: bottom center;
     background-size: cover;
