@@ -19,6 +19,19 @@
     z-index: 1;
     background-color: #F9FAFE;
     overflow: hidden;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0; left: 0;
+        background-image: url('../images/home-about-bgcolor.jpg');
+        background-repeat: repeat-y;
+        background-size: auto 18em;
+        background-position: bottom center;
+        z-index: -2;
+        //transform: rotateY(180deg);
+    }
     &:before {
         content: '';
         display: block;
@@ -28,15 +41,18 @@
         left: 0;
         height: 18em;
         background-image: url('../images/home-about-bg.jpg');
+        background-size: auto 18em;
         background-repeat: no-repeat;
         background-position: bottom center;
         z-index: -1;
-        background-size: auto 18em;
     }
     @include respond-to("medium") {
         padding-bottom: 7em;
         background-image: none;
         background-image: none;
+        &:after{
+            display: none;
+        }
         // Image background
         &:before {
             content: '';
@@ -54,21 +70,24 @@
             background-size: cover;
         }
     }
-    // Dots decoration
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -6.1em;
-        left: 0;
-        display: block;
-        width: 100%;
-        background-image: url("../images/dots-bg.svg");
-        background-repeat: repeat;
-        background-position: top;
-        height: 6.1em;
-        background-size: 48px 48px;
-    }
 }
+
+
+// Dots decoration
+// &:after {
+//     content: "";
+//     position: absolute;
+//     bottom: -6.1em;
+//     left: 0;
+//     display: block;
+//     width: 100%;
+//     background-image: url("../images/dots-bg.svg");
+//     background-repeat: repeat;
+//     background-position: top;
+//     height: 6.1em;
+//     background-size: 48px 48px;
+// }
+
 
 .ps-home-about > .container {
     max-width: 550px;
@@ -85,8 +104,10 @@
 }
 
 .ps-home-about .page-section__content p {
-    background-color: rgba(#F8F9FD, 0.4);
-    box-shadow: 0 0 2em 1em rgba(#F8F9FD, 0.4);
+    @include respond-to("medium") {
+        background-color: rgba(#F8F9FD, 0.4);
+        box-shadow: 0 0 2em 1em rgba(#F8F9FD, 0.4);
+    }
 }
 
 .ps-home-about .social-links {

@@ -6014,7 +6014,6 @@ input[type="checkbox"] {
 }
 
 .hero__read-more {
-  font-size: 0.86rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -6025,12 +6024,7 @@ input[type="checkbox"] {
   width: 100%;
   text-align: center;
   text-decoration: none;
-}
-
-@media (min-width: 960px) {
-  .hero__read-more {
-    font-size: 0.75rem;
-  }
+  font-size: 0.7rem;
 }
 
 .hero__read-more:hover, .hero__read-more:focus {
@@ -6040,6 +6034,12 @@ input[type="checkbox"] {
 
 .hero__read-more:hover .icon svg .shape, .hero__read-more:focus .icon svg .shape {
   fill: #f2461c;
+}
+
+@media (min-width: 960px) {
+  .hero__read-more {
+    font-size: 0.7777777778rem;
+  }
 }
 
 .hero__read-more .text {
@@ -7127,6 +7127,21 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
+.ps-home-about:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../images/home-about-bgcolor.jpg");
+  background-repeat: repeat-y;
+  background-size: auto 18em;
+  background-position: bottom center;
+  z-index: -2;
+}
+
 .ps-home-about:before {
   content: '';
   display: block;
@@ -7136,10 +7151,10 @@ input[type="checkbox"] {
   left: 0;
   height: 18em;
   background-image: url("../images/home-about-bg.jpg");
+  background-size: auto 18em;
   background-repeat: no-repeat;
   background-position: bottom center;
   z-index: -1;
-  background-size: auto 18em;
 }
 
 @media (min-width: 960px) {
@@ -7147,6 +7162,9 @@ input[type="checkbox"] {
     padding-bottom: 7em;
     background-image: none;
     background-image: none;
+  }
+  .ps-home-about:after {
+    display: none;
   }
   .ps-home-about:before {
     content: '';
@@ -7163,20 +7181,6 @@ input[type="checkbox"] {
     background-position: bottom center;
     background-size: cover;
   }
-}
-
-.ps-home-about:after {
-  content: "";
-  position: absolute;
-  bottom: -6.1em;
-  left: 0;
-  display: block;
-  width: 100%;
-  background-image: url("../images/dots-bg.svg");
-  background-repeat: repeat;
-  background-position: top;
-  height: 6.1em;
-  background-size: 48px 48px;
 }
 
 .ps-home-about > .container {
@@ -7199,9 +7203,11 @@ input[type="checkbox"] {
   }
 }
 
-.ps-home-about .page-section__content p {
-  background-color: rgba(248, 249, 253, 0.4);
-  box-shadow: 0 0 2em 1em rgba(248, 249, 253, 0.4);
+@media (min-width: 960px) {
+  .ps-home-about .page-section__content p {
+    background-color: rgba(248, 249, 253, 0.4);
+    box-shadow: 0 0 2em 1em rgba(248, 249, 253, 0.4);
+  }
 }
 
 .ps-home-about .social-links {
