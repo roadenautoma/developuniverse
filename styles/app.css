@@ -5976,6 +5976,7 @@ input[type="checkbox"] {
 }
 
 .hero-intro .hero__title {
+  visibility: hidden;
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1.1;
@@ -5987,6 +5988,7 @@ input[type="checkbox"] {
 }
 
 .hero-intro .hero__subtitle {
+  visibility: hidden;
   font-size: 1.3rem;
   margin-bottom: 0;
 }
@@ -6012,63 +6014,90 @@ input[type="checkbox"] {
 }
 
 .hero-intro__step {
+  visibility: hidden;
   position: absolute;
-  width: 3em;
-  height: 3em;
+  width: 5em;
+  height: 5em;
   display: block;
   z-index: -1;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
   margin: 0;
 }
 
 .hero-intro__step--1 {
-  top: 0;
-  left: 0;
-  transform: translate(-0.5em, -2em) scale(1.8);
+  top: -4em;
+  left: -2.5em;
   transform-origin: bottom right;
 }
 
 @media (min-width: 640px) {
   .hero-intro__step--1 {
-    transform: translate(0.5em, -1.5em) scale(1.8);
+    top: -3.75em;
+    left: -1.25em;
   }
 }
 
 .hero-intro__step--2 {
-  top: 0;
-  right: 0;
-  transform: translate(0.25em, -3em) scale(1.8);
+  top: -5em;
+  right: -1.5em;
   transform-origin: bottom left;
 }
 
 @media (min-width: 640px) {
   .hero-intro__step--2 {
-    transform: translate(0, -2.5em) scale(1.8);
+    top: -4.5em;
+    right: -1em;
   }
 }
 
 .hero-intro__step--3 {
-  left: 0;
-  transform: translate(0em, 0.5em) scale(1.8);
+  left: -2em;
   transform-origin: top right;
 }
 
 @media (min-width: 640px) {
   .hero-intro__step--3 {
-    transform: translate(1.25em, 0) scale(1.8);
+    left: 0;
   }
 }
 
 .hero-intro__step--4 {
-  right: 0;
-  transform: translate(0.5em, 0.5em) scale(1.8);
+  right: -2em;
   transform-origin: top left;
 }
 
 @media (min-width: 640px) {
   .hero-intro__step--4 {
-    transform: translate(-0.75em, 0) scale(1.8);
+    right: 0;
   }
+}
+
+.hero-intro .hero__title {
+  animation-delay: 0.2s;
+}
+
+.hero-intro .hero__subtitle {
+  animation-delay: 0.5s;
+}
+
+.hero-intro__step--1 {
+  animation-delay: 0.8s;
+}
+
+.hero-intro__step--2 {
+  animation-delay: 1s;
+}
+
+.hero-intro__step--3 {
+  animation-delay: 1.2s;
+}
+
+.hero-intro__step--4 {
+  animation-delay: 1.4s;
+}
+
+.hero-intro .hero__read-more {
+  animation-delay: 1.6s;
 }
 
 .modal {

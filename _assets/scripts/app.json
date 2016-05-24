@@ -10,6 +10,7 @@
         "vendor/owl.carousel.js",
         "vendor/autosize.js",
         "vendor/jquery.balancetext.js",
+        "vendor/wow.js",
         "home.js",
         "services.js",
         "main.js",

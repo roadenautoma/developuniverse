@@ -92,3 +92,8 @@ $( document ).ready(function() {
 
 
 }); // End ready
+
+
+$(window).load(function() {
+    //$('.hero__header').addClass("animated");
+});
