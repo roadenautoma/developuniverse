@@ -70,7 +70,7 @@
 }
 
 .ps-home-about > .container {
-    max-width: 600px;
+    max-width: 550px;
 }
 
 .ps-home-about .page-section__header {
@@ -84,9 +84,8 @@
 }
 
 .ps-home-about .page-section__content p {
-    text-shadow: 0 0 1px rgba(white, 1),
-    0px 0px 10px rgba(white, 1),
-    0px 0px 30px white;
+    background-color: rgba(#F8F9FD, 0.4);
+    box-shadow: 0 0 2em 1em rgba(#F8F9FD, 0.4);
 }
 
 .ps-home-about .social-links {

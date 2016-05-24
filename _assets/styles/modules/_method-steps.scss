@@ -14,12 +14,13 @@
         padding: 2.5em;
     }
     @include respond-to("medium") {
-        padding: 2.5em 4em;
+        padding: 3em 4em;
     }
 }
 
 .method-step__number {
     display: none;
+    font-family: $heading-font-family;
     color: $brand-secondary-color;
     line-height: 1;
     vertical-align: middle;
@@ -47,9 +48,6 @@
     //margin-bottom: 0;
 }
 
-
-
-
 .method-step__image {
     margin: 0 auto;
     max-width: 200px;
@@ -63,10 +61,12 @@
         width: 100%;
     }
 }
+
 .method-step .actions {
     margin-top: 0;
     text-align: center;
 }
+
 
 
 // Carousel
@@ -161,8 +161,6 @@
 
 
 // Layout
-
-
 @include respond-to("small") {
     // Equal height
     .owl-stage {
@@ -186,7 +184,7 @@
         display: flex;
         flex: 1 0 auto;
         width: 100%;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
     }
     .method-step__aside{
@@ -196,6 +194,11 @@
     .method-step__body{
         order: 1;
         flex-basis: 45%;
+    }
+    .method-step__body{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
     }
     .method-step .actions {
         text-align: left;

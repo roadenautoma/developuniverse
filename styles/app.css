@@ -6373,12 +6373,13 @@ input[type="checkbox"] {
 
 @media (min-width: 960px) {
   .method__item {
-    padding: 2.5em 4em;
+    padding: 3em 4em;
   }
 }
 
 .method-step__number {
   display: none;
+  font-family: "GT Walsheim", "Roboto", Helvetica, Arial, sans-serif;
   color: #f2461c;
   line-height: 1;
   vertical-align: middle;
@@ -6558,7 +6559,7 @@ input[type="checkbox"] {
     display: flex;
     flex: 1 0 auto;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
   }
   .method-step__aside {
@@ -6568,6 +6569,11 @@ input[type="checkbox"] {
   .method-step__body {
     order: 1;
     flex-basis: 45%;
+  }
+  .method-step__body {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
   }
   .method-step .actions {
     text-align: left;
@@ -6994,7 +7000,7 @@ input[type="checkbox"] {
 }
 
 .ps-home-about > .container {
-  max-width: 600px;
+  max-width: 550px;
 }
 
 .ps-home-about .page-section__header {
@@ -7014,7 +7020,8 @@ input[type="checkbox"] {
 }
 
 .ps-home-about .page-section__content p {
-  text-shadow: 0 0 1px white, 0px 0px 10px white, 0px 0px 30px white;
+  background-color: rgba(248, 249, 253, 0.4);
+  box-shadow: 0 0 2em 1em rgba(248, 249, 253, 0.4);
 }
 
 .ps-home-about .social-links {

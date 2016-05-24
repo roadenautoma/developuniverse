@@ -17939,7 +17939,7 @@ $( document ).ready(function() {
 	}
 
 
-    
+
 
 
 
@@ -17953,8 +17953,6 @@ $( document ).ready(function() {
         // Load the slider when the images are ready
         $steps.imagesLoaded( function(){
 
-            // Machheight between steps
-
             // Create the slider
             $steps.owlCarousel({
                 items: 1,
@@ -17962,7 +17960,7 @@ $( document ).ready(function() {
                 autoplay: false,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
-                autoHeight: false,
+                autoHeight: true,
                 loop: true,
                 dotsContainer: '.method__nav .nav'
             }); // owlcarousel

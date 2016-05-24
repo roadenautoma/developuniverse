@@ -29,7 +29,6 @@ title: Home
 
             <div class="page-section__content">
                 <p>
-                    <!-- TODO: Gonto: Esto es muy dificil de leer con el color que tiene lo otro de fondo. Que opinas? -->
                     I’m a software engineer theat now works on Marketing. Wait, what? Yes, I found a way to combine my 2 passions and apply my <a class="scroll-to" href="#home-method">engineering thinking model</a> to Marketing.
                 </p>
 
@@ -87,11 +86,14 @@ title: Home
                                         </figure>
                                     </aside>
                                     <div class="method-step__body">
-                                        <span class="method-step__number">{{step.number}}</span>
-                                        <h3 class="method-step__title">{{step.title}}</h3>
-                                        <div class="method-step__content">
-                                            <p>{{step.body}}</p>
-                                        </div><!-- .method-step__content -->
+                                        <div class="invisible-item"></div>
+                                        <div class="heading">
+                                            <span class="method-step__number">{{step.number}}</span>
+                                            <h3 class="method-step__title">{{step.title}}</h3>
+                                            <div class="method-step__content">
+                                                <p>{{step.body}}</p>
+                                            </div><!-- .method-step__content -->
+                                        </div><!-- .heading -->
                                         <div class="actions">
                                             <ul>
                                                 <li>
