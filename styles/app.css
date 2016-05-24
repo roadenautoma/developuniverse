@@ -5006,6 +5006,10 @@ input[type="checkbox"] {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-right:before {
+  content: "\e902";
+}
+
 .icon-close:before {
   content: "\e900";
 }
@@ -5183,6 +5187,17 @@ input[type="checkbox"] {
 .btn.btn--link.active, .active.navbar-toggle-btn, .modal .active.modal-toggle-btn {
   color: #f2461c;
   text-decoration: underline;
+}
+
+.btn--more .icon {
+  font-size: 1.5em;
+  margin: -0.5em 0;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.2em;
+  position: relative;
+  top: -0.025em;
 }
 
 /* Sizes */
@@ -5929,6 +5944,7 @@ input[type="checkbox"] {
 .hero-intro {
   height: 100vh;
   position: relative;
+  overflow: hidden;
   min-height: 520px;
 }
 
@@ -6447,6 +6463,7 @@ input[type="checkbox"] {
 .blog-item {
   max-width: 600px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .blog-item__title {
@@ -6466,6 +6483,10 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 
+.blog-item__title a.hover {
+  color: #f2461c;
+}
+
 .blog-item__image {
   position: relative;
 }
@@ -6481,11 +6502,17 @@ input[type="checkbox"] {
 }
 
 .blog-item .btn--more {
+  background: none;
+  box-shadow: none;
+  padding-right: 0;
+  padding-left: 0;
   font-size: 0.86rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: #667A81;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 1;
 }
 
 @media (min-width: 960px) {
@@ -6494,8 +6521,23 @@ input[type="checkbox"] {
   }
 }
 
-.blog-item .btn--more:hover, .blog-item .btn--more:focus {
+.blog-item .btn--more .icon {
+  opacity: 0;
+  transform: translateX(-0.25em);
+  transition: opacity 0.2s, transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+.blog-item .btn--more:visited {
+  color: #667A81;
+}
+
+.blog-item .btn--more:hover, .blog-item .btn--more:focus, .blog-item .btn--more.hover {
   color: #f2461c;
+}
+
+.blog-item .btn--more:hover .icon, .blog-item .btn--more:focus .icon, .blog-item .btn--more.hover .icon {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .footer-contact {

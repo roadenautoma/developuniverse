@@ -168,6 +168,20 @@ $( document ).ready(function() {
 
 
 
+    /* Bigger targets for Blog item
+	------------------------------------------- */
+    $('.blog-item').hover(function(){
+        $(this).find('a').addClass('hover');
+    }, function(){
+        $(this).find('a').removeClass('hover');
+    });
+
+    $('.blog-item').on('click', function() {
+        var target = $(this).find('a').first().attr('href');
+        location.href = target;
+    });
+
+
     // Wow
     var wow = new WOW(
       {

@@ -1,6 +1,7 @@
 .hero-intro {
     height: 100vh;
     position: relative;
+    overflow: hidden;
     min-height: 520px;
     @include respond-to("small") {
         min-height: 630px;
