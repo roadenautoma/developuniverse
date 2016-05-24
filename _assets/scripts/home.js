@@ -6,26 +6,25 @@ $( document ).ready(function() {
     // Hero scroll down
     if( $('.ps-home-hero').length > 0 ) {
 
-        var offset = '';
+        var offset = 0;
 
-        enquire.register("screen and (max-width:879px)", {
-            match : function() {
-    	        offset = $('.navbar').outerHeight();
-    	    },
-    	    unmatch : function() {
-    	        offset = 0;
-    	    }
-        });
+        // enquire.register("screen and (max-width:879px)", {
+        //     match : function() {
+    	//         offset = $('.navbar').outerHeight();
+    	//     },
+    	//     unmatch : function() {
+    	//         offset = 0;
+    	//     }
+        // });
 
 		$('.ps-home-hero .js-hero-read-more').on('click', function(event) {
 			$('html, body').animate({
         		scrollTop: $('#home-about').offset().top - offset
    			}, 500);
+            $(this).blur();
             event.preventDefault();
 		});
 	}
-
-
 
 
 
@@ -79,21 +78,9 @@ $( document ).ready(function() {
         }); // imagesloaded
 
 
-
-
-
-
     } // End if
 
 
 
 
-
-
-
 }); // End ready
-
-
-$(window).load(function() {
-    //$('.hero__header').addClass("animated");
-});

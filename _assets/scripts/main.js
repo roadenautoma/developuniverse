@@ -161,6 +161,7 @@ $( document ).ready(function() {
 		$('html, body').animate({
     		scrollTop: $(target).offset().top
 			}, 500);
+        $(this).blur();
         event.preventDefault();
 
     });
