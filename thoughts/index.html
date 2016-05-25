@@ -36,50 +36,57 @@ title: Thoughts
 
                 <!-- Pagination links -->
     			<div class="pagination">
+
+
     				<ul>
     					{% if paginator.previous_page %}
     					{% if paginator.previous_page == 1 %}
     					<li>
-    						<a href="/thoughts/">Prev</a>
+    						<a class="pagination__pager" href="/thoughts/">Prev</a>
     					</li>
     					{% else %}
     					<li>
-    						<a href="/thoughts/{{ paginator.previous_page }}">Prev</a>
+    						<a class="pagination__pager" href="/thoughts/{{ paginator.previous_page }}">Prev</a>
     					</li>
     					{% endif %}
     					{% else %}
+                        <!--
     					<li>
-    						<span class="disabled">Prev</span>
+    						<span class="pagination__pager disabled">Prev</span>
     					</li>
+                        -->
     					{% endif %}
     					{% if paginator.page == 1 %}
     					<li>
-    						<span class="active">1</span>
+    						<span class="pagination__number active">1</span>
     					</li>
     					{% else %}
     					<li>
-    						<a href="/thoughts/">1</a>
+    						<a class="pagination__number" href="/thoughts/">1</a>
     					</li>
     					{% endif %}
     					{% for count in (2..paginator.total_pages) %}
     					{% if count == paginator.page %}
     					<li>
-    						<span class="active">{{ count }}</span>
+    						<span class="pagination__number active">{{ count }}</span>
     					</li>
     					{% else %}
     					<li>
-    						<a href="/thoughts/page{{ count }}">{{ count }}</a>
+    						<a class="pagination__number" href="/thoughts/page{{ count }}">{{ count }}</a>
     					</li>
     					{% endif %}
     					{% endfor %}
     					{% if paginator.next_page %}
     					<li>
-    						<a href="/thoughts/{{ paginator.next_page }}">Next</a>
+                            <!-- TODO: @Gonto: Pagination next not working -->
+    						<a class="pagination__pager" href="/thoughts/{{ paginator.next_page }}">Next</a>
     					</li>
     					{% else %}
+                        <!--
     					<li>
-    						<span class="disabled">Next</span>
+    						<span class="pagination__pager disabled">Next</span>
     					</li>
+                        -->
     					{% endif %}
     				</ul>
     			</div><!-- .pagination -->

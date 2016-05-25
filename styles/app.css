@@ -4910,7 +4910,8 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-.form-actions .btn:only-child, .form-actions .navbar-toggle-btn:only-child, .form-actions .modal .modal-toggle-btn:only-child, .modal .form-actions .modal-toggle-btn:only-child {
+.form-actions .btn:only-child, .form-actions .navbar-toggle-btn:only-child, .form-actions .modal .modal-toggle-btn:only-child, .modal .form-actions .modal-toggle-btn:only-child, .form-actions .pagination__pager:only-child, .form-actions
+.pagination__number:only-child {
   padding-left: 3em;
   padding-right: 3em;
 }
@@ -5066,7 +5067,8 @@ input[type="checkbox"] {
   content: "\f113";
 }
 
-.btn, .navbar-toggle-btn, .modal .modal-toggle-btn {
+.btn, .navbar-toggle-btn, .modal .modal-toggle-btn, .pagination__pager,
+.pagination__number {
   display: inline-block;
   border: none;
   cursor: pointer;
@@ -5088,23 +5090,28 @@ input[type="checkbox"] {
   transition: all 0.15s;
 }
 
-.btn:visited, .navbar-toggle-btn:visited, .modal .modal-toggle-btn:visited {
+.btn:visited, .navbar-toggle-btn:visited, .modal .modal-toggle-btn:visited, .pagination__pager:visited,
+.pagination__number:visited {
   color: #fff;
 }
 
-.btn:hover, .navbar-toggle-btn:hover, .modal .modal-toggle-btn:hover, .btn:focus, .navbar-toggle-btn:focus, .modal .modal-toggle-btn:focus {
+.btn:hover, .navbar-toggle-btn:hover, .modal .modal-toggle-btn:hover, .pagination__pager:hover,
+.pagination__number:hover, .btn:focus, .navbar-toggle-btn:focus, .modal .modal-toggle-btn:focus, .pagination__pager:focus,
+.pagination__number:focus {
   background-color: #f35a34;
   color: #fff;
   outline: none;
   text-decoration: none;
 }
 
-.btn:disabled , .navbar-toggle-btn:disabled , .modal .modal-toggle-btn:disabled  {
+.btn:disabled , .navbar-toggle-btn:disabled , .modal .modal-toggle-btn:disabled , .pagination__pager:disabled ,
+.pagination__number:disabled  {
   opacity: 0.7;
   pointer-events: none;
 }
 
-.btn .text, .navbar-toggle-btn .text, .modal .modal-toggle-btn .text {
+.btn .text, .navbar-toggle-btn .text, .modal .modal-toggle-btn .text, .pagination__pager .text,
+.pagination__number .text {
   display: inline-block;
   position: relative;
   opacity: 1;
@@ -5113,7 +5120,8 @@ input[type="checkbox"] {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.btn .spinner, .navbar-toggle-btn .spinner, .modal .modal-toggle-btn .spinner {
+.btn .spinner, .navbar-toggle-btn .spinner, .modal .modal-toggle-btn .spinner, .pagination__pager .spinner,
+.pagination__number .spinner {
   display: inline-block;
   width: 2.25em;
   height: 2.25em;
@@ -5129,7 +5137,8 @@ input[type="checkbox"] {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.btn .spinner svg, .navbar-toggle-btn .spinner svg, .modal .modal-toggle-btn .spinner svg {
+.btn .spinner svg, .navbar-toggle-btn .spinner svg, .modal .modal-toggle-btn .spinner svg, .pagination__pager .spinner svg,
+.pagination__number .spinner svg {
   width: 100%;
   height: 100%;
 }
@@ -5180,22 +5189,29 @@ input[type="checkbox"] {
   background-color: #7AD2EA;
 }
 
-.btn--hollow {
+.btn--hollow, .pagination__pager,
+.pagination__number {
   color: #f2461c;
   box-shadow: inset 0 0 0 2px #f2461c;
   background-color: transparent;
 }
 
-.btn--hollow:visited {
+.btn--hollow:visited, .pagination__pager:visited,
+.pagination__number:visited {
   color: #f2461c;
 }
 
-.btn--hollow:hover, .btn--hollow:focus, .btn--hollow.active, .btn--hollow.current {
+.btn--hollow:hover, .pagination__pager:hover,
+.pagination__number:hover, .btn--hollow:focus, .pagination__pager:focus,
+.pagination__number:focus, .btn--hollow.active, .active.pagination__pager,
+.active.pagination__number, .btn--hollow.current, .current.pagination__pager,
+.current.pagination__number {
   background-color: #f2461c;
   color: #fff;
 }
 
-.btn.btn--link, .navbar-toggle-btn, .modal .modal-toggle-btn {
+.btn.btn--link, .navbar-toggle-btn, .modal .modal-toggle-btn, .btn--link.pagination__pager,
+.btn--link.pagination__number {
   background: none;
   color: #f2461c;
   box-shadow: none;
@@ -5203,16 +5219,20 @@ input[type="checkbox"] {
   padding-left: 0;
 }
 
-.btn.btn--link:visited, .navbar-toggle-btn:visited, .modal .modal-toggle-btn:visited {
+.btn.btn--link:visited, .navbar-toggle-btn:visited, .modal .modal-toggle-btn:visited, .btn--link.pagination__pager:visited,
+.btn--link.pagination__number:visited {
   color: #f2461c;
 }
 
-.btn.btn--link:hover, .navbar-toggle-btn:hover, .modal .modal-toggle-btn:hover, .btn.btn--link:focus, .navbar-toggle-btn:focus, .modal .modal-toggle-btn:focus {
+.btn.btn--link:hover, .navbar-toggle-btn:hover, .modal .modal-toggle-btn:hover, .btn--link.pagination__pager:hover,
+.btn--link.pagination__number:hover, .btn.btn--link:focus, .navbar-toggle-btn:focus, .modal .modal-toggle-btn:focus, .btn--link.pagination__pager:focus,
+.btn--link.pagination__number:focus {
   background: none;
   color: #e7380d;
 }
 
-.btn.btn--link.active, .active.navbar-toggle-btn, .modal .active.modal-toggle-btn {
+.btn.btn--link.active, .active.navbar-toggle-btn, .modal .active.modal-toggle-btn, .btn--link.active.pagination__pager,
+.btn--link.active.pagination__number {
   color: #f2461c;
   text-decoration: underline;
 }
@@ -6473,6 +6493,10 @@ html.mfp-helper body {
   transform: translateY(0);
 }
 
+.pagination {
+  text-align: center;
+}
+
 .pagination > ul {
   margin: 0;
   padding: 0;
@@ -6481,6 +6505,15 @@ html.mfp-helper body {
 
 .pagination > ul > li {
   margin-bottom: 0;
+}
+
+.pagination > ul > li {
+  display: inline-block;
+}
+
+.pagination__number {
+  padding-left: 1.25em;
+  padding-right: 1.25em;
 }
 
 .social-links > ul {
