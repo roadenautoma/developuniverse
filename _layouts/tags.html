@@ -1,0 +1,46 @@
+{% include header.html bodyClass= "tpl-blog" %}
+
+
+    <main id="main" class="page-main" role="main">
+
+    <header class="page-header">
+        <div class="hero">
+            <div class="container container--thin">
+                <div class="hero__heading">
+                    <p class="page__name">Thoughts</p>
+                    <!-- TODO: Or hashtag -->
+                    <h1 class="page__title">#{{page.title}}</h1>
+                </div><!-- .hero__heading -->
+            </div><!-- .container -->
+        </div><!-- .hero -->
+    </header><!-- .page-header -->
+
+    <div id="blog-list" class="page-section ps-blog-list">
+        <div class="container">
+
+            <div class="blog" itemscope itemprop="Blog" itemtype="http://schema.org/Blog">
+
+                <ul class="blog-list">
+                    <!-- This loops through the paginated posts -->
+               {% for article in page.posts %}
+                    <li class="blog-list__item">
+                        {% include blog-item.html article = article excerpt=true %}
+                    </li><!-- .blog-list__item -->
+                    {% endfor %}
+                </ul><!-- .blog-list -->
+
+                <!-- Pagination links -->
+
+
+            </div><!-- .blog -->
+
+
+        </div><!-- .container -->
+    </div><!-- .page-section -->
+
+</main><!-- .page-main -->
+
+
+
+{% include footer-newsletter.html %}
+{% include footer.html %}

@@ -34,7 +34,7 @@ gems:
 jekyll-archives:
   enabled:
     - tags
-  layout: 'blog'
+  layout: 'tags'
   permalinks:
     tag: '/tag/:name/'
 

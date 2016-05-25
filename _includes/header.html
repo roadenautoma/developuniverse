@@ -9,7 +9,7 @@
 
     {% include head.html %}
 
-    <body class="{{page.bodyClass}}">
+    <body class="{{include.bodyClass}} {{page.bodyClass}}">
 
         <div id="page" class="site">
             <!-- TODO: Fixed header -->
