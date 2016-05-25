@@ -28,6 +28,15 @@ gems:
   - jemoji
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-archives
+
+
+jekyll-archives:
+  enabled:
+    - tags
+  layout: 'blog'
+  permalinks:
+    tag: '/tag/:name/'
 
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks

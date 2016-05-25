@@ -3,7 +3,8 @@
 @import "breakpoint-sass/stylesheets/breakpoint";
 @import "susy/sass/susy";
 @import "magnific-popup/src/css/main.scss";
-@import "vendor/prism-base16-solarized.dark";
+// Check Pygment styles http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html
+@import "vendor/pygments";
 @import "vendor/animate";
 @import "vendor/owl.carousel";
 

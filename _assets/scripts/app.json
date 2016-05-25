@@ -3,7 +3,6 @@
         "vendor/jquery.js",
         "vendor/enquire.js",
         "vendor/fastclick.js",
-        "vendor/prism.js",
         "vendor/jquery.matchHeight.js",
         "vendor/jquery.magnific-popup.js",
         "vendor/imagesloaded.pkgd.js",

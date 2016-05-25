@@ -23,6 +23,7 @@ Besides that, Github (the most beloved Webapp for all developers) has a nice fea
 However, not everything that Github does is pure gold. In this article, I'll tell you about my own experience when creating this blog and why I decided to move away from Github and Github pages to deploy my blog in Digital Ocean.
 
 <!-- more -->
+
 ## Phases of creating a blog
 
 In order to explain why I moved away from Github Pages, I'll go over all the different phases I went through when building my blog.
