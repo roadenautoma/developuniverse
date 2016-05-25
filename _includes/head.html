@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- TODO: Add proper title and conditionals for home, posts -->
+    <!-- TODO: @Gonto Add proper title and conditionals for home, posts -->
     <title>
         {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} &mdash; {{site.title}}
     </title>
@@ -39,9 +39,9 @@
     <meta name="theme-color" content="#f2461c">
 
     <!-- Styles -->
-    <!-- TODO: Only load if in the blog -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
-    <!-- . -->
+    {% if page.layout == 'post' %}
+        <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+    {% endif %}
     <link rel="stylesheet" href="{{ site.url }}/styles/app.css"/>
 
     <!-- Scripts -->

@@ -65,7 +65,6 @@ $( document ).ready(function() {
             });
 
             // Keyboard
-            // TODO: Should we focus on the slider first and then activate the keyboard?
             $(document).on('keydown', function(event){
                 if (event.keyCode == 37) {
                     owl.trigger('prev.owl.carousel');

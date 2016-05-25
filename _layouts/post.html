@@ -14,7 +14,7 @@
 
                     <div class="article__tags">
                         <ul class="tags-list">
-                             {% for tag in page.tags %}
+                             {% for tag in page.tags | pop: 5 %}
                                <li><a class="tag" href="/tag/{{tag}}">#{{tag}}</a></li>
                              {% endfor %}
 
@@ -77,7 +77,9 @@
                 </div>
             </div><!-- .article-share -->
 
-            <!-- Pager -->
+            <!-- TODO: Add article related -->
+            <!-- {% if page.related_posts.size > 0 %}
+            {% endif %} -->
             <nav class="article-pager">
                 <ul>
                     <li>
@@ -92,10 +94,11 @@
             {% include footer-newsletter.html %}
 
             <!-- Comments -->
-            <!-- TODO: Shoudl comments go here ? -->
             <div class="article-comments" id="comments">
-                <!-- TODO: Add comments -->
-                {% include comments.html %}
+                {% if page.comments != false %}
+                  {% include comments.html %}
+                  <div id="disqus_thread"></div><!-- /#disqus_thread -->
+                {% endif %}
             </div><!-- .article-comments -->
 
 

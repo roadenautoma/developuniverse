@@ -10,7 +10,7 @@ title: About me
     <header class="page-header">
         <div class="hero hero--large">
             <div class="container container--thin">
-                <div class="hero__heading">
+                <div class="hero__heading js-about-header">
                     <p class="page__name wow fadeInDown">About me</p>
                     <h1 class="page__title wow fadeInDown">Every story has a beginning...</h1>
                 </div><!-- .hero__heading -->
@@ -78,7 +78,6 @@ title: About me
                             <div class="body-content">
                                 <figure class="img-rounded align-right"><img  src="{{site.url}}/images/about/beard.jpg" alt="Beard" /></figure>
                                 <p>When I reached the age of 18, not only I started to grow a beard,
-                                <!-- TODO: How do I add an image of a beard here in the middle?-->
                                  but also I started studying <strong>Systems Engineer</strong> at UTN (National Technology University). Since college was a few hours per day, I was bored afterwards, and I knew how to code, I decided to join <a rel="external" href="https://globant.com/">Globant</a>, one of the biggest software consulting firms in Argentina. At that point, I was coding in C# and did apps for <a rel="external" href="https://sourceforge.net/">SourceForce</a> and <a rel="external" href="http://www.ea.com/">Electronic Arts</a> among others. </p>
                             </div><!-- .body-content -->
                         </dd>
@@ -142,7 +141,7 @@ title: About me
 
                                 <figure>
                                     <div class="embed-container">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eGrpnt2VQ3s" frameborder="0" allowfullscreen></iframe>
+                                        <div id="yt-first-talk"></div>
                                     </div><!-- .embed-container -->
                                 </figure>
                             </div><!-- .body-content -->
@@ -161,7 +160,7 @@ title: About me
 
                                 <figure>
                                     <div class="embed-container">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0KzIofI1bMI" frameborder="0" allowfullscreen></iframe>
+                                        <div id="yt-second-talk"></div>
                                     </div><!-- .embed-container -->
                                     <figcaption>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tempora aliquid magni non sed aut dolorum saepe esse adipisci?
@@ -170,7 +169,7 @@ title: About me
 
                                 <figure>
                                     <div class="embed-container">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LLvRMVQ_JcE" frameborder="0" allowfullscreen></iframe>
+                                        <div id="yt-third-talk"></div>
                                     </div><!-- .embed-container -->
                                 </figure>
                             </div><!-- .body-content -->
@@ -237,3 +236,40 @@ title: About me
 
 
 </main><!-- .page-main -->
+
+<script type="text/javascript">
+
+    // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player, player2, player3;
+  function onYouTubePlayerAPIReady() {
+    $('.js-about-header').children().one(animationEnd, function() {
+        player = new YT.Player('yt-first-talk', {
+          height: '560',
+          width: '315',
+          videoId: 'eGrpnt2VQ3s'
+        });
+
+        player2 = new YT.Player('yt-second-talk', {
+          height: '560',
+          width: '315',
+          videoId: '0KzIofI1bMI'
+        });
+
+        player3 = new YT.Player('yt-third-talk', {
+          height: '560',
+          width: '315',
+          videoId: 'LLvRMVQ_JcE'
+        });
+    });
+    
+  }
+</script>

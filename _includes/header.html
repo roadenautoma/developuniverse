@@ -45,8 +45,7 @@
                                     <li {% if page.url == '/services/' %} class="active" {% endif %}>
                                         <a href="{{ site.url }}/services/"><span>Services</span></a>
                                     </li>
-                                    <!-- TODO: @Gonto, how can we add active class when showing a single post? -->
-                                    <li {% if page.url == '/thoughts/' %} class="active" {% endif %}>
+                                    <li {% if page.url == '/thoughts/' or page.layout == 'post' %} class="active" {% endif %}>
                                         <a href="{{ site.url }}/thoughts/"><span>Thoughts</span></a>
                                     </li>
                                 </ul><!-- .navbar__nav -->
