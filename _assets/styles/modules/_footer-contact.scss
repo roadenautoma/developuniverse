@@ -11,7 +11,17 @@
     max-width: $max-width-thin;
 }
 
+.footer-contact .page-section__header,
+.modal-contact .page-section__header {
+    margin-bottom: 2em;
+}
+
 .footer-contact .page-section__title {
     color: $white;
     margin-top: 0;
+}
+
+.footer-contact .page-section__subtitle {
+    color: #ABB6BB;
+    margin-bottom: 0;
 }

@@ -5887,26 +5887,28 @@ input[type="checkbox"] {
 .nav-overlay .navbar__collapse__wrapper {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-@media (max-height: 440px) {
-  .nav-overlay .navbar__collapse__wrapper {
-    top: 0%;
-    transform: translateY(0%);
-  }
-}
-
-.nav-overlay .navbar__collapse__wrapper {
   transform: translateY(-60%);
   opacity: 0;
   transition: all 0.25s ease;
   transition-delay: 0.1s;
 }
 
+@media (max-height: 440px) {
+  .nav-overlay .navbar__collapse__wrapper {
+    top: 0%;
+    transform: translateY(-10%);
+  }
+}
+
 .nav-overlay.is-open .navbar__collapse__wrapper {
   transform: translateY(-50%);
   opacity: 1;
+}
+
+@media (max-height: 440px) {
+  .nav-overlay.is-open .navbar__collapse__wrapper {
+    transform: translateY(0%);
+  }
 }
 
 .badge {
@@ -6006,6 +6008,18 @@ input[type="checkbox"] {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media (min-width: 960px) {
+  .hero-intro .hero-intro__wrapper {
+    padding-top: 97px;
+  }
+}
+
+@media (min-width: 1365px) {
+  .hero-intro .hero-intro__wrapper {
+    padding-top: 109px;
+  }
 }
 
 .hero-intro {
@@ -6231,14 +6245,23 @@ input[type="checkbox"] {
 
 .mfp-full .mfp-content,
 .mfp-full .modal {
-  height: 100%;
+  min-height: 100%;
   background-color: #0A2E3D;
 }
 
-.mfp-full .modal__wrapper {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+@media (min-width: 960px) {
+  .mfp-full .mfp-content,
+  .mfp-full .modal {
+    height: 100%;
+  }
+}
+
+@media (min-width: 960px) {
+  .mfp-full .modal__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .mfp-full .mfp-content {
@@ -6248,7 +6271,7 @@ input[type="checkbox"] {
 .mfp-full .modal {
   max-width: none;
   margin: auto;
-  padding: 2em 0;
+  padding: 4em 0;
 }
 
 /* overlay at start */
@@ -6622,9 +6645,19 @@ input[type="checkbox"] {
   max-width: 800px;
 }
 
+.footer-contact .page-section__header,
+.modal-contact .page-section__header {
+  margin-bottom: 2em;
+}
+
 .footer-contact .page-section__title {
   color: #ffffff;
   margin-top: 0;
+}
+
+.footer-contact .page-section__subtitle {
+  color: #ABB6BB;
+  margin-bottom: 0;
 }
 
 .footer-newsletter {
@@ -7044,6 +7077,7 @@ input[type="checkbox"] {
 }
 
 .timeline-block__time time {
+  background-color: #f1f1f1;
   color: #f2461c;
   font-family: "GT Walsheim", "Roboto", Helvetica, Arial, sans-serif;
   display: inline-block;

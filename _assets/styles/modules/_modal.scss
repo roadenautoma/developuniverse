@@ -31,12 +31,20 @@
 
 .mfp-full .mfp-content,
 .mfp-full .modal {
-    height: 100%;
+    min-height: 100%;
     background-color: $brand-primary-color;
+    @include respond-to("medium") {
+        height: 100%;
+    }
 }
 
-.mfp-full .modal__wrapper{
-    @include vertical-align;
+.mfp-full .modal__wrapper {
+    @include respond-to("medium") {
+        position: relative;
+    	top: 50%;
+    	transform: translateY(-50%);
+    }
+
 }
 
 .mfp-full .mfp-content {
@@ -46,7 +54,7 @@
 .mfp-full .modal {
     max-width: none;
     margin: auto;
-    padding: 2em 0;
+    padding: 4em 0;
 }
 
 // Animation

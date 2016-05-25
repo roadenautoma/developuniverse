@@ -45,22 +45,21 @@
 .nav-overlay .navbar__collapse__wrapper{
 	position: relative;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-60%);
+    opacity: 0;
+    transition: all 0.25s ease;
+    transition-delay: 0.1s;
 	@include breakpoint(max-height 440px) {
 		top: 0%;
-		transform: translateY(0%);
+		transform: translateY(-10%);
 	}
 }
 
 // Animation
-.nav-overlay .navbar__collapse__wrapper{
-    transform: translateY(-60%);
-    opacity: 0;
-    transition: all 0.25s ease;
-    transition-delay: 0.1s;
-}
-
 .nav-overlay.is-open .navbar__collapse__wrapper{
     transform: translateY(-50%);
     opacity: 1;
+    @include breakpoint(max-height 440px) {
+        transform: translateY(0%);
+    }
 }

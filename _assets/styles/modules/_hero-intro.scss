@@ -18,6 +18,12 @@
 
 .hero-intro .hero-intro__wrapper {
     @include vertical-align;
+    @include respond-to("medium") {
+        padding-top: $navbar-medium-height;
+    }
+    @include respond-to("large") {
+        padding-top: $navbar-large-height;
+    }
 }
 
 
