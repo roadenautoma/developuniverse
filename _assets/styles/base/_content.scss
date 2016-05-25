@@ -1,7 +1,7 @@
 .body-content {
     p:last-child,
     ul:last-child,
-    .embed-container:last-child,
+    figure:last-child,
     blockquote:last-child {
         margin-bottom: 0;
     }
@@ -41,13 +41,13 @@ td > code {
 
 
 .body-content figure,
-.body-content pre,
-.body-content .embed-container {
+.body-content pre {
     margin: 2.5em 0;
 }
 
 .body-content figcaption {
     margin-top: 1.25em;
+    font-size: 0.9rem;
     color: $brand-primary-color-light;
     font-family: $heading-font-family;
     font-weight: $font-weight-normal;
