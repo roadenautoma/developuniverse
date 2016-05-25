@@ -4910,6 +4910,11 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+.form-actions .btn:only-child, .form-actions .navbar-toggle-btn:only-child, .form-actions .modal .modal-toggle-btn:only-child, .modal .form-actions .modal-toggle-btn:only-child {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
 /* @group Validation */
 /* @end Validation */
 /* @group Form - Alt */

@@ -112,16 +112,17 @@ input[type="checkbox"] {
     margin-left: 1.25em;
 }
 
-.checkbox__inline {
-
-}
-
 
 /* Actions */
 
 .form-actions{
     margin-top: 1em;
     text-align: center;
+}
+
+.form-actions .btn:only-child {
+	padding-left: 3em;
+	padding-right: 3em;
 }
 
 

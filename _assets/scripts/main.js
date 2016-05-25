@@ -5,6 +5,7 @@ $( document ).ready(function() {
 
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
+    var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
     /* Remove click delay on mobile
     ------------------------------------------- */
@@ -90,8 +91,13 @@ $( document ).ready(function() {
     var contact_textarea = $('.js-form-comments');
 
     contact_textarea.on('focus', function() {
-        autosize(contact_textarea);
+        contact_textarea.one(transitionEnd, function(e) {
+            console.log('animation ended');
+            autosize(contact_textarea);
+        });
     });
+
+
 
     $(contact_textarea).blur(function() {
         if( $(this).val().length === 0 ) {
