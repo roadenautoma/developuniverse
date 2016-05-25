@@ -14,7 +14,7 @@
 
                     <div class="article__tags">
                         <ul class="tags-list">
-                             {% for tag in page.tags %}
+                             {% for tag in page.tags | pop: 5 %}
                                <li><a class="tag" href="/tag/{{tag}}">#{{tag}}</a></li>
                              {% endfor %}
 
