@@ -47,20 +47,20 @@ $( document ).ready(function() {
     }).then(function(data) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-ok').text('Message sent succesfully');
-      $('.js-contact-form-ok').show().addClass('animated flipInX');
+      $('.js-contact-form-ok').slideDown();
       hideMessages();
 
     }, function(response) {
       $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-error').text(response.responseJSON.message);
-      $('.js-contact-form-error').show().addClass('animated flipInX');
+      $('.js-contact-form-error').slideDown();
       console.log("Error sending form", response)
       hideMessages(true);
     });
 
     function hideMessages(error) {
       if (!error) {
-        $('.contact-form').addClass('animated fadeOutDown');
+        $('.contact-form').slideUp();
         firstnameField.val('');
         lastnameField.val('');
         companyField.val('');
@@ -69,11 +69,11 @@ $( document ).ready(function() {
         autosize.destroy(messageField);
       }
       setTimeout(function() {
-        $('.contact-form').removeClass('fadeOutDown').addClass('fadeInUp');
+        $('.contact-form').slideDown();
       }, 3000);
       setTimeout(function() {
-        $('.js-contact-form-ok').removeClass('flipInX').addClass('flipOutX');
-        $('.js-contact-form-error').removeClass('flipInX').addClass('flipOutX');
+        $('.js-contact-form-ok').slideUp();;
+        $('.js-contact-form-error').slideUp();;
       }, 5000);
     }
 
