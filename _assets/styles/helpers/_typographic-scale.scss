@@ -24,7 +24,11 @@
     }
     // 66
     @if $n == 12 {
-
+        font-size: 2.35rem;
+        line-height: 1.21;
+    	@include respond-to("medium") {
+    		font-size: pxrem(66px, $base-font-size);
+    	}
     }
     // 56
     @if $n == 11 {
