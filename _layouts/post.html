@@ -95,7 +95,10 @@
 
             <!-- Comments -->
             <div class="article-comments" id="comments">
-                {% if page.comments != false %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
+                {% if page.comments != false %}
+                  {% include comments.html %}
+                  <div id="disqus_thread"></div><!-- /#disqus_thread -->
+                {% endif %}
             </div><!-- .article-comments -->
 
 
