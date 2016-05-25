@@ -95,6 +95,7 @@
     }
 }
 
+
 .article .body-content h2 {
     @extend .h3;
 }
@@ -107,13 +108,19 @@
     @extend .h5;
 }
 
-.article .body-content blockquote {
+.article .body-content blockquote,
+.article-body hr:first-child + p {
     margin: 2em 0;
     background-color: lighten($brand-terciary-color, 20%);
     padding: 1em;
     border-left: 8px solid $brand-terciary-color;
     color: $brand-primary-color;
 }
+
+.article-body hr {
+    display: none;
+}
+
 
 .article .body-content .soundbite {
     padding: 1.5em;
