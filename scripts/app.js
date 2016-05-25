@@ -19090,14 +19090,19 @@ $( document ).ready(function() {
 
     /* Contact Modal
 	------------------------------------------- */
-
+    var startWindowScroll = 0;
     $('.js-contact-modal-toggle').magnificPopup({
         type:'inline',
         removalDelay: 300,
         mainClass: 'mfp-fade mfp-full',
         showCloseBtn: false,
         enableEscapeKey: true,
+        fixedContentPos:true,
         callbacks: {
+            beforeOpen: function() {
+                startWindowScroll = $(window).scrollTop();
+                $('html').addClass('mfp-helper');
+            },
             open: function() {
                 // Close menu if open
                 if($overlay.hasClass('is-open')) {
@@ -19105,6 +19110,10 @@ $( document ).ready(function() {
                         overlay_close($overlay);
                     }, 1000);
                 }
+            },
+            close: function() {
+                $('html').removeClass('mfp-helper');
+                $(window).scrollTop(startWindowScroll);
             },
             afterClose: function() {
                 // Remove focus to link

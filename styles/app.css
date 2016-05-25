@@ -6063,7 +6063,7 @@ input[type="checkbox"] {
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 0.25em;
-  font-size: 2.752rem;
+  font-size: 2.25rem;
 }
 
 @media (min-width: 640px) {
@@ -6254,11 +6254,34 @@ input[type="checkbox"] {
   position: absolute;
   top: 1em;
   bottom: auto;
-  right: 0;
+  right: 0.25em;
   left: auto;
   left: auto;
   height: auto;
   display: block;
+}
+
+@media (min-width: 770px) {
+  .modal .modal-toggle-btn {
+    right: 1em;
+  }
+}
+
+/*
+TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimsemenov/Magnific-Popup/issues/12
+*/
+.mfp-full {
+  min-width: 101%;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.mfp-helper {
+  height: 100%;
+}
+
+html.mfp-helper body {
+  overflow: hidden;
+  height: 100%;
 }
 
 .mfp-full.mfp-bg {
@@ -6269,24 +6292,22 @@ input[type="checkbox"] {
   padding: 0;
 }
 
+.mfp-full .modal {
+  max-width: none;
+  margin: auto;
+  padding: 4em 0;
+}
+
 .mfp-full .mfp-content,
 .mfp-full .modal {
   min-height: 100%;
   background-color: #0A2E3D;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 640px) {
   .mfp-full .mfp-content,
   .mfp-full .modal {
     height: 100%;
-  }
-}
-
-@media (min-width: 960px) {
-  .mfp-full .modal__wrapper {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
@@ -6294,10 +6315,12 @@ input[type="checkbox"] {
   position: relative;
 }
 
-.mfp-full .modal {
-  max-width: none;
-  margin: auto;
-  padding: 4em 0;
+@media (min-width: 640px) {
+  .mfp-full .modal__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 /* overlay at start */
@@ -6681,7 +6704,8 @@ input[type="checkbox"] {
   margin-top: 0;
 }
 
-.footer-contact .page-section__subtitle {
+.footer-contact .page-section__subtitle,
+.modal-contact .page-section__subtitle {
   color: #ABB6BB;
   margin-bottom: 0;
 }

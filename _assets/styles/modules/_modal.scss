@@ -13,42 +13,44 @@
     color: $brand-primary-color;
     position: absolute;
     top: 1em; bottom: auto;
-    right: 0; left: auto;
+    right: 0.25em; left: auto;
     left: auto;
     height: auto;
     display: block;
+    @include respond-to("navbar-collapse") {
+        right: 1em;
+    }
 }
 
 
 // Full screen
+/*
+TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimsemenov/Magnific-Popup/issues/12
+*/
+
+
+.mfp-full {
+    min-width: 101%;
+    -webkit-overflow-scrolling: touch;
+  //-webkit-transform: translateZ(0);
+
+}
+html.mfp-helper {
+  height: 100%;
+  body{
+    overflow: hidden;
+    height: 100%;
+    //-webkit-transform: translateZ(0);
+  }
+}
+
 
 .mfp-full.mfp-bg {
     background: none;
 }
+
 .mfp-full .mfp-container {
     padding: 0;
-}
-
-.mfp-full .mfp-content,
-.mfp-full .modal {
-    min-height: 100%;
-    background-color: $brand-primary-color;
-    @include respond-to("medium") {
-        height: 100%;
-    }
-}
-
-.mfp-full .modal__wrapper {
-    @include respond-to("medium") {
-        position: relative;
-    	top: 50%;
-    	transform: translateY(-50%);
-    }
-
-}
-
-.mfp-full .mfp-content {
-    position: relative;
 }
 
 .mfp-full .modal {
@@ -56,6 +58,32 @@
     margin: auto;
     padding: 4em 0;
 }
+
+// TODO: Fix scrolling on small window size. Add a height media query and remove the vertical centering (and the heigh 100%)
+
+.mfp-full .mfp-content,
+.mfp-full .modal {
+    min-height: 100%;
+    background-color: $brand-primary-color;
+    @include respond-to("small") {
+        height: 100%;
+    }
+}
+
+.mfp-full .mfp-content {
+    position: relative;
+}
+
+.mfp-full .modal__wrapper {
+    @include respond-to("small") {
+        position: relative;
+    	top: 50%;
+    	transform: translateY(-50%);
+    }
+}
+
+
+
 
 // Animation
 
