@@ -88,6 +88,9 @@ build-iPhoneSimulator/
 _site/
 .sass-cache/
 .jekyll-metadata
+scripts/app.js
+scripts/app.min.js
+styles/app.css
 
 
 ### Node ###
