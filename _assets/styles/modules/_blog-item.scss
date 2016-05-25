@@ -8,6 +8,7 @@
     @include ts(3);
     font-family: $base-font-family;
     line-height: 1.2;
+    margin-bottom: 0.75em;
     a {
         @include no-link;
         &.hover {
@@ -44,6 +45,7 @@
 .blog-item__excerpt + .actions {
     margin-top: 0.5em;
 }
+
 
 .blog-item .btn--more{
     background: none;

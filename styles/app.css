@@ -6703,6 +6703,7 @@ html.mfp-helper body {
   line-height: 1.4;
   font-family: "Circular", "Roboto", Helvetica, Arial, sans-serif;
   line-height: 1.2;
+  margin-bottom: 0.75em;
 }
 
 @media (min-width: 960px) {
@@ -6947,15 +6948,6 @@ html.mfp-helper body {
 .method-step .actions {
   margin-top: 0;
   text-align: center;
-}
-
-.method__list.owl-carousel .owl-item {
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-
-.method__list.owl-carousel .owl-item.active {
-  opacity: 1;
 }
 
 .method__list.owl-carousel .owl-item img {
@@ -7588,8 +7580,8 @@ html.mfp-helper body {
 
 @media (min-width: 960px) {
   .ps-home-about .page-section__content p {
-    background-color: rgba(248, 249, 253, 0.4);
-    box-shadow: 0 0 2em 1em rgba(248, 249, 253, 0.4);
+    background-color: rgba(248, 249, 253, 0.45);
+    box-shadow: 0 0 2em 1em rgba(248, 249, 253, 0.45);
   }
 }
 
@@ -7679,7 +7671,7 @@ html.mfp-helper body {
 /* @group Hero */
 .tpl-about .hero {
   background-color: #f2461c;
-  background-image: url("../images/about-hero-bg.jpg");
+  background-image: url("../images/about-hero-bg-b.jpg");
   background-position: top center;
 }
 

@@ -19266,6 +19266,7 @@ $( document ).ready(function() {
         companyField.val('');
         emailField.val('');
         messageField.val('');
+        autosize.destroy(messageField);
       }
       setTimeout(function() {
         $('.contact-form').removeClass('fadeOutDown').addClass('fadeInUp');

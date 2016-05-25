@@ -105,8 +105,8 @@
 
 .ps-home-about .page-section__content p {
     @include respond-to("medium") {
-        background-color: rgba(#F8F9FD, 0.4);
-        box-shadow: 0 0 2em 1em rgba(#F8F9FD, 0.4);
+        background-color: rgba(#F8F9FD, 0.45);
+        box-shadow: 0 0 2em 1em rgba(#F8F9FD, 0.45);
     }
 }
 

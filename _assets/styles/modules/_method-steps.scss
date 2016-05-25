@@ -71,10 +71,10 @@
 
 // Carousel
 .method__list.owl-carousel .owl-item {
-    opacity: 0;
-    transition: opacity 0.1s;
+    //opacity: 0;
+    //transition: opacity 0.1s;
     &.active {
-        opacity: 1;
+        //opacity: 1;
     }
     img {
         -webkit-transform-style: flat;
