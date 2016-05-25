@@ -52,7 +52,7 @@
 
 .hero .page__name,
 .hero .page__title {
-    -webkit-transform: translateZ(0);
+    visibility: hidden;
 }
 .hero .page__name         { animation-delay: 0.2s; }
 .hero .page__title        { animation-delay: 0.5s; }

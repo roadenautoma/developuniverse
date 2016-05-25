@@ -4,7 +4,12 @@
 
     <!-- TODO: @Gonto Add proper title and conditionals for home, posts -->
     <title>
-        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} &mdash; {{site.title}}
+
+        {% if page.url == "/" %}
+            Gonto &mdash; An engineering approach to marketing
+        {% else %}
+            {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} &mdash; {{site.title}}
+        {% endif %}
     </title>
 
     <meta name="description" content="">

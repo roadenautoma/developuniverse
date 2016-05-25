@@ -19,6 +19,7 @@
     z-index: 1;
     background-color: #F9FAFE;
     overflow: hidden;
+    border-bottom: 1px solid $white;
     &:after{
         content: '';
         display: block;

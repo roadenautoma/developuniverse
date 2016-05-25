@@ -97,9 +97,7 @@ $( document ).ready(function() {
         });
     });
 
-
-
-    $(contact_textarea).blur(function() {
+    contact_textarea.blur(function() {
         if( $(this).val().length === 0 ) {
             //console.log('empty');
             autosize.destroy(contact_textarea);
