@@ -12,6 +12,9 @@
 .pagination__number {
     @extend .btn;
     @extend .btn--hollow;
+    &.active {
+        cursor: default;
+    }
 }
 
 .pagination__number {

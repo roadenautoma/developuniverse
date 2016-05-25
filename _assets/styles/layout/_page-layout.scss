@@ -67,6 +67,7 @@
 .page-section__title {
     @extend .page-section__title;
     @include ts(9);
+    margin: 0.75em 0;
 }
 
 .page-section__subtitle {
