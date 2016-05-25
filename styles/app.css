@@ -6039,7 +6039,7 @@ input[type="checkbox"] {
 
 @media (min-width: 640px) {
   .hero-intro .hero__header {
-    max-width: 530px;
+    max-width: 580px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -6047,13 +6047,13 @@ input[type="checkbox"] {
 
 @media (min-width: 960px) {
   .hero-intro .hero__header {
-    max-width: 880px;
+    max-width: 650px;
   }
 }
 
 @media (min-width: 1365px) {
   .hero-intro .hero__header {
-    max-width: none;
+    max-width: 800px;
   }
 }
 
@@ -6063,6 +6063,31 @@ input[type="checkbox"] {
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 0.25em;
+  font-size: 2.752rem;
+}
+
+@media (min-width: 640px) {
+  .hero-intro .hero__title {
+    font-size: 2.8125rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero-intro .hero__title {
+    font-size: 3.125rem;
+  }
+}
+
+@media (min-width: 1365px) {
+  .hero-intro .hero__title {
+    font-size: 3.3333333333rem;
+  }
+}
+
+@media (min-width: 2200px) {
+  .hero-intro .hero__title {
+    font-size: 4rem;
+  }
 }
 
 .hero-intro .hero__title__concept {
@@ -6146,8 +6171,8 @@ input[type="checkbox"] {
 
 @media (min-width: 640px) {
   .hero-intro__step--1 {
-    top: -3.75em;
-    left: -1.25em;
+    top: -3.5em;
+    left: -1.5em;
   }
 }
 
@@ -6159,19 +6184,20 @@ input[type="checkbox"] {
 
 @media (min-width: 640px) {
   .hero-intro__step--2 {
-    top: -4.5em;
+    top: -4.75em;
     right: -1em;
   }
 }
 
 .hero-intro__step--3 {
-  left: -3.25em;
+  left: -3em;
   transform-origin: top right;
 }
 
 @media (min-width: 640px) {
   .hero-intro__step--3 {
-    left: 0;
+    left: -0.75em;
+    bottom: -4.75em;
   }
 }
 
@@ -6182,7 +6208,7 @@ input[type="checkbox"] {
 
 @media (min-width: 640px) {
   .hero-intro__step--4 {
-    right: 0;
+    right: -1em;
   }
 }
 

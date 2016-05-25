@@ -41,15 +41,15 @@
     z-index: 1;
     max-width: 530px;
     @include respond-to("small") {
-        max-width: 530px;
+        max-width: 580px;
         margin-right: auto;
         margin-left: auto;
     }
     @include respond-to("medium") {
-        max-width: 880px;
+        max-width: 650px;
     }
     @include respond-to("large") {
-        max-width: none;
+        max-width: 800px;
     }
 }
 
@@ -59,6 +59,19 @@
     text-transform: uppercase;
     line-height: 1.1;
     margin-bottom: 0.25em;
+    font-size: 2.752rem;
+    @include respond-to("small") {
+        font-size: pxrem(45px, $small-font-size);
+    }
+    @include respond-to("medium") {
+        font-size: pxrem(50px, $medium-font-size);
+    }
+    @include respond-to("large") {
+        font-size: pxrem(60px, $base-font-size);
+    }
+    @include respond-to("xhuge") {
+        font-size: pxrem(72px, $base-font-size);
+    }
 }
 
 .hero-intro .hero__title__concept {
@@ -130,23 +143,26 @@
     top: -4em; left: -2.5em;
     transform-origin: bottom right;
     @include respond-to("small") {
-        top: -3.75em; left: -1.25em;
+        top: -3.5em; left: -1.5em;
     }
 }
 
 .hero-intro__step--2 {
-    top: -5em; right: -1.5em;
+    top: -5em;
+    right: -1.5em;
     transform-origin: bottom left;
     @include respond-to("small") {
-        top: -4.5em; right: -1em;
+        top: -4.75em;
+        right: -1em;
     }
 }
 
 .hero-intro__step--3 {
-    left: -3.25em;
+    left: -3em;
     transform-origin: top right;
     @include respond-to("small") {
-        left: 0;
+        left: -0.75em;
+        bottom: -4.75em;
     }
 }
 
@@ -154,7 +170,7 @@
     right: -2.75em;
     transform-origin: top left;
     @include respond-to("small") {
-        right: 0;
+        right: -1em;
     }
 }
 
