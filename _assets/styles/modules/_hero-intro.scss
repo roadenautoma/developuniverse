@@ -85,6 +85,8 @@
 }
 
 .hero__read-more {
+    @include no-link;
+    font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: $font-weight-medium;
     letter-spacing: 0.15em;
@@ -93,16 +95,13 @@
     bottom: 3.5em; left: 0;
     width: 100%;
     text-align: center;
-    text-decoration: none;
     &:hover,
     &:focus {
-        text-decoration: none;
         color: $brand-secondary-color;
         .icon svg .shape{
             fill: $brand-secondary-color;
         }
     }
-    font-size: 0.7rem;
     @include respond-to("medium") {
         font-size: pxrem(14px);
     }

@@ -3,28 +3,39 @@ layout: post
 bodyClass: tpl-post
 ---
 
-<article class="post">
+<article class="article">
 
-    <header class="">
-        <h1>5 tips on how to target developers with your content marketing</h1>
-        <time class="">November 14, 2015</time>
+    <header class="article-header">
+        <div class="hero" style="background-image: url('https://unsplash.it/600/400/?random')">
+            <div class="container container--narrow">
 
-        <ul>
-            <li>
-                <a href="#">tag 1</a>
-            </li>
-            <li>
-                <a href="#">tag 2</a>
-            </li>
-        </ul>
-    </header>
+                <div class="hero__heading">
+                    <time class="article__date">November 14, 2015</time>
+
+                    <h1 class="article__title">5 tips on how to target developers with your content marketing</h1>
+
+                    <div class="article__tags">
+                        <ul class="tags-list">
+                            <li><a class="tag" href="#">#Inbound</a></li>
+                            <li><a class="tag" href="#">#Tools</a></li>
+                        </ul>
+                    </div><!-- .article__tags -->
+                </div><!-- .hero__heading -->
+
+            </div><!-- .container -->
+        </div><!-- .hero -->
+    </header><!-- .article-header -->
 
 
-    <div class="">
-
-
+    <div class="article-body">
         <div class="container">
 
+            <!-- Speed reader -->
+            <div class="speed-reader">
+                <!-- TODO: Code speed reader -->
+            </div><!-- .speed-reader -->
+
+            <!-- Start content -->
             <div class="body-content">
                 <p class="intro">
                     If you’re here, it means you’ve heard about the greatness of Inbound Marketing. You don’t have to go find strangers and turn them into leads. People just arrive to your site and turn to leads themselves.
@@ -38,7 +49,7 @@ bodyClass: tpl-post
                 </p>
 
                 <blockquote>
-                    <p>Side note: I'll be talking about the <a href="#">seed project</a> in an upcoming post.</p>
+                    <p><strong>Side note:</strong> I'll be talking about the <a href="#">seed project</a> in an upcoming post.</p>
                 </blockquote>
 
                 <p>
@@ -49,10 +60,8 @@ bodyClass: tpl-post
                 </p>
 
                 <figure>
-                    <img src="http://placehold.it/1386x840" alt="_Picture of a blog with an aside_">
+                    <img src="https://unsplash.it/1386/840/?image=10" alt="_Picture of a blog with an aside_">
                 </figure>
-
-
 
 
                 <h2>2. Write post series</h2>
@@ -65,7 +74,10 @@ bodyClass: tpl-post
                 </p>
 
                 <figure>
-                    <img src="http://placehold.it/1386x840" alt="_Picture showing the 2 titles of posts_">
+                    <img src="https://unsplash.it/1386/840/?image=45" alt="_Picture showing the 2 titles of posts_">
+                    <figcaption>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </figcaption>
                 </figure>
 
                 <h2>3. Github (and open source) is your friend</h2>
@@ -84,7 +96,13 @@ bodyClass: tpl-post
                     <p>
                         However, if you’re building a Developer Platform (also called a B2D), you know that developers aren’t typical people (Trust me, I’m one of them as well).
                     </p>
-                    <a href="#">Tweet this</a>
+                    <div class="actions">
+                        <ul>
+                            <li>
+                                <a class="btn btn--link" href="#"><i class="icon icon-twitter"></i> Tweet this</a>
+                            </li>
+                        </ul>
+                    </div><!-- .actions -->
                 </blockquote>
 
 
@@ -95,7 +113,10 @@ bodyClass: tpl-post
                 </p>
 
                 <figure>
-                    <img src="http://placehold.it/1386x840" alt="_Picture of a subscribe bog, prob. intercom_">
+                    <img src="https://unsplash.it/1386/840/?image=25" alt="_Picture of a subscribe bog, prob. intercom_">
+                    <figcaption>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </figcaption>
                 </figure>
 
 
@@ -112,32 +133,33 @@ bodyClass: tpl-post
                 </p>
 
                 <p>
-                    Now, let's checkout the <a href=""><code>watch-js</code> and <code>watch-css</code> tasks</a>. They both just call the cli for <code>watchify</code>, <code>nodemon</code> and <code>rework</code> which were installed as dev dependencies as well.
+                    Now, let's checkout the <code>watch-js</code> and <code>watch-css</code> tasks. They both just call the cli for <code>watchify</code>, <code>nodemon</code> and <code>rework</code> which were installed as dev dependencies as well.
                 </p>
+    <!-- TODO: change theme for lighter theme: similar to Gists -->
+    <!-- TODO: Fix type size -->
+<pre><code class="language-javascript">/*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
 
-    <pre><code class="language-javascript">/*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
-
-    (function( w ){
-      var loadJS = function( src, cb ){
-        "use strict";
-        var ref = w.document.getElementsByTagName( "script" )[ 0 ];
-        var script = w.document.createElement( "script" );
-        script.src = src;
-        script.async = true;
-        ref.parentNode.insertBefore( script, ref );
-        if (cb && typeof(cb) === "function") {
-          script.onload = cb;
-        }
-        return script;
-      };
-      // commonjs
-      if( typeof module !== "undefined" ){
-        module.exports = loadJS;
-      }
-      else {
-        w.loadJS = loadJS;
-      }
-    }( typeof global !== "undefined" ? global : this )); }</code></pre>
+(function( w ){
+  var loadJS = function( src, cb ){
+    "use strict";
+    var ref = w.document.getElementsByTagName( "script" )[ 0 ];
+    var script = w.document.createElement( "script" );
+    script.src = src;
+    script.async = true;
+    ref.parentNode.insertBefore( script, ref );
+    if (cb && typeof(cb) === "function") {
+      script.onload = cb;
+    }
+    return script;
+  };
+  // commonjs
+  if( typeof module !== "undefined" ){
+    module.exports = loadJS;
+  }
+  else {
+    w.loadJS = loadJS;
+  }
+}( typeof global !== "undefined" ? global : this )); }</code></pre>
 
                 <p>
                     A few places I always recommend sharing articles are:
@@ -176,14 +198,46 @@ bodyClass: tpl-post
             </div><!-- .body-content -->
 
 
-
             <!-- Share -->
-            <footer>
-                Share
-            </footer>
+            <div class="article-share">
+                <dl class="article-share__links">
+                    <dt>Share on</dt>
+                    <dd>
+                        <div class="social-links">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#">
+                                        <i class="icon icon-twitter"></i>
+                                        <span class="text">Twitter</span>
+                                        <span class="social-link__count">192</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon icon-facebook"></i>
+                                        <span class="text">Facebook</span>
+                                        <span class="social-link__count">24</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon icon-linkedin"></i>
+                                        <span class="text">Linkedin</span>
+                                        <span class="social-link__count">91</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- .social-links -->
+                    </dd>
+                </dl>
 
-            <!-- Nav between articles -->
-            <nav class="">
+                <div class="article-share__comments">
+                    <a href="#comments">2 comments</a>
+                </div>
+            </div><!-- .article-share -->
+
+            <!-- Pager -->
+            <nav class="article-pager">
                 <ul>
                     <li>
                         <a href="#">Previous article</a>
@@ -192,10 +246,20 @@ bodyClass: tpl-post
                         <a href="#">Next article</a>
                     </li>
                 </ul>
-            </nav>
+            </nav><!-- .article-pager -->
+
+            <!-- TODO: Should the newsletter sigup go here ? -->
+
+            <!-- Comments -->
+            <!-- TODO: Shoudl comments go here ? -->
+            <div class="article-comments" id="comments">
+                <!-- TODO: Add comments -->
+                {% include comments.html %}
+            </div><!-- .article-comments -->
+
 
         </div><!-- .container -->
+    </div><!-- .article-body -->
 
 
-    </div><!-- . -->
-</article>
+</article><!-- .article -->

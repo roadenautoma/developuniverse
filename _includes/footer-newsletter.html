@@ -1,21 +1,17 @@
-<div class="footer-newsletter">
+<div class="footer-newsletter" id="footer-newsletter">
     <div class="container">
 
-        <img src="http://placehold.it/150x150" alt="">
-
+        <figure class="footer-newsletter__img">
+            <img src="http://placehold.it/96x96" alt="">
+        </figure>
         <header class="page-section__header">
             <!-- TODO: @Gonto: Can you replace placeholder text for this title? -->
-            <h2 class="page-section__title">Join 10,000+ of your marketing peers and subscribe to get notified of new blog posts. Never miss a new post!</h2>
+            <h2 class="page-section__title">Subscribe to get notified of new blog posts. Never miss a new post!</h2>
         </header><!-- .page-section__header -->
         <div class="page-section__body">
 
-            <form class="form subscribe-form" action="/">
-                <div class="form-group">
-                    <label for="subscribe_email">Your e-mail address</label>
-                    <input type="email" name="subscribe_email" placeholder="Your e-mail address">
-                </div><!-- .form-group -->
-                <button type="submit" class="btn btn--hollow">Subscribe</button>
-            </form>
+            {% include subscribe-form.html %}
+
         </div><!-- .page-section__body -->
 
     </div><!-- .container -->

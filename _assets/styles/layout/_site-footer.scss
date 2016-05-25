@@ -7,6 +7,7 @@
 .site-footer-logo {
     display: block;
     line-height: 1;
+    @include no-link;
     .text {
         @extend .sr-only;
     }

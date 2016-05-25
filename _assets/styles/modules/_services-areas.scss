@@ -6,6 +6,11 @@
     }
 }
 
+.areas__filters .nav-tabs > li {
+    margin: 0;
+}
+
+
 .areas__list {
     @include no-list;
 }

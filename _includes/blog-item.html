@@ -18,7 +18,7 @@
     <div class="blog-item__content" itemprop="text">
         <h3 class="blog-item__title" data-mh="blog-item-title"><a href="{{article.url}}" itemprop="name">{{ article.title }}</a></h3>
         <div class="blog-item__meta">
-            <span class="date">{{ article.date | date: "%m-%d-%Y"}}</span>
+            <time class="date">{{ article.date | date: "%m-%d-%Y"}}</time>
         </div><!-- .blog-item__meta -->
 
         {% if include.excerpt %}

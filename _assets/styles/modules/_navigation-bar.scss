@@ -7,6 +7,7 @@
 }
 
 .nav > li > a {
+    @include no-link;
     font-weight: $font-weight-medium;
     display: block;
     &:hover,
@@ -23,9 +24,10 @@
 }
 
 .navbar .brand-logo{
+    @include no-link;
+    @include hide-text;
     margin: 0 auto;
     display: block;
-    @include hide-text;
     width: 6em;
     height: 2.1em;
     background-image: url("../images/logo-sm.svg");

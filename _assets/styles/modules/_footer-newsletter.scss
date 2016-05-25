@@ -1,4 +1,30 @@
 .footer-newsletter {
-    background-color: #989898;
+    @extend .footer-contact;
     text-align: center;
+}
+
+.footer-newsletter > .container{
+    max-width: 600px;
+}
+
+.footer-newsletter__img {
+    margin-bottom: 2em;
+    img {
+        border-radius: 50%;
+    }
+}
+
+.footer-newsletter .page-section__title{
+    @include ts(4);
+    line-height: 1.4;
+    font-weight: $font-weight-medium;
+}
+
+.footer-newsletter .page-section__header {
+    margin-bottom: 0;
+}
+
+.footer-newsletter .subscribe-form {
+    max-width: 30em;
+    margin: 0 auto;
 }

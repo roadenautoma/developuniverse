@@ -2,7 +2,7 @@
     p:last-child,
     ul:last-child,
     .embed-container:last-child,
-    blockquote {
+    blockquote:last-child {
         margin-bottom: 0;
     }
 }
@@ -24,4 +24,31 @@
     	display: block;
     	margin: 0 auto;
     }
+}
+
+
+p > code,
+li > code,
+dd > code,
+td > code {
+    font-family: $font-family-code;
+    border: solid 1px #e4e4e4;
+    padding: 4px 4px 1px;
+    background: #f5f7f8;
+    font-size: 0.8em;
+    border-radius: 3px;
+}
+
+
+.body-content figure,
+.body-content pre,
+.body-content .embed-container {
+    margin: 2.5em 0;
+}
+
+.body-content figcaption {
+    margin-top: 1.25em;
+    color: $brand-primary-color-light;
+    font-family: $heading-font-family;
+    font-weight: $font-weight-normal;
 }

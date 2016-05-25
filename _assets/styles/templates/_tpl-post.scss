@@ -1,2 +1,163 @@
+/* @group  Article Hero */
 
-// Blog Typographic Scale
+.article-header .hero {
+    position: relative;
+    padding: 4em 0;
+    // Darken the image
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba($black, 0.7);
+        z-index: 1;
+    }
+}
+
+.article-header .hero > .container {
+    height: 100%;
+}
+
+.article-header .hero__heading {
+    position: relative;
+    z-index: 2;
+}
+
+.article__title {
+    @include ts(10);
+    font-weight: $font-weight-medium;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+}
+
+.hero .article__title,
+.hero .article__date {
+    color: $white;
+}
+
+.hero .article__date {
+    @include ts(-1);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+@include respond-to("medium") {
+    .article-header .hero {
+        height: 36em;
+    }
+    .article-header .hero__heading {
+        position: relative;
+    	top: 50%;
+    	transform: translateY(-50%);
+    }
+}
+
+/* @end Article Hero */
+
+/* @group Article Body */
+
+
+.article-body {
+    @extend .page-section;
+}
+
+.article-body > .container {
+    max-width: 42em;
+}
+
+.article .body-content {
+    font-family: $font-family-text;
+}
+
+.article .body-content {
+    margin-bottom: 4em;
+    @include headings {
+        font-family: $heading-font-family;
+        margin: ($heading-margin * 2) 0 $heading-margin 0;
+    }
+    @include respond-to("medium") {
+        font-size: 1.0555555556rem;
+    }
+}
+
+.article .body-content .intro {
+    color: $brand-primary-color-light;
+    @include ts(1);
+    &:first-child:first-letter {
+        float: left;
+        color: $brand-primary-color;
+        font-size: 5.25em;
+        line-height: 0.9;
+        padding-top: 0.1em;
+        padding-right: 8px;
+        padding-left: 3px;
+    }
+}
+
+.article .body-content h2 {
+    @extend .h3;
+}
+
+.article .body-content h3 {
+    @extend .h4;
+}
+
+.article .body-content h4 {
+    @extend .h5;
+}
+
+.article .body-content blockquote {
+    margin: 2em 0;
+    background-color: lighten($brand-terciary-color, 20%);
+    padding: 1em;
+    border-left: 8px solid $brand-terciary-color;
+    color: $brand-primary-color;
+}
+
+.article .body-content .soundbite {
+    padding: 1.5em;
+    @include respond-to("medium") {
+        padding: 2em;
+    }
+}
+.soundbite p {
+    @include ts(1);
+    font-weight: $font-weight-medium;
+}
+.soundbite .actions {
+    margin-top: 1em;
+}
+.soundbite .actions .btn {
+    font-size: 0.75rem;
+    padding: 0;
+    color: darken($brand-terciary-color, 20%);
+    &:hover,
+    &:focus {
+        color: darken($brand-terciary-color, 30%);
+    }
+    @include respond-to("medium") {
+        font-size: 0.8rem;
+    }
+}
+.soundbite .actions .btn .icon {
+    position: relative;
+    top: -0.05em;
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+
+
+
+/* @end  Article Body */
+
+/* @group  Article Share */
+
+
+
+
+/* @end  Article Share */

@@ -5,11 +5,11 @@
 }
 
 .blog-item__title {
-    font-family: $base-font-family;
     @include ts(3);
+    font-family: $base-font-family;
     line-height: 1.2;
     a {
-        text-decoration: none;
+        @include no-link;
         &.hover {
             color: $link-text-color-hover;
         }

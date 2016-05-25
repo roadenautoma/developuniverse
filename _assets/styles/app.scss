@@ -45,6 +45,7 @@
 @import "modules/modal";
 @import "modules/modal-contact";
 @import "modules/tabs";
+@import "modules/tags";
 @import "modules/pagination";
 @import "modules/social-links";
 @import "modules/blog-list";
@@ -55,13 +56,14 @@
 @import "modules/services-areas";
 @import "modules/timeline";
 @import "modules/contact-form";
+@import "modules/subscribe-form";
 
 // Templates
 @import "templates/tpl-home";
 @import "templates/tpl-about";
 @import "templates/tpl-services";
 @import "templates/tpl-blog";
-// @import "templates/tpl-post";
+@import "templates/tpl-post";
 // @import "templates/tpl-case";
 
 //@import "shame";

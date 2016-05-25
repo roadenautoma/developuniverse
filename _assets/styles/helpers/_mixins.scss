@@ -37,7 +37,9 @@
 	}
 }
 
-
+@mixin no-link() {
+    border-bottom: none;
+}
 
 // Position
 @mixin position($position, $args) {

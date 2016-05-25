@@ -16,16 +16,19 @@ textarea {
 
 a {
 	color: $link-text-color;
-	text-decoration: underline;
-	transition: color $base-transition-time--faster;
+	text-decoration: none;
+	transition: all $base-transition-time--faster;
+    border-bottom: 1px solid;
+    border-bottom-color: $brand-terciary-color;
 	&:visited {
 		// color: $link-text-color;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		text-decoration: underline;
+		text-decoration: none;
 		color: $link-text-color-hover;
+        border-bottom-color: $link-text-color-hover;
 	}
 }
 
@@ -74,9 +77,10 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0;
+    font-family: $heading-font-family;
 	font-weight: 400;
 	margin-bottom: 1.5em;
-	font-style: italic;
+	font-style: normal;
 	> p {
 		margin-bottom: 0;
 	}

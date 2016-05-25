@@ -3,7 +3,7 @@
     color: $white;
     padding: 4.5em 0;
     @include respond-to("medium") {
-        padding: 5.5em 0;
+        //padding: 5em 0;
     }
 }
 

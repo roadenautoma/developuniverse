@@ -128,6 +128,24 @@
 }
 
 
+.btn--hollow-white {
+    color: $white;
+	box-shadow: inset 0 0 0 $base-border-width $white;
+	background-color: transparent;
+	&:visited {
+		color: $white;
+	}
+	&:hover,
+	&:focus,
+	&.active,
+	&.current {
+		background-color: $white;
+		color: $brand-primary-color;
+	}
+
+}
+
+
 .btn.btn--link{
 	background: none;
 	color: $brand-secondary-color;
