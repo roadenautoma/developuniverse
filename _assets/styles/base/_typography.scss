@@ -96,7 +96,7 @@ address {
 }
 
 pre {
-	background: #c2e5ef;
+	background: $white;
 	font-family: $font-family-code;
 	font-size: pxrem(16px);
 	line-height: 1.5;
@@ -108,7 +108,7 @@ pre {
 
 code, kbd, tt, var {
 	font-size: pxrem(16px);
-	font-family: Monaco, monospace;
+	font-family: $font-family-code;
 }
 
 abbr, acronym {

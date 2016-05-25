@@ -54,7 +54,6 @@
 }
 
 .hero-intro .hero__title {
-    visibility: hidden;
     color: $white;
     text-transform: uppercase;
     line-height: 1.1;
@@ -79,7 +78,6 @@
 }
 
 .hero-intro .hero__subtitle {
-    visibility: hidden;
     @include ts(2);
     margin-bottom: 0;
 }
@@ -127,7 +125,6 @@
 
 // Illustrations
 .hero-intro__step {
-    visibility: hidden;
     @extend .h1;
     position: absolute;
     width: 5em;
@@ -174,6 +171,14 @@
 }
 
 // Animations
+
+.hero-intro .hero__title,
+.hero-intro .hero__subtitle,
+.hero-intro__step,
+.hero__read-more {  
+    visibility: hidden;
+}
+
 .hero-intro .hero__title        { animation-delay: 0.2s; }
 .hero-intro .hero__subtitle     { animation-delay: 0.5s; }
 .hero-intro__step--1            { animation-delay: 0.8s; }

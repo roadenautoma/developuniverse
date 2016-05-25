@@ -30,13 +30,15 @@
 p > code,
 li > code,
 dd > code,
-td > code {
+td > code,
+.highlighter-rouge {
     font-family: $font-family-code;
     border: solid 1px #e4e4e4;
-    padding: 4px 4px 1px;
+    padding: 4px;
     background: #f5f7f8;
     font-size: 0.8em;
     border-radius: 3px;
+    margin: 0 .25em;
 }
 
 

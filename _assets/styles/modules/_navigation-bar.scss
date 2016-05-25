@@ -34,11 +34,6 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    // svg {
-    //     display: inline-block;
-    //     vertical-align: middle;
-    //     fill: $brand-secondary-color;
-    // }
 }
 
 .navbar__collapse {
@@ -144,7 +139,7 @@
     }
     .navbar__nav > li > a{
         display: block;
-        padding: 3em 1em;
+        padding: 2.5em 1em;
         font-size: pxrem(14px, $base-font-size);
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -174,11 +169,6 @@
             margin: 0 auto;
             height: 2.5em;
             background-image: url("../images/logo.svg");
-            // svg{
-            //     display: inline-block;
-            //     vertical-align: middle;
-            //     text-align: center;
-            // }
         }
     }
     .navbar__nav {

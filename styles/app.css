@@ -4594,7 +4594,7 @@ address {
 }
 
 pre {
-  background: #c2e5ef;
+  background: #ffffff;
   font-family: "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-size: 0.8888888889rem;
   line-height: 1.5;
@@ -4606,7 +4606,7 @@ pre {
 
 code, kbd, tt, var {
   font-size: 0.8888888889rem;
-  font-family: Monaco, monospace;
+  font-family: "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 abbr, acronym {
@@ -5319,13 +5319,15 @@ input[type="checkbox"] {
 p > code,
 li > code,
 dd > code,
-td > code {
+td > code,
+.highlighter-rouge {
   font-family: "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   border: solid 1px #e4e4e4;
-  padding: 4px 4px 1px;
+  padding: 4px;
   background: #f5f7f8;
   font-size: 0.8em;
   border-radius: 3px;
+  margin: 0 .25em;
 }
 
 .body-content figure,
@@ -5818,7 +5820,7 @@ td > code {
   }
   .navbar__nav > li > a {
     display: block;
-    padding: 3em 1em;
+    padding: 2.5em 1em;
     font-size: 0.7777777778rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -6081,13 +6083,13 @@ td > code {
 
 @media (min-width: 960px) {
   .hero-intro .hero-intro__wrapper {
-    padding-top: 97px;
+    padding-top: 84px;
   }
 }
 
 @media (min-width: 1365px) {
   .hero-intro .hero-intro__wrapper {
-    padding-top: 109px;
+    padding-top: 95px;
   }
 }
 
@@ -6127,7 +6129,6 @@ td > code {
 }
 
 .hero-intro .hero__title {
-  visibility: hidden;
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1.1;
@@ -6164,7 +6165,6 @@ td > code {
 }
 
 .hero-intro .hero__subtitle {
-  visibility: hidden;
   font-size: 1.3rem;
   margin-bottom: 0;
 }
@@ -6221,7 +6221,6 @@ td > code {
 }
 
 .hero-intro__step {
-  visibility: hidden;
   position: absolute;
   width: 5em;
   height: 5em;
@@ -6278,6 +6277,13 @@ td > code {
   .hero-intro__step--4 {
     right: -1em;
   }
+}
+
+.hero-intro .hero__title,
+.hero-intro .hero__subtitle,
+.hero-intro__step,
+.hero__read-more {
+  visibility: hidden;
 }
 
 .hero-intro .hero__title {
