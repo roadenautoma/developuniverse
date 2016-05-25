@@ -5,6 +5,7 @@
     background-color: $brand-secondary-color;
     background-image: url("../images/about-hero-bg.jpg");
     background-position: top center;
+
 }
 
 
@@ -28,7 +29,17 @@
 
 .ps-timeline {
     background-color: $gray-lightest;
+    padding-bottom: 0;
 }
+
+.ps-timeline .timeline > li:last-child {
+    //padding-bottom: 6em;
+    .timeline-block {
+        margin-bottom: 0;
+        padding-bottom: 8em;
+    }
+}
+
 
 /* Top dots decoration */
 

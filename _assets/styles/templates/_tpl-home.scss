@@ -166,6 +166,7 @@
     background-color: $gray-lightest;
 }
 
+// Aditional item for grid
 .ps-home-blog .blog-list {
     > .blog-list__item:nth-child(4) {
         display: none;
@@ -176,7 +177,18 @@
             display: none;
         }
     }
+}
 
+// Remove margin bottom for last items
+@include respond-to("small") {
+    .ps-home-blog .blog-list > .blog-list__item:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+}
+@include respond-to("medium") {
+    .ps-home-blog .blog-list > .blog-list__item:nth-last-child(-n+4) {
+        margin-bottom: 0;
+    }
 }
 
 .ps-home-blog .page-section__content > .actions {

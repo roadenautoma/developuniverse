@@ -14,8 +14,6 @@
     &:active {
         text-decoration: none;
     }
-
-
 }
 
 .navbar {
@@ -76,7 +74,7 @@
     }
 }
 
-.navbar__nav {
+.navbar__nav{
     > li > a {
         color: $brand-primary-color;
         text-decoration: none;
@@ -91,7 +89,7 @@
         &:after{
             content: "";
             position: absolute;
-            bottom: -0.3em;
+            bottom: -0.5em;
             left: 0;
             display: block;
             width: 100%;
@@ -144,7 +142,7 @@
     }
     .navbar__nav > li > a{
         display: block;
-        padding: 2.5em 1em;
+        padding: 3em 1em;
         font-size: pxrem(14px, $base-font-size);
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -218,6 +216,7 @@
 
 @include respond-to("large") {
     .navbar__nav > li > a{
-        padding: 2.5em 2em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }

@@ -22,3 +22,29 @@
   // Delay - don't start the animation until we say so
   animation-delay: #{$delay}s;
 }
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

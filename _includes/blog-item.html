@@ -11,8 +11,8 @@
             {% if article.case_study %}
             <span class="badge">Case study</span>
             {% endif %}
-            <!-- 1:36 -->
-            <img itemprop="thumbnailUrl" src="https://unsplash.it/600/400/?random" alt="{{ article.title }}" />
+
+            <img itemprop="thumbnailUrl" src="https://unsplash.it/600/400/?image={% random 1:50 %}" alt="{{ article.title }}" />
         </a>
     </div><!-- .blog-item__image -->
     <div class="blog-item__content" itemprop="text">

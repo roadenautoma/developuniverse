@@ -19134,7 +19134,7 @@ $( document ).ready(function() {
 
     /* Animated scroll to
 	------------------------------------------- */
-    $('.scroll-to').on('click', function() {
+    $('.js-scroll-to').on('click', function() {
         var target = $(this).attr('href');
 
         $(this).blur();

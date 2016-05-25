@@ -30,18 +30,29 @@
     right: 0;
 }
 
+.blog-item__excerpt {
+    @include ts(-1);
+    line-height: 1.5;
+    color: $brand-primary-color-light;
+    margin-bottom: 0;
+}
+
 .blog-item .actions {
     margin-top: 1.5em;
 }
 
-.blog-item .btn--more {
+.blog-item__excerpt + .actions {
+    margin-top: 0.5em;
+}
+
+.blog-item .btn--more{
     background: none;
 	box-shadow: none;
 	padding-right: 0;
     padding-left: 0;
     @include ts(-2);
     letter-spacing: 0.1em;
-    color: $brand-primary-color-light;
+    color: $brand-primary-color;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     text-decoration: none;
@@ -54,7 +65,7 @@
             transform $base-transition-time--faster cubic-bezier(.64,.09,.08,1);
     }
     &:visited{
-        color: $brand-primary-color-light;
+        color: $brand-primary-color;
     }
     &:hover,
     &:focus,
