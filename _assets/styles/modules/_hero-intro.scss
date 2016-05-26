@@ -51,6 +51,9 @@
     @include respond-to("large") {
         max-width: 800px;
     }
+    @include respond-to("xhuge") {
+        max-width: 940px;
+    }
 }
 
 .hero-intro .hero__title {
@@ -175,7 +178,7 @@
 .hero-intro .hero__title,
 .hero-intro .hero__subtitle,
 .hero-intro__step,
-.hero__read-more {  
+.hero__read-more {
     visibility: hidden;
 }
 
