@@ -196,6 +196,8 @@ $( document ).ready(function() {
         location.href = target;
     });
 
+    $('.js-share-btn').cSButtons();
+
 
     // Wow
     var wow = new WOW(

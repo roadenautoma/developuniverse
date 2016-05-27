@@ -4,6 +4,7 @@
         "vendor/enquire.js",
         "vendor/fastclick.js",
         "vendor/jquery.matchHeight.js",
+        "vendor/jquery.share.js",
         "vendor/jquery.magnific-popup.js",
         "vendor/imagesloaded.pkgd.js",
         "vendor/owl.carousel.js",
