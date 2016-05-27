@@ -70,7 +70,12 @@
                 </dl>
 
                 <div class="article-share__comments">
-                    <span class="disqus-comment-count" data-disqus-url="http://gon.to/{{page.url}}">Comments</span>
+                    <!-- TODO: Add link outside of span -->
+                    {% if page.dsq_thread_id %}
+                        <span class="disqus-comment-count" data-disqus-identifier="{{page.dsq_thread_id}}">Comments</span>
+                    {% else %}
+                        <span class="disqus-comment-count" data-disqus-url="http://gon.to/{{page.url}}">Comments</span>
+                    {% endif %}
                 </div>
             </div><!-- .article-share -->
 
