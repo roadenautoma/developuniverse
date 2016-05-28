@@ -43,6 +43,7 @@ $( document ).ready(function() {
             $steps.owlCarousel({
                 items: 1,
                 nav: true,
+                margin: 20,
                 autoplay: false,
                 autoplayTimeout: 10000,
                 autoplayHoverPause: true,
