@@ -7,7 +7,7 @@
     margin: 20px auto;
 }
 
-// TODO: Fix Close button disaligment 
+// TODO: Fix Close button disaligment
 .modal .modal-toggle-btn {
     @extend .navbar-toggle-btn;
     color: $brand-primary-color;
@@ -23,23 +23,6 @@
 /*
 TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimsemenov/Magnific-Popup/issues/12
 */
-
-
-.mfp-full {
-    min-width: 101%;
-    -webkit-overflow-scrolling: touch;
-  //-webkit-transform: translateZ(0);
-
-}
-html.mfp-helper {
-  height: 100%;
-  body{
-    overflow: hidden;
-    height: 100%;
-    //-webkit-transform: translateZ(0);
-  }
-}
-
 
 .mfp-full.mfp-bg {
     background: none;

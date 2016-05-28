@@ -118,8 +118,7 @@ $( document ).ready(function() {
         fixedContentPos:true,
         callbacks: {
             beforeOpen: function() {
-                startWindowScroll = $(window).scrollTop();
-                $('html').addClass('mfp-helper');
+
             },
             open: function() {
                 // Close menu if open
@@ -130,8 +129,7 @@ $( document ).ready(function() {
                 }
             },
             close: function() {
-                $('html').removeClass('mfp-helper');
-                $(window).scrollTop(startWindowScroll);
+                
             },
             afterClose: function() {
                 // Remove focus to link
