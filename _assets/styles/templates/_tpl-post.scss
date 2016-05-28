@@ -72,14 +72,14 @@
     @extend .page-section;
 }
 
-.article-body > .container {
+.article-body > .container,
+.article-footer .container {
     max-width: 42em;
 }
 
 .article .body-content {
     font-family: $font-family-text;
     line-height: 1.8;
-    margin-bottom: 4em;
     @include headings {
         font-family: $heading-font-family;
         margin: ($heading-margin * 2) 0 $heading-margin 0;
@@ -133,11 +133,16 @@
     display: none;
 }
 
-.article .body-content figure,
-.article .body-content blockquote,
-.article-body hr:first-child + p {
+.article .body-content figure {
     margin-left: -6.25vw;
     margin-right: -6.25vw; //width: 87.5%;
+}
+
+.article .body-content figcaption {
+    padding: 0 1em;
+    @include respond-to("article-photo-margin") {
+        padding: 0;
+    }
 }
 
 
@@ -179,6 +184,28 @@
 // Code
 
 /* @end  Article Body */
+
+
+
+/* @group Article section */
+
+.article-section {
+
+}
+
+.article-section__header {
+
+}
+
+
+.article-section__title {
+    @extend .h4;
+}
+
+
+
+
+/* @end Article section */
 
 /* @group Share */
 
@@ -284,6 +311,7 @@
 /* @end  Share */
 
 /* @group  Newsletter */
+
 
 
 /* @end  Newsletter */

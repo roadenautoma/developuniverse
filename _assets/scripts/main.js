@@ -147,9 +147,6 @@ $( document ).ready(function() {
     });
 
 
-    /* Newsletter Contact
-	------------------------------------------- */
-    // @Gonto: Add newsletter form submit logic logic here
 
 
     /* Footer go up!
@@ -169,10 +166,11 @@ $( document ).ready(function() {
 	------------------------------------------- */
     $('.js-scroll-to').on('click', function() {
         var target = $(this).attr('href');
+        var hash = target.substring(target.indexOf('#'));
 
         $(this).blur();
 		$('html, body').animate({
-    		scrollTop: $(target).offset().top
+    		scrollTop: $(hash).offset().top
 			}, 500);
         $(this).blur();
         event.preventDefault();

@@ -8,6 +8,7 @@
     color: #fff;
     height: auto;
     padding: 4em 0;
+    position: relative;
     @include respond-to("medium") {
         padding: 8em 0 2em 0;
     }
@@ -46,7 +47,27 @@
     }
 }
 
+.hero__credit{
+    opacity: 0.8;
+    font-size: 0.75rem;
+    color: #e9e9e9;
+    padding: 1em 1em;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+}
 
+.hero__credit a {
+    color: $white;
+}
+
+.hero__credit .credit__locale {
+    display: none;
+    @include respond-to("medium") {
+        display: inline-block;
+    }
+}
 
 // Animations
 

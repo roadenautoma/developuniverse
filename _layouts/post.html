@@ -17,15 +17,17 @@
                              {% for tag in page.tags | pop: 5 %}
                                <li><a class="tag" href="/tag/{{tag}}">#{{tag}}</a></li>
                              {% endfor %}
-
                         </ul>
                     </div><!-- .article__tags -->
                 </div><!-- .hero__heading -->
 
             </div><!-- .container -->
+            <div class="hero__credit">
+                <!-- TODO: Add credit YAML field for photos taken from outside sources -->
+                Photo by <a href="https://unsplash.com/@hoachld">Hoach Le Dinh</a>
+            </div>
         </div><!-- .hero -->
     </header><!-- .article-header -->
-
 
     <div class="article-body">
         <div class="container">
@@ -39,9 +41,14 @@
             <div class="body-content {% if page.intro %}has-intro{% endif %}">
                 {{ content }}
             </div><!-- .body-content -->
+        </div><!-- .container -->
+    </div><!-- .article-body -->
+
+    <footer class="article-footer">
+        <div class="container">
 
             <!-- Share -->
-            <div class="article-share">
+            <div class="article-section article-share">
                 <dl class="article-share__links">
                     <dt>Share on</dt>
                     <dd>
@@ -73,44 +80,48 @@
                 <div class="article-share__comments">
                     <!-- TODO: Add link outside of span -->
                     {% if page.dsq_thread_id %}
-                    <a href="#comments" class="btn btn--hollow js-scroll-to">
+                    <a href="{{page.url}}#comments" class="btn btn--hollow js-scroll-to">
                         <span class="disqus-comment-count" data-disqus-identifier="{{page.dsq_thread_id}}">Comments</span>
                     </a>
                     {% else %}
-                    <a href="#comments" class="btn btn--hollow">
+                    <a href="{{page.url}}#comments" class="btn btn--hollow">
                         <span class="disqus-comment-count" data-disqus-url="http://gon.to/{{page.url}}">Comments</span>
                     </a>
                     {% endif %}
                 </div>
             </div><!-- .article-share -->
 
-            <!-- TODO: Add article related -->
-            <!-- {% if page.related_posts.size > 0 %}
-            {% endif %} -->
-            <nav class="article-related">
-                <ul>
-                    <li>
-                        <a href="#">Previous article</a>
-                    </li>
-                    <li>
-                        <a href="#">Next article</a>
-                    </li>
-                </ul>
-            </nav><!-- .article-related -->
+            <!-- {% if page.related_posts.size > 0 %} -->
+            <!-- {% endif %} -->
+            <div class="article-section article-related">
+                <header class="article-section__header">
+                    <h2 class="article-section__title">Related thoughts:</h2>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="#">F%#ck Github Pages for my Jekyll blog. Why I decided to use Digital Ocean instead?</a></li>
+                        <li><a href="#">Gulp is awesome, but do we really need it?</a></li>
+                        <li><a href="#">New Play Framework 2 Video Course: How to create WebApps</a></li>
+                        <li><a href="#">Fix to Blank (Empty) pages in Google Analytics</a></li>
+                    </ul>
+                </nav><!-- .article-related -->
+            </div><!-- .article-section -->
 
+
+
+            <!-- Subscribe to newsletter -->
             {% include footer-newsletter.html %}
 
-            <!-- Comments -->
-            <div class="article-comments" id="comments">
+            <!-- Disqus comments -->
+            <div class="article-section article-comments" id="comments">
                 {% if page.comments != false %}
                   {% include comments.html %}
                   <div id="disqus_thread"></div><!-- /#disqus_thread -->
                 {% endif %}
             </div><!-- .article-comments -->
 
-
         </div><!-- .container -->
-    </div><!-- .article-body -->
+    </footer><!-- .article-body -->
 
 
 </article><!-- .article -->

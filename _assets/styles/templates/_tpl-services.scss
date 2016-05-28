@@ -1,6 +1,7 @@
 /* @group Hero */
 
 .tpl-services .hero-wrapper {
+    position: relative;
     background-image: url("../images/services-hero-bg-2.jpg");
     background-color: $dark-blue-alt;
     background-size: 200%;
@@ -14,7 +15,12 @@
 
 .tpl-services .hero .page__title {
     @include ts(15);
+    line-height: 1;
     font-weight: $font-weight-bold;
+    span,
+    small {
+        display: block;
+    }
     small {
         color: rgba($white, 0.85);
         display: block;
