@@ -36,34 +36,20 @@ You go to the URL / and you get a page in the following way:
 
 <a href="http://gon.to/wp-content/uploads/2013/03/Blog.png" rel="lightbox" title="The right way of coding AngularJS: How to organize a regular WebApp. Basic Example"><img class="aligncenter size-medium wp-image-272" alt="Blog" src="http://gon.to/wp-content/uploads/2013/03/Blog-300x188.png" width="300" height="188" /></a>
 
-&nbsp;
-
 Then, you login and you go to /sports and you get:
-
-&nbsp;
 
 <a href="http://gon.to/wp-content/uploads/2013/03/Blog-2.png" rel="lightbox" title="The right way of coding AngularJS: How to organize a regular WebApp. Basic Example"><img class="aligncenter size-medium wp-image-271" alt="Blog (2)" src="http://gon.to/wp-content/uploads/2013/03/Blog-2-300x127.png" width="300" height="127" /></a>
 
-&nbsp;
-
 Then, you go to /players and you get:
 
-&nbsp;
-
 <a href="http://gon.to/wp-content/uploads/2013/03/Blog-1.png" rel="lightbox" title="The right way of coding AngularJS: How to organize a regular WebApp. Basic Example"><img class="aligncenter size-medium wp-image-270" alt="Blog (1)" src="http://gon.to/wp-content/uploads/2013/03/Blog-1-300x189.png" width="300" height="189" /></a>
-
-&nbsp;
-
-&nbsp;
 
 So, this example covers most of the different approaches and pages of a regular WebApp. So, how would we approach this?
 
 1) The first thing we need to do is define the URL router and the controllers. We&#8217;d have one main controller for each
 
-&nbsp;
-
 ````js
-var module = angular.module('basicsite', 
+var module = angular.module('basicsite',
 ['ngResource']).
 config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
@@ -76,8 +62,6 @@ config(['$routeProvider', function ($routeProvider) {
         otherwise({redirectTo: '/'});
 }]);
 ````
-
-&nbsp;
 
 2) Now, you have the main routes, templates and controllers defined. As you can see, Footer is used in several pages and is always the same. Header is used in several pages and is almost the same. It just changes if user is logged in or not. As we want to use the footer several times and we don&#8217;t want to define it so many times, we&#8217;re going to define a directive for it. This directive has its template and it can have a controller in case it needs it. Otherwise, we can just have a link method that will be run when added to other HTML.
 
@@ -101,7 +85,6 @@ module.directive('footer', function () {
   </p>
 </div>
 ```
-
 
 3) Almost same things happen with Header. We&#8217;re going to use this in many places but it has some differences. For this cases, I use AngularUI ui-if directive which is awesome, as that&#8217;s exactly what we want. Depending on something we show one content or another. Check it out [clicking here][1]
 
@@ -134,22 +117,20 @@ module.directive('header', function () {
 
 Here, there are 2 important things to note. First the scope attribute, where we put user: &#8220;=&#8221;. What does this mean? This will add the user to out scope ($scope.user). It will create a bidirectional asociation with the value supplied in the HTML as a parameter. If the user doesn&#8217;t put anything, it will be asumed that the name of the parent scope variable is user (Don&#8217;t do this, it&#8217;s impossible to understand :)). What does this mean in english?
 
-If you put <div header user=&#8221;userModel&#8221;> in the template HTML for the controller, it will mean that $scope.user in the Header directive will be always the same as $scope.userModel in the Controller. If one of them changes, the other will change. This is really cool! So, then, we can actually check if this $scope.user exists or not in our template with ui-if. And as it&#8217;s a bidirectional asociation, if $scope.userModel changes from being undefined to a user (He&#8217;s logged in somehow), the hader will change automatically. This is freaking awesome! Binding rules <img src="http://gon.to/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" /> 
+If you put <div header user=&#8221;userModel&#8221;> in the template HTML for the controller, it will mean that $scope.user in the Header directive will be always the same as $scope.userModel in the Controller. If one of them changes, the other will change. This is really cool! So, then, we can actually check if this $scope.user exists or not in our template with ui-if. And as it&#8217;s a bidirectional asociation, if $scope.userModel changes from being undefined to a user (He&#8217;s logged in somehow), the hader will change automatically. This is freaking awesome! Binding rules <img src="http://gon.to/wp-includes/images/smilies/icon_biggrin.gif" alt=":D" class="wp-smiley" />
 
 4) All we need to do now is create the main templates for each controller using our directives.
-
-&nbsp;
 
 ````html
 <div>
   <div header></div>
-  
+
   <div class="main-content">
     <p>
       Here it's this page specific content :)
     </p>
   </div>
-  
+
   <div footer></div>
 </div>
 ````
@@ -157,27 +138,27 @@ If you put <div header user=&#8221;userModel&#8221;> in the template HTML for t
 ````html
 <div>
   <div header user="player"></div>
-  
+
   <div class="main-content">
     <p>
       Here it's this page specific content :)
     </p>
   </div>
-  
+
   <div footer></div>
 </div>
 ````
-  
+
 ````html
 <div>
   <div header user="userModel"></div>
-  
+
   <div class="main-content">
     <p>
       Here it's this page specific content :)
     </p>
   </div>
-  
+
 </div>
 ````
 

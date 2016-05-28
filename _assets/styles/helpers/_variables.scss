@@ -13,9 +13,11 @@ $brand-secondary-color: 		#f2461c;
 $brand-terciary-color:          $light-blue;
 
 $black:                         #2c2c2c;
+$gray-20:                       lighten($black, 80%);
+$gray-40:                       lighten($black, 60%);
 $gray:                          lighten($black, 50%);
-$gray-light:                    lighten($black, 40%);
-$gray-lighter:                  lighten($black, 30%);
+$gray-60:                       lighten($black, 40%);
+$gray-70:                       lighten($black, 30%);
 $gray-lightest:                 #f1f1f1;
 $white:                         #ffffff;
 

@@ -35,10 +35,11 @@
                 <!-- TODO: Code speed reader -->
             </div><!-- .speed-reader -->
 
-            <!-- Start content -->
+            <!-- Content -->
             <div class="body-content {% if page.intro %}has-intro{% endif %}">
-              {{ content }}
-            </div>
+                {{ content }}
+            </div><!-- .body-content -->
+
             <!-- Share -->
             <div class="article-share">
                 <dl class="article-share__links">
@@ -71,16 +72,16 @@
                         </div><!-- .social-links -->
                     </dd>
                 </dl>
-
+                <!-- TODO: @Gonto: Disqus comments count not working -->
                 <div class="article-share__comments">
-                    <a href="#comments" class="disqus-comment-count" data-disqus-url="{{site.url}}{{page.url}}"> <!-- Count will be inserted here --> </span>
-                </div>
+                    <a href="#comments" class="btn btn--hollow disqus-comment-count js-scroll-to" data-disqus-url="{{site.url}}{{page.url}}">2 comments</a>
+                </div><!-- .article-share__comments -->
             </div><!-- .article-share -->
 
             <!-- TODO: Add article related -->
             <!-- {% if page.related_posts.size > 0 %}
             {% endif %} -->
-            <nav class="article-pager">
+            <nav class="article-related">
                 <ul>
                     <li>
                         <a href="#">Previous article</a>
@@ -89,7 +90,7 @@
                         <a href="#">Next article</a>
                     </li>
                 </ul>
-            </nav><!-- .article-pager -->
+            </nav><!-- .article-related -->
 
             {% include footer-newsletter.html %}
 

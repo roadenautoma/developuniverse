@@ -7,7 +7,7 @@ image:
   thumb: 2015-03-03-f-percent-number-ck-github-pages-for-jekyll-why-i-decided-to-use-digital-ocean/logo.png
 comments: true
 share: true
-tags: 
+tags:
 - github
 - github pages
 - jekyll
@@ -15,8 +15,9 @@ tags:
 - ProTip
 - redirect
 - personal blog
+intro: true
 ---
-You've finally decided to create a blog. You want to share your view of the world with everyone who cares to read about it. If you're a developer like me, you probably like Markdown and you'll end up creating your blog with Jekyll since it's very customizable and easy to use. 
+You've finally decided to create a blog. You want to share your view of the world with everyone who cares to read about it. If you're a developer like me, you probably like Markdown and you'll end up creating your blog with Jekyll since it's very customizable and easy to use.
 
 Besides that, Github (the most beloved Webapp for all developers) has a nice feature that lets you [easily deploy](https://help.github.com/articles/using-jekyll-with-pages/) your Jekyll blog for everyone to read it.
 
@@ -52,7 +53,7 @@ In order to avoid [DDoS attacks](http://en.wikipedia.org/wiki/Denial-of-service_
 
 ### What's the solution?
 
-I decided to buy a Digital Ocean machine for 5 USD a month. It's cheap and it's really easy to setup Jekyll on there. 
+I decided to buy a Digital Ocean machine for 5 USD a month. It's cheap and it's really easy to setup Jekyll on there.
 
 I'll write a more detailed blog post on how to do it, but basically, what I did is the following:
 

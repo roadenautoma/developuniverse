@@ -98,7 +98,7 @@ address {
 pre {
 	background: $white;
 	font-family: $font-family-code;
-	font-size: pxrem(16px);
+	font-size: 0.8888888889rem;
 	line-height: 1.5;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -107,7 +107,7 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-size: pxrem(16px);
+	font-size: 0.8888888889rem;
 	font-family: $font-family-code;
 }
 

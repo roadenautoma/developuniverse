@@ -1,5 +1,5 @@
 .modal {
-    position: relative;
+    //position: relative;
     background-color: $white;
     padding: 20px;
     width: auto;
@@ -7,19 +7,15 @@
     margin: 20px auto;
 }
 
-
+// TODO: Fix Close button disaligment 
 .modal .modal-toggle-btn {
     @extend .navbar-toggle-btn;
     color: $brand-primary-color;
     position: absolute;
     top: 1em; bottom: auto;
-    right: 0.25em; left: auto;
     left: auto;
     height: auto;
     display: block;
-    @include respond-to("navbar-collapse") {
-        right: 1em;
-    }
 }
 
 

@@ -27,25 +27,43 @@
 }
 
 
+// Code
+
 p > code,
 li > code,
 dd > code,
-td > code,
-.highlighter-rouge {
+td > code{
     font-family: $font-family-code;
     border: solid 1px #e4e4e4;
     padding: 4px;
     background: #f5f7f8;
     font-size: 0.8em;
-    border-radius: 3px;
+    border-radius: 0;
     margin: 0 .25em;
 }
 
+.highlighter-rouge pre {
+    font-family: $font-family-code;
+    margin: 0;
+    //border: $base-border-width solid $brand-primary-color-lightest;
+    border-radius: 0;
+    border: 1px solid #e4e4e4;
+    background-color: #f5f7f8;
+}
+
+.highlighter-rouge pre,
+.highlighter-rouge code {
+    font-size: 0.7777777778rem;
+}
+
+// Images
 
 .body-content figure,
-.body-content pre {
+.body-content .highlighter-rouge,
+.body-content .gist {
     margin: 2.5em 0;
 }
+
 
 .body-content figcaption {
     margin-top: 1.25em;
