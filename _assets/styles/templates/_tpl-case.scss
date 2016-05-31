@@ -1,0 +1,57 @@
+// Hero
+
+.tpl-case .article-header .hero {
+    @include respond-to("medium") {
+        height: 24em;
+    }
+
+}
+
+.article__badge {
+    .badge {
+        font-size: 0.8rem;
+        background-color: $brand-secondary-color;
+    }
+}
+
+.tpl-case .article-body > .container {
+    @include page-container;
+}
+
+
+
+// Layou
+.tpl-case .article-body {
+
+}
+
+.tpl-case .article-preview__intro {
+    margin-bottom: 3em;
+}
+
+.tpl-case .article-preview__access {
+
+}
+
+@include with-layout($big-gutters) {
+    @include respond-to("medium") {
+        .tpl-case .article-body {
+            @include container;
+        }
+        .tpl-case .article-preview__intro {
+            @include span(7.5 of 12);
+            margin-bottom: 0;
+        }
+        .tpl-case .article-preview__access {
+            @include span(4.5 of 12);
+            @include last;
+        }
+    }
+}
+
+
+// Access
+
+.widget-access {
+    padding: 2em;
+}

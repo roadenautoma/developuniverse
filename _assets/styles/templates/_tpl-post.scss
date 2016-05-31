@@ -91,7 +91,7 @@
 
 // Intro
 .article .body-content.has-intro > p:first-child {
-    color: $brand-primary-color-light;
+    color: $brand-primary-color;
     @include ts(1);
     margin-bottom: 2.5em;
     &:first-child:first-letter {

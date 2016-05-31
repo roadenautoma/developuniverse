@@ -1,6 +1,8 @@
 .badge {
     background-color: $brand-primary-color;
     font-family: $heading-font-family;
+    font-weight: $font-weight-bold;
+    font-size: 1em;
     color: $white;
     display: inline-block;
     letter-spacing: 0.1em;
@@ -9,6 +11,5 @@
     text-align: center;
     padding: .4em .6em .3em;
     line-height: 1;
-    font-size: 1em;
     white-space: nowrap;
 }
