@@ -1,5 +1,5 @@
 .modal {
-    //position: relative;
+    position: relative;
     background-color: $white;
     padding: 20px;
     width: auto;
@@ -22,6 +22,22 @@
 /*
 TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimsemenov/Magnific-Popup/issues/12
 */
+.mfp-helper #page {
+  display: none;
+}
+
+.mfp-full {
+    min-width: 100vw;
+    position: static !important;
+}
+html.mfp-helper {
+  height: 100%;
+  body{
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
 
 .mfp-full.mfp-bg {
     background: none;
@@ -54,9 +70,9 @@ TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimse
 
 .mfp-full .modal__wrapper {
     @include respond-to("small") {
-        position: relative;
-    	top: 50%;
-    	transform: translateY(-50%);
+        // position: relative;
+          // top: 50%;
+          // transform: translateY(-50%);
     }
 }
 
@@ -68,9 +84,9 @@ TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimse
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
@@ -84,9 +100,9 @@ TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimse
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 /* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
