@@ -53,12 +53,8 @@ module.exports = function(grunt) {
 				},
 				files: {
                     'jquery.js': 'jquery/dist/jquery.js',
-					'modernizr.js': 'modernizr/modernizr.js',
-                    'enquire.js': 'enquire/dist/enquire.js',
-                    'prism.js': 'prism/prism.js',
+					'enquire.js': 'enquire/dist/enquire.js',
                     'jquery.matchHeight.js': 'matchHeight/jquery.matchHeight.js',
-                    'jcf.js': 'jcf/js/jcf.js',
-                    'jcf.checkbox.js': 'jcf/js/jcf.checkbox.js',
                     'fastclick.js': 'fastclick/lib/fastclick.js',
                     'jquery.magnific-popup.js': 'magnific-popup/dist/jquery.magnific-popup.js',
                     'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js',
