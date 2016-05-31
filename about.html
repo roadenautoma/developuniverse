@@ -213,30 +213,22 @@ title: About me
                         </dd>
                     </dl>
                 </li>
-                <li>
-                    <!--  TODO: Use this text as closing over a full width-image -->
-                    <dl class="timeline-block">
-                        <span class="timeline-block__dot"></span>
-                        <dt class="timeline-block__time wow fadeInUp">
-                            <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>
-                        </dt>
-                        <dd class="timeline-block__content wow fadeInUp">
-                            <div class="body-content">
-                                <p>We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, <strong><a class="js-scroll-to" href="#footer-contact">contact me!</a> You can be part of my story!</strong> </p>
-                            </div><!-- .body-content -->
-                        </dd>
-                        <!-- TODO: Can we put some image about the present some how? -->
-                        <!-- TODO: Add the arrow or something in the end that goes to the contact form with an animation. Same for the link above -->
-                    </dl>
-                </li>
             </ol>
-
-            <div class="timeline-present">
-                Present
-            </div><!-- .timeline-present -->
-
         </div><!-- .container -->
+
+        <!-- Present -->
+        <div class="timeline-present">
+            <div class="container container--thin">
+
+                <div class="timeline-present__content">
+                    <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>
+                    <p>We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, <a class="js-scroll-to" href="#footer-contact">contact me!</a> <strong>You can be part of my story!</strong></p>
+                </div><!-- .timeline-present__content -->
+
+            </div><!-- .container -->
+        </div><!-- .timeline-present -->
     </section><!-- .ps-timeline -->
+
 
 
 
@@ -283,6 +275,6 @@ title: About me
   function onYouTubePlayerAPIReady() {
     $('.js-about-header').children().one(animationEnd, getVideos);
     setTimeout(getVideos, 1000);
-    
+
   }
 </script>

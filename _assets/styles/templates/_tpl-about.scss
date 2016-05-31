@@ -40,6 +40,54 @@
     }
 }
 
+.timeline-present {
+    position: relative;
+    overflow: hidden;
+    padding: 10em 0 24em 0;
+    text-align: left;
+    background-color: #B1D6E6;
+    color: $brand-primary-color;
+    z-index: 1;
+    // Image
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30em;
+        background-image: url("../images/about-present-bg.jpg");
+        background-size: auto 100% ;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    @include respond-to("medium") {
+        text-align: center;
+    }
+}
+
+.timeline-present > .container {
+    max-width: 500px;
+    @include respond-to("medium") {
+        max-width: $max-width-thin;
+    }
+}
+
+.timeline-present__content {
+    @include ts(1);
+    position: relative;
+    color: $brand-primary-color;
+}
+.timeline-present time {
+    color: $brand-secondary-color;
+    margin-bottom: 1em;
+    display: inline-block;
+    font-size: 1.25em;
+}
+
+
 
 /* Top dots decoration */
 

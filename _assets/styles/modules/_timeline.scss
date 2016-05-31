@@ -6,6 +6,29 @@
     > li {
         @include clearfix;
     }
+    // Vertical line
+    &:after{
+        z-index: 20;
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: -8em;
+        left: 1.1em;
+        height: 12em;
+        width: 8px;
+        background-size: contain;
+        background-repeat: repeat-y;
+        background-image: url("../images/line-straight.svg");
+        @include respond-to("small") {
+            left: 3.75em;
+        }
+        @include respond-to("medium") {
+            left: 50%;
+            height: 12em;
+            margin-left: -4px;
+            width: 8px;
+        }
+    }
 }
 
 
@@ -47,9 +70,6 @@
     margin-top: 0;
 }
 
-.timeline > li:last-child .timeline-block:before{
-    background-image: url("../images/line-straight.svg");
-}
 
 // Vertical line (Solid)
 .timeline > li:nth-child(1n) .timeline-block:before{
@@ -66,7 +86,10 @@
     background-image: url("../images/line-zizzag.svg");
 }
 
-
+// Last child
+.timeline > li:last-child .timeline-block:before {
+    background-image: url("../images/line-straight.svg");
+}
 
 
 .timeline-block__time{
