@@ -31,7 +31,6 @@ TODO: Jumpy modal when using form tabs in mobile. Check https://github.com/dimse
 
 .mfp-full {
     min-width: 101%;
-  //-webkit-transform: translateZ(0);
 
 }
 html.mfp-helper {
@@ -39,7 +38,6 @@ html.mfp-helper {
   body{
     overflow: hidden;
     height: 100%;
-    //-webkit-transform: translateZ(0);
   }
 }
 
@@ -73,13 +71,13 @@ html.mfp-helper {
     position: relative;
 }
 
-.mfp-full .modal__wrapper {
-    @include respond-to("small") {
-        position: relative;
-    	top: 50%;
-    	// transform: translateY(-50%);
-    }
-}
+// .mfp-full .modal__wrapper {
+//     @include respond-to("small") {
+//         position: relative;
+//     	top: 50%;
+//     	// transform: translateY(-50%);
+//     }
+// }
 
 
 
@@ -89,9 +87,9 @@ html.mfp-helper {
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
@@ -105,9 +103,9 @@ html.mfp-helper {
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 /* content animate it */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
