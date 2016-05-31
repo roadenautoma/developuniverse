@@ -9,28 +9,73 @@
 
 .article__badge {
     .badge {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         background-color: $brand-secondary-color;
     }
 }
+
+
+
+.tpl-case .article-body {
+    background-image: url("../images/dots-bg.svg");
+    background-repeat: repeat;
+    background-position: top;
+    background-size: 48px 48px;
+}
+
 
 .tpl-case .article-body > .container {
     @include page-container;
 }
 
 
-
-// Layou
-.tpl-case .article-body {
+// Preview list
+.article-preview__args {
 
 }
 
+.article-preview__args .article-preview__title {
+    @extend .h4;
+    color: $brand-secondary-color;
+}
+
+
+
+// Access
+.widget-access {
+    padding: 2em;
+    background-color: $white;
+    border: 3px solid $brand-primary-color;
+    box-shadow: 0 0 0 20px $white;
+}
+
+.widget-access .widget__header {
+    text-align: center;
+}
+.widget-access .widget__title {
+    @include ts(2);
+    color: $brand-primary-color;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+.widget-access .form-group {
+    margin-bottom: 1.5em;
+}
+
+.widget-access .form-group--checkbox {
+    margin: 1.75em 0 1em 0;
+    .checkbox__label {
+        @include ts(-1);
+    }
+}
+
+
+// Layout
 .tpl-case .article-preview__intro {
-    margin-bottom: 3em;
-}
-
-.tpl-case .article-preview__access {
-
+    margin-bottom: 4em;
+    background-color: $white;
+    box-shadow: 0 0 0 20px $white;
 }
 
 @include with-layout($big-gutters) {
@@ -38,6 +83,19 @@
         .tpl-case .article-body {
             @include container;
         }
+        .tpl-case .article-preview__intro {
+            @include span(7 of 12);
+            margin-bottom: 0;
+        }
+        .tpl-case .article-preview__access {
+            @include span(5 of 12);
+            @include last;
+        }
+        .tpl-case .widget-access .widget__header {
+            text-align: left;
+        }
+    }
+    @include respond-to("large") {
         .tpl-case .article-preview__intro {
             @include span(7.5 of 12);
             margin-bottom: 0;
@@ -47,11 +105,4 @@
             @include last;
         }
     }
-}
-
-
-// Access
-
-.widget-access {
-    padding: 2em;
 }

@@ -7,6 +7,27 @@
     }
 }
 
+.body-content ul,
+.custom-list {
+    list-style: none;
+    > li{
+        margin: 0.75em 0;
+        position: relative;
+        &:before {
+            content: "";
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            left: -1.25em;
+            top: 0.65em;
+            display: inline-block;
+            background-image: url("../images/list-dot.svg");
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+    }
+}
+
 .body-content {
     .align-left {
     	display: inline;

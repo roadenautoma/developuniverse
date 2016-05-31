@@ -1,7 +1,7 @@
-<div class="alert alert--success js-contact-form-ok" style="display: none;"></div>
-<div class="alert alert--error js-contact-form-error"  style="display: none;"></div>
+<div class="alert alert--success js-case-form-ok" style="display: none;"></div>
+<div class="alert alert--error js-case-form-error"  style="display: none;"></div>
 
-<form class="form form--alt case-form" autocomplete="off">
+<form class="form case-form" autocomplete="off">
     <fieldset>
         <div class="form-group">
             <label class="control-label" for="firstname">First name <span class="req">*</span></label>
@@ -22,9 +22,19 @@
             <input name="company" class="form-control" type="text" placeholder=" Company" />
         </div><!-- .form-group -->
 
+        <div class="form-group form-group--checkbox">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="consulting" name="service_option1" />
+                    <span class="checkbox__label">Subscribe to my newsletter and get
+notified on new articles.</span>
+                </label>
+            </div>
+        </div><!-- .form-group -->
+
     </fieldset>
     <div class="form-actions">
-        <button type="submit" class="btn btn--terciary js-send-btn js-contact-form-send-btn">
+        <button type="submit" class="btn js-send-btn js-case-form-send-btn">
             <span class="text">Send</span>
             <span class="spinner" title="0">
                 {% include images/spinner.svg %}

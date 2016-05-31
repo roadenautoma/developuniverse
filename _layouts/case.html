@@ -27,41 +27,38 @@
         <div class="container">
 
             <div class="article-preview__intro">
+
                 <!-- Content -->
-                <div class="body-content {% if page.intro %}has-intro{% endif %}">
+                <div class="body-content has-intro">
                     <p>
                         If you’re here, it means you’ve heard about the greatness of Inbound Marketing. You don’t have to go find strangers and turn them into leads. People just arrive to your site and turn to leads themselves.
                         However, if you’re building a <a rel="external" href="https://www.bvp.com/developer-platforms">Developer Platform</a> (also called a B2D), you know that developers aren’t typical people (Trust me, I'm one of them as well 😄). In this blog post, I’ll go over 5 ways you can target developers with your content marketing.
                     </p>
-
-                    <div class="article-preview">
-                        <h2>In this article you will learn:</h2>
-
-                        <ul>
-                            <li>
-                                Usually, when somebody comes back to your site, they’re more likely to signup.
-                            </li>
-                            <li>
-                                You can leverage this behaviour by simply writing a series of post on the same subject, and making it clear in the first one that there’s going to be a new one at an specific date.
-                            </li>
-                            <li>
-                                For example, at Auth0 we did a benchmark series where each week we do a performance benchmark between a different set of FrontEnd frameworks.
-                            </li>
-                        </ul>
-
-                    </div><!-- .article-preview -->
                 </div><!-- .body-content -->
+
+                <div class="article-preview__args">
+                    <h2 class="article-preview__title">In this article you will learn:</h2>
+
+                    <div class="body-content">
+                        <ul>
+                            <li>Usually, when somebody comes back to your site, they’re more likely to signup.</li>
+                            <li>You can leverage this behaviour by simply writing a series of post on the same subject, and making it clear in the first one that there’s going to be a new one at an specific date.</li>
+                            <li>For example, at Auth0 we did a benchmark series where each week we do a performance benchmark between a different set of FrontEnd frameworks.</li>
+                        </ul>
+                    </div><!-- .body-content -->
+                </div><!-- .article-preview__args -->
+
+
             </div><!-- .article-preview__intro -->
 
             <aside class="article-preview__access">
                 <div class="widget widget-access">
-                    <header>
-                        <h3>Get inmediate access to the article by filling this form</h3>
-                    </header>
-                    <div class="">
-
+                    <header class="widget__header">
+                        <h3 class="widget__title">Get inmediate access to this article by filling this form:</h3>
+                    </header><!-- .widget__header -->
+                    <div class="widget__body">
                         {% include case-form.html %}
-                    </div>
+                    </div><!-- .widget__body -->
                 </div><!-- .widget -->
             </aside><!-- .article-preview__access -->
 

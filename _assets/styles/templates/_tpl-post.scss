@@ -69,7 +69,10 @@
 
 
 .article-body {
-    @extend .page-section;
+    padding: 3.5em 0;
+    @include respond-to("medium") {
+        padding: 7em 0;
+    }
 }
 
 .article-body > .container,
@@ -94,6 +97,7 @@
     color: $brand-primary-color;
     @include ts(1);
     margin-bottom: 2.5em;
+    margin-top: 0;
     &:first-child:first-letter {
         float: left;
         color: $brand-primary-color;
@@ -122,11 +126,14 @@
 
 .article .body-content blockquote,
 .article-body hr:first-child + p {
-    margin: 2.5em 0;
     background-color: lighten($brand-terciary-color, 20%);
     padding: 1.5em;
     border-left: 8px solid $brand-terciary-color;
     color: $brand-primary-color;
+}
+
+.article .body-content blockquote {
+    margin: 2.5em 0;
 }
 
 .article-body hr {
@@ -309,6 +316,14 @@
 
 
 /* @end  Share */
+
+/* @group  Related */
+
+.article-related ul > li  {
+    margin: 0.25em 0;
+}
+
+/* @end  Related */
 
 /* @group  Newsletter */
 
