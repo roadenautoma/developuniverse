@@ -110,6 +110,7 @@ $( document ).ready(function() {
 
     /* Contact Modal
 	------------------------------------------- */
+
     var startWindowScroll = 0;
     $('.js-contact-modal-toggle').magnificPopup({
         type:'inline',
@@ -148,10 +149,6 @@ $( document ).ready(function() {
         $.magnificPopup.close();
     });
 
-
-    /* Newsletter Contact
-	------------------------------------------- */
-    // @Gonto: Add newsletter form submit logic logic here
 
 
     /* Footer go up!
