@@ -1,14 +1,15 @@
 <div class="footer-newsletter" id="footer-newsletter">
     <div class="container">
 
-        <figure class="footer-newsletter__img">
-            <img src="http://placehold.it/96x96" alt="">
-        </figure>
-        <header class="page-section__header">
+
+        <header class="footer-newsletter__header">
+            <figure class="footer-newsletter__img">
+                {% include images/newsletter-buddy.svg %}
+            </figure>
             <!-- TODO: @Gonto: Can you replace placeholder text for this title? -->
-            <h2 class="page-section__title">Subscribe to get new awesome blog posts in your inbox once a month!</h2>
+            <h2 class="footer-newsletter__title">Subscribe to get new awesome blog posts in your inbox once a month!</h2>
         </header><!-- .page-section__header -->
-        <div class="page-section__body">
+        <div class="footer-newsletter__body">
 
             {% include subscribe-form.html %}
 

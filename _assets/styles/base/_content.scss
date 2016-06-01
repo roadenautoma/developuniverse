@@ -54,7 +54,9 @@ p > code,
 li > code,
 dd > code,
 td > code{
+    color: $base-text-color;
     font-family: $font-family-code;
+    font-weight: normal;
     border: solid 1px #e4e4e4;
     padding: 4px;
     background: #f5f7f8;
