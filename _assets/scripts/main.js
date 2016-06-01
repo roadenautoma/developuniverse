@@ -193,10 +193,19 @@ $( document ).ready(function() {
         location.href = target;
     });
 
+
+
+    /* Share buttons
+	------------------------------------------- */
     $('.js-share-btn').cSButtons();
+    $('.js-share-btn').on('click', function(e) {
+        e.preventDefault();
+    });
 
 
-    // Wow
+
+    /* Wow
+	------------------------------------------- */
     var wow = new WOW(
       {
         boxClass:     'wow',      // animated element css class (default is wow)
