@@ -8,11 +8,11 @@
             <div class="container container--narrow">
 
                 <div class="hero__heading">
-                    <time class="article__date">{{ page.date | date: '%B %d, %Y' }}</time>
+                    <time class="article__date wow fadeInDown">{{ page.date | date: '%B %d, %Y' }}</time>
 
-                    <h1 class="article__title">{{page.title}}</h1>
+                    <h1 class="article__title wow fadeInDown">{{page.title}}</h1>
 
-                    <div class="article__tags">
+                    <div class="article__tags wow fadeInDown">
                         <ul class="tags-list">
                              {% for tag in page.tags | pop: 5 %}
                                <li><a class="tag" href="/tag/{{tag}}">#{{tag}}</a></li>
