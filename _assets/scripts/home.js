@@ -44,9 +44,9 @@ $( document ).ready(function() {
                 items: 1,
                 nav: true,
                 margin: 20,
-                autoplay: false,
+                autoplay: true,
                 autoplayTimeout: 10000,
-                autoplayHoverPause: true,
+                autoplayHoverPause: false,
                 autoHeight: false,
                 loop: true,
                 dotsContainer: '.method__nav .nav'

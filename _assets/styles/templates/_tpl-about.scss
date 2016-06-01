@@ -33,10 +33,9 @@
 }
 
 .ps-timeline .timeline > li:last-child {
-    //padding-bottom: 6em;
     .timeline-block {
         margin-bottom: 0;
-        padding-bottom: 8em;
+        padding-bottom: 4em;
     }
 }
 
@@ -79,7 +78,53 @@
     @include ts(1);
     position: relative;
     color: $brand-primary-color;
+    a{
+        border-bottom-color: darken($brand-terciary-color,18%);
+        &:hover,
+    	&:focus,
+    	&:active {
+            border-bottom-color: $link-text-color-hover;
+    	}
+    }
+
 }
+
+// Vertical line
+.timeline-present__content .line {
+    z-index: 20;
+    position: absolute;
+    display: block;
+    top: -14em;
+    left: 1.1em;
+    height: 12em;
+    width: 8px;
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-image: url("../images/line-straight.svg");
+    &:after{
+        content: "";
+        width: 1.45em;
+        height: 1.45em;
+        position: absolute;
+        display: block;
+        bottom: -1.45em;
+        left: -0.5em;
+        background-image: url("../images/line-arrow-bottom.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+    }
+    @include respond-to("small") {
+        left: 3.75em;
+    }
+    @include respond-to("medium") {
+        left: 50%;
+        height: 12em;
+        margin-left: -4px;
+        width: 8px;
+    }
+}
+
 .timeline-present time {
     color: $brand-secondary-color;
     margin-bottom: 1em;

@@ -15,11 +15,6 @@ title: About me
                     <h1 class="page__title wow fadeInDown">Every story has a beginning...</h1>
                 </div><!-- .hero__heading -->
             </div><!-- .container -->
-            <div class="hero__credit">
-                <!-- TODO: @Gonto: Add photo credit -->
-                <span class="credit__locale">Name of conference and year.</span>
-                Photo by <a href="https://unsplash.com/@hoachld">Hoach Le Dinh</a>
-            </div>
         </div><!-- .hero -->
     </header><!-- .page-header -->
 
@@ -213,16 +208,17 @@ title: About me
                         </dd>
                     </dl>
                 </li>
-            </ol>
+            </ol><!-- .timeline -->
         </div><!-- .container -->
 
         <!-- Present -->
         <div class="timeline-present">
-            <div class="container container--thin">
+            <div class="container">
 
                 <div class="timeline-present__content">
-                    <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>
-                    <p>We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, <a class="js-scroll-to" href="#footer-contact">contact me!</a> <strong>You can be part of my story!</strong></p>
+                    <span class="line"></span>
+                    <time class="wow fadeInUp" datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>
+                    <p class="wow fadeInUp">We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, <a class="js-scroll-to" href="#footer-contact">contact me</a>! <strong>You can be part of my story!</strong></p>
                 </div><!-- .timeline-present__content -->
 
             </div><!-- .container -->
