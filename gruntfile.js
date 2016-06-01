@@ -63,14 +63,6 @@ module.exports = function(grunt) {
                     'wow.js' : 'wow/dist/wow.js'
 				}
 			},
-            production_scripts: {
-				options: {
-					destPrefix: 'scripts'
-				},
-				files: {
-					'modernizr.js': 'modernizr/modernizr.js'
-				}
-			},
             styles: {
 				options: {
 					destPrefix: '<%= project.assets %>/styles/vendor'

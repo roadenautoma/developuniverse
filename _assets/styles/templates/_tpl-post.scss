@@ -1,3 +1,7 @@
+$article-container-width: 42em;
+
+
+
 /* @group  Article Hero */
 
 .article-header .hero {
@@ -77,7 +81,7 @@
 
 .article-body > .container,
 .article-footer .container {
-    max-width: 42em;
+    max-width: $article-container-width;
 }
 
 .article .body-content {
@@ -109,7 +113,7 @@
     }
 }
 
-
+// Headings
 .article .body-content h2 {
     @extend .h3;
 }
@@ -124,6 +128,7 @@
     font-weight: $font-weight-medium;
 }
 
+// Blockquote and TD;TL
 .article .body-content blockquote,
 .article-body hr:first-child + p {
     background-color: lighten($brand-terciary-color, 20%);
@@ -140,19 +145,8 @@
     display: none;
 }
 
-.article .body-content figure {
-    margin-left: -6.25vw;
-    margin-right: -6.25vw; //width: 87.5%;
-}
 
-.article .body-content figcaption {
-    padding: 0 1em;
-    @include respond-to("article-photo-margin") {
-        padding: 0;
-    }
-}
-
-
+// Soundbite
 .article .body-content .soundbite {
     padding: 1.5em;
     @include respond-to("medium") {
@@ -188,7 +182,27 @@
 
 }
 
-// Code
+
+// Overflowing elements (images)
+.article .body-content figure {
+    margin-left: -6.25vw;
+    margin-right: -6.25vw; //width: 87.5%;
+    @include respond-to("medium") {
+        margin-left: -8vw;
+        margin-right: -8vw;
+    }
+}
+
+.article .body-content figcaption {
+    width: 87.5%;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond-to("article-photo-margin") {
+        padding: 0;
+        width: 100%;
+    }
+}
+
 
 /* @end  Article Body */
 
@@ -196,20 +210,15 @@
 
 /* @group Article section */
 
-.article-section {
-
-}
-
-.article-section__header {
-
-}
-
-
 .article-section__title {
     @extend .h4;
 }
 
-
+.article-share,
+.article-related,
+.article-comments {
+    margin: 4em 0;
+}
 
 
 /* @end Article section */
@@ -217,10 +226,15 @@
 /* @group Share */
 
 .article-share {
-    // padding: 2em 0;
-    // border-top: 8px solid lighten($brand-terciary-color, 20%);
-    // border-bottom: 8px solid lighten($brand-terciary-color, 20%);
+    padding: 4em 0;
+    margin: 0 0 2em 0;
+    background-image: url("../images/dots-bg.svg");
+    background-repeat: repeat;
+    background-position: top;
+    background-size: 48px 48px;
 }
+
+
 
 .article-share .social-links > ul > li {
     margin: 0 0.25em;
@@ -253,8 +267,7 @@
     }
 }
 
-.article-share__links {
-    text-align: center;
+.share-links {
     @include no-deflist;
     > dt {
         font-size: 0.8rem;
@@ -272,20 +285,24 @@
 }
 
 .article-share__links {
+    text-align: center;
     margin-bottom: 2em;
 }
 
-.article-share,
-.article-related,
-.article-comments {
-    margin: 4em 0;
+
+
+.article-share__links .share-links,
+.article-share__comments .share-comments {
+    background-color: $white;
+    box-shadow: 0 0 0 1.5em $white;
 }
 
 
-
 @include respond-to("small") {
-    .article-share {
+    .article-share > .container {
         @include container;
+        @include page-container;
+        max-width: $article-container-width;
     }
     .article-share__links {
         text-align: left;
@@ -298,11 +315,15 @@
         text-align: right;
         margin-bottom: 0;
     }
+    .article-share__links .share-links,
+    .article-share__comments .share-comments {
+        display: inline-block;
+    }
     .article-share__comments .btn{
         font-size: 0.8rem;
         width: auto;
     }
-    .article-share__links {
+    .share-links {
         > dt {
             margin-bottom: 0;
         }
@@ -325,8 +346,8 @@
 
 /* @end  Related */
 
-/* @group  Newsletter */
+/* @group  Newsletter subscribe */
 
 
 
-/* @end  Newsletter */
+/* @end  Newsletter subscribe */

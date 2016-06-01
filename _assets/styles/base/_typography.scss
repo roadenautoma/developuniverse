@@ -77,10 +77,15 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0;
+    color: $brand-primary-color;
     font-family: $heading-font-family;
-	font-weight: 400;
+    font-weight: $font-weight-medium;
 	margin-bottom: 1.5em;
+    line-height: 1.5;
 	font-style: normal;
+    font-size: 1.15em;
+    padding: 1em 0 1em 1.5em;
+    border-left: 8px solid $brand-terciary-color;
 	> p {
 		margin-bottom: 0;
 	}

@@ -32,11 +32,8 @@
     <div class="article-body">
         <div class="container">
 
-            <!-- Speed reader -->
-            <div class="speed-reader">
-                <!-- TODO: Code speed reader -->
-            </div><!-- .speed-reader -->
-
+            <!-- TODO: Code speed reader -->
+            
             <!-- Content -->
             <div class="body-content {% if page.intro %}has-intro{% endif %}">
                 {{ content }}
@@ -45,54 +42,14 @@
     </div><!-- .article-body -->
 
     <footer class="article-footer">
-        <div class="container">
 
-            <!-- Share -->
-            <div class="article-section article-share">
-                <dl class="article-share__links">
-                    <dt>Share on</dt>
-                    <dd>
-                        <div class="social-links">
-                            <ul class="nav">
-                                <li>
-                                    <a href="#" data-url="http://gon.to/{{page.url}}" data-type="twitter" data-txt="{{page.title}}" data-via="mgonto" data-count="true" class="js-share-btn">
-                                        <i class="icon icon-twitter"></i>
-                                        <span class="text">Twitter</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-url="http://gon.to/{{page.url}}" data-type="facebook" data-txt="{{page.title}}" data-via="mgonto" data-count="true" class="js-share-btn">
-                                        <i class="icon icon-facebook"></i>
-                                        <span class="text">Facebook</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" data-url="http://gon.to/{{page.url}}" data-type="linkedin" data-txt="{{page.title}}" data-via="mgonto" data-count="true" class="js-share-btn">
-                                        <i class="icon icon-linkedin"></i>
-                                        <span class="text">Linkedin</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div><!-- .social-links -->
-                    </dd>
-                </dl>
+        <!-- Share -->
+        {% include article-share.html %}
 
-                <div class="article-share__comments">
-                    {% if page.dsq_thread_id %}
-                    <a href="{{page.url}}#comments" class="btn btn--hollow js-scroll-to">
-                        <span class="disqus-comment-count" data-disqus-identifier="{{page.dsq_thread_id}}">Comments</span>
-                    </a>
-                    {% else %}
-                    <a href="{{page.url}}#comments" class="btn btn--hollow">
-                        <span class="disqus-comment-count" data-disqus-url="http://gon.to/{{page.url}}">Comments</span>
-                    </a>
-                    {% endif %}
-                </div>
-            </div><!-- .article-share -->
-
-            <!-- {% if page.related_posts.size > 0 %} -->
-            <!-- {% endif %} -->
-            <div class="article-section article-related">
+        <!-- {% if page.related_posts.size > 0 %} -->
+        <!-- {% endif %} -->
+        <div class="article-section article-related">
+            <div class="container">
                 <header class="article-section__header">
                     <h2 class="article-section__title">Related thoughts:</h2>
                 </header>
@@ -104,24 +61,25 @@
                         <li><a href="#">Fix to Blank (Empty) pages in Google Analytics</a></li>
                     </ul>
                 </nav><!-- .article-related -->
-            </div><!-- .article-section -->
+            </div><!-- .container -->
+        </div><!-- .article-section -->
 
 
+        <!-- Subscribe to newsletter -->
+        {% include footer-newsletter.html %}
 
-            <!-- Subscribe to newsletter -->
-            {% include footer-newsletter.html %}
-
-            <!-- Disqus comments -->
-            <div class="article-section article-comments" id="comments">
+        <!-- Disqus comments -->
+        <div class="article-section article-comments" id="comments">
+            <div class="container">
                 {% if page.comments != false %}
                   {% include comments.html %}
                   <div id="disqus_thread"></div><!-- /#disqus_thread -->
                 {% endif %}
-            </div><!-- .article-comments -->
+            </div><!-- .container -->
+        </div><!-- .article-comments -->
 
-        </div><!-- .container -->
+
     </footer><!-- .article-footer -->
-
 </article><!-- .article -->
 
 {% include footer.html %}
