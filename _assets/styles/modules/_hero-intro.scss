@@ -78,7 +78,19 @@
 
 .hero-intro .hero__title__concept {
     color: $brand-terciary-color;
+    display: block;
+    &:before {
+        content:"-";
+        display: inline;
+        visibility: hidden;
+        font-size: 1%;
+
+    }
+    @include respond-to("xsmall") {
+        display: inline;
+    }
 }
+
 
 .hero-intro .hero__subtitle {
     @include ts(2);

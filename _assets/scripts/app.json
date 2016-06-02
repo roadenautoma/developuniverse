@@ -12,6 +12,7 @@
         "vendor/jquery.balancetext.js",
         "vendor/wow.js",
         "vendor/viewport-units-buggyfill.js",
+        "vendor/typed.min.js",
         "home.js",
         "services.js",
         "main.js",

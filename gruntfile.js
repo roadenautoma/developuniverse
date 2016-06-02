@@ -61,7 +61,8 @@ module.exports = function(grunt) {
                     'imagesloaded.pkgd.js': 'imagesloaded/imagesloaded.pkgd.js',
                     'autosize.js' : 'autosize/dist/autosize.js',
                     'wow.js' : 'wow/dist/wow.js',
-                    'viewport-units-buggyfill.js' : 'viewport-units-buggyfill/viewport-units-buggyfill.js'
+                    'viewport-units-buggyfill.js' : 'viewport-units-buggyfill/viewport-units-buggyfill.js',
+                    'typed.min.js':'typed.js/dist/typed.min.js'
 				}
 			},
             styles: {

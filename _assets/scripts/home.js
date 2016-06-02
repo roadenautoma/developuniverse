@@ -6,6 +6,36 @@ $( document ).ready(function() {
         window.viewportUnitsBuggyfill.init();
     }
 
+
+    if( $('#typed').length > 0 ) {
+
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+        $('.hero__read-more').one(animationEnd, function(e) {
+
+            // TODO: @Gonto: For this to work we need to start with a backspace effect. Can you make this example work? http://codepen.io/moitorrijos/pen/QNwdLj
+
+            setTimeout(function() {
+                $('#typed').typed({
+                    strings: ["Gardening", "Cooking", "Marketing"],
+                    contentType: 'text',
+                    startDelay: 0,
+                    typeSpeed: 50,
+                    backSpeed: 50,
+                    backDelay: 2500,
+                    loop: true,
+                    showCursor: false
+                });
+            }, 1500);
+
+        });
+
+
+
+    }
+
+
+
     /* Hero: Read more
     ------------------------------------------- */
     // Hero scroll down
