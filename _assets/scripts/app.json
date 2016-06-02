@@ -11,6 +11,7 @@
         "vendor/autosize.js",
         "vendor/jquery.balancetext.js",
         "vendor/wow.js",
+        "vendor/viewport-units-buggyfill.js",
         "home.js",
         "services.js",
         "main.js",

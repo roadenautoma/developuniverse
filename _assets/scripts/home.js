@@ -1,5 +1,10 @@
 $( document ).ready(function() {
 
+    /* Fix VH for hero in iOS
+    ------------------------------------------- */
+    if( $('.tpl-home').length > 0)  {
+        window.viewportUnitsBuggyfill.init();
+    }
 
     /* Hero: Read more
     ------------------------------------------- */
@@ -7,6 +12,11 @@ $( document ).ready(function() {
     if( $('.ps-home-hero').length > 0 ) {
 
         var offset = 0;
+
+        if( $('.site-header--fixed').length > 0 ) {
+            offset = $('.navbar').outerHeight();
+            offset = offset - 1;
+        }
 
         // enquire.register("screen and (max-width:879px)", {
         //     match : function() {
@@ -25,8 +35,6 @@ $( document ).ready(function() {
             event.preventDefault();
 		});
 	}
-
-
 
 
     /* Step by step: Slider

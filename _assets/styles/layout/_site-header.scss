@@ -6,6 +6,19 @@
     z-index: 100;
 }
 
+.site-header--fixed .navbar {
+    box-shadow: 0 0 0 2px rgba($brand-primary-color, 0.15);
+}
+
 .site-header--fixed + .site-content {
-    padding-top: 10em;
+    padding-top: $navbar-mobile-height;
+    @include respond-to("navbar-collapse") {
+        padding-top: $navbar-small-height;
+    }
+    @include respond-to("medium") {
+        padding-top: $navbar-medium-height;
+    }
+    @include respond-to("large") {
+        padding-top: $navbar-large-height;
+    }
 }

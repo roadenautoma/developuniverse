@@ -168,10 +168,16 @@ $( document ).ready(function() {
     $('.js-scroll-to').on('click', function() {
         var target = $(this).attr('href');
         var hash = target.substring(target.indexOf('#'));
+        var offset = -1;
+
+        if( $('.site-header--fixed').length > 0 ) {
+            offset = $('.navbar').outerHeight();
+            offset = offset - 1;
+        }
 
         $(this).blur();
 		$('html, body').animate({
-    		scrollTop: $(hash).offset().top
+    		scrollTop: $(hash).offset().top - offset
 			}, 500);
         $(this).blur();
         event.preventDefault();

@@ -60,7 +60,8 @@ module.exports = function(grunt) {
                     'owl.carousel.js': 'owl.carousel/dist/owl.carousel.js',
                     'imagesloaded.pkgd.js': 'imagesloaded/imagesloaded.pkgd.js',
                     'autosize.js' : 'autosize/dist/autosize.js',
-                    'wow.js' : 'wow/dist/wow.js'
+                    'wow.js' : 'wow/dist/wow.js',
+                    'viewport-units-buggyfill.js' : 'viewport-units-buggyfill/viewport-units-buggyfill.js'
 				}
 			},
             styles: {
