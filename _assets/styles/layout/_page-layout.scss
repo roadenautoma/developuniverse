@@ -73,6 +73,7 @@
 .page-section__subtitle {
     @extend .page__subtitle;
     @include ts(1);
+    line-height: 1.6;
 }
 
 .page-section__body p:last-child,
