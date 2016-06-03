@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
     window.is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
     var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';

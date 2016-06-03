@@ -6,8 +6,13 @@ $( document ).ready(function() {
     if($(this).hasClass('btn--is-loading')) {
       return;
     }
-    if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
-      return;
+    
+    if (!window.is_mobile) {
+      if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
+        return;
+      }   
+    } else {
+      e.preventDefault();
     }
 
     var emailField = form.find('[name="subscribe_email"]');
