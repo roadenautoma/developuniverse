@@ -33,7 +33,7 @@
 // Animation
 .mfp-wrap .modal-contact {
     .page-section__header,
-    .form {
+    .form-wrapper {
         transform: translateY(-2em);
         opacity: 0;
         transition: all 0.25s ease;
@@ -43,7 +43,7 @@
 
 .mfp-wrap.mfp-ready .modal-contact {
     .page-section__header,
-    .form {
+    .form-wrapper {
         transform: translateY(0);
         opacity: 1;
     }

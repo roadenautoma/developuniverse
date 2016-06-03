@@ -1,38 +1,41 @@
-<div class="alert alert--success js-contact-form-ok" style="display: none;"></div>
-<div class="alert alert--error js-contact-form-error"  style="display: none;"></div>
+<div class="form-wrapper">
 
-<form class="form form--alt contact-form" autocomplete="off">
-    <fieldset>
-        <div class="form-group">
-            <label class="control-label" for="firstname">First name <span class="req">*</span></label>
-            <input name="firstname" class="form-control needsclick" type="text" placeholder="First Name*" required="required" />
-        </div><!-- .form-group -->
+    <div class="alert alert--success js-contact-form-ok"></div>
+    <div class="alert alert--error js-contact-form-error"></div>
+    <span class="spinner" title="0">
+        {% include images/spinner.svg %}
+    </span><!-- .spinner -->
 
-        <div class="form-group">
-            <label class="control-label" for="lastname">Last name <span class="req">*</span></label>
-            <input name="lastname" class="form-control needsclick" type="text" placeholder="Last Name*" required="required" />        </div><!-- .form-group -->
+    <form class="form form--alt contact-form" autocomplete="off">
+        <fieldset>
+            <div class="form-group">
+                <label class="control-label" for="firstname">First name <span class="req">*</span></label>
+                <input name="firstname" class="form-control needsclick" type="text" placeholder="First Name*" required="required" />
+            </div><!-- .form-group -->
 
-        <div class="form-group">
-            <label class="control-label" for="email">Email address <span class="req">*</span></label>
-            <input name="email" class="form-control needsclick" type="email" placeholder="Email address*" required="required" />
-        </div><!-- .form-group -->
+            <div class="form-group">
+                <label class="control-label" for="lastname">Last name <span class="req">*</span></label>
+                <input name="lastname" class="form-control needsclick" type="text" placeholder="Last Name*" required="required" />
+            </div><!-- .form-group -->
 
-        <div class="form-group">
-            <label class="control-label" for="company">Company</label>
-            <input name="company" class="form-control needsclick" type="text" placeholder=" Company" />
-        </div><!-- .form-group -->
+            <div class="form-group">
+                <label class="control-label" for="email">Email address <span class="req">*</span></label>
+                <input name="email" class="form-control needsclick" type="email" placeholder="Email address*" required="required" />
+            </div><!-- .form-group -->
 
-        <div class="form-group">
-            <textarea class="js-form-comments needsclick" rows="1" name="message" placeholder="Tell me more" required="required"></textarea>
-            <label class="control-label" for="message">Tell me more <span class="req">*</span></label>
-        </div><!-- .form-group -->
-    </fieldset>
-    <div class="form-actions">
-        <button type="submit" class="btn btn--terciary js-send-btn js-contact-form-send-btn">
-            <span class="text">Send</span>
-            <span class="spinner" title="0">
-                {% include images/spinner.svg %}
-            </span><!-- .spinner -->
-        </button>
-    </div><!-- .form-actions -->
-</form>
+            <div class="form-group">
+                <label class="control-label" for="company">Company</label>
+                <input name="company" class="form-control needsclick" type="text" placeholder=" Company" />
+            </div><!-- .form-group -->
+
+            <div class="form-group">
+                <textarea class="js-form-comments needsclick" rows="1" name="message" placeholder="Tell me more" required="required"></textarea>
+                <label class="control-label" for="message">Tell me more <span class="req">*</span></label>
+            </div><!-- .form-group -->
+        </fieldset>
+        <div class="form-actions">
+            <button type="submit" class="btn btn--terciary js-send-btn js-contact-form-send-btn">Send</button>
+        </div><!-- .form-actions -->
+    </form>
+
+</div><!-- .form-wrapper -->

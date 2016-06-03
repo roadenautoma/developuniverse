@@ -27,7 +27,7 @@ $( document ).ready(function() {
     var emailField = form.find('[name="email"]');
     var email = emailField.val();
 
-    $('.js-contact-form-send-btn').toggleClass('btn--is-loading');
+    $('.form-wrapper').addClass('is-sending');
 
     // Call the Webtask
     $.ajax({
@@ -45,22 +45,27 @@ $( document ).ready(function() {
       dataType: 'json',
       jsonp: false
     }).then(function(data) {
-      $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-ok').text('Message sent succesfully');
-      $('.js-contact-form-ok').slideDown();
-      hideMessages();
+      $('.js-contact-form-ok').addClass('is-visible');
+      $('.form-wrapper').addClass('is-result').removeClass('is-sending');
+      setTimeout(function() {
+        hideMessages();
+    }, 2500);
 
     }, function(response) {
-      $('.js-contact-form-send-btn').toggleClass('btn--is-loading')
       $('.js-contact-form-error').text(response.responseJSON.message);
-      $('.js-contact-form-error').slideDown();
-      console.log("Error sending form", response)
-      hideMessages(true);
+      $('.js-contact-form-error').addClass('is-visible');
+      $('.form-wrapper').addClass('is-result').removeClass('is-sending');
+      console.log("Error sending form", response);
+      setTimeout(function() {
+        hideMessages(true);
+      }, 2500);
+
     });
 
     function hideMessages(error) {
       if (!error) {
-        $('.contact-form').slideUp();
+        $('.form-wrapper').addClass('is-hidden');
         firstnameField.val('');
         lastnameField.val('');
         companyField.val('');
@@ -68,13 +73,7 @@ $( document ).ready(function() {
         messageField.val('');
         autosize.destroy(messageField);
       }
-      setTimeout(function() {
-        $('.contact-form').slideDown();
-      }, 3000);
-      setTimeout(function() {
-        $('.js-contact-form-ok').slideUp();;
-        $('.js-contact-form-error').slideUp();;
-      }, 5000);
+      $('.form-wrapper').removeClass('is-hidden is-result');
     }
 
     // Always return false to avoid real submit

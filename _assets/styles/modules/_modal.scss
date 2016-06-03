@@ -85,8 +85,6 @@ html.mfp-helper {
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: opacity 0.15s ease-out;
-  -moz-transition: opacity 0.15s ease-out;
   transition: opacity 0.15s ease-out;
 }
 /* overlay animate in */
@@ -101,8 +99,6 @@ html.mfp-helper {
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: opacity 0.15s ease-out;
-  -moz-transition: opacity 0.15s ease-out;
   transition: opacity 0.15s ease-out;
 }
 /* content animate it */

@@ -148,6 +148,96 @@ input[type="checkbox"] {
 
 /* @group Validation */
 
+.form-wrapper .alert {
+	text-align: center;
+	background-color: $white;
+}
+
+.form-wrapper {
+	text-align: center;
+	position: relative;
+}
+
+.form {
+	transition: opacity $base-transition-time ease;
+}
+
+
+// Loading
+.form-wrapper .spinner {
+	width: 4em;
+	height: 4em;
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; right: 0; bottom: 0;
+	opacity: 1;
+	display: inline-block;
+	svg {
+		width: 100%;
+		height: 100%;
+		.circle {
+			fill: $white;
+		}
+		.loading {
+			fill: $brand-secondary-color;
+		}
+	}
+	z-index: 20;
+	opacity: 0;
+	transform: scale(0.1);
+	visibility: hidden;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-wrapper .alert{
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0;
+	width: 80%;
+	z-index: 2;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%) scale(0.1);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+// Actions
+// Is Sending
+// Is Result
+.form-wrapper {
+	&.is-sending,
+	&.is-result {
+		.form {
+			opacity: 0.25;
+			pointer-events: none;
+		}
+	}
+	&.is-sending .spinner {
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+	&.is-result .alert.is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	&.is-hidden {
+		.form {
+			opacity: 0;
+		}
+	}
+	&.is-visible {
+		.form {
+			opacity: 1;
+		}
+	}
+}
+
+
 /* @end Validation */
 
 
@@ -165,6 +255,12 @@ input[type="checkbox"] {
 	.control-label {
 	    color: #ABB6BB;
 	}
+}
+
+.footer-contact .form-wrapper .alert,
+.modal-contact .form-wrapper .alert {
+	background-color: $brand-primary-color;
+	color: $white;
 }
 
 
