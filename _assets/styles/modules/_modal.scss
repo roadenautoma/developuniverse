@@ -23,14 +23,15 @@
 /*
 TODO: Flash when when opening contact modal in desktop
 */
-.mfp-helper #page {
+.mfp-helper .mfp-open ~ #page {
   display: none;
 }
 
-.mfp-full {
+.mfp-full.mfp-open {
     min-width: 100vw;
     position: static !important;
 }
+
 html.mfp-helper {
   height: 100%;
   body{

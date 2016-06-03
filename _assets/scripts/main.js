@@ -112,7 +112,6 @@ $( document ).ready(function() {
     var startWindowScroll = 0;
     $('.js-contact-modal-toggle').magnificPopup({
         type:'inline',
-        removalDelay: 300,
         mainClass: 'mfp-fade mfp-full',
         showCloseBtn: false,
         enableEscapeKey: true,
@@ -120,10 +119,13 @@ $( document ).ready(function() {
         callbacks: {
             beforeOpen: function() {
                 startWindowScroll = $(window).scrollTop();
-                $('html').addClass('mfp-helper');
+                
             },
             open: function() {
                 // Close menu if open
+                $('html').addClass('mfp-helper');    
+                this.content.closest('.mfp-container').addClass('mfp-open');
+                
                 if($overlay.hasClass('is-open')) {
                     setTimeout(function() {
                         overlay_close($overlay);
