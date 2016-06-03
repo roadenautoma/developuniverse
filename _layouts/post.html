@@ -22,10 +22,6 @@
                 </div><!-- .hero__heading -->
 
             </div><!-- .container -->
-            <div class="hero__credit">
-                <!-- TODO: @Gonto: Add credit YAML field for photos taken from outside sources -->
-                Photo by <a href="https://unsplash.com/@hoachld">Hoach Le Dinh</a>
-            </div>
         </div><!-- .hero -->
     </header><!-- .article-header -->
 
@@ -46,23 +42,27 @@
         <!-- Share -->
         {% include article-share.html %}
 
-        <!-- {% if page.related_posts.size > 0 %} -->
-        <!-- {% endif %} -->
-        <div class="article-section article-related">
-            <div class="container">
-                <header class="article-section__header">
-                    <h2 class="article-section__title">Related thoughts:</h2>
-                </header>
-                <nav>
-                    <ul class="custom-list">
-                        <li><a href="#">F%#ck Github Pages for my Jekyll blog. Why I decided to use Digital Ocean instead?</a></li>
-                        <li><a href="#">Gulp is awesome, but do we really need it?</a></li>
-                        <li><a href="#">New Play Framework 2 Video Course: How to create WebApps</a></li>
-                        <li><a href="#">Fix to Blank (Empty) pages in Google Analytics</a></li>
-                    </ul>
-                </nav><!-- .article-related -->
-            </div><!-- .container -->
-        </div><!-- .article-section -->
+        {% if page.related_posts.size > 0 %}
+            <div class="article-section article-related">
+                <div class="container">
+                    <header class="article-section__header">
+                        <h2 class="article-section__title">Related thoughts:</h2>
+                    </header>
+                    <nav>
+                        <ul class="custom-list">
+                            {% for post in site.posts %}
+
+                                 {% assign current = post %}
+                                 {% capture current_slug %}{{ current.id | slugify }}{% endcapture %}
+                                 {% if page.related_posts contains current_slug %}
+                                    <li><a href="{{post.url}}">{{post.title}}</a></li>
+                                 {% endif %}
+                             {% endfor %}
+                        </ul>
+                    </nav><!-- .article-related -->
+                </div><!-- .container -->
+            </div><!-- .article-section -->
+        {% endif %}
 
 
         <!-- Subscribe to newsletter -->
