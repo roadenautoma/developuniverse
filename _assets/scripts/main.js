@@ -123,9 +123,11 @@ $( document ).ready(function() {
             },
             open: function() {
                 // Close menu if open
+                var self = this;
                 this.content.closest('.mfp-content').one(transitionEnd, function() {
                     $('html').addClass('mfp-helper');
-                    this.content.closest('.mfp-container').addClass('mfp-open');
+                    self.content.closest('.mfp-container').addClass('mfp-open');
+                    self.content.closest('.mfp-full').addClass('mfp-full-open');
                 });
                 
                 if($overlay.hasClass('is-open')) {
