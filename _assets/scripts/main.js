@@ -123,8 +123,10 @@ $( document ).ready(function() {
             },
             open: function() {
                 // Close menu if open
-                $('html').addClass('mfp-helper');    
-                this.content.closest('.mfp-container').addClass('mfp-open');
+                this.content.closest('.mfp-content').one(transitionEnd, function() {
+                    $('html').addClass('mfp-helper');
+                    this.content.closest('.mfp-container').addClass('mfp-open');
+                });
                 
                 if($overlay.hasClass('is-open')) {
                     setTimeout(function() {
@@ -132,7 +134,7 @@ $( document ).ready(function() {
                     }, 1000);
                 }
             },
-            close: function() {
+            beforeClose: function() {
                 $('html').removeClass('mfp-helper');
                 $(window).scrollTop(startWindowScroll);
             },
