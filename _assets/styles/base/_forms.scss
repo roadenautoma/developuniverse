@@ -210,7 +210,8 @@ input[type="checkbox"] {
 .form-wrapper {
 	&.is-sending,
 	&.is-result {
-		.form {
+		.form,
+		.subscribe-form-area{
 			opacity: 0.25;
 			pointer-events: none;
 		}
@@ -226,7 +227,8 @@ input[type="checkbox"] {
 		transform: translate(-50%, -50%) scale(1);
 	}
 	&.is-hidden {
-		.form {
+		.form,
+		.subscribe-form-area {
 			opacity: 0;
 		}
 	}
