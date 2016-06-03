@@ -81,11 +81,12 @@ $( document ).ready(function() {
         emailField.val('');
         messageField.val('');
         autosize.destroy(messageField);
+        if (isModal) {
+          $.magnificPopup.instance.close();
+        }
       }
       $('.form-wrapper').removeClass('is-hidden is-result');
-      if (isModal) {
-        $.magnificPopup.instance.close();
-      }
+      
     }
 
     // Always return false to avoid real submit
