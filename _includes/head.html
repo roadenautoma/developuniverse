@@ -2,13 +2,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
-        {% if page.url == "/" %}
-            Gonto &mdash; An engineering approach to marketing
-        {% else %}
-            {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} &mdash; {{site.title}}
-        {% endif %}
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
     </title>
-    <meta name="description" content="">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,10 +12,10 @@
 
     <!-- Twitter Cards -->
     {% if site.owner.twitter %}
-    {% if page.image.feature %}<meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site.url }}/images/posts/{{ page.image.feature }}">
+    {% if page.image.hero %}<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url }}/images/posts/{{ page.image.hero }}">
     {% else %}<meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/posts/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}">{% endif %}
+    <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/images/posts/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.image }}{% endif %}">{% endif %}
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:creator" content="@{{ site.owner.twitter }}">{% endif %}
@@ -27,7 +23,11 @@
     <!-- Open Graph -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/posts/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}">
+    {% if page.image.hero %}
+    <meta property="og:image" content="{{ site.url }}/images/posts/{{ page.image.hero }}">
+    {% else %}
+    <meta property="og:image" content="{% if page.image.thumb %}{{ site.url }}/images/posts/{{ page.image.thumb }}{% else %}{{ site.url }}/images/{{ site.image }}{% endif %}">
+    {% endif %}
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">

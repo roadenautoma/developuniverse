@@ -2,13 +2,8 @@ var request = require('request');
 
 var fields = [
   {
-    label: 'First Name',
-    field: 'firstname',
-    required: true
-  },
-  {
-    label: 'Last Name',
-    field: 'lastname',
+    label: 'Message',
+    field: 'message',
     required: true
   },
   {
@@ -22,10 +17,15 @@ var fields = [
     required: true
   },
   {
-    label: 'Message',
-    field: 'message',
+    label: 'Last Name',
+    field: 'lastname',
     required: true
   },
+  {
+    label: 'First Name',
+    field: 'firstname',
+    required: true
+  }
 ];
 
 return function (ctx, cb) {
