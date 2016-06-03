@@ -6,7 +6,6 @@ title: About me
 
 <main id="main" class="page-main" role="main">
 
-
     <header class="page-header">
         <div class="hero hero--large">
             <div class="container container--thin">
@@ -217,7 +216,15 @@ title: About me
                 <div class="timeline-present__content">
                     <span class="line"></span>
                     <time class="wow fadeInUp" datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>
-                    <p class="wow fadeInUp">We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, <a class="js-scroll-to" href="#footer-contact">contact me</a>! <strong>You can be part of my story!</strong></p>
+                    <p class="wow fadeInUp">We have arrived at the present. Now it's time to shape the future together. If you want to bounce an idea with me, talk about a project, or just want to grab a beer, contact me! <strong>You can be part of my story!</strong></p>
+
+                    <div class="actions">
+                        <ul>
+                            <li>
+                                <a class="btn btn--primary js-scroll-to" href="{{page.url}}#footer-contact">Get in touch</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div><!-- .timeline-present__content -->
 
             </div><!-- .container -->
