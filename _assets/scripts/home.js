@@ -52,15 +52,22 @@ $( document ).ready(function() {
                 items: 1,
                 nav: true,
                 margin: 20,
-                autoplay: true,
-                autoplayTimeout: 10000,
-                autoplayHoverPause: false,
+                // autoplay: !is_mobile,
+                // autoplayTimeout: 10000,
+                // autoplayHoverPause: false,
                 autoHeight: false,
                 loop: true,
                 dotsContainer: '.method__nav .nav'
             }); // owlcarousel
 
             var owl = $steps.owlCarousel();
+
+            $('.ps-home-method').on("mouseenter", function(e) {
+                if (!is_mobile) {
+                    owl.trigger('play.owl.autoplay', [10000]);
+                }
+                //Not owl.trigger('play.owl.autoplay', [1000]);
+            });
 
             // Custom pager
             $('.method__nav button').on('click', function() {
