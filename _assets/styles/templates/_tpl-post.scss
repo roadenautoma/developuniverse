@@ -74,7 +74,9 @@ $article-container-width: 42em;
 .hero .article__tags {
     visibility: hidden;
 }
-.hero .article__date         { animation-delay: 0.2s; }
+.hero .article__date,
+.page__name,
+.article__badge              { animation-delay: 0.2s; }
 .hero .article__title        { animation-delay: 0.5s; }
 .hero .article__tags         { animation-delay: 0.9s; }
 
