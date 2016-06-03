@@ -86,6 +86,9 @@ $( document ).ready(function() {
         if (isModal) {
           $.magnificPopup.instance.close();
         }
+      } else {
+        $('.js-contact-form-error').removeClass('is-visible');
+        formWrapper.removeClass('is-result')
       }
       formWrapper.removeClass('is-hidden is-result');
       

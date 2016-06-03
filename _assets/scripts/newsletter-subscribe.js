@@ -37,16 +37,14 @@ $( document ).ready(function() {
       $('.js-subscribe-form-ok').text("Thanks for subscribing to the newsletter!");
       $('.js-subscribe-form-ok').addClass('is-visible');
       formWrapper.addClass('is-result').removeClass('is-sending');
-      setTimeout(function() {
-        changeMessage();
-      }, 2500);
     }, function(response) {
       $('.js-subscribe-form-error').text(response.responseJSON.message);
       $('.js-subscribe-form-error').addClass('is-visible');
       formWrapper.addClass('is-result').removeClass('is-sending');
       console.log("Error sending form", response);
       setTimeout(function() {
-        changeMessage(true);
+        $('.js-subscribe-form-error').removeClass('is-visible');
+        formWrapper.removeClass('is-result')
       }, 2500);
     });
 
