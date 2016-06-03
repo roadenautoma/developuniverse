@@ -134,6 +134,7 @@ $( document ).ready(function() {
     var startWindowScroll = 0;
     $('.js-contact-modal-toggle').magnificPopup({
         type:'inline',
+        removalDelay: 300,
         mainClass: 'mfp-fade mfp-full',
         showCloseBtn: false,
         enableEscapeKey: true,
