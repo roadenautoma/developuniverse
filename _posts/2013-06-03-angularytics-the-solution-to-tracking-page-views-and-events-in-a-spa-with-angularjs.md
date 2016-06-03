@@ -19,6 +19,9 @@ tags:
   - spa
   - track
 
+related_posts:
+  - 2013-05-30-check-and-inspect-angulars-scope-for-any-dom-element-in-developer-console-from-chrome
+
 ---
 -----------
 **<a href="https://github.com/mgonto/angularytics" target="_blank">TL;DR: Check out the Angularytics GitHub repo and quick bootstrap here</a>**
