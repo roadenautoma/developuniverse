@@ -3,6 +3,8 @@ $( document ).ready(function() {
   $('.js-contact-form-send-btn').click(function(e) {
     var form = $('.contact-form');
 
+    var isModal = form.closest('#contact-modal').length !== 0;
+
     // Returns
     if($(this).hasClass('btn--is-loading')) {
       return;
@@ -59,7 +61,7 @@ $( document ).ready(function() {
       console.log("Error sending form", response);
       setTimeout(function() {
         hideMessages(true);
-      }, 2500);
+      }, isModal ? 4000 : 2500);
 
     });
 
@@ -74,6 +76,9 @@ $( document ).ready(function() {
         autosize.destroy(messageField);
       }
       $('.form-wrapper').removeClass('is-hidden is-result');
+      if (isModal) {
+        $.magnificPopup.instance.close();
+      }
     }
 
     // Always return false to avoid real submit
