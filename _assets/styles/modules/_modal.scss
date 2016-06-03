@@ -27,6 +27,10 @@ TODO: Flash when when opening contact modal in desktop
   display: none;
 }
 
+.mfp-full{
+  -webkit-overflow-scrolling: touch;
+}
+
 .mfp-full .mfp-open {
     min-width: 100vw;
     position: static !important;
