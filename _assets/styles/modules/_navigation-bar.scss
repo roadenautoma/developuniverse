@@ -23,6 +23,8 @@
     text-align: center;
 }
 
+
+
 .navbar .brand-logo{
     @include no-link;
     @include hide-text;
@@ -188,6 +190,17 @@
         text-align: left;
         padding-left: 100px;
     }
+
+    .navbar.navbar--small {
+        .navbar__nav > li > a{
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+        }
+        .navbar__brand .brand-logo {
+            height: 2em;
+        }
+    }
+
 }
 
 

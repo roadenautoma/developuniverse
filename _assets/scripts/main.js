@@ -68,6 +68,27 @@ $( document ).ready(function() {
 	});
 
 
+    /* Reduce Navbar for big screens
+	------------------------------------------- */
+	enquire.register("screen and (min-width:770px)", {
+
+
+	  	match : function() {
+	  		jQuery('.navbar').addClass('navbar--resizable');
+	  		jQuery('.navbar').addClass('navbar--big');
+
+		    jQuery(window).scroll(function(){
+			    if(jQuery(document).scrollTop() > 50) {
+			        jQuery('.navbar--resizable').removeClass('navbar--big').addClass('navbar--small');
+			    } else {
+			        jQuery('.navbar--resizable').removeClass('navbar--small').addClass('navbar--big');
+			    }
+			});
+		},
+	  	unmatch : function() {
+	  		jQuery('.navbar').removeClass('navbar--resizable').removeClass('navbar--small').removeClass('navbar--big');
+	  	}
+	});
 
 
     /* Forms
@@ -120,7 +141,7 @@ $( document ).ready(function() {
         callbacks: {
             beforeOpen: function() {
                 startWindowScroll = $(window).scrollTop();
-                
+
             },
             open: function() {
                 // Close menu if open
@@ -130,7 +151,7 @@ $( document ).ready(function() {
                     self.content.closest('.mfp-container').addClass('mfp-open');
                     self.content.closest('.mfp-full').addClass('mfp-full-open');
                 });
-                
+
                 if($overlay.hasClass('is-open')) {
                     setTimeout(function() {
                         overlay_close($overlay);
