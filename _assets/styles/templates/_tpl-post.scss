@@ -87,7 +87,7 @@ $article-container-width: 42em;
 .article-body {
     padding: 3.5em 0;
     @include respond-to("medium") {
-        padding: 7em 0;
+        padding: 6em 0 2.5em 0;
     }
 }
 
@@ -150,7 +150,7 @@ $article-container-width: 42em;
 }
 
 .article .body-content blockquote {
-    margin: 2.5em 0;
+    margin: 2em 0;
 }
 
 .article-body hr {
