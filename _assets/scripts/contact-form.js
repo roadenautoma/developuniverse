@@ -2,13 +2,15 @@ $( document ).ready(function() {
 
   $('.js-contact-form-send-btn').click(function(e) {
     var form = $('.contact-form');
+    var formWrapper = form.closest('.form-wrapper');
 
     var isModal = form.closest('#contact-modal').length !== 0;
 
     // Returns
-    if($(this).hasClass('btn--is-loading')) {
+    if(formWrapper.hasClass('is-sending')) {
       return;
     }
+
     if (!window.is_mobile) {
       if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
         return;
@@ -36,7 +38,7 @@ $( document ).ready(function() {
     var emailField = form.find('[name="email"]');
     var email = emailField.val();
 
-    $('.form-wrapper').addClass('is-sending');
+    formWrapper.addClass('is-sending');
 
     // Call the Webtask
     $.ajax({
@@ -56,7 +58,7 @@ $( document ).ready(function() {
     }).then(function(data) {
       $('.js-contact-form-ok').text('Message sent succesfully');
       $('.js-contact-form-ok').addClass('is-visible');
-      $('.form-wrapper').addClass('is-result').removeClass('is-sending');
+      formWrapper.addClass('is-result').removeClass('is-sending');
       setTimeout(function() {
         hideMessages();
     }, 2500);
@@ -64,7 +66,7 @@ $( document ).ready(function() {
     }, function(response) {
       $('.js-contact-form-error').text(response.responseJSON.message);
       $('.js-contact-form-error').addClass('is-visible');
-      $('.form-wrapper').addClass('is-result').removeClass('is-sending');
+      formWrapper.addClass('is-result').removeClass('is-sending');
       console.log("Error sending form", response);
       setTimeout(function() {
         hideMessages(true);
@@ -74,7 +76,7 @@ $( document ).ready(function() {
 
     function hideMessages(error) {
       if (!error) {
-        $('.form-wrapper').addClass('is-hidden');
+        formWrapper.addClass('is-hidden');
         firstnameField.val('');
         lastnameField.val('');
         companyField.val('');
@@ -84,8 +86,11 @@ $( document ).ready(function() {
         if (isModal) {
           $.magnificPopup.instance.close();
         }
+      } else {
+        $('.js-contact-form-error').removeClass('is-visible');
+        formWrapper.removeClass('is-result')
       }
-      $('.form-wrapper').removeClass('is-hidden is-result');
+      formWrapper.removeClass('is-hidden is-result');
       
     }
 

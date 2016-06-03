@@ -2,11 +2,13 @@ $( document ).ready(function() {
   $('.js-btn-newsletter-subscribe').click(function(e) {
 
     var form = $(this).closest("form");
+    var formWrapper = form.closest('.form-wrapper');
+
     // Returns
-    if($(this).hasClass('btn--is-loading')) {
+    if(formWrapper.hasClass('is-sending')) {
       return;
     }
-    
+
     if (!window.is_mobile) {
       if (( typeof(form[0].checkValidity) == "function" ) && !form[0].checkValidity()) {
         return;
@@ -18,7 +20,7 @@ $( document ).ready(function() {
     var emailField = form.find('[name="subscribe_email"]');
     var email = emailField.val();
 
-    $(this).toggleClass('btn--is-loading');
+    formWrapper.addClass('is-sending');
 
     // Call the Webtask
     $.ajax({
@@ -32,18 +34,23 @@ $( document ).ready(function() {
       dataType: 'json',
       jsonp: false
     }).then(function(data) {
-      $('.js-btn-newsletter-subscribe').toggleClass('btn--is-loading')
-      $('.js-subscribe-form-ok').text('Message sent succesfully');
-      $('.js-subscribe-form-ok').show();
-      emailField.val('');
-
+      $('.js-subscribe-form-ok').text("Thanks for subscribing to the newsletter!");
+      $('.js-subscribe-form-ok').addClass('is-visible');
+      formWrapper.addClass('is-result').removeClass('is-sending');
     }, function(response) {
-      $('.js-btn-newsletter-subscribe').toggleClass('btn--is-loading')
       $('.js-subscribe-form-error').text(response.responseJSON.message);
-      $('.js-contact-form-error').show();
-      console.log("Error sending form", response)
-      
+      $('.js-subscribe-form-error').addClass('is-visible');
+      formWrapper.addClass('is-result').removeClass('is-sending');
+      console.log("Error sending form", response);
+      setTimeout(function() {
+        $('.js-subscribe-form-error').removeClass('is-visible');
+        formWrapper.removeClass('is-result')
+      }, 2500);
     });
+
+    function changeMessage(error) {
+
+    }
 
     return false;
   });
