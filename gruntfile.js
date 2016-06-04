@@ -192,6 +192,14 @@ module.exports = function(grunt) {
       'postcss'
     ]);
 
+    grunt.registerTask('build-nj', [
+      'bowercopy',
+      'manifest',
+      'uglify',
+      'sass',
+      'postcss'
+    ]);
+
     grunt.registerTask('dev', [
       'connect:livereload',
       'watch'
