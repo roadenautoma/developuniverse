@@ -2,6 +2,9 @@
     @extend .footer-contact;
     padding: 2.5em 0 3em 0;
     text-align: center;
+    background-repeat: repeat-x;
+    background-size: 1400px auto;
+    //background-image: url('../images/posts/generic/post-hero.svg');
 }
 
 .footer-newsletter > .container{

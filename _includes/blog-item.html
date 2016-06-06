@@ -12,7 +12,7 @@
             <span class="badge">Case study</span>
             {% endif %}
 
-            <img itemprop="thumbnailUrl" src="https://unsplash.it/600/400/?image={% random 1:50 %}" alt="{{ article.title }}" />
+            <img itemprop="thumbnailUrl" src="{% if article.thumb %} {% else %} {{site.url}}/images/posts/generic/post-thumb-0{% random 1:9 %}.jpg {% endif %}" alt="{{ article.title }}" />
         </a>
     </div><!-- .blog-item__image -->
     <div class="blog-item__content" itemprop="text">

@@ -19,6 +19,14 @@ $article-container-width: 42em;
     }
 }
 
+.article-header--no-hero .hero {
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    &:before {
+        display: none;
+    }
+}
+
 .article-header .hero > .container {
     height: 100%;
 }
