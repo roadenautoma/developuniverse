@@ -61,7 +61,8 @@ module.exports = function(grunt) {
                     'imagesloaded.pkgd.js': 'imagesloaded/imagesloaded.pkgd.js',
                     'autosize.js' : 'autosize/dist/autosize.js',
                     'wow.js' : 'wow/dist/wow.js',
-                    'viewport-units-buggyfill.js' : 'viewport-units-buggyfill/viewport-units-buggyfill.js'
+                    'viewport-units-buggyfill.js' : 'viewport-units-buggyfill/viewport-units-buggyfill.js',
+                    'webfontloader.js' : 'webfontloader/webfontloader.js'
 				}
 			},
             styles: {
@@ -88,6 +89,17 @@ module.exports = function(grunt) {
                 dest: 'scripts/app.min.js'
             }
         }, // uglify
+
+        copy: {
+            styles: {
+                files: [{
+                    cwd: '<%= project.assets %>/styles',
+                    src: 'fonts.css',
+                    dest: 'styles/',
+                    expand: true
+                }]
+            }
+        },
 
         connect: {
     		options: {
@@ -185,6 +197,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
       'bowercopy',
+      'copy',
       'manifest',
       'uglify',
       'shell:jekyllBuild',
@@ -194,6 +207,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build-nj', [
       'bowercopy',
+      'copy',
       'manifest',
       'uglify',
       'sass',
