@@ -11,28 +11,21 @@ $( document ).ready(function() {
     // Hero scroll down
     if( $('.ps-home-hero').length > 0 ) {
 
-        var offset = 0;
+        $(".js-hero-read-more").click(function(event){
+			event.preventDefault();
 
-        if( $('.site-header--fixed').length > 0 ) {
-            offset = $('.navbar').outerHeight();
-            offset = offset - 1;
-        }
+			if( $('.navbar').hasClass('navbar--big') ) {
+				var $navbarHeight = 67;
+			} else {
+				var $navbarHeight = $('.navbar').outerHeight();
+			}
 
-        // enquire.register("screen and (max-width:879px)", {
-        //     match : function() {
-    	//         offset = $('.navbar').outerHeight();
-    	//     },
-    	//     unmatch : function() {
-    	//         offset = 0;
-    	//     }
-        // });
-
-		$('.ps-home-hero .js-hero-read-more').on('click', function(event) {
 			$('html, body').animate({
-        		scrollTop: $('#home-about').offset().top - offset
-   			}, 500);
+	        	scrollTop: $(".ps-home-about").offset().top - $navbarHeight
+	    	}, 500);
+
             $(this).blur();
-            event.preventDefault();
+
 		});
 	}
 
