@@ -47,7 +47,7 @@
     }
 }
 
-.hero a{
+.hero a:not(.tag){
     color: $white;
 }
 

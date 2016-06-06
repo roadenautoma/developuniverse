@@ -231,8 +231,9 @@ $article-container-width: 42em;
 .article-share,
 .article-related,
 .article-comments {
-    margin: 4em 0;
+    padding: 4em 0;
 }
+
 
 
 /* @end Article section */
@@ -241,7 +242,7 @@ $article-container-width: 42em;
 
 .article-share {
     padding: 4em 0;
-    margin: 0 0 2em 0;
+    margin: 0;
     background-image: url("../images/dots-bg.svg");
     background-repeat: repeat;
     background-position: top;
