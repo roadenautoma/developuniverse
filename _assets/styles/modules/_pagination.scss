@@ -2,9 +2,18 @@
     text-align: center;
     > ul {
         @include no-list;
+        display: flex;
+        @include respond-to("small") {
+            display: inline-block;
+        }
     }
     > ul > li {
-        display: inline-block;
+        display: block;
+        width: 50%;
+        @include respond-to("small") {
+            display: inline-block;
+            width: auto;
+        }
     }
 }
 
@@ -18,6 +27,10 @@
 }
 
 .pagination__number {
+    display: none;
     padding-left: 1.25em;
     padding-right: 1.25em;
+    @include respond-to("small") {
+        display: inline-block;
+    }
 }
