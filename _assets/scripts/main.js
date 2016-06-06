@@ -55,6 +55,14 @@ $( document ).ready(function() {
 	        if($toggle.hasClass('is-open')) {
 	            overlay_open($overlay);
 	        }
+            $('.js-brand-logo').on('click', function(event) {
+                event.preventDefault();
+                $(this).blur();
+        		$('html, body').animate({
+            		scrollTop: $('#page').offset().top
+        		}, 500);
+
+            });
 	    },
 	    unmatch : function() {
 	        $overlay.removeClass('nav-overlay');
