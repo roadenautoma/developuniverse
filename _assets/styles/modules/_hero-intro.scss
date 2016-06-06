@@ -40,6 +40,10 @@
     position: relative;
     z-index: 1;
     max-width: 530px;
+    strong {
+        font-weight: $font-weight-bold;
+        color: $brand-terciary-color;
+    }
     @include respond-to("small") {
         max-width: 580px;
         margin-right: auto;
@@ -76,13 +80,17 @@
     }
 }
 
-.hero-intro .hero__title__concept {
-    color: $brand-terciary-color;
-}
 
 .hero-intro .hero__subtitle {
     @include ts(2);
     margin-bottom: 0;
+    a {
+        color: $brand-terciary-color;
+        &:hover,
+        &:focus {
+            color: $link-text-color-hover;
+        }
+    }
 }
 
 .hero__read-more {
