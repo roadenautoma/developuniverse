@@ -10,7 +10,7 @@ reading_time:     true
 words_per_minute: 200
 email: martin@gon.to
 
-# url: "https://gon.to"
+url: "https://gon.to"
 
 paginate_path: "thoughts/page:num"
 
