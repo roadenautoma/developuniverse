@@ -162,7 +162,7 @@ title: Gonto — An engineering approach to marketing
                     <ul class="blog-list">
                         {% for article in site.posts limit: 4 %}
                         <li class="blog-list__item">
-                            {% include blog-item.html article=article excerpt=false %}
+                            {% include blog-item.html article=article excerpt=false index=forloop.index %}
                         </li><!-- .blog-list__item -->
                         {% endfor %}
                     </ul><!-- .blog-list -->
