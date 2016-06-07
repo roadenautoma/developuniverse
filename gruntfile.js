@@ -178,7 +178,18 @@ module.exports = function(grunt) {
             jekyllServe: {
                 command: 'jekyll serve'
             }
-        }
+        },
+
+        imagemin: {                          // Task
+            all: {                         // Another target
+              files: [{
+                expand: true,                  // Enable dynamic expansion
+                cwd: 'default_images/',        // Src matches are relative to this path
+                src: ['**/*.{png,jpg,gif,svg,jpeg}'],   // Actual patterns to match
+                dest: 'images/'                  // Destination path prefix
+              }]
+            }
+          }
 
     });
 
@@ -194,6 +205,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-manifest-concat');
     grunt.loadNpmTasks('grunt-bowercopy');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('build', [
       'bowercopy',
@@ -202,7 +214,8 @@ module.exports = function(grunt) {
       'uglify',
       'shell:jekyllBuild',
       'sass',
-      'postcss'
+      'postcss',
+      'imagemin'
     ]);
 
     grunt.registerTask('build-nj', [
@@ -211,7 +224,8 @@ module.exports = function(grunt) {
       'manifest',
       'uglify',
       'sass',
-      'postcss'
+      'postcss',
+      'imagemin'
     ]);
 
     grunt.registerTask('dev', [

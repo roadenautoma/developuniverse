@@ -5,6 +5,7 @@
 .sass-cache/
 *.css.map
 
+images/
 
 ### OSX ###
 .DS_Store
