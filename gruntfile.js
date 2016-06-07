@@ -173,7 +173,7 @@ module.exports = function(grunt) {
         // shell commands for use in Grunt tasks
         shell: {
             jekyllBuild: {
-                command: 'jekyll build'
+                command: 'jekyll build --config _config.yml,_config_dev.yml'
             },
             jekyllServe: {
                 command: 'jekyll serve'
@@ -181,7 +181,10 @@ module.exports = function(grunt) {
         },
 
         imagemin: {                          // Task
-            all: {                         // Another target
+            all: {   
+              options: {                       // Target options
+                optimizationLevel: 3,
+              },
               files: [{
                 expand: true,                  // Enable dynamic expansion
                 cwd: 'default_images/',        // Src matches are relative to this path
@@ -212,10 +215,10 @@ module.exports = function(grunt) {
       'copy',
       'manifest',
       'uglify',
+      'imagemin',
       'shell:jekyllBuild',
       'sass',
-      'postcss',
-      'imagemin'
+      'postcss'
     ]);
 
     grunt.registerTask('build-nj', [
