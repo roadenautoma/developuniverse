@@ -41,16 +41,16 @@
                                     <li {% if page.url == '/' %} class="active" {% endif %}>
                                         <a href="{{ site.url }}"><span>Home</span></a>
                                     </li>
-                                    <li {% if page.url == '/services/' %} class="active" {% endif %}>
-                                        <a href="{{ site.url }}/services/"><span>Services</span></a>
+                                    <li {% if page.url == '/about/' %} class="active" {% endif %}>
+                                        <a href="{{ site.url }}/about/"><span>About</span></a>
                                     </li>
                                     <li {% if page.url == '/thoughts/' or page.layout == 'post' %} class="active" {% endif %}>
                                         <a href="{{ site.url }}/thoughts/"><span>Thoughts</span></a>
                                     </li>
                                 </ul><!-- .navbar__nav -->
                                 <ul class="nav navbar__nav navbar__nav--right">
-                                    <li {% if page.url == '/about/' %} class="active" {% endif %}>
-                                        <a href="{{ site.url }}/about/"><span>About</span></a>
+                                    <li {% if page.url == '/services/' %} class="active" {% endif %}>
+                                        <a href="{{ site.url }}/services/"><span>Services</span></a>
                                     </li>
                                     <li>
                                         <a class="js-contact-modal-toggle" href="#contact-modal"><span>Contact</span></a>
