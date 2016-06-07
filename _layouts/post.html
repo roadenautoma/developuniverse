@@ -4,7 +4,7 @@
   <article class="article">
 
     <header class="article-header {% if article.hero %} {% else %} article-header--no-hero {% endif %}">
-        <div class="hero" style="background-image: url('{% if article.hero %} {% else %} {{site.url}}/images/posts/generic/post-hero.svg{% endif %}')">
+        <div class="hero" style="background-image: url('{% if article.image.hero %}{{ site.url }}/images/posts/{{ article.image.hero }}{% else %} {{site.url}}/images/posts/generic/post-hero.svg{% endif %}')">
             <div class="container container--narrow">
 
                 <div class="hero__heading">

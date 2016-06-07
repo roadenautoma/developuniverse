@@ -40,9 +40,24 @@
 		}
 	};
 
-	{% if page.layout == 'post' %}
-        // TODO: Load google families only here, not on all pages
-    {% endif %}
+	{% if page.layout == 'post' || page.url = '/thoughts' %}
+    WebFontConfig = {
+      google: {
+        families: ['Source Serif Pro:n4,n7','Source+Code+Pro']
+      },
+      custom: {
+        families: ['GT Walsheim:n4,n7,n9', 'Circular:n4,n5,n7'],
+        urls: ['{{ site.url }}/styles/fonts.css']
+      }
+    };
+  {% else %}
+    WebFontConfig = {
+      custom: {
+        families: ['GT Walsheim:n4,n7,n9', 'Circular:n4,n5,n7'],
+        urls: ['{{ site.url }}/styles/fonts.css']
+      }
+    };
+  {% endif %}
 
 	(function(d) {
       var wf = d.createElement('script'), s = d.scripts[0];
@@ -51,7 +66,7 @@
     })(document);
 	</script>
 
-	<script src="{{ site.url }}/scripts/app.js"></script>
+	<script src="{{ site.url }}/scripts/app.min.js"></script>
         {% if site.google_analytics %}
         <!-- Asynchronous Google Analytics snippet -->
         <script>

@@ -10,6 +10,8 @@ reading_time:     true
 words_per_minute: 200
 email: martin@gon.to
 
+# url: "https://gon.to"
+
 paginate_path: "thoughts/page:num"
 
 excerpt_separator: <!--more-->
@@ -20,6 +22,7 @@ owner:
   twitter: mgonto
 
 google_analytics: UA-48082910-1
+
 
 timezone:    America/New_York
 future:      true

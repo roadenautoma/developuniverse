@@ -3,8 +3,6 @@ layout: post
 title: "Gulp is awesome, but do we really need it?"
 description: "In most cases, with a simple package.json you can do the same than with Grunt and Gupl with a more mantainable code. In this post, I'll explain you how!"
 date: 2015-02-26 22:58
-image:
-  thumb: 2015-02-26-gulp-is-awesome-but-do-we-really-need-it/logo.jpeg
 comments: true
 share: true
 tags: 

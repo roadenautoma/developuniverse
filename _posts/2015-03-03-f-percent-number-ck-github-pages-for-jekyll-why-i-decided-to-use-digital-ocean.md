@@ -3,8 +3,6 @@ layout: post
 title: "F%#ck Github Pages for my Jekyll blog. Why I decided to use Digital Ocean instead?"
 description: Using Github Pages for your Jekyll blog is pretty common. In this article I'll explain why that's the worse thing you can do!
 date: 2015-03-03 22:06
-image:
-  thumb: 2015-03-03-f-percent-number-ck-github-pages-for-jekyll-why-i-decided-to-use-digital-ocean/logo.png
 comments: true
 share: true
 tags:
