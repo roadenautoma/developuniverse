@@ -77,7 +77,7 @@ title: About me
                             <div class="body-content">
                                 <figure class="img-rounded align-right"><img  src="{{site.url}}/images/about/beard.jpg" alt="Beard" /></figure>
                                 <p>When I reached the age of 18, not only I started to grow a beard,
-                                 but also I started studying <strong>Systems Engineer</strong> at UTN (National Technology University). Since college was a few hours per day, I was bored afterwards, and I knew how to code, I decided to join <a rel="external" href="https://globant.com/">Globant</a>, one of the biggest software consulting firms in Argentina. At that point, I was coding in C# and did apps for <a rel="external" href="https://sourceforge.net/">SourceForce</a> and <a rel="external" href="http://www.ea.com/">Electronic Arts</a> among others. </p>
+                             but also I started studying <strong>Systems Engineer</strong> at UTN (National Technology University). Since college was a few hours per day, I was bored afterwards, and I knew how to code, I decided to join <a rel="external" href="https://globant.com/">Globant</a>, one of the biggest software consulting firms in Argentina. At that point, I was coding in C# and did apps for <a rel="external" href="https://sourceforge.net/">SourceForce</a> and <a rel="external" href="http://www.ea.com/">Electronic Arts</a> among others. </p>
                             </div><!-- .body-content -->
                         </dd>
                     </dl><!-- .timeline-block -->
@@ -275,7 +275,9 @@ title: About me
     }
 
   function onYouTubePlayerAPIReady() {
-    $('.js-about-header').children().one(animationEnd, getVideos);
+    $(document).ready(function() {
+        $('.js-about-header').children().one(animationEnd, getVideos);
+    });
     setTimeout(getVideos, 1000);
 
   }
