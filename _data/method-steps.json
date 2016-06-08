@@ -10,14 +10,14 @@
         "number": "2",
         "short_title": "Formulate",
         "title": "Formulate a hypothesis for each.",
-        "body": "Based on data, you can create a hypothesis of why this problem is happening and what you can do to solve this.",
+        "body": "Based on data, you can create a hypothesis of why the problem is happening and what you can do to solve it.",
         "image": "http://placehold.it/500x500"
     },
     {
         "number": "3",
         "short_title": "Define",
-        "title": "Define a metric, a timeframe and a goal.",
-        "body": "Every hypothesis must be measurable and quantifiable. In order to do so, you must choose a metric and a goal so that you can decide if the experiment was a success or not.",
+        "title": "Define a metric, a timeframe, and a goal.",
+        "body": "Every hypothesis must be measurable and quantifiable. To achieve this, you must choose a metric and a goal so that you can decide whether the experiment is a success or not.",
         "image": "http://placehold.it/500x500"
     },
     {
@@ -31,7 +31,7 @@
         "number": "5",
         "short_title": "Verify",
         "title": "Verify the data.",
-        "body": "Once the time has passed, you have to check if the value for the metric you chose reached the goal or not. If it did, you can call this experiment a success.",
+        "body": "Once the execution time has passed, you have to check if the value for the metric you chose reached the goal or not. If it did, you can call the experiment a success.",
         "image": "http://placehold.it/500x500"
     },
     {
