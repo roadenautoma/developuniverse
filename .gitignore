@@ -1,6 +1,6 @@
-
 # Created by https://www.gitignore.io/api/sass,osx,ruby,jekyll,node,grunt,bower
 
+_config_dev.yml
 ### Sass ###
 .sass-cache/
 *.css.map
