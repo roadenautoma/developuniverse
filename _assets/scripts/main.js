@@ -5,7 +5,7 @@ $( document ).ready(function() {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
-    if(is_mobile) {
+    if(window.is_mobile) {
         $('html').addClass('mobile');
     } else {
         $('html').addClass('no-mobile');
@@ -122,7 +122,7 @@ $( document ).ready(function() {
 
 
     // Autosize textarea
-    if(!is_mobile) {
+    if(!window.is_mobile) {
         var contact_textarea = $('.js-form-comments');
 
         contact_textarea.on('focus', function() {
