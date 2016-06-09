@@ -20,9 +20,6 @@
 
 // Full screen
 
-/*
-TODO: Flash when when opening contact modal in desktop
-*/
 .mfp-helper .mfp-full-open ~ #page {
   display: none;
 }
@@ -44,7 +41,6 @@ html.mfp-helper {
   }
 }
 
-
 .mfp-full.mfp-bg {
     background: none;
 }
@@ -59,28 +55,16 @@ html.mfp-helper {
     padding: 4em 0;
 }
 
-// TODO: Fix scrolling on small window size. Add a height media query and remove the vertical centering (and the heigh 100%)
-
 .mfp-full .mfp-content,
 .mfp-full .modal {
     min-height: 100%;
     background-color: $brand-primary-color;
-    @include respond-to("small") {
-        height: 100%;
-    }
 }
 
 .mfp-full .mfp-content {
     position: relative;
 }
 
-.mfp-full .modal__wrapper {
-    @include respond-to("small") {
-        // position: relative;
-          // top: 50%;
-          // transform: translateY(-50%);
-    }
-}
 
 
 

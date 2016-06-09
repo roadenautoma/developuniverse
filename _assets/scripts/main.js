@@ -105,31 +105,35 @@ $( document ).ready(function() {
     });
 
     $('input:not(:checkbox):not(:button):not(:radio), textarea').blur(function() {
-        $(this).parents('.form-group').removeClass('is-focus');
+
         if( $(this).val().length === 0 ) {
            $(this).parents('.form-group').removeClass('is-filled');
         } else {
            $(this).parents('.form-group').addClass('is-filled')
         }
+        $(this).parents('.form-group').removeClass('is-focus');
     });
 
 
     // Autosize textarea
-    var contact_textarea = $('.js-form-comments');
+    if(!is_mobile) {
+        // var contact_textarea = $('.js-form-comments');
+        //
+        // contact_textarea.on('focus', function() {
+        //     contact_textarea.one(transitionEnd, function(e) {
+        //         console.log('animation ended');
+        //         autosize(contact_textarea);
+        //     });
+        // });
+        //
+        // $(contact_textarea).blur(function() {
+        //     if( $(this).val().length === 0 ) {
+        //         //console.log('empty');
+        //         autosize.destroy(contact_textarea);
+        //     }
+        // });
+    }
 
-    contact_textarea.on('focus', function() {
-        contact_textarea.one(transitionEnd, function(e) {
-            console.log('animation ended');
-            autosize(contact_textarea);
-        });
-    });
-
-    $(contact_textarea).blur(function() {
-        if( $(this).val().length === 0 ) {
-            //console.log('empty');
-            autosize.destroy(contact_textarea);
-        }
-    });
 
 
 
