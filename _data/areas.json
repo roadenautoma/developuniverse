@@ -6,7 +6,7 @@
         [
             {
                 "name": "Developer Evangelism",
-                "description": "Design and implementation of a strategy to make developers try, use and eventually promote your SaaS or platform.",
+                "description": "Design and implementation of a strategy to make developers try, use, and eventually promote your SaaS or platform.",
                 "icon": "evangelism",
                 "area_slug": "developer-marketing"
             }
@@ -19,7 +19,7 @@
         [
             {
                 "name": "Content Marketing",
-                "description": "Design and implementation of a content strategy to dive top of funnel leads. Includes email and direct mail, webinars, video, and branding.",
+                "description": "Design and implementation of a content strategy to drive top of funnel leads. Includes email and direct mail, webinars, video, and branding.",
                 "icon": "content",
                 "area_slug": "inbound-marketing"
             },
@@ -31,7 +31,7 @@
             },
             {
                 "name": "SEO",
-                "description": "Optimize every landing and piece of content so that they rank higher on search engines for the chosen keywords.",
+                "description": "Optimize every landing page and piece of content so that they rank higher on search engines for the chosen keywords.",
                 "icon": "seo",
                 "area_slug": "inbound-marketing"
             }
@@ -44,13 +44,13 @@
         [
             {
                 "name": "Analytics",
-                "description": "Create data driven marketing experiments that align with organizational goals, prove marketing ROI, and inform investment decision. Conversion and funnel analysis.",
+                "description": "Create data-driven marketing experiments that align with organizational goals, prove marketing ROI, and inform investment decisions. Conversion and funnel analysis.",
                 "icon": "analytics",
                 "area_slug": "marketing-operations"
             },
             {
                 "name": "Marketing Automation",
-                "description": "Implementation of processes and software to automate repetitive marketing actions related to emails, lead nurturing, social media, website actions and landing pages.",
+                "description": "Implementation of processes and software to automate repetitive marketing actions related to emails, lead nurturing, social media, website actions, and landing pages.",
                 "icon": "automation",
                 "area_slug": "marketing-operations"
             },
@@ -75,13 +75,13 @@
             },
             {
                 "name": "Product Strategy",
-                "description": "Work with the Product Management team on defining key features and packages to implement based on market research and customer segmentation, as well as creating a messaging framework on how to market those.",
+                "description": "Work with the Product Management team on defining key features and packages to implement based on market research and customer segmentation, as well as creating a messaging framework on how to market them.",
                 "icon": "product",
                 "area_slug": "strategy"
             },
             {
                 "name": "Marketing Campaigns",
-                "description": "Definition and implementation of both outbound and inbound marketing campaigns to target specific industries (vertical), use cases (horizontal) and personas (top down, bottom up, etc.).",
+                "description": "Definition and implementation of both inbound and outbound marketing campaigns to target specific industries (verticals), use cases (horizontals), and personas (top down, bottom up).",
                 "icon": "campaigns",
                 "area_slug": "strategy"
             },
