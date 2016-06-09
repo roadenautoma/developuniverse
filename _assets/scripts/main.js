@@ -5,6 +5,12 @@ $( document ).ready(function() {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd';
 
+    if(is_mobile) {
+        $('html').addClass('mobile');
+    } else {
+        $('html').addClass('no-mobile');
+    }
+
     /* Remove click delay on mobile
     ------------------------------------------- */
     FastClick.attach(document.body);
@@ -117,21 +123,21 @@ $( document ).ready(function() {
 
     // Autosize textarea
     if(!is_mobile) {
-        // var contact_textarea = $('.js-form-comments');
-        //
-        // contact_textarea.on('focus', function() {
-        //     contact_textarea.one(transitionEnd, function(e) {
-        //         console.log('animation ended');
-        //         autosize(contact_textarea);
-        //     });
-        // });
-        //
-        // $(contact_textarea).blur(function() {
-        //     if( $(this).val().length === 0 ) {
-        //         //console.log('empty');
-        //         autosize.destroy(contact_textarea);
-        //     }
-        // });
+        var contact_textarea = $('.js-form-comments');
+
+        contact_textarea.on('focus', function() {
+            contact_textarea.one(transitionEnd, function(e) {
+                console.log('animation ended');
+                autosize(contact_textarea);
+            });
+        });
+
+        $(contact_textarea).blur(function() {
+            if( $(this).val().length === 0 ) {
+                //console.log('empty');
+                autosize.destroy(contact_textarea);
+            }
+        });
     }
 
 
