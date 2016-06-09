@@ -23,7 +23,13 @@ textarea {
   	}
     @include placeholder {
         visibility: hidden;
+		color: transparent;
   	}
+	&:invalid {
+		outline: none;
+		box-shadow: none;
+		border-bottom-color: $danger-color;
+	}
 }
 
 
@@ -34,10 +40,35 @@ textarea {
 	height: 2.6em;
     transition: height 0.3s cubic-bezier(.64,.09,.08,1) min-height 0.3s cubic-bezier(.64,.09,.08,1);
 	overflow: hidden;
-    &:focus {
-     	min-height: 6em;
-    }
+	&:focus {
+		min-height: 6em;
+	}
 }
+
+
+// No autosize
+.mobile {
+	textarea:focus {
+		min-height: 11.25em;
+		@include respond-to("medium") {
+			min-height: 8.75em;
+		}
+	}
+	.is-filled textarea {
+		height: 11.25em;
+		transition: none;
+		@include respond-to("medium") {
+			height: 8.75em;
+		}
+	}
+	.is-filled textarea,
+	.is-focus textarea {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+}
+
+
 
 select {
 	width: 100%;
