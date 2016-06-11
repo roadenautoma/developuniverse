@@ -1,6 +1,6 @@
 title: Gonto — An engineering approach to marketing
 short_title: Gonto
-description: "I’m a software engineer that now works on Marketing. I found a way to combine my 2 passions and apply my engineering thinking model to Marketing"
+description: "Gonto is a software engineer that now works on Marketing. He found a way to combine my 2 passions and apply my engineering thinking model to Marketing"
 source:      ./
 destination: ./_site
 exclude: [".sass-cache", "node_modules", "bower_components", "bower.json", "package.json", "gruntfile.js", "readme.md", "_assets"]
