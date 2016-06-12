@@ -188,7 +188,7 @@ module.exports = function(grunt) {
               },
               files: [{
                 expand: true,                  // Enable dynamic expansion
-                cwd: 'default_images/',        // Src matches are relative to this path
+                cwd: '_assets/images/',        // Src matches are relative to this path
                 src: ['**/*.{png,jpg,gif,svg,jpeg}'],   // Actual patterns to match
                 dest: 'images/'                  // Destination path prefix
               }]
