@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Design and development by Estudio Pileta -- www.pileta.tv
+    Cecilia Alvarez -- Designer -- @azceci
+    Fernando Carrettoni -- Front-end developer -- @landitus
+    Martin Gontovnikas -- Jekyll & JS stuff -- @mgonto
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Sass, Grunt, Bower
+    jQuery, Normalize.css
+    Jekyll, Github Pages
