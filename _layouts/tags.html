@@ -23,7 +23,7 @@
                     <!-- This loops through the paginated posts -->
                {% for article in page.posts %}
                     <li class="blog-list__item">
-                        {% include blog-item.html article = article excerpt=true %}
+                        {% include blog-item.html article = article excerpt=true index=forloop.index %}
                     </li><!-- .blog-list__item -->
                     {% endfor %}
                 </ul><!-- .blog-list -->

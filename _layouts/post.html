@@ -15,7 +15,7 @@
                     <div class="article__tags wow fadeInDown">
                         <ul class="tags-list">
                              {% for tag in page.tags | pop: 5 %}
-                               <li><a class="tag" href="/tag/{{tag}}">#{{tag}}</a></li>
+                                <li><a class="tag" href="/tag/{{tag | append: '' | slugify}}">#{{tag}}</a></li>
                              {% endfor %}
                         </ul>
                     </div><!-- .article__tags -->
