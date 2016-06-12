@@ -133,6 +133,7 @@ module.exports = function(grunt) {
                     '_includes/*.html',
                     '_data/*.*',
                     'thoughts/**/*.*',
+                    '_posts/**/*.*',
                     '*.html',
                 ],
                 tasks: ['shell:jekyllBuild']
@@ -173,10 +174,10 @@ module.exports = function(grunt) {
         // shell commands for use in Grunt tasks
         shell: {
             jekyllBuild: {
-                command: 'jekyll build --config _config.yml,_config_dev.yml'
+                command: 'bundle exec jekyll build --config _config.yml,_config_dev.yml'
             },
             jekyllServe: {
-                command: 'jekyll serve'
+                command: 'bundle exec jekyll serve'
             }
         },
 

@@ -28,11 +28,13 @@ google_analytics: UA-48082910-1
 timezone:    America/New_York
 future:      true
 gems:
+  - "jekyll/figure"
   - jekyll-sitemap
   - jemoji
   - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-archives
+  
 
 
 jekyll-archives:

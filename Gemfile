@@ -8,3 +8,5 @@ gem 'jekyll-sitemap'
 gem 'jemoji'
 gem 'jekyll-redirect-from'
 gem 'jekyll-archives'
+gem 'jekyll-figure'
+gem 'jekyll-compose', group: [:jekyll_plugins]

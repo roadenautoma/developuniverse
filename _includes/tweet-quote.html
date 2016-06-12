@@ -1,0 +1,33 @@
+{% comment %}
+This is the template used for tweeteable quotes.
+
+To use it just include it in a post (Don't use the outer quotes):
+
+'{% include tweet_quote.html quote_text="the quote text" %}'
+
+You can also save the text in a variable
+
+'{% assign quote_text = "Some more text" %}'
+
+'{% include tweet_quote.html quote_text=quote_text %}'
+
+{% endcomment %}
+
+{% assign current = page %}
+
+<div>
+<a rel="external" href="https://twitter.com/intent/tweet?text=&quot;{{ include.quote_text }}&quot; via @{{site.owner.twitter}} {{ site.url }}{{current.url}}">
+<blockquote class="soundbite">
+    <p>
+        "{{include.quote_text}}"
+    </p>
+    <div class="actions">
+        <ul>
+            <li>
+                <a rel="external" class="btn btn--link" href="https://twitter.com/intent/tweet?text=&quot;{{ include.quote_text }}&quot; via @{{site.owner.twitter}} {{ site.url }}{{current.url}}"><i class="icon icon-twitter"></i> Tweet this</a>
+            </li>
+        </ul>
+    </div><!-- .actions -->
+</blockquote>
+</a>
+</div>
