@@ -5,7 +5,7 @@ _config_dev.yml
 .sass-cache/
 *.css.map
 
-images/
+/images/
 
 ### OSX ###
 .DS_Store
