@@ -45,11 +45,11 @@ For example, at Auth0 we did an Angular 2 series where each week we explain a ne
 
 ## 3. Github (and open source) is your friend
 
-Developers love Open Source software. They love it because it usually means they'll need to write more code since they can reuse some existing library. If they need to implement some machine learning algorithm and somebody has coded an open source project that implements it, they’re just going to use it.
+Developers love Open Source software. They love it because it usually means they'll need to write less code since they can reuse some existing library. If they need to implement some machine learning algorithm and somebody has coded an open source project that implements it, they’re just going to use it.
 
 This is why you should always write as much open source software as you can. Github is always on the top results on Google searches so if a developer is searching for a solution he might just find your repository.
 
-How can you convert this traffic to leads? Just add a link to the announcement from your blog and some credit about your company. If that’s not enough, doing open source will also help you with hiring 💪. Developers love to work on open source projects!
+How can you convert this traffic to leads? Just add a link to the announcement from your blog and some credit about your company. If that’s not enough, doing open source will also help you with hiring :muscle:. Developers love to work on open source projects!
 
 {% figure caption: "Credits from the angular-jwt repository in Auth0's github"%}
 ![Credits from the angular-jwt repository in Auth0's github](https://d.pr/i/13uaR+)
