@@ -48,7 +48,7 @@ The results speak for themselves (I changed the numbers to not show real Auth0 v
 
 
 {% figure caption: "Control and test group data from Auth0."%}
-![control test group results for Auth0](http://d.pr/i/zBMP+)
+![control test group results for Auth0](https://d.pr/i/zBMP+)
 {% endfigure %}
 
 
